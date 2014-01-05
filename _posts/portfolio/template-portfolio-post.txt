@@ -1,0 +1,11 @@
+---
+layout: default
+title: Portfolio Item 4
+site-url: http://www.craigwfox.com
+site-title: craigwfox.com
+feat-image: /images/craigwfoxcom.jpg
+feat-image-alt: Craigwfox.com
+categories: portfolio
+---
+
+// Content Area Below

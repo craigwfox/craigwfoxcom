@@ -1,0 +1,26 @@
+/* ---------
+	Mixins
+--------- */
+
+	/* ---- Inline-Block with Haslayout Hack ---- */
+		@mixin inline-block {
+			display:inline-block;
+			zoom:1;
+			*display:inline;
+		}
+
+	/* ---- Sprite for Global Sprite ---- */
+		@mixin sprite-global($W, $h, $x, $y) {
+			width:$x;
+			height:$y;
+
+			background: url('../../library/imgs/main-sprite.png') no-repeat $x $y;
+		}
+	
+	/* ---- Sprite with Variable Img ---- */
+		@mixin sprite-variable($W, $h, $x, $y, $url) {
+			width:$x;
+			height:$y;
+
+			background: $url no-repeat $x $y;
+		}

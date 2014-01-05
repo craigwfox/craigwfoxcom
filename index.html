@@ -1,0 +1,30 @@
+---
+layout: default
+title: Craig Fox // Front-End Developer
+---
+
+<section class="intro grid-wrap">
+  <div class="col-1-2">
+    <p>I love design and clean, semantic code. My specialty is front-end development.</p>
+  </div>
+  <div class="col-1-2">
+    <img src="/assets/images/web-dev-text.svg" alt="Web Designer and Developer" />
+  </div>
+</section>
+
+<section class="about grid-wrap">
+  <p>Currently I’m a developer for the Richland Group, in Fort Smith, Ar. I take the Photoshop Documents from our designers and turn these designs into functioning WordPress websites. I work with HTML5, CSS3, WordPress, and Responsive Web Design.</p>
+
+  <p>I love what I do and I feel that shows in my work. Whether it’s writing clean code or designing a user-friendly site.</p>
+</section>
+
+<section class="portfolio grid-wrap">
+  {% for post in site.categories['portfolio']  %}
+    <article class="portfolio-item">
+      <h2 class="pi-title">{{ post.title }}</h2>
+      <p class="url"><a href="{{ post.site-url }}">{{ post.site-title }}</a></p>
+      <img src="{{ post.feat-image }}" alt="{{ post.feat-image-alt }}" />
+      {{ post.content }}
+    </article>
+  {% endfor %}
+</section>
