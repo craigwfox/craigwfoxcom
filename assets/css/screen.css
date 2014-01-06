@@ -322,7 +322,8 @@ table {
   .site-nav ul {
     min-width: 800px;
     max-width: 1000px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0; }
   .site-nav li {
     display: inline-block; }
   .site-nav a {
