@@ -10,6 +10,5 @@
 By Craig Fox @ craigwfox.com
 https://github.com/craigwfox/Simple-Starter-Theme.git
 ******************************************************* */
-$(function(){
-	
+$(function(){	
 });
