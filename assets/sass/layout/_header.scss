@@ -3,6 +3,8 @@
 --------- */
   .site-head {
     width: 100%;
+    min-width: $min-width;
+    max-width: $max-width;
 
     margin: 0 auto 1.875em;
 

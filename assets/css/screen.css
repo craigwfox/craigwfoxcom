@@ -299,6 +299,8 @@ table {
 --------- */
 .site-head {
   width: 100%;
+  min-width: 800px;
+  max-width: 1000px;
   margin: 0 auto 1.875em;
   text-align: center; }
 
@@ -328,6 +330,8 @@ table {
 	Footer
 --------- */
 .site-foot {
+  min-width: 800px;
+  max-width: 1000px;
   margin: 2em auto 0;
   padding: 0.875em 0;
   background: #0f2329;
@@ -341,6 +345,8 @@ table {
 --------- */
 
 .grid-row {
+  min-width: 800px;
+  max-width: 1000px;
   overflow: auto;
   margin-bottom: 3%;
   text-align: center; }

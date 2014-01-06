@@ -3,11 +3,14 @@
 --------- */
   .grid-wrap {}
     .grid-row {
-        overflow: auto;
+      min-width: $min-width;
+      max-width: $max-width;
 
-        margin-bottom: 3%;
+      overflow: auto;
 
-        text-align: center;
+      margin-bottom: 3%;
+
+      text-align: center;
     }
       .grid-col {
         display: inline-block;
