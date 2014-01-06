@@ -6,6 +6,8 @@
         overflow: auto;
 
         margin-bottom: 3%;
+
+        text-align: center;
     }
       .grid-col {
         display: inline-block;
@@ -15,6 +17,8 @@
         padding:0 1.5%;
 
         @include box-sizing(border-box);
+
+        text-align: left;
       }
 
         .grid-3-4 {

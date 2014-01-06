@@ -11,5 +11,48 @@
 
 
 /* ------------------
-  Static Home Page
+  Home Page
 ------------------ */
+  /* Intro */
+    .intro {
+      max-width: 90%;
+
+      p {
+        font-size: 1.675rem;
+      }
+
+      .grid-col {
+        vertical-align: middle;
+
+        text-align: center;
+      }
+    }
+
+  /* About */
+    .about {
+      padding: 2em 5%;
+
+      background: $dark-blue;
+
+      p {
+        color: $cream;
+        font-size: 1.17rem;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+  /* Portfolio */
+    .portfolio {}
+      .portfolio-item {}
+        .pi-title {
+          font-size: 1rem;
+        }
+        .pi-url {}
+        .pi-img {}
+
+
+
+

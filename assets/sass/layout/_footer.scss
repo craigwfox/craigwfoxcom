@@ -2,12 +2,17 @@
 	Footer
 --------- */
 	.site-foot {
-		width: 90%;
 
 		margin: 2em auto 0;
-		padding: 1em 0;
+		padding: .875em 0;
 
-		border-top: 1px solid lighten($text,40%);
+    background: $dark-blue;
 
 		text-align: center;
+
+    p {
+      padding: 0;
+      
+      color: $cream;
+    }
 	}

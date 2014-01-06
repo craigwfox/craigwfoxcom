@@ -1,27 +1,43 @@
 /* ---------
-	Header
+  Header
 --------- */
-	.site-head {
-		width: 100%;
+  .site-head {
+    width: 100%;
 
-		margin: 0 auto 1.875em;
-		padding: .5em 0;
+    margin: 0 auto 1.875em;
 
-		background: $dark-blue;
+    text-align: center;
+  }
+    .site-logo-wrap {
+      width: 100%;
 
-		border-bottom: 1px solid lighten($text,40%);
+      display: block;
 
-		text-align: center;
-	}
-		.site-logo {
-			max-width: 90%;
+      padding: .875em 0;
 
-			display: block;
+      background: $dark-blue;
+    }
+    .site-logo {
+      width: 90%;
+      max-width: 400px;
 
-			margin: 0 auto;
-		}
+      display: block;
 
-	/* ---- Site Nav ---- */
-		.site-nav {
-			padding: 1.375em 0 0;
-		}
+      margin: 0 auto;
+    }
+
+  /* ---- Site Nav ---- */
+    .site-nav {
+      margin-top: .475em;
+      padding: .275em 0;
+
+      background: $dark-blue;
+
+      a {
+        display: inline-block;
+
+        padding:.25em 1.5em;
+
+        font:normal 700 1.175rem/1em $head-font;
+      }
+    }
