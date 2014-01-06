@@ -299,8 +299,6 @@ table {
 --------- */
 .site-head {
   width: 100%;
-  min-width: 800px;
-  max-width: 1000px;
   margin: 0 auto 1.875em;
   text-align: center; }
 
@@ -321,8 +319,13 @@ table {
   margin-top: 0.475em;
   padding: 0.275em 0;
   background: #0f2329; }
+  .site-nav ul {
+    min-width: 800px;
+    max-width: 1000px; }
+  .site-nav li {
+    display: inline-block; }
   .site-nav a {
-    display: inline-block;
+    display: block;
     padding: 0.25em 1.5em;
     font: normal 700 1.175rem/1em 'Open Sans', sans-serif; }
 
@@ -330,8 +333,6 @@ table {
 	Footer
 --------- */
 .site-foot {
-  min-width: 800px;
-  max-width: 1000px;
   margin: 2em auto 0;
   padding: 0.875em 0;
   background: #0f2329;
@@ -345,8 +346,6 @@ table {
 --------- */
 
 .grid-row {
-  min-width: 800px;
-  max-width: 1000px;
   overflow: auto;
   margin-bottom: 3%;
   text-align: center; }
@@ -365,7 +364,8 @@ table {
   width: 74.999%; }
 
 .grid-1-2 {
-  width: 48.999%; }
+  width: 48.999%;
+  max-width: 500px; }
 
 .grid-1-4 {
   width: 23.999%; }

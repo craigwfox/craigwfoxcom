@@ -3,8 +3,6 @@
 --------- */
   .site-head {
     width: 100%;
-    min-width: $min-width;
-    max-width: $max-width;
 
     margin: 0 auto 1.875em;
 
@@ -35,8 +33,15 @@
 
       background: $dark-blue;
 
-      a {
+      ul {
+        min-width: $min-width;
+        max-width: $max-width;
+      }
+      li {
         display: inline-block;
+      }
+      a {
+        display:block;
 
         padding:.25em 1.5em;
 

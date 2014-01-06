@@ -3,8 +3,6 @@
 --------- */
   .grid-wrap {}
     .grid-row {
-      min-width: $min-width;
-      max-width: $max-width;
 
       overflow: auto;
 
@@ -33,6 +31,7 @@
           @extend .grid-col;
 
           width: 48.999%;
+          max-width: 500px;
         }
         .grid-1-4 {
           @extend .grid-col;
