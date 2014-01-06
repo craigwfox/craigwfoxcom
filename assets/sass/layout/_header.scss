@@ -36,6 +36,8 @@
       ul {
         min-width: $min-width;
         max-width: $max-width;
+
+        margin: 0 auto;
       }
       li {
         display: inline-block;

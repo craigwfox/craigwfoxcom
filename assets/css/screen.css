@@ -321,7 +321,8 @@ table {
   background: #0f2329; }
   .site-nav ul {
     min-width: 800px;
-    max-width: 1000px; }
+    max-width: 1000px;
+    margin: 0 auto; }
   .site-nav li {
     display: inline-block; }
   .site-nav a {
