@@ -26,6 +26,16 @@
 
         text-align: center;
       }
+
+      @media (max-width: 825px) {
+        .grid-1-2 {
+          width: auto;
+
+          display: block;
+
+          margin: 0 auto;
+        }
+      }
     }
 
   /* About */
@@ -35,6 +45,9 @@
       background: $dark-blue;
 
       p {
+        max-width: 1000px;
+
+        margin: 0 auto;
         color: $cream;
         font-size: 1.17rem;
 
@@ -46,11 +59,25 @@
 
   /* Portfolio */
     .portfolio {}
-      .portfolio-item {}
+      .portfolio-item {
+        @media (max-width:900px) {
+          width: 45%;
+        }
+      }
         .pi-title {
           font-size: 1rem;
         }
-        .pi-url {}
+        .pi-url {
+          a {
+            color: darken($links,25%);
+
+            &:hover {
+
+              color: $dark-blue;
+              text-decoration: underline;
+            }
+          }
+        }
         .pi-img {}
 
 
