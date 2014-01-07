@@ -5,6 +5,6 @@ site-url: http://www.wholehogfortsmith.com/
 site-title: wholehogfortsmith.com
 feat-image: /assets/images/portfolio/wholehogcafefs.jpg
 feat-image-alt: Machine Power
-categories: portfolio
+categories: portfolio-off
 ---
 
