@@ -22,7 +22,7 @@ title: Craig Fox // Front-End Developer
   {% for post in site.categories['portfolio']  %}
     <article class="portfolio-item grid-1-4">
       <h2 class="pi-title">{{ post.title }}</h2>
-      <img class="pi-img" src="{{ post.feat-image }}" alt="{{ post.feat-image-alt }}" />
+      <a href="{{ post.site-url }}"><img class="pi-img" src="{{ post.feat-image }}" alt="{{ post.feat-image-alt }}" /></a>
       <p class="pi-url"><a href="{{ post.site-url }}">Visit Site</a></p>
       {{ post.content }}
     </article>
