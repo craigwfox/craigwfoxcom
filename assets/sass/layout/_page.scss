@@ -66,6 +66,10 @@
       }
         .pi-title {
           font-size: 1rem;
+
+          @media (max-width:460px) {
+          font-size: .775rem;
+          }
         }
         .pi-url {
           a {
