@@ -9,9 +9,48 @@
 
 		text-align: center;
 
-    p {
-      padding: 0;
-
-      color: $cream;
+    .section-title {
+      color: #94b3bf;
     }
 	}
+  
+  .contact {
+    list-style-type: none;
+
+    li {
+      color: $cream;
+    }
+    a {
+      color: $cream;
+
+      &:hover, &:focus {
+        color:darken($cream,20%);
+      }
+    }
+  }
+
+  .social-wrap {
+    margin: 0;
+    padding: 0;
+
+    text-align: right;
+  }
+    .social-icns {
+      display: inline-block;
+
+      padding: 0 0 0 .375em;
+
+      text-align: left;
+
+      a {
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+  .credits {
+    padding: .675em 0 0;
+
+    color: $cream;
+  }
