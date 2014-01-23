@@ -23,7 +23,21 @@
   /* ------------------
     Logos and Icons
   ------------------ */
+    .github {
+      @include sprite-variable(86px,76px,-90px,0,url('../images/social-icns.svg'));
 
+      display: block;
+    }
+    .facebook {
+      @include sprite-variable(86px,76px,0,0,url('../images/social-icns.svg'));
+
+      display: block;
+    }
+    .linkedin {
+      @include sprite-variable(86px,76px,-180px,0,url('../images/social-icns.svg'));
+
+      display: block;
+    }
 
   /* ------------------
     Container and Misc
