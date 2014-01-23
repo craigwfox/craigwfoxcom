@@ -10,17 +10,19 @@
 		}
 
 	/* ---- Sprite for Global Sprite ---- */
-		@mixin sprite-global($W, $h, $x, $y) {
-			width:$x;
-			height:$y;
+		@mixin sprite-global($w, $h, $x, $y) {
+			width:$w;
+			height:$h;
 
 			background: url('../../library/imgs/main-sprite.png') no-repeat $x $y;
 		}
 	
 	/* ---- Sprite with Variable Img ---- */
-		@mixin sprite-variable($W, $h, $x, $y, $url) {
-			width:$x;
-			height:$y;
+		@mixin sprite-variable($w, $h, $x, $y, $url) {
+			width:$w;
+			height:$h;
 
 			background: $url no-repeat $x $y;
+
+			text-indent: -9999px;
 		}

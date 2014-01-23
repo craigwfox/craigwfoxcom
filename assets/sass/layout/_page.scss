@@ -13,6 +13,13 @@
 /* ------------------
   Home Page
 ------------------ */
+  .section-title {
+    padding: 0 0 .675em;
+
+    font-size: 2.475em;
+    font-family: $text-font;
+  }
+
   /* Intro */
     .intro {
       max-width: 90%;
@@ -54,6 +61,10 @@
         &:last-child {
           padding-bottom: 0;
         }
+      }
+
+      .section-title {
+        color: #94b3bf;
       }
     }
 
