@@ -41,6 +41,12 @@
       padding: 0 0 0 .375em;
 
       text-align: left;
+
+      a {
+        &:hover {
+          opacity: .8;
+        }
+      }
     }
 
   .credits {
