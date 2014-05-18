@@ -24,10 +24,14 @@
       }
       .social-wrap {
         text-align: center;
+
+        .social-icn {
+          padding: 0 .375em;
+        }
       }
       .contact {
         padding-top: 1em;
-        
+
         li {
           display: inline-block;
 
