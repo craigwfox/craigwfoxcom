@@ -25,12 +25,13 @@
       .social-wrap {
         text-align: center;
 
-        .social-icn {
-          padding: 0 .375em;
+        .social-icns {
+          margin: 0 .375em;
+          padding: 0;
         }
       }
       .contact {
-        padding-top: 1em;
+        padding: 1em 0 0;
 
         li {
           display: inline-block;
