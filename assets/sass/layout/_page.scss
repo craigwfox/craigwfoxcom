@@ -63,6 +63,19 @@
         }
       }
 
+      @media (max-width:900px) {
+        .grid-1-2 {
+          width: 100%;
+          
+          display: block;
+        }
+        .about-image {
+          padding-top: 1em;
+          
+          text-align: center;
+        }
+      }
+
       .section-title {
         color: #94b3bf;
       }

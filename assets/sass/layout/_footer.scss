@@ -12,6 +12,29 @@
     .section-title {
       color: #94b3bf;
     }
+
+
+    @media (max-width:900px) {
+      .grid-1-2 {
+        width: 100%;
+        
+        display: block;
+
+        text-align: center;
+      }
+      .social-wrap {
+        text-align: center;
+      }
+      .contact {
+        padding-top: 1em;
+        
+        li {
+          display: inline-block;
+
+          padding: 0 .75em;
+        }
+      }
+    }
 	}
   
   .contact {
