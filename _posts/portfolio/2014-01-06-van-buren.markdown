@@ -3,7 +3,7 @@ layout: default
 title: Van Buren AP
 site-url: http://www.vanburen.org
 site-title: van-buren.org
-feat-image: /assets/images/portfolio/van-buren.png
+feat-image: /assets/images/portfolio/van-buren.jpg
 feat-image-alt: Van Buren AP
 categories: legacy-portfolio
 ---
