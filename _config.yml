@@ -1,4 +1,18 @@
-name: Your New Jekyll Site
+name: Craigwfox.com
 markdown: redcarpet
 highlighter: pygments
 permalink: pretty
+
+exclude: [
+	node_modules,
+	assets/sass,
+	assets/jsbin,
+	"*.sublime-project",
+	"*.sublime-workspace",
+	"Gruntfile.js",
+	"CNAME",
+	"LICENSE",
+	"npm-debug.log",
+	"package.json",
+	"README.md"
+]
