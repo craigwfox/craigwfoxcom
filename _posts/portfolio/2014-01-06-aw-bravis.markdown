@@ -3,7 +3,7 @@ layout: default
 title: AW Bravis
 site-url: http://awbravis.com/
 site-title: awbravis.com
-feat-image: /assets/images/portfolio/aw-bravis.png
+feat-image: /assets/images/portfolio/aw-bravis.jpg
 feat-image-alt: AW Bravis
 categories: portfolio
 ---

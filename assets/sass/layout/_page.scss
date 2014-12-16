@@ -87,12 +87,15 @@
         @media (max-width:900px) {
           width: 45%;
         }
+        @media (max-width:460px) {
+          width: 100%;
+        }
       }
         .pi-title {
           font-size: 1rem;
 
           @media (max-width:460px) {
-          font-size: .775rem;
+            font-size: .775rem;
           }
         }
         .pi-url {

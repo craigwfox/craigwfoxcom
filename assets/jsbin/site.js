@@ -10,5 +10,28 @@
 By Craig Fox @ craigwfox.com
 https://github.com/craigwfox/Simple-Starter-Theme.git
 ******************************************************* */
-(function($){	
+(function($){
+  var scrollNav = function(){
+    console.log('scrollNav Running')
+    
+
+    var nav = $('.site-nav');
+
+    nav.on('click', 'a', function(event){
+      event.preventDefault();
+
+      var el = $(this),
+          curNav = el.attr('data-nav'),
+          curSec = $('body').find('*[id="'+curNav+'"]'),
+          curLoc = curSec.position().top;
+      
+      console.log(curLoc);
+
+      $('body').animate({
+        scrollTop: curLoc
+      },200);
+    });
+  };
+
+  scrollNav();
 })(jQuery);
