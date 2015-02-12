@@ -27,10 +27,16 @@ title: Craig Fox // Front-End Developer
 <section id="work" class="portfolio grid-row">
   <h2 class="section-title">My Work</h2>
   {% for post in site.categories['portfolio']  %}
-    <article class="portfolio-item grid-1-4">
-      <h2 class="pi-title">{{ post.title }}</h2>
-      <a href="{{ post.site-url }}"><img class="pi-img" src="{{ post.feat-image }}" alt="{{ post.feat-image-alt }}" /></a>
-      <p class="pi-url"><a href="{{ post.site-url }}" rel="nofollow">Visit Site</a></p>
+    <article class="portfolio-item">
+      <div class="grid-1-3 pi-feat">
+        <a href="{{ post.site-url }}"><img class="pi-img" src="{{ post.feat-image }}" alt="{{ post.feat-image-alt }}" /></a>
+      </div>
+
+      <div class="grid-2-3 pi-details">
+        <h2 class="pi-title">{{ post.title }}</h2>
+        {{ post.content }}
+        <p class="pi-url"><a href="{{ post.site-url }}" rel="nofollow">Visit Site</a></p>
+      </div>
     </article>
   {% endfor %}
 </section>

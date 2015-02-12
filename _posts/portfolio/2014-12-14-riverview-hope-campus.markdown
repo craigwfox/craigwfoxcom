@@ -9,3 +9,8 @@ categories: portfolio
 ---
 
 <!-- Content Area Below -->
+<ul class="portfolio-role">
+  <li>Front-End Development</li>
+  <li>Something Else</li>
+  <li>Made cookies</li>
+</ul>

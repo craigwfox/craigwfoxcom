@@ -82,34 +82,114 @@
     }
 
   /* Portfolio */
-    .portfolio {}
-      .portfolio-item {
-        @media (max-width:900px) {
-          width: 45%;
-        }
-        @media (max-width:460px) {
-          width: 100%;
-        }
+    .portfolio {
+      max-width: 1500px;
+      width: 95%;
+
+      display: flex;
+      align-items:top;
+      flex-wrap:wrap;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      .section-title {
+        width: 100%;
       }
-        .pi-title {
-          font-size: 1rem;
+    }
+      .portfolio-item {
+        width: 50%;
 
-          @media (max-width:460px) {
-            font-size: .775rem;
-          }
+        display: flex;
+        align-items:top;
+        flex-wrap:wrap;
+
+        padding-bottom: 2em;
+      }
+
+        .pi-feat {
+          width: 40%;
         }
-        .pi-url {
-          a {
-            color: darken($links,25%);
+          .pi-img {
+            display: block;
+            
+            box-shadow: 0 0 2px rgba(0,0,0,.35);
+          }
 
-            &:hover {
 
-              color: $dark-blue;
-              text-decoration: underline;
+        .pi-details {
+          width: 60%;
+        }
+          .pi-title {
+            padding-top: 0;
+            padding-bottom: .675em;
+
+            font-size: 1.575rem;
+            line-height: 1em;
+          }
+          .pi-url {
+            display: inline-block;
+
+            padding-bottom: 0;
+
+            border-bottom: 2px solid $links;
+
+            font-size: 1.175rem;
+            line-height: 1.275em;
+
+            a {
+              color: $links;
+              text-decoration: none;
+
+              &:hover {
+                border-bottom: 2px solid $dark-blue;
+
+                color: $dark-blue;
+                // text-decoration: underline;
+              }
             }
           }
-        }
-        .pi-img {}
+
+          .portfolio-role {
+            li {
+              color: $links;
+              font-size: 1.375rem;
+              line-height: 1.275em;
+            }
+          }
+
+          @media (max-width:1000px) {
+            .portfolio-item {
+              width: 100%;
+            }
+            .pi-feat {
+              width: 50%;
+            }
+            .pi-details {
+              width: 50%;
+            }
+          }
+
+          @media (max-width:650px) {
+            .pi-feat {
+              width: 100%;
+
+              padding-bottom: 1em;
+
+              img {
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+            .pi-details {
+              width: 100%;
+              max-width: 400px;
+
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+
 
 
 
