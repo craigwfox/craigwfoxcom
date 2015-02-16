@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Depot Days Festival
-site-url: http://www.depotdays.com
+site-url: http://www.depotdays.org/
 site-title: depotdays.org
 feat-image: assets/images/portfolio/depotdays.jpg
 feat-image-alt: Depot Days Festival
