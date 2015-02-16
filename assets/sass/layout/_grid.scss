@@ -10,12 +10,8 @@
       text-align: center;
     }
       .grid-col {
-        display: inline-block;
-        vertical-align: top;
 
         padding:0 1.5%;
-
-        @include box-sizing(border-box);
 
         text-align: left;
       }

@@ -1,28 +1,37 @@
 /* ---------
-	Mixins
+  Mixins
 --------- */
 
-	/* ---- Inline-Block with Haslayout Hack ---- */
-		@mixin inline-block {
-			display:inline-block;
-			zoom:1;
-			*display:inline;
-		}
+  /* ---- Inline-Block with Haslayout Hack ---- */
+    @mixin inline-block {
+      display:inline-block;
+      zoom:1;
+      *display:inline;
+    }
 
-	/* ---- Sprite for Global Sprite ---- */
-		@mixin sprite-global($w, $h, $x, $y) {
-			width:$w;
-			height:$h;
+  /* ---- Width and margin center ---- */
+    @mixin wrapperEl($width: 100%, $widthMax: 1000px) {
+      width: $width;
+      max-width: $widthMax;
 
-			background: url('../../library/imgs/main-sprite.png') no-repeat $x $y;
-		}
-	
-	/* ---- Sprite with Variable Img ---- */
-		@mixin sprite-variable($w, $h, $x, $y, $url) {
-			width:$w;
-			height:$h;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-			background: $url no-repeat $x $y;
+  /* ---- Sprite for Global Sprite ---- */
+    @mixin sprite-global($w, $h, $x, $y) {
+      width:$w;
+      height:$h;
 
-			text-indent: -9999px;
-		}
+      background: url('../../library/imgs/main-sprite.png') no-repeat $x $y;
+    }
+  
+  /* ---- Sprite with Variable Img ---- */
+    @mixin sprite-variable($w, $h, $x, $y, $url) {
+      width:$w;
+      height:$h;
+
+      background: $url no-repeat $x $y;
+
+      text-indent: -9999px;
+    }

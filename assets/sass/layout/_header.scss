@@ -3,10 +3,6 @@
 --------- */
   .site-head {
     width: 100%;
-
-    margin: 0 auto;
-
-    text-align: center;
   }
     .site-logo-wrap {
       width: 100%;
@@ -34,8 +30,11 @@
       background: $dark-blue;
 
       ul {
-        margin: 0 auto;
+        @include wrapperEl;
+
         padding: 0;
+
+        text-align: center;
       }
       li {
         display: inline-block;

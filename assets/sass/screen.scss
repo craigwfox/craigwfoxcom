@@ -15,16 +15,17 @@ https://github.com/craigwfox/craigwfox-v4.git
 /* Compass Calls and Resets */
   @import "bits/reset";
 
+/* General Styles */
+  @import "bits/type";
+  @import "bits/chunks";
+  @import "bits/forms";
+
 /* Page Layout */
   @import "layout/header";
   @import "layout/footer";
   @import "layout/grid";
   @import "layout/page";
-
-/* General Styles */
-  @import "bits/type";
-  @import "bits/chunks";
-  @import "bits/forms";
+  @import "bits/media_queries";
 
 /* Jekyll Syntax CSS */
   @import "bits/syntax";
