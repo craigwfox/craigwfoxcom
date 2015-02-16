@@ -12,8 +12,6 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
 ******************************************************* */
 (function($){
   var scrollNav = function(){
-    console.log('scrollNav Running')
-    
 
     var nav = $('.site-nav');
 
@@ -24,8 +22,6 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
           curNav = el.attr('data-nav'),
           curSec = $('body').find('*[id="'+curNav+'"]'),
           curLoc = curSec.position().top;
-      
-      console.log(curLoc);
 
       $('body').animate({
         scrollTop: curLoc

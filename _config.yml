@@ -5,11 +5,11 @@ permalink: pretty
 
 exclude: [
 	node_modules,
-	assets/sass,
-	assets/jsbin,
+	src,
 	"*.sublime-project",
 	"*.sublime-workspace",
 	"Gruntfile.js",
+	"gulpfile.js",
 	"CNAME",
 	"LICENSE",
 	"npm-debug.log",

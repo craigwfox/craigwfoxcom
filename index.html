@@ -3,7 +3,7 @@ layout: default
 title: Craig Fox // Front-End Developer
 ---
 
-<section class="grid-wrap intro">
+<section class="grid-row intro">
   <div class="grid-1-2 intro__text">
     <p>I love design and clean, semantic code. My specialty is front-end development.</p>
   </div>
@@ -12,24 +12,30 @@ title: Craig Fox // Front-End Developer
   </div>
 </section>
 
-<section id="about" class="about grid-row">
-  <h2 class="section-title">About Me</h2>
-  <div class="grid-2-3">    
-    <p>Currently I'm the lead front-end developer for the Richland Group, in Fort Smith, Ar. I make websites there using HTML, CSS, Javascript, and Wordpress.</p>
 
-    <p>I love what I do and I feel that shows in my work. Whether it's writing clean code or designing a user-friendly site.</p>
-  </div>
-  <div class="grid-1-3 about-image">
-    <img src="/assets/images/craig-fox.jpg" alt="Craig Fox - Web Developer" />
-  </div>
-</section>
+<div class="about__wrapper">
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="grid-row">
+      <div class="grid-2-3 about__copy">    
+        <p>Currently I'm the lead front-end developer for the Richland Group, in Fort Smith, Ar. I make websites there using HTML, CSS, Javascript, and Wordpress.</p>
 
-<section id="work" class="portfolio grid-row">
+        <p>I love what I do and I feel that shows in my work. Whether it's writing clean code or designing a user-friendly site.</p>
+      </div>
+      <div class="grid-1-3 about__image">
+        <img src="/assets/images/craig-fox.jpg" alt="Craig Fox - Web Developer" />
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="work" class="portfolio">
   <h2 class="section-title">My Work</h2>
-  {% for post in site.categories['portfolio']  %}
-    <article class="portfolio-item">
+  <div class="grid-row">
+  {% for post in site.categories['portfolio'] limit:4  %}
+    <article class="grid-1-2 portfolio-item">
       <div class="grid-1-3 pi-feat">
-        <a href="{{ post.site-url }}"><img class="pi-img" src="{{ post.feat-image }}" alt="{{ post.feat-image-alt }}" /></a>
+        <a href="{{ post.site-url }}"><img class="pi-img" src="{{ post.feat-image }}" alt="{{ post.feat-image-alt }}" rel></a>
       </div>
 
       <div class="grid-2-3 pi-details">
@@ -39,4 +45,5 @@ title: Craig Fox // Front-End Developer
       </div>
     </article>
   {% endfor %}
+  </div>
 </section>

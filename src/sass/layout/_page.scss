@@ -14,9 +14,9 @@
   Home Page
 ------------------ */
   .section-title {
-    padding: 0 0 .675em;
+    padding: 0 0 .675rem;
 
-    font-size: 2.475em;
+    font-size: 2.475rem;
     font-family: $text-font;
   }
 
@@ -24,17 +24,25 @@
     .intro {
       @include wrapperEl(90%, 1250px);
 
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
       p {
+        padding: 0;
+
         font-size: 1.675rem;
       }
     }
 
   /* About */
-    .about {
-      padding: 2em 5%;
+    .about__wrapper {
+      padding: 2em 0;
 
       background: $dark-blue;
-
+    }
+    .about {
+      @include wrapperEl(90%, 1250px);
+      
       p {
         max-width: 1000px;
 
@@ -52,20 +60,23 @@
       }
     }
 
+    .about__copy {
+      padding-left: 0;
+    }
+    .about__image {
+      padding-right: 0;
+    }
+
   /* Portfolio */
     .portfolio {
-      max-width: 1500px;
-      width: 95%;
+      @include wrapperEl(90%, 1250px);
 
-      display: flex;
-      align-items:top;
-      flex-wrap:wrap;
-
-      margin-left: auto;
-      margin-right: auto;
+      padding:2rem 0;
 
       .section-title {
         width: 100%;
+
+        padding:0 0 1.375rem;
       }
     }
       .portfolio-item {
@@ -75,11 +86,14 @@
         align-items:top;
         flex-wrap:wrap;
 
-        padding-bottom: 2em;
+        padding:0 0 3rem;
       }
 
         .pi-feat {
           width: 40%;
+
+          padding-left: 0;
+          padding-right: 0;
         }
           .pi-img {
             display: block;
@@ -90,6 +104,8 @@
 
         .pi-details {
           width: 60%;
+
+          padding-right: 0;
         }
           .pi-title {
             padding-top: 0;
@@ -105,7 +121,7 @@
 
             border-bottom: 2px solid $links;
 
-            font-size: 1.175rem;
+            font-size: 1.075rem;
             line-height: 1.275em;
 
             a {
@@ -124,8 +140,8 @@
           .portfolio-role {
             li {
               color: $links;
-              font-size: 1.375rem;
-              line-height: 1.275em;
+              font-size: 1.175rem;
+              line-height: 1.475em;
             }
           }
 

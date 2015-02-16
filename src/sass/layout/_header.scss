@@ -44,18 +44,11 @@
 
         padding:.25em 1.5em;
 
-        font:normal 700 1.175rem/1em $head-font;
-      }
+        color: lighten($links,10%);
+        font:normal 700 1.675rem/1em $head-font;
 
-      @media (max-width: 400px) {
-        a {
-          padding: .25em 1em;
-        }
-      }
-
-      @media (max-width: 350px) {
-        a {
-          padding: .25em .5em;
+        &:hover, &:active, &:focus {
+          color: lighten($links,20%);
         }
       }
     }
