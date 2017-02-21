@@ -1,6 +1,8 @@
 name: Craigwfox.com
 highlighter: rouge
 permalink: pretty
+url: https://craigwfox.com/
+enforce_ssl: craigwfox.com/
 
 exclude: [
 	node_modules,
