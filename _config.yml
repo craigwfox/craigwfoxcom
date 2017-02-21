@@ -1,5 +1,5 @@
 name: Craigwfox.com
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 
 exclude: [
