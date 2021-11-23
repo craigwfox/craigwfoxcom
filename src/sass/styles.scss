@@ -11,6 +11,13 @@
 @import "./support/variables";
 
 // ====---------------====
+// Type
+// ====---------------====
+@import "./type/misc";
+@import "./type/headings";
+@import "./type/lists";
+
+// ====---------------====
 // Layout
 // ====---------------====
 @import "./layout/base";
