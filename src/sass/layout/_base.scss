@@ -14,9 +14,9 @@ body,
 }
 
 body {
-  background: var(--clr-bg);
+  background: hsl(var(--clr-bg));
 
-  color: var(--clr-text-base);
+  color: hsl(var(--clr-text-base));
   font: 400 var(--fs-base) / var(--lh-base) var(--font-main);
 }
 

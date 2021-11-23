@@ -1,0 +1,35 @@
+// ---------------------------------------------
+// ======---------------------------------======
+//  Site header
+// ======---------------------------------======
+// ---------------------------------------------
+.site-header {
+  display: grid;
+  place-content: center;
+  gap: calc(var(--sp-base) / 2);
+
+  padding: var(--sp-base);
+
+  img {
+    max-width: 15rem;
+  }
+}
+
+.site-header nav {
+  display: flex;
+  place-content: center;
+  gap: var(--sp-base);
+
+  a {
+    --link-clr: var(--clr-light);
+
+    padding: 0 0.5rem;
+
+    border-bottom: 0.5rem solid hsl(var(--link-clr));
+
+    &:hover,
+    &:focus {
+      --link-clr: var(--clr-main);
+    }
+  }
+}
