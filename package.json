@@ -5,8 +5,7 @@
   "version": "5.0.0",
   "author": "Craig Fox <craig@craigwfox.com>",
   "dependencies": {
-    "@fontsource/libre-baskerville": "^4.5.0",
-    "@fontsource/open-sans": "^4.5.2",
+    "@fontsource/rubik": "^4.5.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "gatsby": "^4.2.0",

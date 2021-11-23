@@ -9,6 +9,7 @@
 // ====---------------====
 @import "./support/reset";
 @import "./support/variables";
+@import "./support/mixins";
 
 // ====---------------====
 // Type
@@ -18,12 +19,13 @@
 @import "./type/lists";
 
 // ====---------------====
+// Bits
+// ====---------------====
+@import "./bits/images";
+
+// ====---------------====
 // Layout
 // ====---------------====
 @import "./layout/base";
 @import "./layout/header";
 @import "./layout/footer";
-
-// ====---------------====
-// Components
-// ====---------------====

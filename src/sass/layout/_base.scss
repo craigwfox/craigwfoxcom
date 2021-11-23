@@ -23,3 +23,70 @@ body {
 #gatsby-focus-wrapper {
   min-height: 100vh;
 }
+
+// ====---------------====
+// Main
+// ====---------------====
+.main {
+}
+
+// ====---------------====
+// Sections
+// ====---------------====
+.section {
+  max-width: var(--w-lg);
+  width: calc(100% - var(--sp-md));
+
+  padding: var(--sp-md) 0;
+  margin: 0 auto;
+
+  border-bottom: 0.5rem solid hsl(var(--clr-dark));
+
+  @include mqMed {
+    max-width: calc(var(--w-lg) - 4rem);
+  }
+
+  h1 {
+    font-size: clamp(2.3rem, 6vw, 3.5rem);
+  }
+
+  p {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.section--about {
+  @include mqSmol {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0 var(--sp-md);
+  }
+
+  h1 {
+    @include mqSmol {
+      grid-column: 1 / -1;
+      grid-row: 1;
+
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  > div {
+    @include mqSmol {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
+  .about-image {
+    @include mqSmol {
+      grid-column: 2;
+      grid-row: 2 / -1;
+    }
+  }
+}

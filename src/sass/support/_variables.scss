@@ -7,8 +7,10 @@
   // Colors
   // ====---------------====
   --clr-bg: 220 39% 15%;
+  --clr-dark: 220 39% 10%;
   --clr-main: 0 100% 67%;
   --clr-light: 44 100% 93%;
+  --clr-bright: 43 100% 65%;
   --clr-text-base: 220 39% 95%;
 
   // ====---------------====
@@ -16,11 +18,19 @@
   // ====---------------====
   --fs-base: 1.2rem;
   --lh-base: 1.5;
-  --font-main: "Libre Baskerville", serif;
-  --font-accent: "Open Sans", sans-serif;
+  --font-main: "Rubik", sans-serif;
 
   // ====---------------====
   // Spacing
   // ====---------------====
-  --sp-base: 2rem;
+  --sp-sm: 1rem;
+  --sp-md: 2rem;
+  --sp-lg: 3rem;
+
+  // ====---------------====
+  // Widths
+  // ====---------------====
+  --w-sm: 45rem;
+  --w-md: 65rem;
+  --w-lg: 75rem;
 }

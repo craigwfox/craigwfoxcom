@@ -1,5 +1,5 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import iconFox from "../images/fox-icon.svg"
 
 const Footer = () => (
   <footer id="footer" className="site-footer">
@@ -12,29 +12,28 @@ const Footer = () => (
       <li>
         <a href="http://www.linkedin.com/in/craigwfox">LinkedIn</a>
       </li>
-    </ul>
-
-    <ul>
-      <li>
-        ©{` `}
-        {new Date().getFullYear()}
-        {` `}
-        Craig Fox
-        {` `}
-        <StaticImage
-          src="../images/fox-icon.svg"
-          alt="Orange fox head illustration"
-          width={15}
-          height={15}
-        />
-      </li>
-      <li>Front-End Developer</li>
       <li>
         <a href="mailto:info@craigwfox.com" target="_blank" rel="noreferrer">
           Email me
         </a>
       </li>
     </ul>
+
+    <p>
+      ©{` `}
+      {new Date().getFullYear()}
+      {` `}
+      Craig Fox
+      {` `}
+      <img
+        src={iconFox}
+        alt="Orange fox head illustration"
+        width="25"
+        aria-hidden="true"
+      />
+      {` `}
+      Front-end developer
+    </p>
   </footer>
 )
 

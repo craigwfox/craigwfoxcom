@@ -5,5 +5,5 @@
  */
 
 // You can delete this file if you're not using it
-import "@fontsource/open-sans"
-import "@fontsource/libre-baskerville"
+import "@fontsource/rubik/400.css"
+import "@fontsource/rubik/700.css"
