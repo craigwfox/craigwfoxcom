@@ -5,14 +5,18 @@ import { Link } from "gatsby"
 import svgCraigLogo from "../images/craig-logo.svg"
 
 const Header = ({ siteDescription }) => (
-  <header className="site-head">
-    <Link to="/" className="site-logo-wrap">
+  <header className="site-header">
+    <Link to="/">
       <img
         className="site-logo"
         src={svgCraigLogo}
         alt="Craig Fox Web Designer and Front-End Developer"
       />
     </Link>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/">Blog</a>
+    </nav>
   </header>
 )
 
