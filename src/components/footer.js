@@ -1,33 +1,38 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Footer = () => (
-  <footer id="contact" className="site-foot">
-    <h2 className="section-title">Contact</h2>
+  <footer id="footer" className="site-footer">
+    <h2>Contact</h2>
 
-    <ul className="social-wrap">
-      <li className="social-icns">
-        <a className="github" href="https://github.com/craigwfox">
-          Github
-        </a>
+    <ul>
+      <li>
+        <a href="https://github.com/craigwfox">Github</a>
       </li>
-      <li className="social-icns">
-        <a className="linkedin" href="http://www.linkedin.com/in/craigwfox">
-          LinkedIn
-        </a>
+      <li>
+        <a href="http://www.linkedin.com/in/craigwfox">LinkedIn</a>
       </li>
     </ul>
 
-    <ul className="contact">
+    <ul>
       <li>
         ©{` `}
         {new Date().getFullYear()}
         {` `}
-        Craig Fox 🦊
+        Craig Fox
+        {` `}
+        <StaticImage
+          src="../images/fox-icon.svg"
+          alt="Orange fox head illustration"
+          width={15}
+          height={15}
+        />
       </li>
       <li>Front-End Developer</li>
       <li>
-        <a href="mailto:info@craigwfox.com">Email me</a>
+        <a href="mailto:info@craigwfox.com" target="_blank" rel="noopener">
+          Email me
+        </a>
       </li>
     </ul>
   </footer>

@@ -1,34 +1,22 @@
-@charset "UTF-8";
-/* ******************************************
-Craigwfox.com - Version 5.0
+// ---------------------------------------------
+// ======---------------------------------======
+//  Styles for craigwfox.com v5
+// ======---------------------------------======
+// ---------------------------------------------
 
-By Craig Fox @ craigwfox.com
-https://github.com/craigwfox/craigwfox-v5.git
-****************************************** */
+// ====---------------====
+// Supporting
+// ====---------------====
+@import "./support/reset";
+@import "./support/variables";
 
-// --------------------------
-// Variable and Mixins
-  @import "bits/variables";
-  @import "bits/mixins";
+// ====---------------====
+// Layout
+// ====---------------====
+@import "./layout/base";
+@import "./layout/header";
+@import "./layout/footer";
 
-// --------------------------
-// Compass Calls and Resets
-  @import "bits/reset";
-
-// --------------------------
-// General Styles
-  @import "bits/type";
-  @import "bits/chunks";
-  @import "bits/forms";
-
-// --------------------------
-// Page Layout
-  @import "layout/header";
-  @import "layout/footer";
-  @import "layout/grid";
-  @import "layout/page";
-  @import "bits/media_queries";
-
-// --------------------------
-// Jekyll Syntax CSS
-  @import "bits/syntax";
+// ====---------------====
+// Components
+// ====---------------====
