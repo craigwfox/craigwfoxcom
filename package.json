@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "craigwfox-gatsby",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "5.0.0",
+  "author": "Craig Fox <craig@craigwfox.com>",
   "dependencies": {
     "@fontsource/alfa-slab-one": "^4.5.0",
     "@fontsource/roboto": "^4.5.1",
