@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Archive from "./archive"
 import "../sass/styles.scss"
 
 const Layout = ({ children }) => {
@@ -33,7 +32,6 @@ const Layout = ({ children }) => {
       />
       <main id="maincontent" className="main">
         <section className="content">{children}</section>
-        <Archive />
       </main>
       <footer className="site-footer">
         <p>
