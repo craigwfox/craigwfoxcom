@@ -21,9 +21,8 @@ const IndexPage = () => (
         <div className="">
           <StaticImage
             src="../images/craig-becca-hiking.jpg"
-            alt="Craig sitting at a desk with Kitty laying on his arm"
-            width={500}
-            height={500}
+            alt="Craig and Becca hiking at Petit Jean Mountain"
+            width={300}
           />
         </div>
       </div>
