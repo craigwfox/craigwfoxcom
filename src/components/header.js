@@ -8,7 +8,7 @@ const Header = ({ siteDescription }) => (
   <header className="site-head">
     <Link to="/" className="site-logo-wrap">
       <img
-        class="site-logo"
+        className="site-logo"
         src={svgCraigLogo}
         alt="Craig Fox Web Designer and Front-End Developer"
       />
