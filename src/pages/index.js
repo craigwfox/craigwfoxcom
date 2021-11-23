@@ -8,29 +8,24 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <section id="about" aria-labelledby="title-about" className="section">
-      <h2 id="title-about">About Me</h2>
-      <div className="grid">
-        <div className="">
-          <p>
-            Currently I'm a front-end developer and I make websites there using
-            HTML, CSS, and Javascript. I love what I do and feel that shows in
-            my work. Whether it's writing clean code or designing a
-            user-friendly site.
-          </p>
-        </div>
-        <div className="">
-          <StaticImage
-            src="../images/craig-becca-hiking.jpg"
-            alt="Craig and Becca hiking at Petit Jean Mountain"
-            width={300}
-          />
-        </div>
+      <h2 id="title-about">About Craig</h2>
+      <p>
+        Hiya, I'm a front-end developer and have been building websites for a
+        bit over 10 years. Currently I'm working for Arkansas Blue Cross and
+        Blue Shield and do some contract work on the side.
+      </p>
+      <p>
+        I try to make my sites usable and accessible for all. Over the years
+        I've built sites static sites, WordPress, Vue, and React for companies
+        large and small.
+      </p>
+      <div>
+        <StaticImage
+          src="../images/craig-becca-hiking.jpg"
+          alt="Craig and Becca hiking at Petit Jean Mountain"
+          width={300}
+        />
       </div>
-    </section>
-
-    <section id="work" className="portfolio">
-      <h2 className="section-title">My Work</h2>
-      <div className="grid-row"></div>
     </section>
   </Layout>
 )
