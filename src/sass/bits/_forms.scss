@@ -1,0 +1,56 @@
+/* ---------
+	Forms
+--------- */
+	form {}
+
+	fieldset {}
+
+	label {
+		display: block;
+
+		padding: .675em 0 .275em;
+		margin: 0;
+
+		font: normal 400 1rem/1em $text-font;
+	}
+
+	input, select, textarea {
+		max-width: 85%;
+
+		display: block;
+
+		margin: 0 0 .875em 0;
+		padding: .275em .5em;
+
+		// box-sizing:border-box;
+
+		font: normal 400 1rem/1em $text-font;
+	}
+
+	input[type=text] {}
+
+	input[type=email] {}
+
+	input[type=radio],input[type=checkbox]  {
+		display: inline-block;
+		vertical-align: middle;
+
+		margin: 0 .375em 0 .5em;
+	}
+
+	input[type=submit] {}
+
+	select {}
+
+	option {}
+
+	textarea {}
+
+
+/* --- Main Site Search Form --- */
+	.search-form {
+		input {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}

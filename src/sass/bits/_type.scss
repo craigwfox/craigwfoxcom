@@ -1,0 +1,149 @@
+/* -----------
+  Typography
+----------- */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding:.675em 0 .125em;
+
+    color:$headline;
+    font:normal normal 600 2em/1.2em $head-font;
+  }
+  
+  h1 {
+    padding: 0 0 .25em;
+    
+    color: desaturate(blue, 60%);
+    font-size:2rem;
+  }
+  
+  h2 {
+    font-size:1.875rem;
+  }
+  
+  h3 {
+    font-size:1.675rem;
+  }
+  
+  h4 {
+    font-size:1.475rem;
+  }
+  
+  h5 {
+    font-size:1.275rem;
+  }
+  
+  h6 {
+    font-size:1rem;
+  }
+
+  p, li, dl, dt, td, input, textarea, label, select {
+    margin: 0;
+    padding:0 0 .675em;
+
+    font:normal normal 400 .9rem/1.7em $text-font;
+    color:$text;
+  }
+
+  del {
+    color: red;
+  }
+
+  a {
+    text-decoration:none;
+    color: $links;
+    font:inherit;
+
+    &:hover, &:focus {
+      color:darken($links,20%);
+    }
+  }
+
+  ul, ol {
+    margin: 0;
+
+    padding: 0 0 1em 1.675em;
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul, ol {
+      padding: 0 0 0 1.275em;
+      font-size: 16px;
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 1.5em;
+
+    p {
+      padding: 0;
+    }
+  }
+  p + blockquote {
+    padding-top: .5em;
+  }
+
+  pre {
+    padding: 0;
+    margin: 0;
+
+    background:darken(#26292c,5%);
+
+    &:before {
+      content: attr(rel);
+
+      height: auto;
+
+      display: block;
+
+      padding:.875% 2%;
+
+      background: lighten(#26292c,25%);
+
+      color: #e5f080;
+      font-size: 1.575em;
+    } 
+  }
+  code {
+    display: block;
+
+    margin: 0;
+    padding: 2%;
+
+    color: #f8f8f8;
+
+    font-size: .975em;
+  }
+    .class-name {
+      color: lighten(#4d4db3,20%);
+    }
+    .css-prop {
+      color: lighten(#4d4db3,20%);
+    }
+    .css-value {
+      color: #e5f080;
+    }
+
+/* ---- Subpage Text Styles ---- */ 
+  // Change to class wrapping subpage content
+  .content {
+    h1, h2, h3, h4, h5, h6 {
+      a {
+        color: $links;
+
+        text-decoration: none;
+      }
+    }
+    p {}
+    ul {}
+    a {
+      text-decoration: underline;
+
+      &:hover, &:focus {
+        color:darken($links,5%);
+      }
+    }
+  }

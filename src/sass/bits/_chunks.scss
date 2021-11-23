@@ -1,0 +1,86 @@
+/* ---------
+  Chunks
+--------- */
+  /* ------------------
+    Micro Clearfix
+    Nicolas Gallagher
+  ------------------ */
+    .cf:before, .cf:after {
+      content:"";
+      display:table;
+    }
+    .cf:after {
+      clear:both;
+    }
+    .cf {
+      zoom:1;
+    }
+    .hidden {
+      display: none;
+    }
+
+
+  /* ------------------
+    Logos and Icons
+  ------------------ */
+    .github {
+      @include sprite-variable(86px,76px,-90px,0,url('../images/social-icns.svg'));
+
+      display: block;
+    }
+    .facebook {
+      @include sprite-variable(86px,76px,0,0,url('../images/social-icns.svg'));
+
+      display: block;
+    }
+    .linkedin {
+      @include sprite-variable(86px,76px,-180px,0,url('../images/social-icns.svg'));
+
+      display: block;
+    }
+
+  /* ------------------
+    Container and Misc
+    Global Classes
+  ------------------ */
+      .alignleft {
+        float:left;
+        margin:0 1.175em .875em 0;
+        padding:0;
+      }
+      .alignright {
+        float:right;
+        margin:1.175em 0 .875em 1.175em;
+        padding:0;
+      }
+      .aligncenter {
+        text-align:center;
+        margin:0 1.175em .875em 1.175em;
+        padding:0;
+      }
+
+      img.alignleft, img.alignright, img.aligncenter {
+        border: .1em solid #999;
+      }
+
+      .inline-list {
+
+        ul {
+          padding-left: 0;
+        }
+        li {
+          display:inline;
+
+          padding:0 .675em;
+
+          border-right: .1em solid #999;
+          
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+            border: 0;
+          }
+        }
+      }
