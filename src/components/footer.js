@@ -30,7 +30,7 @@ const Footer = () => (
       </li>
       <li>Front-End Developer</li>
       <li>
-        <a href="mailto:info@craigwfox.com" target="_blank" rel="noopener">
+        <a href="mailto:info@craigwfox.com" target="_blank" rel="noreferrer">
           Email me
         </a>
       </li>
