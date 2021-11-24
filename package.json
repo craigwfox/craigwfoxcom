@@ -6,8 +6,6 @@
   "author": "Craig Fox <craig@craigwfox.com>",
   "dependencies": {
     "@fontsource/rubik": "^4.5.0",
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
     "gatsby": "^4.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.2.0",
     "gatsby-plugin-image": "^2.2.0",
