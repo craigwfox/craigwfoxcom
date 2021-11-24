@@ -60,6 +60,10 @@ body {
     font-size: clamp(1.1rem, 2vw, 1.6rem);
   }
 
+  p + h2 {
+    margin-top: var(--sp-lg);
+  }
+
   &:last-child {
     border-bottom: 0;
   }
@@ -94,6 +98,16 @@ body {
       grid-column: 2;
       grid-row: 2 / -1;
     }
+  }
+}
+
+// ====---------------====
+// Section - post
+// ====---------------====
+.section--post {
+  h2 {
+    text-decoration: hsl(var(--clr-bright) / 0.5) underline 0.4rem;
+    text-underline-offset: 0.3rem;
   }
 }
 
