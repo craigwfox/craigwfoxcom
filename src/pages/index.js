@@ -44,7 +44,7 @@ const IndexPage = () => (
       <div className="grid">
         <div>
           <h3>Fun sites</h3>
-          <ul class="list-links">
+          <ul className="list-links">
             <li>
               <a href="https://movies.craigwfox.com">Fox moves of 2021</a>
             </li>
@@ -55,7 +55,7 @@ const IndexPage = () => (
         </div>
         <div>
           <h3>Links</h3>
-          <ul class="list-links">
+          <ul className="list-links">
             <li>
               <a href="https://github.com/craigwfox">Github</a>
             </li>
@@ -66,7 +66,7 @@ const IndexPage = () => (
         </div>
         <div>
           <h3>Posts</h3>
-          <ul class="list-links">
+          <ul className="list-links">
             <li>
               <a href="/posts/equal-height-cols">
                 Different methods for equal height columns
