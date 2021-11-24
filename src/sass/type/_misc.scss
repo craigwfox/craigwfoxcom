@@ -12,7 +12,8 @@ a {
 
   cursor: pointer;
   color: hsl(var(--link-clr));
-  border-bottom: 0.2rem solid hsl(var(--link-clr));
+  text-decoration: underline 0.2rem;
+  text-underline-offset: 0.4rem;
 
   transition: all var(--speed-main) ease;
 

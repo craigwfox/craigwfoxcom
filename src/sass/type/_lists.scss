@@ -4,8 +4,37 @@
 // ======---------------------------------======
 // ---------------------------------------------
 
+// ====---------------====
+// List of links
+// ====---------------====
 .list-links {
   li {
     margin-bottom: var(--sp-sm);
+  }
+}
+
+// ====---------------====
+// List of posts
+// ====---------------====
+.list-posts {
+  li {
+    display: grid;
+    place-items: start;
+
+    margin-bottom: var(--sp-sm);
+    padding-bottom: calc(var(--sp-sm) * 1.5);
+
+    border-bottom: 0.2rem solid hsl(var(--clr-dark) / 0.5);
+
+    &:last-child {
+      border-bottom: 0;
+
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  time {
+    font-size: 1rem;
   }
 }
