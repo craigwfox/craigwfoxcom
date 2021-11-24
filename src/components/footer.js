@@ -2,7 +2,7 @@ import * as React from "react"
 import iconFox from "../images/fox-icon.svg"
 
 const Footer = () => (
-  <footer id="footer" className="site-footer">
+  <footer id="footer" className="site-footer" aria-label="Site footer">
     <h2>Contact</h2>
 
     <ul>
