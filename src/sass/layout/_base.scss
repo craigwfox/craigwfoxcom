@@ -106,8 +106,20 @@ body {
 // ====---------------====
 .section--post {
   h2 {
+    margin-top: var(--sp-lg);
+
     text-decoration: hsl(var(--clr-bright) / 0.5) underline 0.4rem;
     text-underline-offset: 0.3rem;
+  }
+
+  iframe {
+    max-width: 90%;
+
+    margin: 0.7rem 0 var(--sp-md);
+  }
+
+  pre {
+    max-width: 90%;
   }
 }
 

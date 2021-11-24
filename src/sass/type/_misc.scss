@@ -29,3 +29,11 @@ a {
 p {
   margin-bottom: var(--sp-para);
 }
+
+.disclaimer {
+  margin-top: var(--sp-sm);
+
+  color: hsl(var(--clr-text-base) / 0.8);
+  font-size: 0.8rem;
+  font-style: italic;
+}
