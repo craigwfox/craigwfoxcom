@@ -6,9 +6,8 @@ import svgCraigLogo from "../images/craig-logo-red.svg"
 
 const Header = ({ siteDescription }) => (
   <header className="site-header">
-    <Link to="/">
+    <Link to="/" className="site-logo">
       <img
-        className="site-logo"
         src={svgCraigLogo}
         alt="Craig Fox Web Designer and Front-End Developer"
       />

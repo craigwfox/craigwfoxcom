@@ -8,14 +8,18 @@
 // Links
 // ====---------------====
 a {
-  --link-clr: var(--clr-main);
+  --link-clr: var(--clr-link);
 
   cursor: pointer;
   color: hsl(var(--link-clr));
+  text-decoration: underline 0.2rem;
+  text-underline-offset: 0.4rem;
+
+  transition: all var(--speed-main) ease;
 
   &:hover,
   &:focus {
-    --link-clr: var(--clr-light);
+    --link-clr: var(--clr-bright);
   }
 }
 

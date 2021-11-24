@@ -27,21 +27,27 @@
   }
 }
 
+.site-logo {
+  border-bottom: 0;
+
+  transition: all var(--speed-main) ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(90%);
+  }
+}
+
 .site-header nav {
   display: flex;
   place-content: center;
   gap: var(--sp-md);
 
   a {
-    --link-clr: var(--clr-light);
-
     padding: 0 0.5rem;
 
     border-bottom: 0.5rem solid hsl(var(--link-clr));
 
-    &:hover,
-    &:focus {
-      --link-clr: var(--clr-bright);
-    }
+    text-decoration: none;
   }
 }

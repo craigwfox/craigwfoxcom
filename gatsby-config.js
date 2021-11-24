@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Craig Fox // Front-End Developer`,
-    description: `Craig Fox - front-end developer, nerd, human.`,
+    title: `Craig Fox, Front-End Developer`,
+    description: `Craig Fox - front-end developer, maker, and geek.`,
     author: `@craigwfox`,
     siteUrl: `https://craigwfox.com/`,
   },

@@ -12,7 +12,9 @@ const IndexPage = () => (
       aria-labelledby="title-about"
       className="section section--about"
     >
-      <h1 id="title-about">I'm Craig Fox, developer, maker, and geek</h1>
+      <h1 id="title-about">
+        I'm Craig Fox, front-end developer, maker, and geek
+      </h1>
       <div>
         <p>
           Currently I'm working for Arkansas Blue Cross and Blue Shield as a
@@ -32,10 +34,57 @@ const IndexPage = () => (
 
       <StaticImage
         className="about-image"
-        src="../images/craig-becca-hiking.jpg"
+        src="../images/craig-hiking-2.jpg"
         alt="Craig and Becca hiking at Petit Jean Mountain"
         width={500}
       />
+    </section>
+
+    <section id="work" aria-labelledby="title-work" className="section">
+      <h2 id="title-work">Some things I've done</h2>
+
+      <div className="grid">
+        <div>
+          <h3>Fun sites</h3>
+          <ul className="list-links">
+            <li>
+              <a href="https://movies.craigwfox.com">Fox moves of 2021</a>
+            </li>
+            <li>
+              <a href="https://games.craigwfox.com">Games played</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <ul className="list-links">
+            <li>
+              <a href="https://github.com/craigwfox">Github</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/craigwfox">Codepen</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Posts</h3>
+          <ul className="list-posts">
+            <li>
+              <time>Nov 22, 2021</time>
+              <a href="/posts/equal-height-cols">
+                Different methods for equal height columns
+              </a>
+            </li>
+            <li>
+              <time>Nov 15, 2021</time>
+              <a href="/posts/equal-height-cols">
+                Another sweet post with a even longer title that is just
+                entirely too long
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </Layout>
 )
