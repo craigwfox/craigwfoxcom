@@ -17,7 +17,7 @@ body {
   background: hsl(var(--clr-bg));
 
   color: hsl(var(--clr-text-base));
-  font: 400 var(--fs-base) / var(--lh-base) var(--font-main);
+  font: 400 1.2rem / 1.5 var(--font-main);
 }
 
 #gatsby-focus-wrapper {
@@ -47,7 +47,13 @@ body {
   }
 
   h1 {
+    color: hsl(var(--clr-light));
     font-size: clamp(2.3rem, 6vw, 3.5rem);
+  }
+
+  h2 {
+    color: hsl(var(--clr-light));
+    margin-bottom: 1.5rem;
   }
 
   p {
@@ -89,4 +95,13 @@ body {
       grid-row: 2 / -1;
     }
   }
+}
+
+// ====---------------====
+// Grid
+// ====---------------====
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
+  gap: var(--sp-md);
 }

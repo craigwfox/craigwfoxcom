@@ -37,6 +37,45 @@ const IndexPage = () => (
         width={500}
       />
     </section>
+
+    <section id="work" aria-labelledby="title-work" className="section">
+      <h2 id="title-work">Some things I've done</h2>
+
+      <div className="grid">
+        <div>
+          <h3>Fun sites</h3>
+          <ul class="list-links">
+            <li>
+              <a href="https://movies.craigwfox.com">Fox moves of 2021</a>
+            </li>
+            <li>
+              <a href="https://games.craigwfox.com">Games played</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <ul class="list-links">
+            <li>
+              <a href="https://github.com/craigwfox">Github</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/craigwfox">Codepen</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Posts</h3>
+          <ul class="list-links">
+            <li>
+              <a href="/posts/equal-height-cols">
+                Different methods for equal height columns
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </Layout>
 )
 
