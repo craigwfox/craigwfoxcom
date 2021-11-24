@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
+import Seo from "./seo"
 
 export default class postLayout extends Component {
   render() {
@@ -8,8 +9,11 @@ export default class postLayout extends Component {
 
     return (
       <Layout>
-        <time>{markdownRemark.frontmatter.date}</time>
-        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+        <Seo title={markdownRemark.frontmatter.title} />
+        <div className="section section--post">
+          <time>{markdownRemark.frontmatter.date}</time>
+          <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+        </div>
       </Layout>
     )
   }

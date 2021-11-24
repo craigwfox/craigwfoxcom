@@ -22,25 +22,21 @@ const LISTING_QUERY = graphql`
 `
 
 const Listing = () => (
-  <StaticQuery
-    query={LISTING_QUERY}
-    render={({ allMarkdownRemark }) =>
-      allMarkdownRemark.edges.map(({ node }) => (
-        <article className="post post--listing" key={node.frontmatter.slug}>
-          <h2 className="post-title">
+  <ul className="list-posts">
+    <StaticQuery
+      query={LISTING_QUERY}
+      render={({ allMarkdownRemark }) =>
+        allMarkdownRemark.edges.map(({ node }) => (
+          <li key={node.frontmatter.slug}>
+            <time>{node.frontmatter.date}</time>
             <Link to={`/posts${node.frontmatter.slug}`}>
               {node.frontmatter.title}
             </Link>
-          </h2>
-          <time className="post-date">{node.frontmatter.date}</time>
-          <p className="post-excerpt">{node.excerpt}</p>
-          <Link to={`/posts${node.frontmatter.slug}`} className="post-link">
-            Read more
-          </Link>
-        </article>
-      ))
-    }
-  />
+          </li>
+        ))
+      }
+    />
+  </ul>
 )
 
 export default Listing
