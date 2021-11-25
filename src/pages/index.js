@@ -56,7 +56,7 @@ const IndexPage = () => (
         <h2 id="title-work">Stuff I've done</h2>
 
         <div className="grid">
-          <div>
+          {/* <div>
             <h3>Projects</h3>
             <ul className="list-links">
               <li>
@@ -66,7 +66,7 @@ const IndexPage = () => (
                 <a href="https://games.craigwfox.com">Games played</a>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div>
             <h3>Links</h3>
             <ul className="list-links">
