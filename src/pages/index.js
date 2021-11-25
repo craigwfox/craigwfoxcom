@@ -23,13 +23,13 @@ const IndexPage = () => (
           years.
         </p>
         <p>
-          When building sites I try to make my sites usable and accessible for
-          all. Over the years I've built websites using static site generators,
-          WordPress, Vue, and React sites for companies large and small.
+          When building sites I try to make them usable and accessible. Over the
+          years I've built websites using static site generators, WordPress,
+          Vue, and React sites for companies large and small.
         </p>
         <p>
-          Outside of work I woodwork, 3d print, hike, read, and play video
-          games.
+          Outside of work I like to woodwork, 3d print, hike, read, and play
+          video games.
         </p>
       </div>
 
