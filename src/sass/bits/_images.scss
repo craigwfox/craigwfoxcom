@@ -25,3 +25,11 @@
     object-position: right bottom;
   }
 }
+
+// ====---------------====
+// 404 image
+// ====---------------====
+.image-border {
+  border-radius: 5rem;
+  border: 0.5rem solid hsl(var(--clr-dark));
+}
