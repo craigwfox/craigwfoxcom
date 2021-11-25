@@ -4,14 +4,6 @@
 // ======---------------------------------======
 // ---------------------------------------------
 
-.post-note {
-  margin-top: calc(var(--sp-sm) * 0.5);
-  margin-bottom: var(--sp-para);
-
-  color: hsl(var(--clr-text-base) / 0.8);
-  font-style: italic;
-}
-
 // ====---------------====
 // Post feed
 // ====---------------====
@@ -49,4 +41,15 @@
       --link-clr: var(--clr-link);
     }
   }
+}
+
+// ====---------------====
+// Post single styles
+// ====---------------====
+.post-note {
+  margin-top: calc(var(--sp-sm) * 0.5);
+  margin-bottom: var(--sp-para);
+
+  color: hsl(var(--clr-text-base) / 0.8);
+  font-style: italic;
 }

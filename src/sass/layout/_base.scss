@@ -40,8 +40,6 @@ body {
   padding: var(--sp-md) 0;
   margin: 0 auto;
 
-  border-bottom: 0.5rem solid hsl(var(--clr-dark));
-
   @include mqMed {
     max-width: calc(var(--w-lg) - 4rem);
   }
@@ -53,7 +51,6 @@ body {
 
   h2 {
     color: hsl(var(--clr-light));
-    margin-bottom: 1.5rem;
   }
 
   p {
@@ -63,13 +60,11 @@ body {
   p + h2 {
     margin-top: var(--sp-lg);
   }
-
-  &:last-child {
-    border-bottom: 0;
-  }
 }
 
 .section--about {
+  border-bottom: 0.5rem solid hsl(var(--clr-dark));
+
   @include mqSmol {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -124,8 +119,48 @@ body {
 }
 
 // ====---------------====
-// Grid
+// Grids
 // ====---------------====
+.home-grid {
+  max-width: var(--w-lg);
+  width: calc(100% - var(--sp-md));
+
+  display: grid;
+  grid-template-columns: 100%;
+  gap: var(--sp-md);
+
+  margin: var(--sp-lg) auto 0;
+
+  @include mqSmol {
+    max-width: calc(var(--w-lg) - 2.5rem);
+
+    margin-bottom: var(--sp-lg);
+
+    border-bottom: 0;
+    grid-template-columns: 2fr 1.6fr;
+  }
+
+  .section {
+    padding-top: 0;
+
+    border-bottom: 0.5rem solid hsl(var(--clr-dark));
+
+    @include mqSmol {
+      padding-right: var(--sp-md);
+      padding-bottom: 0;
+
+      border-bottom: 0;
+      border-right: 0.5rem solid hsl(var(--clr-dark));
+    }
+
+    &:last-child {
+      border-right: 0;
+      border-bottom: 0;
+      padding-right: 0;
+    }
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, auto));

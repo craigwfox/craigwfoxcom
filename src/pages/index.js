@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SmolFeed from "../components/smolFeed"
+import { Link } from "gatsby"
 
 const IndexPage = () => (
   <Layout>
@@ -41,38 +42,45 @@ const IndexPage = () => (
       />
     </section>
 
-    <section id="work" aria-labelledby="title-work" className="section">
-      <h2 id="title-work">Some things I've done</h2>
+    <div className="home-grid">
+      <section id="posts" className="section" aria-labelledby="title-blog">
+        <header className="title-button">
+          <h2 id="title-blog">Latest</h2>
+          <Link to="posts" className="btn">
+            View archive
+          </Link>
+        </header>
+        <SmolFeed />
+      </section>
+      <section id="work" aria-labelledby="title-work" className="section">
+        <h2 id="title-work">Stuff I've done</h2>
 
-      <div className="grid">
-        <div>
-          <h3>Fun sites</h3>
-          <ul className="list-links">
-            <li>
-              <a href="https://movies.craigwfox.com">Fox moves of 2021</a>
-            </li>
-            <li>
-              <a href="https://games.craigwfox.com">Games played</a>
-            </li>
-          </ul>
+        <div className="grid">
+          <div>
+            <h3>Projects</h3>
+            <ul className="list-links">
+              <li>
+                <a href="https://movies.craigwfox.com">Fox moves of 2021</a>
+              </li>
+              <li>
+                <a href="https://games.craigwfox.com">Games played</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Links</h3>
+            <ul className="list-links">
+              <li>
+                <a href="https://github.com/craigwfox">Github</a>
+              </li>
+              <li>
+                <a href="https://codepen.io/craigwfox">Codepen</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h3>Links</h3>
-          <ul className="list-links">
-            <li>
-              <a href="https://github.com/craigwfox">Github</a>
-            </li>
-            <li>
-              <a href="https://codepen.io/craigwfox">Codepen</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3>Posts</h3>
-          <SmolFeed />
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </Layout>
 )
 
