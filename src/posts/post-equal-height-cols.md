@@ -10,13 +10,11 @@ title: "Methods for equal height columns"
   Updated for 2021, my original post on this was in 2017 and can be found on <a href="https://codepen.io/craigwfox/post/methods-for-equal-height-columns">CodePen</a>.
 </p>
 
-While looking over a competitor's newly designed website, I saw they were using float and an after element to make equal height columns. This got me to thinking about all of the different ways that you can make an equal height column layout.
-
-Below I'm going to go over various ways to layout content to be equal height.
+A few years ago, while looking over a competitor's newly designed website, I saw they were using float and an after pseudo selector to make equal height columns. This got me to thinking about all of the different ways that you can make an equal height column layout.
 
 ## Using :after and float
 
-This is the method I mentioned earlier. It's not something I have used before and is meant more for vertically centering content.
+This is the method I mentioned earlier. It's not something I have used before and is pretty unnecessary now with flex and grid. The purpose of it seems to have been meant more for vertically centering than making the columns equal height.
 
 ### Pros
 
@@ -25,12 +23,12 @@ This is the method I mentioned earlier. It's not something I have used before an
 
 ### Cons
 
-- The height isn't dynamic. If content runs long it will expand outside of the container.
-- Requires rows so if you want to swap from a 3 column layout to a two column as the browser this doesn't allow for it
+- The height isn't dynamic. If content runs long it will overflow outside of the container.
+- Requires rows so if you want to swap from a 3 column layout to a two column as the browser resizes it requires a decent bit of CSS
 
 ### The HTML
 
-The HTML is a typical grid layout. You have a row containing your columns.
+The HTML is a typical grid layout of rows and columns. Very similar to what you would see in older version of Bootstrap.
 
 ```html
 <div class="row">
@@ -45,7 +43,7 @@ The HTML is a typical grid layout. You have a row containing your columns.
 
 ### The CSS
 
-For the CSS you have a row with a clearfix. Then the columns that have max-height's set to limit the `padding-top: 100%` from expanding too far.
+For the CSS you have a row with a clearfix. Then the column will have a `max-height` and the col's &:after pseudo selector has padding 100%.
 
 ```css
 .row:after {
@@ -77,12 +75,12 @@ For the CSS you have a row with a clearfix. Then the columns that have max-heigh
 
 ## Table-Cell
 
-This was one of my personal gotos before using starting to use flexbox. It is fairly easy to work with and had solid browser support in older versions of IE.
+This was one of my personal gotos before using starting to use flex and grid. It is fairly easy to work with and at the time I used it had solid browser support in older versions of IE, while I still needed to support that.
 
 ### Pros:
 
 - Columns are equal height.
-- Great support/fallback for ie9
+- Great support/fallback for ie9 (if that something you might still need)
 
 ### Cons:
 
@@ -132,12 +130,11 @@ The CSS is simple. The `.col` class is given the `display: table-cell` property.
 
 - Equal height columns
 - Can move and reorder content with CSS
-- Doesn't require rows to have multiple rows of columns, so if you need to swap from the number of columns you can using css
+- Doesn't require rows to have multiple rows of columns, so if you need to swap from the number of columns you can by adjusting the widths
 
 ### Cons:
 
-- Requires quite a few prefixes for browser support (Autoprefixer makes this easy)
-- If you need to support older versions of IE (9 and below) you will need fallbacks
+- Not really any cons these days. It works in all modern browsers (and even IE 11 with some prefixing and a bit of tweaking here and there)
 
 ### The HTML
 
@@ -188,12 +185,12 @@ For a more complete guide to flex box check out the [CSS-Tricks guide](https://c
 
 ### Pros:
 
-- Tons of options for fine tune control of how the layout works. You be broad or define the layout element by element.
-- Like Flexbox you can rearrange your content with CSS making coding for different resolutions easier.
+- Tons of options for fine tune control of how the layout works. You can go pretty simple or you can precisely control where each element goes in the grid.
+- Like Flexbox you can rearrange your content with CSS just by swapping the rows / cols (do remember that just because you reorder the elements within the grid, screen readers and tabbing will still follow the order of the HTML not necessarily how the screen renders)
 
 ### Cons:
 
-- Not as solid browser support as Flexbox
+- Not really any cons these days. It works in all modern browsers (and even IE 11 with some prefixing and a bit of tweaking here and there)
 
 ### The HTML
 
