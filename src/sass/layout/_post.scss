@@ -11,3 +11,42 @@
   color: hsl(var(--clr-text-base) / 0.8);
   font-style: italic;
 }
+
+// ====---------------====
+// Post feed
+// ====---------------====
+
+.post-feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: var(--sp-md) var(--sp-sm);
+}
+
+.post {
+  display: grid;
+  place-items: start;
+  gap: 0.5rem;
+
+  padding: var(--sp-sm) var(--sp-sm) var(--sp-md);
+
+  background: hsl(var(--clr-dark) / 0.3);
+
+  h2 {
+    margin-bottom: 0;
+
+    font-size: 1.7rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    --link-clr: var(--clr-bright);
+
+    &:hover,
+    &:focus {
+      --link-clr: var(--clr-link);
+    }
+  }
+}

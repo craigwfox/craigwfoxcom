@@ -14,7 +14,7 @@ const Header = ({ siteDescription }) => (
     </Link>
     <nav aria-label="Site navigation">
       <Link to="/">Home</Link>
-      <Link to="/">Blog</Link>
+      <Link to="/posts">Blog</Link>
     </nav>
   </header>
 )

@@ -3,7 +3,7 @@ import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
-import Listing from "../components/listing"
+import SmolFeed from "../components/smolFeed"
 
 const IndexPage = () => (
   <Layout>
@@ -69,7 +69,7 @@ const IndexPage = () => (
         </div>
         <div>
           <h3>Posts</h3>
-          <Listing />
+          <SmolFeed />
         </div>
       </div>
     </section>
