@@ -49,5 +49,9 @@
     border-bottom: 0.5rem solid hsl(var(--link-clr));
 
     text-decoration: none;
+
+    &[aria-current="page"] {
+      --link-clr: var(--clr-link) / 0.6;
+    }
   }
 }
