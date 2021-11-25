@@ -3,11 +3,14 @@ import iconFox from "../images/fox-icon.svg"
 
 const Footer = () => (
   <footer id="footer" className="site-footer" aria-label="Site footer">
-    <h2>Contact</h2>
+    <h2>Find me</h2>
 
     <ul>
       <li>
         <a href="https://github.com/craigwfox">Github</a>
+      </li>
+      <li>
+        <a href="https://codepen.io/craigwfox">Codepen</a>
       </li>
       <li>
         <a href="http://www.linkedin.com/in/craigwfox">LinkedIn</a>
