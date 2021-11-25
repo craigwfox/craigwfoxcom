@@ -3,6 +3,7 @@ import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import Listing from "../components/listing"
 
 const IndexPage = () => (
   <Layout>
@@ -68,21 +69,7 @@ const IndexPage = () => (
         </div>
         <div>
           <h3>Posts</h3>
-          <ul className="list-posts">
-            <li>
-              <time>Nov 22, 2021</time>
-              <a href="/posts/equal-height-cols">
-                Different methods for equal height columns
-              </a>
-            </li>
-            <li>
-              <time>Nov 15, 2021</time>
-              <a href="/posts/equal-height-cols">
-                Another sweet post with a even longer title that is just
-                entirely too long
-              </a>
-            </li>
-          </ul>
+          <Listing />
         </div>
       </div>
     </section>

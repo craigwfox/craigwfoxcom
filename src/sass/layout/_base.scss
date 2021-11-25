@@ -60,6 +60,10 @@ body {
     font-size: clamp(1.1rem, 2vw, 1.6rem);
   }
 
+  p + h2 {
+    margin-top: var(--sp-lg);
+  }
+
   &:last-child {
     border-bottom: 0;
   }
@@ -94,6 +98,28 @@ body {
       grid-column: 2;
       grid-row: 2 / -1;
     }
+  }
+}
+
+// ====---------------====
+// Section - post
+// ====---------------====
+.section--post {
+  h2 {
+    margin-top: var(--sp-lg);
+
+    text-decoration: hsl(var(--clr-bright) / 0.5) underline 0.4rem;
+    text-underline-offset: 0.3rem;
+  }
+
+  iframe {
+    max-width: 90%;
+
+    margin: 0.7rem 0 var(--sp-md);
+  }
+
+  pre {
+    max-width: 90%;
   }
 }
 

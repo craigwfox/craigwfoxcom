@@ -4,10 +4,19 @@
 // ======---------------------------------======
 // ---------------------------------------------
 
+ul {
+  padding-left: var(--sp-md);
+  margin-bottom: var(--sp-para);
+  list-style-type: disc;
+}
+
 // ====---------------====
 // List of links
 // ====---------------====
 .list-links {
+  padding-left: 0;
+  list-style-type: none;
+
   li {
     margin-bottom: var(--sp-sm);
   }
@@ -17,6 +26,9 @@
 // List of posts
 // ====---------------====
 .list-posts {
+  padding-left: 0;
+  list-style-type: none;
+
   li {
     display: grid;
     place-items: start;

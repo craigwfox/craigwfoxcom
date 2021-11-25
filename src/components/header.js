@@ -12,7 +12,7 @@ const Header = ({ siteDescription }) => (
         alt="Craig Fox Web Designer and Front-End Developer"
       />
     </Link>
-    <nav>
+    <nav aria-label="Site navigation">
       <Link to="/">Home</Link>
       <Link to="/">Blog</Link>
     </nav>
