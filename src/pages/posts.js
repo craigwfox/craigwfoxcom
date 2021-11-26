@@ -1,6 +1,5 @@
 import * as React from "react"
 import Seo from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import BigFeed from "../components/bigFeed"
