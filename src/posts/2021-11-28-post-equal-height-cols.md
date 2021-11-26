@@ -1,6 +1,6 @@
 ---
 slug: "/methods-for-equal-height-columns"
-date: "2021-11-24"
+date: "2021-11-28"
 title: "Methods for equal height columns"
 ---
 

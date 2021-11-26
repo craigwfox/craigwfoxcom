@@ -96,6 +96,15 @@ module.exports = {
               escapeEntities: {},
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              wrapperStyle:
+                "margin-left: 0; margin-right: 0; border: 0.4rem solid hsl(var(--clr-dark));",
+              withWebp: true,
+            },
+          },
         ],
       },
     },
