@@ -1,0 +1,35 @@
+// ---------------------------------------------
+// ======---------------------------------======
+//  Images
+// ======---------------------------------======
+// ---------------------------------------------
+
+.about-image {
+  max-width: 20rem;
+  max-height: 20rem;
+  overflow: hidden;
+
+  align-self: center;
+
+  display: block;
+
+  margin: 0 auto;
+
+  border-radius: 5% 45% 5% 45%;
+  border: 0.5rem solid hsl(var(--clr-dark));
+
+  img {
+    width: 140%;
+    height: 140%;
+    object-fit: cover;
+    object-position: right bottom;
+  }
+}
+
+// ====---------------====
+// 404 image
+// ====---------------====
+.image-border {
+  border-radius: 5rem;
+  border: 0.5rem solid hsl(var(--clr-dark));
+}

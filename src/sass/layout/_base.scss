@@ -1,0 +1,168 @@
+// ---------------------------------------------
+// ======---------------------------------======
+//  Base layout styles
+// ======---------------------------------======
+// ---------------------------------------------
+
+// ====---------------====
+// Content Wrappers
+// ====---------------====
+html,
+body,
+#___gatsby {
+  height: 100%;
+}
+
+body {
+  background: hsl(var(--clr-bg));
+
+  color: hsl(var(--clr-text-base));
+  font: 400 1.2rem / 1.5 var(--font-main);
+}
+
+#gatsby-focus-wrapper {
+  min-height: 100vh;
+}
+
+// ====---------------====
+// Main
+// ====---------------====
+.main {
+}
+
+// ====---------------====
+// Sections
+// ====---------------====
+.section {
+  max-width: var(--w-lg);
+  width: calc(100% - var(--sp-md));
+
+  padding: var(--sp-md) 0;
+  margin: 0 auto;
+
+  @include mqMed {
+    max-width: calc(var(--w-lg) - 4rem);
+  }
+
+  h1 {
+    color: hsl(var(--clr-light));
+    font-size: clamp(2.3rem, 6vw, 3.5rem);
+  }
+
+  h2 {
+    color: hsl(var(--clr-light));
+  }
+
+  p {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+  }
+
+  p + h2 {
+    margin-top: var(--sp-lg);
+  }
+}
+
+.section--about {
+  border-bottom: 0.5rem solid hsl(var(--clr-dark));
+
+  @include mqSmol {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0 var(--sp-md);
+  }
+
+  h1 {
+    @include mqSmol {
+      grid-column: 1 / -1;
+      grid-row: 1;
+
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  > div {
+    @include mqSmol {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
+  .about-image {
+    @include mqSmol {
+      grid-column: 2;
+      grid-row: 2 / -1;
+    }
+  }
+}
+
+// ====---------------====
+// Section - post
+// ====---------------====
+.section--post {
+  h2 {
+    margin-top: var(--sp-lg);
+
+    text-decoration: hsl(var(--clr-bright) / 0.5) underline 0.4rem;
+    text-underline-offset: 0.3rem;
+  }
+
+  iframe {
+    max-width: 90%;
+
+    margin: 0.7rem 0 var(--sp-md);
+  }
+
+  pre {
+    max-width: 90%;
+  }
+}
+
+// ====---------------====
+// Grids
+// ====---------------====
+.home-grid {
+  max-width: var(--w-lg);
+  width: calc(100% - var(--sp-md));
+
+  display: grid;
+  grid-template-columns: 100%;
+  gap: var(--sp-md);
+
+  margin: var(--sp-lg) auto 0;
+
+  @include mqSmol {
+    max-width: calc(var(--w-lg) - 2.5rem);
+
+    margin-bottom: var(--sp-lg);
+
+    border-bottom: 0;
+    grid-template-columns: 2fr 1.6fr;
+  }
+
+  .section {
+    padding-top: 0;
+
+    border-bottom: 0.5rem solid hsl(var(--clr-dark));
+
+    @include mqSmol {
+      padding-right: var(--sp-md);
+      padding-bottom: 0;
+
+      border-bottom: 0;
+      border-right: 0.5rem solid hsl(var(--clr-dark));
+    }
+
+    &:last-child {
+      border-right: 0;
+      border-bottom: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
+  gap: var(--sp-md);
+}

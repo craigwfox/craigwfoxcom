@@ -1,30 +1,52 @@
 {
-  "name": "craigwfoxcom",
-  "version": "1.0.0",
-  "description": "************************************************************************\r Craigwfox.com - Version 4.0",
-  "main": "gulpfile.js",
+  "name": "craigwfox-gatsby",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "5.0.0",
+  "author": "Craig Fox <craig@craigwfox.com>",
+  "dependencies": {
+    "@fontsource/rubik": "^4.5.0",
+    "gatsby": "^4.2.0",
+    "gatsby-plugin-gatsby-cloud": "^4.2.0",
+    "gatsby-plugin-image": "^2.2.0",
+    "gatsby-plugin-manifest": "^4.2.0",
+    "gatsby-plugin-offline": "^5.2.0",
+    "gatsby-plugin-react-helmet": "^5.2.0",
+    "gatsby-plugin-sass": "^5.2.0",
+    "gatsby-plugin-sharp": "^4.2.0",
+    "gatsby-remark-images": "^6.2.0",
+    "gatsby-remark-prismjs": "^6.2.0",
+    "gatsby-source-filesystem": "^4.2.0",
+    "gatsby-transformer-remark": "^5.2.0",
+    "gatsby-transformer-sharp": "^4.2.0",
+    "prismjs": "^1.25.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1",
+    "sass": "^1.43.4"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/craigwfox/craigwfox.github.io.git"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
-  "author": "Craig Fox",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/craigwfox/craigwfox.github.io/issues"
-  },
-  "homepage": "https://github.com/craigwfox/craigwfox.github.io#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglify": "^3.0.2",
-    "node-sass": "^6.0.0",
-    "run-sequence": "^2.2.1"
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

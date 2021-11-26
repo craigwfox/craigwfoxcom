@@ -1,77 +1,33 @@
-/* ---------
-	Footer
---------- */
-	.site-foot {
-		margin: 2em auto 0;
-		padding: .875em 0;
+// ---------------------------------------------
+// ======---------------------------------======
+//  Footer
+// ======---------------------------------======
+// ---------------------------------------------
 
-    background: $dark-blue;
+.site-footer {
+  max-width: var(--w-lg);
+  width: calc(100% - var(--sp-md));
 
-		text-align: center;
+  display: grid;
+  place-content: center;
+  gap: calc(var(--sp-md) / 3);
 
-    .section-title {
-      color: #94b3bf;
-    }
+  padding: var(--sp-md) var(--sp-sm);
+  margin: var(--sp-sm) auto 0;
 
-	}
-  
-  .contact {
-    padding: 1em 0 0;
+  border-top: 0.5rem solid hsl(var(--clr-main));
 
+  text-align: center;
+
+  h2 {
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    padding-left: 0;
     list-style-type: none;
-
-    li {
-      display: inline-block;
-      vertical-align: middle;
-
-      color: $cream;
-
-      &:after {
-        content: "/";
-
-        display: inline-block;
-        vertical-align: middle;
-
-        margin-right: .475em;
-        padding-left: .875em;
-      }
-      &:last-child {
-        &:after {
-          display: none;
-        }
-      }
-    }
-    a {
-      color: $cream;
-
-      &:hover, &:focus {
-        color:darken($cream,20%);
-      }
-    }
   }
-
-  .social-wrap {
-    margin: 0;
-    padding: 0;
-
-    text-align: center;
-  }
-    .social-icns {
-      display: inline-block;
-
-      padding: 0 0 0 .375em;
-
-      text-align: left;
-
-      a {
-        &:hover {
-          opacity: .8;
-        }
-      }
-    }
-
-  .credits {
-    padding: .675em 0 0;
-
-    color: $cream;
-  }
+}

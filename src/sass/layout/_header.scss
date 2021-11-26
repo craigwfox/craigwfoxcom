@@ -1,54 +1,57 @@
-/* ---------
-  Header
---------- */
-  .site-head {
-    width: 100%;
+// ---------------------------------------------
+// ======---------------------------------======
+//  Site header
+// ======---------------------------------======
+// ---------------------------------------------
+.site-header {
+  max-width: var(--w-lg);
+  width: calc(100% - var(--sp-md));
+
+  display: grid;
+  place-content: center;
+  gap: calc(var(--sp-md) / 3);
+
+  padding: var(--sp-md) var(--sp-sm) var(--sp-sm);
+  margin: 0 auto var(--sp-sm);
+
+  border-bottom: 0.5rem solid hsl(var(--clr-main));
+
+  @include mqSmol {
+    grid-template-columns: auto 1fr;
+    place-items: center start;
+    gap: var(--sp-md);
   }
-    .site-logo-wrap {
-      width: 100%;
 
-      display: block;
+  img {
+    max-width: 18rem;
+  }
+}
 
-      padding: .875em 0;
+.site-logo {
+  border-bottom: 0;
 
-      background: $dark-blue;
+  transition: all var(--speed-main) ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(90%);
+  }
+}
+
+.site-header nav {
+  display: flex;
+  place-content: center;
+  gap: var(--sp-md);
+
+  a {
+    padding: 0 0.5rem;
+
+    border-bottom: 0.5rem solid hsl(var(--link-clr));
+
+    text-decoration: none;
+
+    &[aria-current="page"] {
+      --link-clr: var(--clr-link) / 0.6;
     }
-    .site-logo {
-      width: 90%;
-      max-width: 400px;
-
-      display: block;
-
-      margin: 0 auto;
-    }
-
-  /* ---- Site Nav ---- */
-    .site-nav {
-      margin-top: .475em;
-      padding: .275em 0;
-
-      background: $dark-blue;
-
-      ul {
-        @include wrapperEl;
-
-        padding: 0;
-
-        text-align: center;
-      }
-      li {
-        display: inline-block;
-      }
-      a {
-        display:block;
-
-        padding:.25em 1.5em;
-
-        color: lighten($links,10%);
-        font:normal 700 1.675rem/1em $head-font;
-
-        &:hover, &:active, &:focus {
-          color: lighten($links,20%);
-        }
-      }
-    }
+  }
+}

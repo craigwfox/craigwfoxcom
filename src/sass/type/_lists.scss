@@ -1,0 +1,52 @@
+// ---------------------------------------------
+// ======---------------------------------======
+//  Lists
+// ======---------------------------------======
+// ---------------------------------------------
+
+ul {
+  padding-left: var(--sp-md);
+  margin-bottom: var(--sp-para);
+  list-style-type: disc;
+}
+
+// ====---------------====
+// List of links
+// ====---------------====
+.list-links {
+  padding-left: 0;
+  list-style-type: none;
+
+  li {
+    margin-bottom: var(--sp-sm);
+  }
+}
+
+// ====---------------====
+// List of posts
+// ====---------------====
+.list-posts {
+  padding-left: 0;
+  list-style-type: none;
+
+  li {
+    display: grid;
+    place-items: start;
+
+    margin-bottom: var(--sp-sm);
+    padding-bottom: calc(var(--sp-sm) * 1.5);
+
+    border-bottom: 0.2rem solid hsl(var(--clr-dark) / 0.5);
+
+    &:last-child {
+      border-bottom: 0;
+
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  time {
+    font-size: 1rem;
+  }
+}
