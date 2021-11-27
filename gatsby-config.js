@@ -125,13 +125,13 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(node => {
-                return Object.assign({}, node.frontmatter, {
-                  description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.frontmatter.slug,
-                  guid: site.siteMetadata.siteUrl + node.frontmatter.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
+                  date: edge.node.frontmatter.date,
+                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
@@ -143,7 +143,7 @@ module.exports = {
                       frontmatter {
                         title
                         slug
-                        date(formatString: "MMMM DD, YYYY")
+                        date
                       }
                       excerpt
                     }
