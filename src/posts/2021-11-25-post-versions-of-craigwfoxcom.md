@@ -15,6 +15,7 @@ This was the first version of my personal site, it was meant to be a mix of a bl
 ## Version 2.0
 
 Version two was still meant to be a portfolio site for graphic design work. I remember being really proud of the rounded corners, I had learned that you could use positioned images to create them. So I was using them everywhere.
+
 ![Screen capture of craigwfox.com version 2](../images/posts/2021-11/versions-of-craigwfox/version-2.png)
 
 ## Version 3.0
