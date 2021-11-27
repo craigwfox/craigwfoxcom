@@ -4,7 +4,7 @@ import * as React from "react"
 const BIGFEED_QUERY = graphql`
   query BlogPostBigFeed {
     allMarkdownRemark(
-      limit: 15
+      limit: 300
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
