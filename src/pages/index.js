@@ -36,7 +36,7 @@ const IndexPage = () => (
 
       <StaticImage
         className="about-image"
-        src="../images/craig-hiking-2.jpg"
+        src="../images/craig-hiking-about.webp"
         alt="Craig and Becca hiking at Petit Jean Mountain"
         width={500}
       />

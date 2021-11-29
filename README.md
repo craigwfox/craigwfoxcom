@@ -59,6 +59,10 @@ gatsby clean
 
 ## Todo
 
+### Overall
+
+- Dark and light mode options
+
 ### RSS
 
 - Add image to RSS feed
