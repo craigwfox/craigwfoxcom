@@ -8,6 +8,15 @@
 
 Repo url - https://github.com/craigwfox/craigwfox.github.io
 
+- [Scripts](#Scripts)
+- [Todo](#Todo)
+
+<br />
+
+---
+
+<br />
+
 ## Scripts
 
 ### Development mode
