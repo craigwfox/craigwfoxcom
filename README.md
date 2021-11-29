@@ -1,9 +1,8 @@
-************************************************************************
-Craigwfox.com - Version 5.0
+# craigwfox.com - Version 5.0
 
-By Craig Fox @ craigwfox.com
-https://github.com/craigwfox/craigwfox-v5.git
-************************************************************************
+![Craig fox logo](./src/images/craig-logo-red.svg | width="250")
 
-Github Repo URL: https://github.com/craigwfox/craigwfox-v45git
-Site URL: craigwfox.com
+## By Craig Fox
+
+https://github.com/craigwfox/craigwfox.github.io
+
