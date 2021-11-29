@@ -11,11 +11,7 @@ Repo url - https://github.com/craigwfox/craigwfox.github.io
 - [Scripts](#Scripts)
 - [Todo](#Todo)
 
-<br />
-
 ---
-
-<br />
 
 ## Scripts
 
@@ -59,11 +55,7 @@ Removes the `.cache` and `public` folders, can help fix some build issues.
 gatsby clean
 ```
 
-<br />
-
 ---
-
-<br />
 
 ## Todo
 
