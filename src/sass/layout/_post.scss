@@ -53,3 +53,12 @@
   color: hsl(var(--clr-text-base) / 0.8);
   font-style: italic;
 }
+
+// ====---------------====
+// Post single styles
+// ====---------------====
+.section--post {
+  iframe + p {
+    margin-top: 0;
+  }
+}
