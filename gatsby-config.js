@@ -6,6 +6,8 @@ module.exports = {
     siteUrl: `https://craigwfox.com/`,
   },
   plugins: [
+    'gatsby-plugin-pnpm',
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
