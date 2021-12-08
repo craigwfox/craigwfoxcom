@@ -7,9 +7,14 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-pnpm',
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        excludes: ['/admin', '/confirmed'],
+      },
+    },
     {
       resolve: `gatsby-plugin-plausible`,
       options: {
