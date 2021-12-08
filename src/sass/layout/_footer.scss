@@ -19,9 +19,6 @@
 
   text-align: center;
 
-  h2 {
-  }
-
   ul {
     display: flex;
     justify-content: center;
@@ -29,5 +26,9 @@
 
     padding-left: 0;
     list-style-type: none;
+  }
+
+  img {
+    display: inline-block;
   }
 }
