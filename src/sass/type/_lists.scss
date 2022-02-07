@@ -8,6 +8,10 @@ ul {
   padding-left: var(--sp-md);
   margin-bottom: var(--sp-para);
   list-style-type: disc;
+
+  li {
+    margin-bottom: calc(var(--sp-sm) / 1.5);
+  }
 }
 
 // ====---------------====
@@ -47,6 +51,6 @@ ul {
   }
 
   time {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
   }
 }

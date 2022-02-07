@@ -56,7 +56,7 @@ p {
   margin-top: var(--sp-sm);
 
   color: hsl(var(--clr-text-base) / 0.8);
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
   font-style: italic;
 }
 
