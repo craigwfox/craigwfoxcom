@@ -17,7 +17,7 @@ const Footer = () => (
       </li>
       <li>
         <a href="mailto:info@craigwfox.com" target="_blank" rel="noreferrer">
-          Email me
+          Email
         </a>
       </li>
     </ul>
