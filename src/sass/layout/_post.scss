@@ -17,6 +17,7 @@
 .post {
   display: grid;
   place-items: start;
+  grid-template-rows: auto auto 1fr;
   gap: 0.5rem;
 
   padding: var(--sp-sm) var(--sp-sm) var(--sp-md);
@@ -26,7 +27,7 @@
   h2 {
     margin-bottom: 0;
 
-    font-size: 1.7rem;
+    font-size: clamp(1.5rem, 2vw, 1.7rem);
   }
 
   p {
