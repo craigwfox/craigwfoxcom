@@ -8,6 +8,10 @@ ul {
   padding-left: var(--sp-md);
   margin-bottom: var(--sp-para);
   list-style-type: disc;
+
+  li {
+    margin-bottom: calc(var(--sp-sm) / 1.5);
+  }
 }
 
 // ====---------------====
