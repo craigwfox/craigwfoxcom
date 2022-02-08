@@ -13,6 +13,7 @@ const BIGFEED_QUERY = graphql`
             title
             slug
             date(formatString: "MMMM DD, YYYY")
+            excerpt
           }
           excerpt
         }
@@ -33,7 +34,9 @@ const BigFeed = () => (
               {node.frontmatter.title}
             </Link>
           </h2>
-          <p>{node.excerpt}</p>
+          <p>
+            {node.frontmatter.excerpt ? node.frontmatter.excerpt : node.excerpt}
+          </p>
         </article>
       ))
     }

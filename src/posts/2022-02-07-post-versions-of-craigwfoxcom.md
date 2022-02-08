@@ -3,7 +3,7 @@ slug: "/responsive-videos"
 date: "2022-02-07"
 title: "Responsive videos"
 categories: ["Web history", "Old vs new"]
-excerpt: ""
+excerpt: "A look at how responsive videos have been done in the past and how we can do them now."
 ---
 
 # Responsive Videos
