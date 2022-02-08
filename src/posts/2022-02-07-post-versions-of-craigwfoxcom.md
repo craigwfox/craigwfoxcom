@@ -8,7 +8,7 @@ excerpt: ""
 
 # Responsive Videos
 
-## How I'm done responsive videos in the past
+## How I've done responsive videos in the past
 
 In the past I've used a couple of different methods to achieve responsive videos:
 
@@ -19,7 +19,7 @@ At the end of the day both of these methods are achieving the same thing using s
 
 ### The HTML
 
-The HTMl for both is pretty straightforward you have wrapper div and an iframe. In bootstrap the iframe would need a class added to it while FitVids handled this.
+The HTML for both is pretty straightforward you have wrapper div and an iframe. In bootstrap the iframe would need a class added to it while FitVids handled this.
 
 ```HTML
 <div class="wrapper">
@@ -29,7 +29,7 @@ The HTMl for both is pretty straightforward you have wrapper div and an iframe. 
 
 ### The CSS
 
-As with the HTMl the CSS between the two is very similar.
+As with the HTML the CSS between the two is very similar.
 
 #### First you have the wrapper class
 
@@ -114,7 +114,7 @@ The CSS in this method is quite a bit more clear.
 
 ### Working example
 
-<iframe height="370" style="width: 100%;" scrolling="no" title="Responsive video" src="https://codepen.io/craigwfox/embed/qBVRXJZ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="370" style="width: 100%;" scrolling="no" title="Responsive video" src="https://codepen.io/craigwfox/embed/qBVRXJZ?default-tab=HTML%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/craigwfox/pen/qBVRXJZ">
   Responsive video</a> by Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>)
   on <a href="https://codepen.io">CodePen</a>.
