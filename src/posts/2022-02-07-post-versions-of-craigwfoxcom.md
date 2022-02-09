@@ -4,6 +4,8 @@ date: "2022-02-07"
 title: "Responsive videos"
 categories: ["Web history", "Old vs new"]
 excerpt: "A look at how responsive videos have been done in the past and how we can do them now."
+embedJs:
+  - https://cpwebassets.codepen.io/assets/embed/ei.js
 ---
 
 # Responsive Videos
@@ -114,7 +116,7 @@ The CSS in this method is quite a bit more clear.
 
 ### Working example
 
-<iframe height="370" style="width: 100%;" scrolling="no" title="Responsive video" src="https://codepen.io/craigwfox/embed/qBVRXJZ?default-tab=HTML%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="375" style="width: 100%;" scrolling="no" title="Responsive video" src="https://codepen.io/craigwfox/embed/qBVRXJZ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/craigwfox/pen/qBVRXJZ">
   Responsive video</a> by Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>)
   on <a href="https://codepen.io">CodePen</a>.
