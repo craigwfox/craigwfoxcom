@@ -3,6 +3,7 @@ slug: "/versions-of-craigwfox-com"
 date: "2021-11-25"
 title: "The versions of craigwfox.com"
 excerpt: "A look at all the versions of this site."
+image: "../images/rss/2021-11-versions-of-craigwfox.jpg"
 ---
 
 # The versions of craigwfox.com
