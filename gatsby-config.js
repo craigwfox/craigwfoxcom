@@ -6,13 +6,13 @@ module.exports = {
     siteUrl: `https://craigwfox.com/`,
   },
   plugins: [
-    'gatsby-plugin-pnpm',
+    "gatsby-plugin-pnpm",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: "gatsby-plugin-sitemap",
       options: {
-        excludes: ['/admin', '/confirmed'],
+        excludes: ["/admin", "/confirmed"],
       },
     },
     {
@@ -120,7 +120,8 @@ module.exports = {
           },
         ],
       },
-    },{
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
@@ -140,10 +141,15 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
+                  description: edge.node.frontmatter.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
                   date: edge.node.frontmatter.date,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
+                  enclosure: edge.node.frontmatter.image && {
+                    url:
+                      site.siteMetadata.siteUrl +
+                      edge.node.frontmatter.image.publicURL,
+                  },
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
@@ -157,8 +163,12 @@ module.exports = {
                         title
                         slug
                         date
+                        excerpt
+                        image  {
+                          publicURL
+                        }
                       }
-                      excerpt
+                      html
                     }
                   }
                 }
@@ -166,6 +176,8 @@ module.exports = {
             `,
             output: "/rss.xml",
             title: "Crag Fox's Blog",
+            image_url: "https://craigwfox.com/favicon-32x32.png",
+            description: "Ramblings about Front-end development by Craig Fox",
           },
         ],
       },
