@@ -60,10 +60,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        background_color: `#172135`,
+        theme_color: `#172135`,
         display: `minimal-ui`,
         icon: `src/images/fox-icon.svg`, // This path is relative to the root of the site.
       },
@@ -176,7 +174,7 @@ module.exports = {
             `,
             output: "/rss.xml",
             title: "Crag Fox's Blog",
-            image_url: "https://craigwfox.com/favicon-32x32.png",
+            image_url: "https://craigwfox.com/favicon-192x192.png",
             description: "Ramblings about Front-end development by Craig Fox",
           },
         ],
