@@ -148,7 +148,10 @@ module.exports = {
                       site.siteMetadata.siteUrl +
                       edge.node.frontmatter.image.publicURL,
                   },
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [
+                    { "content:encoded": edge.node.html },
+                    { "dc:creator": "Craig Fox" },
+                  ],
                 })
               })
             },
