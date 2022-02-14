@@ -5,6 +5,7 @@ title: "Responsive videos"
 categories: ["Web history", "Old vs new"]
 excerpt: "A look at how responsive videos have been done in the past and how we can do them now."
 image: "../images/rss/2022-02-responsive-videos.jpg"
+ogimage: "../images/rss/2022-02-responsive-videos.jpg"
 embedJs:
   - https://cpwebassets.codepen.io/assets/embed/ei.js
 ---
