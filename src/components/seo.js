@@ -19,6 +19,7 @@ function Seo({ description, lang, meta, title, frontmatter = {}, ogimage }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -59,6 +60,10 @@ function Seo({ description, lang, meta, title, frontmatter = {}, ogimage }) {
         {
           name: `twitter:card`,
           content: `summary`,
+        },
+        {
+          name: `twitter:image`,
+          content: ogimage || ``,
         },
         {
           name: `twitter:creator`,
