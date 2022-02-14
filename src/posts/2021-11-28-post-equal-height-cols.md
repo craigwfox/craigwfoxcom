@@ -4,6 +4,7 @@ date: "2021-11-28"
 title: "Methods for equal height columns"
 excerpt: "The different ways I've created equal height columns, since I first started making websites."
 image: "../images/rss/2021-11-equal-height-columns.jpg"
+ogimage: "../images/rss/2021-11-equal-height-columns.jpg"
 ---
 
 # Methods for equal height columns
