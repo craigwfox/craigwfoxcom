@@ -55,7 +55,7 @@ function Seo({ description, lang, meta, title, frontmatter = {}, ogimage }) {
         },
         {
           property: `og:image`,
-          content: ogimage || ``,
+          content: site.siteMetadata.siteUrl + ogimage || ``,
         },
         {
           name: `twitter:card`,
@@ -63,7 +63,7 @@ function Seo({ description, lang, meta, title, frontmatter = {}, ogimage }) {
         },
         {
           name: `twitter:image`,
-          content: ogimage || ``,
+          content: site.siteMetadata.siteUrl + ogimage || ``,
         },
         {
           name: `twitter:creator`,
