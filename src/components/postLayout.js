@@ -10,7 +10,8 @@ export default class postLayout extends Component {
     return (
       <Layout>
         <Seo title={markdownRemark.frontmatter.title} />
-        <Seo ogimage={markdownRemark.frontmatter.ogimage.publicURL} />
+        <Seo ogImage={markdownRemark.frontmatter.ogimage.publicURL} />
+        <Seo postDescription={markdownRemark.frontmatter.excerpt} />
 
         <div className="section section--post">
           <time>{markdownRemark.frontmatter.date}</time>
@@ -29,6 +30,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         slug
+        excerpt
         ogimage {
           publicURL
         }
