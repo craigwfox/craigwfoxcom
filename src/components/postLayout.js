@@ -7,11 +7,15 @@ export default class postLayout extends Component {
   render() {
     const { markdownRemark } = this.props.data
 
+    const seo = {
+      title: markdownRemark.frontmatter.title,
+      ogImage: markdownRemark.frontmatter.ogimage.publicURL,
+      postDescription: markdownRemark.frontmatter.excerpt,
+    }
+
     return (
       <Layout>
-        <Seo title={markdownRemark.frontmatter.title} />
-        <Seo ogImage={markdownRemark.frontmatter.ogimage.publicURL} />
-        <Seo postDescription={markdownRemark.frontmatter.excerpt} />
+        <Seo {...seo} />
 
         <div className="section section--post">
           <time>{markdownRemark.frontmatter.date}</time>

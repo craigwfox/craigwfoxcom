@@ -9,6 +9,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useLocation } from "@reach/router"
 
 function Seo({
   description,
@@ -18,6 +19,7 @@ function Seo({
   frontmatter = {},
   ogImage,
   postDescription,
+  pagePath,
 }) {
   const { site } = useStaticQuery(
     graphql`
@@ -33,10 +35,12 @@ function Seo({
       }
     `
   )
-
+  const { pathname } = useLocation()
   const metaDescription =
     postDescription || description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const siteUrl = site.siteMetadata.siteUrl
+  const pageUrl = siteUrl + pathname
 
   return (
     <Helmet
@@ -51,36 +55,52 @@ function Seo({
           content: metaDescription,
         },
         {
+          property: `og:locale`,
+          content: `en_US`,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:url`,
+          content: pageUrl,
+        },
+        {
+          property: `og:site_name`,
+          content: `Craig Fox Front-end Developer`,
         },
         {
           property: `og:description`,
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `Craig Fox Front-End Developer`,
+          property: `og:image`,
+          content: siteUrl + ogImage || ``,
         },
         {
-          property: `og:image`,
-          content: site.siteMetadata.siteUrl + ogImage || ``,
+          name: `twitter:site`,
+          content: `@craigwfox`,
         },
         {
           name: `twitter:card`,
-          content: metaDescription,
-        },
-        {
-          name: `twitter:image`,
-          content: site.siteMetadata.siteUrl + ogImage || ``,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:title`,
           content: title,
+        },
+        {
+          name: `twitter:image`,
+          content: siteUrl + ogImage || ``,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata?.author || ``,
         },
         {
           name: `twitter:description`,
