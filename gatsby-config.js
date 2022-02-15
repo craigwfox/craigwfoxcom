@@ -140,9 +140,15 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.excerpt,
-                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
+                  url:
+                    site.siteMetadata.siteUrl +
+                    "/posts" +
+                    edge.node.frontmatter.slug,
                   date: edge.node.frontmatter.date,
-                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
+                  guid:
+                    site.siteMetadata.siteUrl +
+                    "/posts" +
+                    edge.node.frontmatter.slug,
                   enclosure: edge.node.frontmatter.image && {
                     url:
                       site.siteMetadata.siteUrl +
