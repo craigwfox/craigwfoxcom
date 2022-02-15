@@ -24,6 +24,9 @@
 
   img {
     max-width: 18rem;
+    height: auto;
+
+    object-fit: contain;
   }
 }
 
