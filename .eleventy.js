@@ -27,6 +27,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addJavaScriptFunction("image", imageShortcode)
   eleventyConfig.addWatchTarget("./src/_includes/css/")
   eleventyConfig.addPassthroughCopy("./src/css/")
+  eleventyConfig.addPassthroughCopy({ "./src/fonts/": "/css/fonts" })
   eleventyConfig.setUseGitIgnore(false)
 
   return {
