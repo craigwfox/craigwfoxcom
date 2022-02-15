@@ -1,7 +1,6 @@
 ---
 layout: layouts/base.njk
 title: Home
-subtitle:
 ---
 
 <section
@@ -32,7 +31,16 @@ subtitle:
         View archive
       </a>
     </header>
-    <SmolFeed />
+    <ul class="list-posts">
+      {%- for post in collections.post | reverse -%}
+      <li>
+        <time>{{ post.data.date | postDate }}</time>
+        <a href={{ post.data.permalink }}>
+          {{ post.data.title }}
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
   </section>
 
   <section id="work" aria-labelledby="title-work" class="section">

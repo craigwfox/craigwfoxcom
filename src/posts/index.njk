@@ -8,6 +8,18 @@ subtitle:
   <h1 id="title-blog">Ramblings of me</h1>
 
   <div class="post-feed">
-    <BigFeed />
+  {%- for post in collections.post | reverse -%}
+    <article class="post" aria-labelledby="title-">
+      <time>{{ post.data.date | postDate }}</time>
+      <h2>
+        <a href={{ post.data.permalink }}>
+          {{ post.data.title }}
+        </a>
+      </h2>
+      <p>
+        {{ post.data.excerpt }}
+      </p>
+    </article>
+  {%- endfor -%}
   </div>
 </section>

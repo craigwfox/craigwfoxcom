@@ -1,5 +1,5 @@
 const Image = require("@11ty/eleventy-img")
-const { clientScript } = require("browser-sync/dist/connect-utils")
+const { DateTime } = require("luxon")
 
 async function imageShortcode(src, alt, sizes, cls) {
   let metadata = await Image(src, {
@@ -22,6 +22,29 @@ async function imageShortcode(src, alt, sizes, cls) {
 }
 
 module.exports = function (eleventyConfig) {
+  // ====---------------====
+  // Layout Aliases
+  // ====---------------====
+  eleventyConfig.addLayoutAlias("post", "layouts/post.njk")
+  eleventyConfig.addLayoutAlias("base", "layouts/base.njk")
+
+  // ====---------------====
+  // Shortcodes
+  // ====---------------====
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`)
+
+  // ====---------------====
+  // Filters
+  // ====---------------====
+
+  // Date formatting
+  eleventyConfig.addFilter("postDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL)
+  })
+
+  // ====---------------====
+  // Other configs
+  // ====---------------====
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
   eleventyConfig.addLiquidShortcode("image", imageShortcode)
   eleventyConfig.addJavaScriptFunction("image", imageShortcode)
