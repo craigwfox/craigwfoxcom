@@ -51,6 +51,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css/")
   eleventyConfig.addPassthroughCopy({ "./src/fonts/": "/css/fonts" })
 
+  // Images
+  eleventyConfig.addPassthroughCopy("./src/apple-touch-icon.png")
+  eleventyConfig.addPassthroughCopy("./src/favicon.svg")
+  eleventyConfig.addPassthroughCopy("./src/logo.svg")
+  eleventyConfig.addPassthroughCopy("./src/logo.png")
+  eleventyConfig.addPassthroughCopy("./src/logo-192-192.png")
+  eleventyConfig.addPassthroughCopy("./src/logo-512-512.png")
+
+  // Config
+  eleventyConfig.addPassthroughCopy("./src/manifest.json")
+
   // ====---------------====
   // 👀 Watchers
   // ====---------------====
