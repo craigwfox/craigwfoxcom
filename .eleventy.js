@@ -1,6 +1,7 @@
 const Image = require("@11ty/eleventy-img")
 const { DateTime } = require("luxon")
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
+const pluginRss = require("@11ty/eleventy-plugin-rss")
 
 async function imageShortcode(src, alt, sizes, cls) {
   let metadata = await Image(src, {
@@ -25,6 +26,12 @@ async function imageShortcode(src, alt, sizes, cls) {
 }
 
 module.exports = function (eleventyConfig) {
+  // ====---------------====
+  // Plugins
+  // ====---------------====
+  eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.addPlugin(pluginRss)
+
   // ====---------------====
   // Layout Aliases
   // ====---------------====
@@ -52,6 +59,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./src/fonts/": "/css/fonts" })
 
   // Images
+  eleventyConfig.addPassthroughCopy({ "./src/images/rss": "/img/rss/" })
+  eleventyConfig.addPassthroughCopy({ "./src/images/twitter": "/img/twitter/" })
   eleventyConfig.addPassthroughCopy("./src/apple-touch-icon.png")
   eleventyConfig.addPassthroughCopy("./src/favicon.svg")
   eleventyConfig.addPassthroughCopy("./src/logo.svg")
@@ -73,7 +82,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
   eleventyConfig.addLiquidShortcode("image", imageShortcode)
   eleventyConfig.addJavaScriptFunction("image", imageShortcode)
-  eleventyConfig.addPlugin(syntaxHighlight)
   eleventyConfig.setUseGitIgnore(false)
 
   return {
