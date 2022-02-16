@@ -4,9 +4,10 @@ permalink: "/posts/responsive-videos/"
 date: 2022-02-07
 title: "Responsive videos"
 categories: ["Web history", "Old vs new"]
-excerpt: "A look at how responsive videos have been done in the past and how we can do them now."
+description: "A look at how responsive videos have been done in the past and how we can do them now."
 image: "img/rss/2022-02-responsive-videos.png"
-ogimage: "img/twitter/2022-02-responsive-videos.png"
+ogImage: "img/twitter/2022-02-responsive-videos.png"
+ogImageAlt: "Learn about responsive videos"
 embedJs:
   - https://cpwebassets.codepen.io/assets/embed/ei.js
 ---

@@ -3,9 +3,10 @@ tags: post
 permalink: "/posts/versions-of-craigwfox-com/"
 date: 2021-11-25
 title: "The versions of craigwfox.com"
-excerpt: "A look at all the versions of this site."
+description: "A look at all the versions of this site."
 image: "img/rss/2021-11-versions-of-craigwfox.png"
-ogimage: "img/twitter/2021-11-versions-of-craigwfox.png"
+ogImage: "img/twitter/2021-11-versions-of-craigwfox.png"
+ogImageAlt: "The different version of craigwfox.com"
 ---
 
 # The versions of craigwfox.com

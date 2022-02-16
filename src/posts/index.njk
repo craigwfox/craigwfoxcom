@@ -1,7 +1,8 @@
 ---
 layout: layouts/base.njk
 title: Blog
-subtitle:
+ogType: article
+description: Ramblings on front-end web development
 ---
 
 <section id="blog" aria-labelledby="title-blog" class="section">
@@ -17,7 +18,7 @@ subtitle:
         </a>
       </h2>
       <p>
-        {{ post.data.excerpt }}
+        {{ post.data.description }}
       </p>
     </article>
   {%- endfor -%}

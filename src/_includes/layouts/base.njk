@@ -1,3 +1,6 @@
+---
+ogType: website
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +8,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} - {{ metadata.title }}</title>
+  <meta name="description" content="{{ description }}">
 
-  <meta name="theme-color" content="#172135">
   <link rel="icon" href="{{ '/favicon.svg' | url }}">
+
+  {# Manifest / PWA #}
+  <meta name="theme-color" content="#172135">
   <link rel="mask-icon" href="{{ '/favicon.svg' | url }}" color="#172135">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" as="style" href="{{ '/css/styles.css' }}" />
+  {# Open graph tags #}
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:type" content="{{ ogType }}" />
+  <meta property="og:description" content="{{ description }}">
+  {% if permalink %}
+    <meta property="og:url" content="{{ site.baseUrl + permalink }}" />
+  {% else %}
+    <meta property="og:url" content="{{ metadata.url + page.url }}" />
+  {% endif %}
+  {% if ogImage %}
+    <meta property="og:image" content="{{ site.baseUrl + ogImage }}" />
+    <meta name="twitter:image:alt" content="{{ ogImageAlt }}">
+  {% endif %}
 
+  {# Twitter Open #}
+
+  {# Feed / sitemap #}
   <link rel="alternate" href="{{ metadata.feed.url | url }}" type="application/atom+xml" title="{{ metadata.title }}" />
+  <link rel="sitemap" href="{{ metadata.sitemap.url | url }}" type="application/atom+xml" title="{{ metadata.title }}" />
+
+  <link rel="stylesheet" as="style" href="{{ '/css/styles.css' }}" />
 
   <script defer data-domain="craigwfox.com" src="https://plausible.io/js/plausible.js"></script>
 </head>
