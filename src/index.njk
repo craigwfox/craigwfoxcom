@@ -34,7 +34,7 @@ title: Home
     <ul class="list-posts">
       {%- for post in collections.post | reverse -%}
       <li>
-        <time>{{ post.data.date | postDate }}</time>
+        <time>{{ post.date | postDate }}</time>
         <a href={{ post.data.permalink }}>
           {{ post.data.title }}
         </a>
