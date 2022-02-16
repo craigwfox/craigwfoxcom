@@ -54,6 +54,11 @@ module.exports = function (eleventyConfig) {
     )
   })
 
+  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+  eleventyConfig.addFilter("htmlDateString", dateObj => {
+    return dateObj.toISOString()
+  })
+
   // ====---------------====
   // Pass Throughs
   // ====---------------====
