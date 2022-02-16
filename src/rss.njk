@@ -35,6 +35,7 @@
       <pubDate>{{ post.date | dateToRfc3339 }}</pubDate>
       <link href="{{ absolutePostUrl }}"/>
       <guid isPermaLink="true">{{ absolutePostUrl }}</guid>
+      <enclosure url="{{metadata.url + post.data.image }}" length="0" type="image/png" />
     </item>
     {%- endfor %}
   </channel>
