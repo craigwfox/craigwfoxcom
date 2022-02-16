@@ -1,10 +1,12 @@
 ---
-slug: "/methods-for-equal-height-columns"
-date: "2021-11-28"
+tags: post
+permalink: "/posts/methods-for-equal-height-columns/"
+date: 2021-11-28
 title: "Methods for equal height columns"
-excerpt: "The different ways I've created equal height columns, since I first started making websites."
-image: "../images/rss/2021-11-equal-height-columns.png"
-ogimage: "../images/twitter/2021-11-equal-height-columns.png"
+description: "The different ways I've created equal height columns, since I first started making websites."
+image: "img/rss/2021-11-equal-height-columns.png"
+ogImage: "img/twitter/2021-11-equal-height-columns.png"
+ogImageAlt: "A look at methods for equal height columns"
 ---
 
 # Methods for equal height columns

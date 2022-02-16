@@ -1,0 +1,14 @@
+{
+  "title": "Craig Fox Front-End Developer",
+  "url": "https://craigwfox.com",
+  "feed": {
+    "subtitle": "Ramblings about Front-end development by Craig Fox",
+    "filename": "atom.xml",
+    "path": "/feed/atom.xml",
+    "url": "https://craigwfox.com/feed/atom.xml",
+    "id": "https://craigwfox.com/"
+  },
+  "sitemap": {
+    "url": "https://craigwfox.com/sitemap.xml"
+  }
+}

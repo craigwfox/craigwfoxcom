@@ -1,11 +1,13 @@
 ---
-slug: "/responsive-videos"
-date: "2022-02-07"
+tags: post
+permalink: "/posts/responsive-videos/"
+date: 2022-02-07
 title: "Responsive videos"
 categories: ["Web history", "Old vs new"]
-excerpt: "A look at how responsive videos have been done in the past and how we can do them now."
-image: "../images/rss/2022-02-responsive-videos.png"
-ogimage: "../images/twitter/2022-02-responsive-videos.png"
+description: "A look at how responsive videos have been done in the past and how we can do them now."
+image: "img/rss/2022-02-responsive-videos.png"
+ogImage: "img/twitter/2022-02-responsive-videos.png"
+ogImageAlt: "Learn about responsive videos"
 embedJs:
   - https://cpwebassets.codepen.io/assets/embed/ei.js
 ---
@@ -25,7 +27,7 @@ At the end of the day both of these methods are achieving the same thing using s
 
 The HTML for both is pretty straightforward you have wrapper div and an iframe. In bootstrap the iframe would need a class added to it while FitVids handled this.
 
-```HTML
+```html
 <div class="wrapper">
   <iframe src="..."></iframe>
 </div>
@@ -43,7 +45,7 @@ As with the HTML the CSS between the two is very similar.
 - **Overflow** - The overflow is set to `hidden`. This prevents the video from overflowing the parent, in theory this shouldn't be needed as long as the aspect ratio of the video is right and FitVids actually omits it.
 - **Padding** - The padding is set to `0`. This clears any padding from the wrapper, because any padding on the parent would throw off the resizing of the video.
 
-```CSS
+```css
 .wrapper {
   width: 100%;
   display: block;
@@ -58,7 +60,7 @@ As with the HTML the CSS between the two is very similar.
 - **Width and height:** The width and height are set to `100%` to make the iframe match the parent containers height and width.
 - **Position:** The position is set to `absolute` and the top, bottom, left, and right to `0` (today you could do this using `inset: 0` instead).
 
-```CSS
+```css
 iframe {
   width: 100%;
   height: 100%;
@@ -77,9 +79,9 @@ This is where the real magic of it happens. You would set either the top padding
 - **Display block:** This makes sure the pseudo element works as a block level element, if you were to leave it as an inline element the top padding would have no effect.
 - **Padding top:** This is where the padding value based on the aspect ratio is added.
 
-```CSS
+```css
 .wrapper::before {
-  content:'';
+  content: "";
   display: block;
   padding-top: 56.25%;
 }
@@ -93,7 +95,7 @@ Today we have the CSS properties [aspect-ratio](https://developer.mozilla.org/en
 
 The HTML can be pretty simple. I'd suggest adding a class to iframes that you want to be responsive (I'd probably avoid globally adding it to all iframes, just incase there are embeds you don't want working this way).
 
-```HTML
+```html
 <iframe class="responsive-video" src="..."></iframe>
 ```
 
@@ -105,7 +107,7 @@ The CSS in this method is quite a bit more clear.
 - **Aspect ratio** - The aspect-ratio is set to `16 / 9` prevents the width and height from stretching the video beyond the 16:9 aspect ratio, which would result is blank space in the iframe. Additionally you can set the aspect ratio to whatever ratio you want.
 - **Object fit** - The object-fit is set to `contain` this makes the iframe try and expand to the largest width and height that it can without clipping outside it's parent bounds.
 
-```CSS
+```css
 .responsive-video {
   width: 100%;
   height: 100%;
@@ -113,7 +115,6 @@ The CSS in this method is quite a bit more clear.
   aspect-ratio: 16 / 9;
   object-fit: contain;
 }
-
 ```
 
 ### Working example
@@ -128,7 +129,7 @@ The CSS in this method is quite a bit more clear.
 
 Not all videos will be 16:9 so you could add some additional class to cover more aspect ratios.
 
-```CSS
+```css
 .responsive-video {
   width: 100%;
   height: 100%;
