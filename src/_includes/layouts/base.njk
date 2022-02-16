@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} // Craig Fox</title>
+  <title>{{ title }} - {{ metadata.title }}</title>
 
   <meta name="theme-color" content="#172135">
   <link rel="icon" href="{{ '/favicon.svg' | url }}">
@@ -13,6 +13,8 @@
   <link rel="manifest" href="/manifest.json">
 
   <link rel="stylesheet" as="style" href="{{ '/css/styles.css' }}" />
+
+  <link rel="alternate" href="{{ metadata.feed.url | url }}" type="application/atom+xml" title="{{ metadata.title }}" />
 
   <script defer data-domain="craigwfox.com" src="https://plausible.io/js/plausible.js"></script>
 </head>
