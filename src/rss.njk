@@ -1,0 +1,42 @@
+---json
+{
+  "permalink": "feed/atom.xml",
+  "excludeFromSitemap": true,
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Crag Fox's Blog",
+    "subtitle": "Ramblings about Front-end development by Craig Fox",
+    "url": "https://craigwfox.com/",
+    "feedUrl": "https://craigwfox.com/feed.xml",
+    "author": {
+      "name": "Craig Fox",
+      "email": "info@craigwfox.com"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ metadata.title }}</title>
+    <description/>
+    <link>{{ metadata.url }}</link>
+    <atom:link href="{{ metadata.feedUrl }}" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://craigwfox.com/favicon.svg</url>
+      <title>Craig Fox - Front-end Developer</title>
+      <link>https://craigwfox.com</link>
+    </image>
+    {%- for post in collections.post | reverse %}
+    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+    <item>
+      <title>{{ post.data.title }}</title>
+      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+      <pubDate>{{ post.date | dateToRfc3339 }}</pubDate>
+      <link href="{{ absolutePostUrl }}"/>
+      <guid isPermaLink="true">{{ absolutePostUrl }}</guid>
+      <enclosure url="{{metadata.url + post.data.image }}" length="0" type="image/png" />
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>
