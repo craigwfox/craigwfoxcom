@@ -59,6 +59,45 @@
   }
 }
 
-.site-header theme-switcher {
+.site-toggles {
   grid-column: 3;
+  display: flex;
+  gap: 0.7rem;
+}
+
+button[is="theme-switcher"] {
+  width: 2rem;
+
+  display: grid;
+  place-items: center;
+
+  position: relative;
+  padding: 0;
+
+  background: none;
+  border: 0;
+  border-radius: 0.5rem;
+
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+  color: var(--ts-btn-clr, #4cc6ff);
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    stroke: var(--ts-btn-clr, #4cc6ff);
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      stroke: var(--ts-btn-hover, #ffefc2);
+    }
+  }
 }
