@@ -30,6 +30,9 @@ ogType: website
   {% if ogImage %}
     <meta property="og:image" content="{{ site.baseUrl + ogImage }}" />
     <meta name="twitter:image:alt" content="{{ ogImageAlt }}">
+  {% else %}
+    <meta property="og:image" content="{{ site.baseUrl + 'img/twitter/open-graph-base.png' }}" />
+    <meta name="twitter:image:alt" content="Craig Fox, front-end developer, maker, and geek">
   {% endif %}
 
   {# Feed / sitemap #}
