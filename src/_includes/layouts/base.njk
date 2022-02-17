@@ -110,13 +110,6 @@ ogType: website
 
   <template id="ts-button-template">
     <style>
-      :host {
-        {# --ts-btn-clr: #ffefc2; #}
-        {# --ts-btn-hover: #ff5757; #}
-        --ts-btn-clr: #4cc6ff;
-        --ts-btn-hover: #ffefc2;
-      }
-
       button {
         display: grid;
         place-items:center;
@@ -125,17 +118,17 @@ ogType: website
         padding: 0.5rem;
 
         background: none;
-        border: .2rem solid var(--ts-btn-clr);
+        border: .2rem solid var(--ts-btn-clr, #4cc6ff);
         border-radius: 0.5rem;
 
         transition: all .2s ease-in-out;
 
         cursor: pointer;
-        color: var(--ts-btn-clr);
+        color: var(--ts-btn-clr, #4cc6ff);
       }
 
       button svg {
-        stroke: var(--ts-btn-clr);
+        stroke: var(--ts-btn-clr, #4cc6ff);
 
         transition: all .2s ease-in-out;
       }
@@ -154,11 +147,11 @@ ogType: website
       }
 
       button:hover, button:focus {
-        border-color: var(--ts-btn-hover);
+        border-color: var(--ts-btn-hover, #ffefc2);
       }
 
       button:hover svg, button:focus svg {
-        stroke: var(--ts-btn-hover);
+        stroke: var(--ts-btn-hover, #ffefc2);
       }
     </style>
     <button
