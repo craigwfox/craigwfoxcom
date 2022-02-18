@@ -62,7 +62,6 @@ module.exports = function (eleventyConfig) {
   // ====---------------====
   // Pass Throughs
   // ====---------------====
-  eleventyConfig.addPassthroughCopy("./src/css/")
   eleventyConfig.addPassthroughCopy({ "./src/fonts/": "/css/fonts" })
 
   // Images
@@ -80,11 +79,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/sw.js")
 
   // ====---------------====
-  // 👀 Watchers
-  // ====---------------====
-  eleventyConfig.addWatchTarget("./src/_includes/css/")
-
-  // ====---------------====
   // Other configs
   // ====---------------====
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
@@ -93,10 +87,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false)
 
   return {
+    templateFormats: ["md", "njk", "html", "liquid"],
+    pathPrefix: "/",
+    markdownTemplateEngine: "liquid",
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
+    passthroughFileCopy: true,
     dir: {
       // ⚠️ Includes are both to input directory.
       input: "./src",
       includes: "_includes",
+      data: "_data",
       output: "dist",
     },
   }
