@@ -7,7 +7,7 @@ const sass = require("gulp-sass")(require("sass"))
 // Paths
 // ====---------------====
 const paths = {
-  js: ".node_modules/simple-theme-switcher/simple-theme-switcher.js",
+  js: ["./node_modules/simple-theme-switcher/simple-theme-switcher.js"],
   css: "./src/sass/**/*.scss",
 }
 
@@ -25,7 +25,7 @@ function buildStyles() {
 // JS
 // ====---------------====
 function buildJs() {
-  return gulp.src(path.js).pipe(terser()).pipe(gulp.dest("./src/js-out"))
+  return gulp.src(paths.js).pipe(terser()).pipe(gulp.dest("./src/js-out"))
 }
 
 // ====---------------====
@@ -46,4 +46,5 @@ exports.watchers = watchers
 // ====---------------====
 // Default
 // ====---------------====
+exports.build = gulp.series(buildJs, buildStyles)
 exports.default = gulp.series(watchers)

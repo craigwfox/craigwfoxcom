@@ -4,12 +4,11 @@
   "description": "![Craig fox logo](./src/images/craig-logo-red.svg)",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --style=compressed src/sass/styles.scss src/css/styles.css",
+    "gulp": "gulp",
     "11ty": "eleventy",
     "watch:eleventy": "eleventy --serve",
-    "watch:sass": "npm run sass -- --watch",
-    "dev": "npm-run-all sass --parallel watch:*",
-    "build": "npm-run-all sass --parallel 11ty"
+    "dev": "npm-run-all gulp --parallel watch:*",
+    "build": "npm-run-all gulp --parallel 11ty"
   },
   "repository": {
     "type": "git",
