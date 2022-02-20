@@ -71,12 +71,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/favicon.svg")
   eleventyConfig.addPassthroughCopy("./src/logo.svg")
   eleventyConfig.addPassthroughCopy("./src/logo.png")
-  eleventyConfig.addPassthroughCopy("./src/logo-192-192.png")
-  eleventyConfig.addPassthroughCopy("./src/logo-512-512.png")
+  eleventyConfig.addPassthroughCopy("./src/logo-192x192.png")
+  eleventyConfig.addPassthroughCopy("./src/logo-512x512.png")
 
   // Config
   eleventyConfig.addPassthroughCopy("./src/manifest.json")
-  eleventyConfig.addPassthroughCopy("./src/sw.js")
 
   // ====---------------====
   // Other configs
