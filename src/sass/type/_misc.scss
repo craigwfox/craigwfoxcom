@@ -19,12 +19,12 @@ a {
 
   &:hover,
   &:focus {
-    --link-clr: var(--clr-bright);
+    --link-clr: var(--clr-alt-2);
   }
 }
 
 .btn {
-  --link-clr: var(--clr-dark);
+  --link-clr: var(--clr-bg-alt);
 
   display: flex;
 
@@ -40,8 +40,8 @@ a {
 
   &:hover,
   &:focus {
-    --link-clr: var(--clr-dark);
-    background: hsl(var(--clr-bright));
+    --link-clr: var(--clr-bg-alt);
+    background: hsl(var(--clr-alt-2));
   }
 }
 

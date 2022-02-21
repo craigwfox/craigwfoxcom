@@ -22,7 +22,7 @@
 
   padding: var(--sp-sm) var(--sp-sm) var(--sp-md);
 
-  background: hsl(var(--clr-dark) / 0.3);
+  background: hsl(var(--clr-bg-alt) / 0.3);
 
   h2 {
     margin-bottom: 0;
@@ -35,7 +35,7 @@
   }
 
   a {
-    --link-clr: var(--clr-bright);
+    --link-clr: var(--clr-alt-2);
 
     &:hover,
     &:focus {
