@@ -68,12 +68,16 @@
   --clr-bg: 220 39% 15%;
   --clr-bg-alt: 220 39% 10%;
 
+  --clr-border-1: 220 39% 10%;
+  --clr-border-2: 220 39% 10% / 0.5;
+
   --clr-main: 0 100% 67%;
   --clr-alt-1: 44 100% 88%;
   --clr-alt-2: 43 100% 65%;
 
   --clr-link: 199 100% 65%;
   --clr-text-base: 220 39% 95%;
+  --clr-text-reverse: var(--clr-bg-alt);
 }
 
 // ====---------------====
@@ -81,14 +85,15 @@
 // ====---------------====
 @media (prefers-color-scheme: light) {
   :root {
-    --clr-bg: 220 39% 105%;
-    --clr-bg-alt: 220 39% 100%;
-    --clr-main: 0 100% 67%;
+    --clr-bg: 38 22% 95%;
+    --clr-bg-alt: 220 39% 20%;
 
-    --clr-alt-1: 44 100% 88%;
+    --clr-main: 0 100% 67%;
+    --clr-alt-1: 199 100% 20%;
     --clr-alt-2: 43 100% 65%;
 
-    --clr-link: 199 100% 65%;
-    --clr-text-base: 220 39% 25%;
+    --clr-link: 199 100% 40%;
+    --clr-text-base: 220 39% 10%;
+    --clr-text-reverse: 220 39% 95%;
   }
 }
