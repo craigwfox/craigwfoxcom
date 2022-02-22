@@ -8,7 +8,9 @@
   width: calc(100% - var(--sp-md));
 
   display: grid;
-  place-content: center;
+  place-items: center;
+  grid-template-columns: 2.5rem 1fr 2.5rem;
+  grid-template-areas: "gap logo toggles" "gap nav toggles";
   gap: calc(var(--sp-md) / 3);
 
   padding: var(--sp-md) var(--sp-sm) var(--sp-sm);
@@ -18,11 +20,13 @@
 
   @include mqSmol {
     grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo nav toggles";
     place-items: center start;
     gap: var(--sp-md);
   }
 
   svg {
+    width: 100%;
     max-width: 18rem;
     height: auto;
 
@@ -31,6 +35,8 @@
 }
 
 .site-logo {
+  grid-area: logo;
+
   border-bottom: 0;
 
   transition: all var(--speed-main) ease-in-out;
@@ -42,6 +48,7 @@
 }
 
 .site-header nav {
+  grid-area: nav;
   display: flex;
   place-content: center;
   gap: var(--sp-md);
@@ -60,14 +67,17 @@
 }
 
 .site-toggles {
-  grid-column: 3;
+  grid-area: toggles;
+
+  align-self: flex-start;
+  justify-self: flex-end;
   display: flex;
   gap: 0.7rem;
 }
 
 button[is="theme-switcher"] {
-  --ts-btn: hsl(var(--clr-link));
-  --ts-btn-hover: hsl(var(--clr-link-hover));
+  --ts-btn: hsl(var(--clr-link-hover));
+  --ts-btn-hover: hsl(var(--clr-link));
 
   @include mqLight {
     --ts-btn: hsl(var(--clr-main));
@@ -107,5 +117,48 @@ button[is="theme-switcher"] {
     svg {
       stroke: var(--ts-btn-hover);
     }
+  }
+}
+
+// ====---------------====
+// Skip content link
+// ====---------------====
+.skip-link {
+  width: 1px;
+  height: 1px;
+
+  overflow: hidden;
+  position: absolute;
+
+  margin: -1px;
+  padding: 1rem 2rem;
+
+  background-color: hsl(var(--clr-bg-alt));
+  border: 0.3rem solid hsl(var(--clr-alt-2));
+  clip: rect(0 0 0 0);
+
+  color: hsl(var(--clr-text-base));
+  white-space: nowrap;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  &:focus {
+    width: auto;
+    height: auto;
+
+    overflow: visible;
+    position: absolute;
+    z-index: 1;
+    left: 2rem;
+    top: 2rem;
+
+    margin: 0;
+
+    clip: auto;
+  }
+
+  &:focus:hover {
+    background: hsl(var(--clr-bg));
   }
 }
