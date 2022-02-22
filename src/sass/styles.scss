@@ -3,35 +3,50 @@
 //  Styles for craigwfox.com v5
 // ======---------------------------------======
 // ---------------------------------------------
+@layer plugins, support, typography, bits, layout, themes;
 
 // ====---------------====
-// Supporting
+// Mixins
 // ====---------------====
-@import "./support/reset";
-@import "./support/variables";
 @import "./support/mixins";
-
-// ====---------------====
-// Type
-// ====---------------====
-@import "./type/misc";
-@import "./type/headings";
-@import "./type/lists";
-
-// ====---------------====
-// Bits
-// ====---------------====
-@import "./bits/images";
-
-// ====---------------====
-// Layout
-// ====---------------====
-@import "./layout/base";
-@import "./layout/header";
-@import "./layout/footer";
-@import "./layout/post";
+@import "./support/variables";
 
 // ====---------------====
 // Plugins
 // ====---------------====
-@import "./plugin/prism-tomorrow";
+@layer plugins {
+  @import "./plugin/prism-tomorrow";
+}
+
+// ====---------------====
+// Supporting
+// ====---------------====
+@layer support {
+  @import "./support/reset";
+}
+
+// ====---------------====
+// Type
+// ====---------------====
+@layer typography {
+  @import "./type/misc";
+  @import "./type/headings";
+  @import "./type/lists";
+}
+
+// ====---------------====
+// Bits
+// ====---------------====
+@layer bits {
+  @import "./bits/images";
+}
+
+// ====---------------====
+// Layout
+// ====---------------====
+@layer layout {
+  @import "./layout/base";
+  @import "./layout/header";
+  @import "./layout/footer";
+  @import "./layout/post";
+}

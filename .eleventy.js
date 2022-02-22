@@ -62,7 +62,6 @@ module.exports = function (eleventyConfig) {
   // ====---------------====
   // Pass Throughs
   // ====---------------====
-  eleventyConfig.addPassthroughCopy("./src/css/")
   eleventyConfig.addPassthroughCopy({ "./src/fonts/": "/css/fonts" })
 
   // Images
@@ -72,17 +71,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/favicon.svg")
   eleventyConfig.addPassthroughCopy("./src/logo.svg")
   eleventyConfig.addPassthroughCopy("./src/logo.png")
-  eleventyConfig.addPassthroughCopy("./src/logo-192-192.png")
-  eleventyConfig.addPassthroughCopy("./src/logo-512-512.png")
+  eleventyConfig.addPassthroughCopy("./src/logo-192x192.png")
+  eleventyConfig.addPassthroughCopy("./src/logo-512x512.png")
 
   // Config
   eleventyConfig.addPassthroughCopy("./src/manifest.json")
-  eleventyConfig.addPassthroughCopy("./src/sw.js")
-
-  // ====---------------====
-  // 👀 Watchers
-  // ====---------------====
-  eleventyConfig.addWatchTarget("./src/_includes/css/")
 
   // ====---------------====
   // Other configs
@@ -93,10 +86,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false)
 
   return {
+    templateFormats: ["md", "njk", "html", "liquid"],
+    pathPrefix: "/",
+    markdownTemplateEngine: "liquid",
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
+    passthroughFileCopy: true,
     dir: {
       // ⚠️ Includes are both to input directory.
       input: "./src",
       includes: "_includes",
+      data: "_data",
       output: "dist",
     },
   }

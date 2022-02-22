@@ -32,9 +32,9 @@ pre[class*="language-"] {
     padding: 0.2rem 1rem;
     margin: -0.5rem -0.5rem 1rem;
 
-    background: hsl(var(--clr-light) / 0.8);
+    background: hsl(var(--clr-code-title));
 
-    color: hsl(var(--clr-dark));
+    color: hsl(var(--clr-bg-alt));
     font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -61,7 +61,7 @@ pre[class*="js"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: hsl(var(--clr-dark));
+  background: hsl(var(--clr-code-bg));
 }
 
 :not(pre) > code[class*="language-"] {
