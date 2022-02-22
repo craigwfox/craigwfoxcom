@@ -40,7 +40,7 @@ ul {
     margin-bottom: var(--sp-sm);
     padding-bottom: calc(var(--sp-sm) * 1.5);
 
-    border-bottom: 0.2rem solid hsl(var(--clr-dark) / 0.5);
+    border-bottom: 0.2rem solid hsl(var(--clr-border-2));
 
     &:last-child {
       border-bottom: 0;

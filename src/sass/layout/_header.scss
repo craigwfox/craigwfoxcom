@@ -17,7 +17,7 @@
   border-bottom: 0.5rem solid hsl(var(--clr-main));
 
   @include mqSmol {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     place-items: center start;
     gap: var(--sp-md);
   }
@@ -55,6 +55,57 @@
 
     &[aria-current="page"] {
       --link-clr: var(--clr-link) / 0.6;
+    }
+  }
+}
+
+.site-toggles {
+  grid-column: 3;
+  display: flex;
+  gap: 0.7rem;
+}
+
+button[is="theme-switcher"] {
+  --ts-btn: hsl(var(--clr-link));
+  --ts-btn-hover: hsl(var(--clr-link-hover));
+
+  @include mqLight {
+    --ts-btn: hsl(var(--clr-main));
+    --ts-btn-hover: hsl(var(--clr-text-base));
+  }
+
+  width: 2rem;
+
+  display: grid;
+  place-items: center;
+
+  position: relative;
+  padding: 0;
+
+  background: none;
+  border: 0;
+  border-radius: 0.5rem;
+
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+  color: var(--ts-btn);
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    stroke: var(--ts-btn);
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      stroke: var(--ts-btn-hover);
     }
   }
 }
