@@ -8,7 +8,10 @@
   width: calc(100% - var(--sp-md));
 
   display: grid;
-  place-content: center;
+  place-items: center;
+  grid-template-columns: 2.5rem 1fr 2.5rem;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "gap logo toggles" "gap nav toggles";
   gap: calc(var(--sp-md) / 3);
 
   padding: var(--sp-md) var(--sp-sm) var(--sp-sm);
@@ -23,6 +26,7 @@
   }
 
   svg {
+    width: 100%;
     max-width: 18rem;
     height: auto;
 
@@ -31,6 +35,8 @@
 }
 
 .site-logo {
+  grid-area: logo;
+
   border-bottom: 0;
 
   transition: all var(--speed-main) ease-in-out;
@@ -42,6 +48,7 @@
 }
 
 .site-header nav {
+  grid-area: nav;
   display: flex;
   place-content: center;
   gap: var(--sp-md);
@@ -60,14 +67,17 @@
 }
 
 .site-toggles {
-  grid-column: 3;
+  grid-area: toggles;
+
+  justify-self: flex-end;
+  align-self: flex-start;
   display: flex;
   gap: 0.7rem;
 }
 
 button[is="theme-switcher"] {
-  --ts-btn: hsl(var(--clr-link));
-  --ts-btn-hover: hsl(var(--clr-link-hover));
+  --ts-btn: hsl(var(--clr-link-hover));
+  --ts-btn-hover: hsl(var(--clr-link));
 
   @include mqLight {
     --ts-btn: hsl(var(--clr-main));
