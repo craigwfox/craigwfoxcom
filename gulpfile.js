@@ -11,7 +11,7 @@ const concat = require("gulp-concat")
 const paths = {
   js: {
     input: [
-      "./node_modules/simple-theme-switcher/simple-theme-switcher.js",
+      "./node_modules/simple-theme-switcher/theme-switcher.js",
       "./src/js/main.js",
     ],
     output: "./dist/js/",

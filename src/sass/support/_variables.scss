@@ -92,24 +92,28 @@
 // ====---------------====
 // Dark theme
 // ====---------------====
+@mixin darkTheme() {
+  --clr-bg: 220 39% 15%;
+  --clr-bg-alt: 220 39% 10%;
+
+  --clr-main: 0 100% 67%;
+  --clr-alt-1: 44 100% 88%;
+  --clr-alt-2: 43 100% 65%;
+
+  --clr-link: 199 100% 65%;
+  --clr-link-hover: var(--clr-alt-2);
+  --clr-text-base: 220 39% 95%;
+  --clr-text-reverse: var(--clr-bg-alt);
+
+  // ===------ Ui nuggets ------===
+  --clr-border-1: 220 39% 10%;
+  --clr-border-2: 220 39% 10% / 0.5;
+  --clr-code-bg: var(--clr-bg-alt);
+  --clr-code-title: var(--clr-alt-1) / 0.8;
+}
+
 @layer themes.dark {
   [data-theme="dark"] {
-    --clr-bg: 220 39% 15%;
-    --clr-bg-alt: 220 39% 10%;
-
-    --clr-main: 0 100% 67%;
-    --clr-alt-1: 44 100% 88%;
-    --clr-alt-2: 43 100% 65%;
-
-    --clr-link: 199 100% 65%;
-    --clr-link-hover: var(--clr-alt-2);
-    --clr-text-base: 220 39% 95%;
-    --clr-text-reverse: var(--clr-bg-alt);
-
-    // ===------ Ui nuggets ------===
-    --clr-border-1: 220 39% 10%;
-    --clr-border-2: 220 39% 10% / 0.5;
-    --clr-code-bg: var(--clr-bg-alt);
-    --clr-code-title: var(--clr-alt-1) / 0.8;
+    @include darkTheme;
   }
 }
