@@ -66,6 +66,14 @@
 }
 
 button[is="theme-switcher"] {
+  --ts-btn: hsl(var(--clr-link));
+  --ts-btn-hover: hsl(var(--clr-link-hover));
+
+  @include mqLight {
+    --ts-btn: hsl(var(--clr-main));
+    --ts-btn-hover: hsl(var(--clr-text-base));
+  }
+
   width: 2rem;
 
   display: grid;
@@ -81,7 +89,7 @@ button[is="theme-switcher"] {
   transition: all 0.2s ease-in-out;
 
   cursor: pointer;
-  color: var(--ts-btn-clr, #4cc6ff);
+  color: var(--ts-btn);
 
   svg {
     width: 100%;
@@ -89,7 +97,7 @@ button[is="theme-switcher"] {
 
     object-fit: contain;
 
-    stroke: var(--ts-btn-clr, #4cc6ff);
+    stroke: var(--ts-btn);
 
     transition: all 0.2s ease-in-out;
   }
@@ -97,7 +105,7 @@ button[is="theme-switcher"] {
   &:hover,
   &:focus {
     svg {
-      stroke: var(--ts-btn-hover, #ffefc2);
+      stroke: var(--ts-btn-hover);
     }
   }
 }

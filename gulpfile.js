@@ -2,13 +2,18 @@ const { watch, series, src, dest } = require("gulp")
 const terser = require("gulp-terser")
 const sass = require("gulp-sass")(require("sass"))
 const browserSync = require("browser-sync").create()
+const rename = require("gulp-rename")
+const concat = require("gulp-concat")
 
 // ====---------------====
 // Paths
 // ====---------------====
 const paths = {
   js: {
-    input: ["./node_modules/simple-theme-switcher/simple-theme-switcher.js"],
+    input: [
+      "./node_modules/simple-theme-switcher/simple-theme-switcher.js",
+      "./src/js/main.js",
+    ],
     output: "./dist/js/",
   },
   styles: {
@@ -33,7 +38,11 @@ function buildStyles() {
 // JS
 // ====---------------====
 function buildJs() {
-  return src(paths.js.input).pipe(terser()).pipe(dest(paths.js.output))
+  return src(paths.js.input)
+    .pipe(concat("main.js"))
+    .pipe(terser())
+    .pipe(rename("main.min.js"))
+    .pipe(dest(paths.js.output))
 }
 
 // ====---------------====
