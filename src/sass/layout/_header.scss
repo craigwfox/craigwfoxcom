@@ -10,7 +10,6 @@
   display: grid;
   place-items: center;
   grid-template-columns: 2.5rem 1fr 2.5rem;
-  grid-template-rows: repeat(2, auto);
   grid-template-areas: "gap logo toggles" "gap nav toggles";
   gap: calc(var(--sp-md) / 3);
 
@@ -21,6 +20,7 @@
 
   @include mqSmol {
     grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo nav toggles";
     place-items: center start;
     gap: var(--sp-md);
   }
@@ -69,8 +69,8 @@
 .site-toggles {
   grid-area: toggles;
 
-  justify-self: flex-end;
   align-self: flex-start;
+  justify-self: flex-end;
   display: flex;
   gap: 0.7rem;
 }
