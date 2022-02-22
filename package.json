@@ -4,11 +4,12 @@
   "description": "![Craig fox logo](./src/images/craig-logo-red.svg)",
   "main": "index.js",
   "scripts": {
-    "build": "npm-run-all eleventy --parallel gulp",
-    "start": "npm-run-all gulp-watch --parallel eleventy-watch",
     "eleventy-build": "eleventy",
     "eleventy-watch": "eleventy --incremental --watch",
-    "gulp-watch": "gulp watch"
+    "gulp-watch": "gulp watch",
+    "gulp-build": "gulp",
+    "start": "npm-run-all gulp-watch --parallel eleventy-watch",
+    "build": "npm run eleventy-build & npm run gulp-build"
   },
   "repository": {
     "type": "git",
