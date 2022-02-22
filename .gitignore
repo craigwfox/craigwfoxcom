@@ -72,3 +72,6 @@ yarn-error.log
 dist
 src/css
 src/js-out
+
+# Local Netlify folder
+.netlify
