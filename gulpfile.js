@@ -57,6 +57,7 @@ var startServer = function (done) {
     server: {
       baseDir: paths.reload,
     },
+    open: false,
   })
   done()
 }
