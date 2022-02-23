@@ -79,11 +79,6 @@ button[is="theme-switcher"] {
   --ts-btn: hsl(var(--clr-link-hover));
   --ts-btn-hover: hsl(var(--clr-link));
 
-  @include mqLight {
-    --ts-btn: hsl(var(--clr-main));
-    --ts-btn-hover: hsl(var(--clr-text-base));
-  }
-
   width: 2rem;
 
   display: grid;

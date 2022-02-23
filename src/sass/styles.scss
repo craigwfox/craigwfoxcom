@@ -3,7 +3,6 @@
 //  Styles for craigwfox.com v5
 // ======---------------------------------======
 // ---------------------------------------------
-@layer plugins, support, themes, typography, bits, layout;
 
 // ====---------------====
 // Mixins
@@ -14,39 +13,29 @@
 // ====---------------====
 // Plugins
 // ====---------------====
-@layer plugins {
-  @import "./plugin/prism-tomorrow";
-}
+@import "./plugin/prism-tomorrow";
 
 // ====---------------====
 // Supporting
 // ====---------------====
-@layer support {
-  @import "./support/reset";
-}
+@import "./support/reset";
 
 // ====---------------====
 // Type
 // ====---------------====
-@layer typography {
-  @import "./type/misc";
-  @import "./type/headings";
-  @import "./type/lists";
-}
+@import "./type/misc";
+@import "./type/headings";
+@import "./type/lists";
 
 // ====---------------====
 // Bits
 // ====---------------====
-@layer bits {
-  @import "./bits/images";
-}
+@import "./bits/images";
 
 // ====---------------====
 // Layout
 // ====---------------====
-@layer layout {
-  @import "./layout/base";
-  @import "./layout/header";
-  @import "./layout/footer";
-  @import "./layout/post";
-}
+@import "./layout/base";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/post";

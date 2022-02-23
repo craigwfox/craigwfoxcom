@@ -29,7 +29,5 @@
 // Media Queries Other
 // ====---------------====
 @mixin mqLight {
-  @layer themes.lightMode {
-    @content;
-  }
+  @content;
 }
