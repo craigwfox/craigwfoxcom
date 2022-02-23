@@ -90,20 +90,18 @@ module.exports = function (eleventyConfig) {
   // ====---------------====
   let markdownIt = require("markdown-it")
   let markdownItAnchor = require("markdown-it-anchor")
+  let markdownItAttrs = require("markdown-it-attrs")
   let options = {
     html: true,
     breaks: true,
     linkify: true,
   }
-  let markdownLib = markdownIt(options).use(markdownItAnchor, {
-    level: [2, 3],
-    permalink: markdownItAnchor.permalink.linkInsideHeader({
-      symbol: `
-        <span aria-hidden="true">#</span>
-      `,
-      placement: "before",
-    }),
-  })
+  let markdownLib = markdownIt(options)
+    .use(markdownItAttrs)
+    .use(markdownItAnchor, {
+      level: [2, 3],
+      permalink: markdownItAnchor.permalink.headerLink(),
+    })
 
   eleventyConfig.setLibrary("md", markdownLib)
 

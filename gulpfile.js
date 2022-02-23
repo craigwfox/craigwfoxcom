@@ -1,6 +1,7 @@
 const { watch, series, src, dest } = require("gulp")
 const terser = require("gulp-terser")
 const sass = require("gulp-sass")(require("sass"))
+const sourcemaps = require("gulp-sourcemaps")
 const browserSync = require("browser-sync").create()
 const rename = require("gulp-rename")
 const concat = require("gulp-concat")
@@ -29,7 +30,9 @@ const paths = {
 // ====---------------====
 function buildStyles() {
   return src(paths.styles.input)
-    .pipe(sass.sync().on("error", sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(dest(paths.styles.output))
     .pipe(browserSync.stream())
 }
