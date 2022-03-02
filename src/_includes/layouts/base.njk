@@ -19,6 +19,11 @@ ogType: website
   <link rel="manifest" href="/manifest.json">
 
   {# Open graph tags #}
+  {% if permalink %}
+    <link rel="canonical" href="{{ site.baseUrl + permalink }}" />
+  {% else %}
+    <link rel="canonical" href="{{ metadata.url + page.url }}" />
+  {% endif %}
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:type" content="{{ ogType }}" />
   <meta property="og:description" content="{{ description }}">
