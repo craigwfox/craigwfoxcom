@@ -85,6 +85,29 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addJavaScriptFunction("image", imageShortcode)
   eleventyConfig.setUseGitIgnore(false)
 
+  // ====---------------====
+  // Markdown settings
+  // ====---------------====
+  let markdownIt = require("markdown-it")
+  let markdownItAnchor = require("markdown-it-anchor")
+  let markdownItAttrs = require("markdown-it-attrs")
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  }
+  let markdownLib = markdownIt(options)
+    .use(markdownItAttrs)
+    .use(markdownItAnchor, {
+      level: [2, 3],
+      permalink: markdownItAnchor.permalink.headerLink(),
+    })
+
+  eleventyConfig.setLibrary("md", markdownLib)
+
+  // ====---------------====
+  // Do the eleventy thing
+  // ====---------------====
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
     pathPrefix: "/",
