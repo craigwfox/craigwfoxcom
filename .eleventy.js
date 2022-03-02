@@ -76,6 +76,7 @@ module.exports = function (eleventyConfig) {
 
   // Config
   eleventyConfig.addPassthroughCopy("./src/manifest.json")
+  eleventyConfig.addPassthroughCopy("./src/robots.txt")
 
   // ====---------------====
   // Other configs
