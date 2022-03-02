@@ -9,7 +9,7 @@
     "gulp-watch": "gulp watch",
     "gulp-build": "gulp",
     "start": "npm-run-all gulp-watch --parallel eleventy-watch",
-    "dev": "npm-run-all eleventy-build --parallel gulp-build",
+    "dev": "npm run eleventy-watch & npm run gulp-watch",
     "build": "npm-run-all eleventy-build --parallel gulp-build"
   },
   "repository": {
