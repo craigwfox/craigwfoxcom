@@ -24,7 +24,8 @@ a:visited {
   }
 }
 
-.btn {
+.btn,
+.btn:visited {
   --link-clr: var(--clr-text-reverse);
 
   display: flex;
