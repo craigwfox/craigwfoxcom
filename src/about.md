@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: About
-description: About me
+description: About Craig Fox, front-end developer, maker, and geek
 ---
 
 <div class="section">
