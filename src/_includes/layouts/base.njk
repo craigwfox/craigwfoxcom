@@ -20,7 +20,7 @@ ogType: website
 
   {# Open graph tags #}
   {% if permalink %}
-    <link rel="canonical" href="{{ site.baseUrl + permalink }}" />
+    <link rel="canonical" href="{{ 'https://craigwfox.com' + permalink }}" />
   {% else %}
     <link rel="canonical" href="{{ metadata.url + page.url }}" />
   {% endif %}
@@ -28,7 +28,7 @@ ogType: website
   <meta property="og:type" content="{{ ogType }}" />
   <meta property="og:description" content="{{ description }}">
   {% if permalink %}
-    <meta property="og:url" content="{{ site.baseUrl + permalink }}" />
+    <meta property="og:url" content="{{ 'https://craigwfox.com' + permalink }}" />
   {% else %}
     <meta property="og:url" content="{{ metadata.url + page.url }}" />
   {% endif %}
@@ -44,7 +44,7 @@ ogType: website
   <link rel="alternate" href="{{ metadata.feed.url | url }}" type="application/atom+xml" title="{{ metadata.title }}" />
   <link rel="sitemap" href="{{ metadata.sitemap.url | url }}" type="application/atom+xml" title="{{ metadata.title }}" />
 
-  <link rel="stylesheet" as="style" href="{{ '/css/styles.css' }}" />
+  <link rel="stylesheet" href="{{ '/css/styles.css' }}" />
 
   <script defer data-domain="craigwfox.com" src="https://plausible.io/js/plausible.js"></script>
 </head>
