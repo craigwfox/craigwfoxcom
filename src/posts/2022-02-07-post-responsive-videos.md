@@ -8,8 +8,6 @@ description: "A look at how responsive videos have been done in the past and how
 image: "img/rss/2022-02-responsive-videos.png"
 ogImage: "img/twitter/2022-02-responsive-videos.png"
 ogImageAlt: "Learn about responsive videos"
-embedJs:
-  - https://cpwebassets.codepen.io/assets/embed/ei.js
 ---
 
 # Responsive Videos
