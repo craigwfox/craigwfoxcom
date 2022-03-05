@@ -13,7 +13,7 @@ Here is a list of the tools I use to build websites.
 - [Software](#software)
 - [Hardware](#hardware)
 
-## Software {#software}
+## Software
 
 ### Dev environment
 
@@ -35,7 +35,7 @@ Here is a list of the tools I use to build websites.
 - Obsidian
 - Notion
 
-## Hardware {#hardware}
+## Hardware
 
 ### 2021 Macbook Pro
 
