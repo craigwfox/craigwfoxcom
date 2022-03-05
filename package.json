@@ -41,6 +41,6 @@
     "sass": "^1.49.7"
   },
   "dependencies": {
-    "simple-theme-switcher": "^1.0.2"
+    "simple-theme-switcher": "1.0.4"
   }
 }
