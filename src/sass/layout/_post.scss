@@ -37,18 +37,18 @@
   }
 }
 
-// @include darkTheme() {
-//   .post {
-//     a {
-//       --link-clr: var(--clr-alt-2);
+@include darkTheme() {
+  .post {
+    a {
+      --link-clr: var(--clr-alt-2);
 
-//       &:hover,
-//       &:focus {
-//         --link-clr: var(--clr-link);
-//       }
-//     }
-//   }
-// }
+      &:hover,
+      &:focus {
+        --link-clr: var(--clr-link);
+      }
+    }
+  }
+}
 
 // ====---------------====
 // Post single styles
