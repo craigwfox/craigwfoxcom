@@ -7,35 +7,35 @@
 // ====---------------====
 // Mixins
 // ====---------------====
-@import "./support/mixins";
-@import "./support/variables";
+@use "./support/mixins";
+@use "./support/variables";
 
 // ====---------------====
 // Plugins
 // ====---------------====
-@import "./plugin/prism-tomorrow";
+@use "./plugin/prism-tomorrow";
 
 // ====---------------====
 // Supporting
 // ====---------------====
-@import "./support/reset";
+@use "./support/reset";
 
 // ====---------------====
 // Type
 // ====---------------====
-@import "./type/misc";
-@import "./type/headings";
-@import "./type/lists";
+@use "./type/misc";
+@use "./type/headings";
+@use "./type/lists";
 
 // ====---------------====
 // Bits
 // ====---------------====
-@import "./bits/images";
+@use "./bits/images";
 
 // ====---------------====
 // Layout
 // ====---------------====
-@import "./layout/base";
-@import "./layout/header";
-@import "./layout/footer";
-@import "./layout/post";
+@use "./layout/base";
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/post";
