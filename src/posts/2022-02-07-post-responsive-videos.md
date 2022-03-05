@@ -2,7 +2,7 @@
 tags: post
 permalink: "/posts/responsive-video-embeds/"
 date: 2022-02-07
-title: "Responsive videos"
+title: "Responsive / fluid width videos"
 categories: ["Web history", "Old vs new"]
 description: "A look at how responsive videos have been done in the past and how we can do them now."
 image: "img/rss/2022-02-responsive-videos.png"
