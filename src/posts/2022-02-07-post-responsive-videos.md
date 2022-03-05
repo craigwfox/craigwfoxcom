@@ -12,7 +12,7 @@ ogImageAlt: "Learn about responsive videos"
 
 # Responsive Videos
 
-## How I've done responsive videos in the past {#the-past}
+## How I've done responsive videos in the past
 
 In the past I've used a couple of different methods to achieve responsive videos:
 
@@ -21,7 +21,7 @@ In the past I've used a couple of different methods to achieve responsive videos
 
 At the end of the day both of these methods are achieving the same thing using similar HTML and CSS. The major difference between is how they add the HTML to the page. FitVids injects the HTML and CSS into the page using Javascript, while Bootstrap requires you to manually add the embed wrapper to each video (this can also be automated in most content management systems).
 
-### The HTML {#past-html}
+### The HTML
 
 The HTML for both is pretty straightforward you have wrapper div and an iframe. In bootstrap the iframe would need a class added to it while FitVids handled this.
 
@@ -31,7 +31,7 @@ The HTML for both is pretty straightforward you have wrapper div and an iframe. 
 </div>
 ```
 
-### The CSS {#past-css}
+### The CSS
 
 As with the HTML the CSS between the two is very similar.
 
@@ -85,11 +85,11 @@ This is where the real magic of it happens. You would set either the top padding
 }
 ```
 
-## How I manage responsive videos now {#the-now}
+## How I manage responsive videos now
 
 Today we have the CSS properties [aspect-ratio](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio) and [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) that make this much simpler to manage.
 
-### HTML {#now-html}
+### HTML
 
 The HTML can be pretty simple. I'd suggest adding a class to iframes that you want to be responsive (I'd probably avoid globally adding it to all iframes, just incase there are embeds you don't want working this way).
 
@@ -97,7 +97,7 @@ The HTML can be pretty simple. I'd suggest adding a class to iframes that you wa
 <iframe class="responsive-video" src="..."></iframe>
 ```
 
-### CSS {#now-css}
+### CSS
 
 The CSS in this method is quite a bit more clear.
 

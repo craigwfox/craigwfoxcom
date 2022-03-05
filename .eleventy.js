@@ -89,22 +89,22 @@ module.exports = function (eleventyConfig) {
   // ====---------------====
   // Markdown settings
   // ====---------------====
-  let markdownIt = require("markdown-it")
-  let markdownItAnchor = require("markdown-it-anchor")
-  let markdownItAttrs = require("markdown-it-attrs")
-  let options = {
-    html: true,
-    breaks: true,
-    linkify: true,
-  }
-  let markdownLib = markdownIt(options)
-    .use(markdownItAttrs)
-    .use(markdownItAnchor, {
-      level: [2, 3],
-      permalink: markdownItAnchor.permalink.headerLink(),
-    })
+  // let markdownIt = require("markdown-it")
+  // let markdownItAnchor = require("markdown-it-anchor")
+  // let markdownItAttrs = require("markdown-it-attrs")
+  // let options = {
+  //   html: true,
+  //   breaks: true,
+  //   linkify: true,
+  // }
+  // let markdownLib = markdownIt(options)
+  //   .use(markdownItAttrs)
+  //   .use(markdownItAnchor, {
+  //     level: [2, 3],
+  //     permalink: markdownItAnchor.permalink.headerLink(),
+  //   })
 
-  eleventyConfig.setLibrary("md", markdownLib)
+  // eleventyConfig.setLibrary("md", markdownLib)
 
   // ====---------------====
   // Do the eleventy thing
@@ -112,7 +112,7 @@ module.exports = function (eleventyConfig) {
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
     pathPrefix: "/",
-    markdownTemplateEngine: "liquid",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     passthroughFileCopy: true,

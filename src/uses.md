@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Uses
-description: The tools I use to build websites.
+description: The hardware and software I use to build websites.
 ---
 
 <div class="section">
@@ -9,6 +9,31 @@ description: The tools I use to build websites.
 # Uses
 
 Here is a list of the tools I use to build websites.
+
+- [Software](#software)
+- [Hardware](#hardware)
+
+## Software
+
+### Dev environment
+
+- Visual Studio Code
+- Node / npm
+- Local By Flywheel
+- Powershell (Terminal Windows)
+- Hyper (Terminal Mac)
+- Firefox
+
+### Js Stuff
+
+- Vue
+- Svelte / Sveltekit
+
+### Tasks and Notes
+
+- Asana
+- Obsidian
+- Notion
 
 ## Hardware
 
