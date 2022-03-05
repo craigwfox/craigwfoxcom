@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/posts/responsive-videos/"
+  to = "/posts/responsive-video-embeds/"
+  status = 301
