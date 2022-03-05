@@ -1,6 +1,6 @@
 ---
 tags: post
-permalink: "/posts/responsive-videos/"
+permalink: "/posts/responsive-video-embeds/"
 date: 2022-02-07
 title: "Responsive videos"
 categories: ["Web history", "Old vs new"]
@@ -10,7 +10,7 @@ ogImage: "img/twitter/2022-02-responsive-videos.png"
 ogImageAlt: "Learn about responsive videos"
 ---
 
-# Responsive Videos
+# Responsive / fluid width videos
 
 ## How I've done responsive videos in the past
 
