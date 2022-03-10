@@ -1,3 +1,5 @@
+@use "../support/mixins" as *;
+
 // ---------------------------------------------
 // ======---------------------------------======
 //  Variables
@@ -87,7 +89,7 @@
 // ====---------------====
 // Dark theme
 // ====---------------====
-@mixin darkTheme() {
+@mixin darkProps() {
   --clr-bg: 220 39% 15%;
   --clr-bg-alt: 220 39% 10%;
 
@@ -107,6 +109,6 @@
   --clr-code-title: var(--clr-alt-1) / 0.8;
 }
 
-[data-theme="dark"] {
-  @include darkTheme;
+@include darkTheme {
+  @include darkProps();
 }

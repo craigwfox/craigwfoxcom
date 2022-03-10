@@ -28,6 +28,8 @@
 // ====---------------====
 // Media Queries Other
 // ====---------------====
-@mixin mqLight {
-  @content;
+@mixin darkTheme {
+  [data-theme="dark"] {
+    @content;
+  }
 }
