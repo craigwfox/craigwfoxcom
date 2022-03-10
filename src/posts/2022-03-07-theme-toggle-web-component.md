@@ -7,7 +7,7 @@ categories: []
 description: A simple web component to toggle the site themes and modes.
 image: "img/rss/2022-03-web-component-toggle.webp"
 ogImage: "img/twitter/2022-03-web-component-toggle.webp"
-ogImageAlt: "A web componenent to toggle site themes / modes"
+ogImageAlt: "A web component to toggle site themes / modes"
 ---
 
 # A web component to toggle themes
