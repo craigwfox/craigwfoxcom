@@ -1,12 +1,12 @@
 ---
 tags: post
 permalink: "/posts/theme-toggle-web-component/"
-date: 2022-03-04
+date: 2022-03-10
 title: "A web component to toggle themes"
 categories: []
 description: A simple web component to toggle the site themes and modes.
-image: "img/rss/2022-03-web-component-toggle.png"
-ogImage: "img/twitter/2022-03-web-component-toggle.png"
+image: "img/rss/2022-03-web-component-toggle.webp"
+ogImage: "img/twitter/2022-03-web-component-toggle.webp"
 ogImageAlt: "A web componenent to toggle site themes / modes"
 ---
 
@@ -78,7 +78,23 @@ This is the full button in action. I've also added an svg image, but this could 
   aria-label="Change to light mode"
   aria-live="polite"
 >
-  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"> <circle cx="12" cy="12" r="5" /> <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" /></svg>
+  <svg
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linecap="square"
+    stroke-linejoin="round"
+  >
+    <circle cx="12" cy="12" r="5" />
+    <path
+      d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+    />
+  </svg>
 </theme-switcher>
 ```
 
@@ -93,7 +109,7 @@ To get started we will need to define the web component. To do that we will use 
 ```js
 class ThemeSwitcher {
   constructor() {
-    super();
+    super()
   }
 }
 ```
@@ -103,11 +119,11 @@ Next will define the element. The first argument will be the custom elements nam
 ```js
 class ThemeSwitcher {
   constructor() {
-    super();
+    super()
   }
 }
 
-customElements.define("theme-switcher", ThemeSwitcher);
+customElements.define("theme-switcher", ThemeSwitcher)
 ```
 
 Additionally in this example I want to extend the HTMLButtonElement. This means that the custom element will inherit the same styles and functionality of a normal HTML button. This prevents us from having to do additional CSS and JS to make things like focusing work properly.
@@ -115,10 +131,10 @@ Additionally in this example I want to extend the HTMLButtonElement. This means 
 ```js
 class ThemeSwitcher extends HTMLButtonElement {
   constructor() {
-    super();
+    super()
   }
 }
-customElements.define("theme-switcher", ThemeSwitcher, { extends: "button" });
+customElements.define("theme-switcher", ThemeSwitcher, { extends: "button" })
 ```
 
 <p class="post-note">This isn't supported in Safari on iOS or MacOS so you will either need to fallback, install a polyfill, or not extend the element.</p>
@@ -190,33 +206,33 @@ The end result of getting all the attributes should end up looking something lik
 ```js
 class ThemeSwitcher extends HTMLButtonElement {
   constructor() {
-    super();
+    super()
 
     // Getting the static attributes (dataAttr and modes)
-    this.dataAttr = this.getAttribute("dataAttr");
+    this.dataAttr = this.getAttribute("dataAttr")
 
     this.mode1 = this.getAttribute("modes")
       .split(",")
-      .map((index) => index.trim())[0];
+      .map(index => index.trim())[0]
 
     this.mode2 = this.getAttribute("modes")
       .split(",")
-      .map((index) => index.trim())[1];
+      .map(index => index.trim())[1]
   }
 
   static get observedAttributes() {
-    return ["current"];
+    return ["current"]
   }
 
   get current() {
-    return this.getAttribute("current");
+    return this.getAttribute("current")
   }
 
   set current(val) {
-    return this.setAttribute("current", val);
+    return this.setAttribute("current", val)
   }
 }
-customElements.define("theme-switcher", ThemeSwitcher, { extends: "button" });
+customElements.define("theme-switcher", ThemeSwitcher, { extends: "button" })
 ```
 
 ### a11y updates
@@ -322,67 +338,67 @@ After all that we will end with this JS below.
 ```js
 class ThemeSwitcher extends HTMLButtonElement {
   constructor() {
-    super();
+    super()
 
     // Bindings
-    this.swap = this.swap.bind(this);
-    this.ariaLabel = this.ariaLabel.bind(this);
+    this.swap = this.swap.bind(this)
+    this.ariaLabel = this.ariaLabel.bind(this)
 
     // Get static attributes
-    this.dataAttr = this.getAttribute("dataAttr");
+    this.dataAttr = this.getAttribute("dataAttr")
     this.mode1 = this.getAttribute("modes")
       .split(",")
-      .map((index) => index.trim())[0];
+      .map(index => index.trim())[0]
     this.mode2 = this.getAttribute("modes")
       .split(",")
-      .map((index) => index.trim())[1];
+      .map(index => index.trim())[1]
 
     // Grab dom elements
-    this.body = document.querySelector("body");
+    this.body = document.querySelector("body")
 
     // Check for a default theme setting on the body
     if (this.body.getAttribute(this.dataAttr)) {
-      this.current = this.body.getAttribute(this.dataAttr);
+      this.current = this.body.getAttribute(this.dataAttr)
     }
 
     // sets the click listener to fire the swap function
-    this.addEventListener("click", this.swap);
+    this.addEventListener("click", this.swap)
   }
 
   // Swaps the attribute
   ariaLabel(state) {
-    this.setAttribute("aria-label", `${state} mode`);
+    this.setAttribute("aria-label", `${state} mode`)
   }
 
   // Fires all the attribute swapping
   swap() {
     if (this.current === this.mode1) {
-      this.current = this.mode2;
-      this.ariaLabel(this.mode1);
-      this.body.setAttribute(this.dataAttr, `${this.mode2}`);
+      this.current = this.mode2
+      this.ariaLabel(this.mode1)
+      this.body.setAttribute(this.dataAttr, `${this.mode2}`)
     } else {
-      this.current = this.mode1;
-      this.ariaLabel(this.mode2);
-      this.body.setAttribute(this.dataAttr, `${this.mode1}`);
+      this.current = this.mode1
+      this.ariaLabel(this.mode2)
+      this.body.setAttribute(this.dataAttr, `${this.mode1}`)
     }
   }
 
   // Observe current
   static get observedAttributes() {
-    return ["current"];
+    return ["current"]
   }
 
   // Get current
   get current() {
-    return this.getAttribute("current");
+    return this.getAttribute("current")
   }
 
   // Set current
   set current(val) {
-    return this.setAttribute("current", val);
+    return this.setAttribute("current", val)
   }
 }
-customElements.define("theme-switcher", ThemeSwitcher, { extends: "button" });
+customElements.define("theme-switcher", ThemeSwitcher, { extends: "button" })
 ```
 
 ## Live demo
