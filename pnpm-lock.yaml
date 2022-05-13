@@ -12,8 +12,10 @@ specifiers:
   gulp-sourcemaps: ^3.0.0
   gulp-terser: ^2.1.0
   gulp-watch: ^5.0.1
+  markdown-it: ^13.0.1
   markdown-it-anchor: ^8.4.1
   markdown-it-attrs: ^4.1.3
+  markdown-it-link-attributes: ^4.0.0
   npm-run-all: ^4.1.5
   sass: ^1.49.9
   simple-theme-switcher: 1.0.4
@@ -33,8 +35,10 @@ devDependencies:
   gulp-sourcemaps: 3.0.0
   gulp-terser: 2.1.0
   gulp-watch: 5.0.1
-  markdown-it-anchor: 8.4.1
-  markdown-it-attrs: 4.1.3
+  markdown-it: 13.0.1
+  markdown-it-anchor: 8.4.1_markdown-it@13.0.1
+  markdown-it-attrs: 4.1.3_markdown-it@13.0.1
+  markdown-it-link-attributes: 4.0.0
   npm-run-all: 4.1.5
   sass: 1.49.9
 
@@ -2975,6 +2979,12 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
+  /linkify-it/4.0.1:
+    resolution: {integrity: sha512-C7bfi1UZmoj8+PQx22XyeXCuBlokoyWQL5pWSP+EI6nzRylyThouddufc2c1NDIcP9k5agmN9fLpA7VNJfIiqw==}
+    dependencies:
+      uc.micro: 1.0.6
+    dev: true
+
   /liquidjs/9.36.0:
     resolution: {integrity: sha512-HbU4xBsY1r3ZEORTgPsiluXsOtMx8iI0MqTsPejgIk+sIgta5wQUYsoQgUPuGKWVHKKKMO9PidiMEPKlePl8rg==}
     engines: {node: '>=4.8.7'}
@@ -3086,18 +3096,26 @@ packages:
       object-visit: 1.0.1
     dev: true
 
-  /markdown-it-anchor/8.4.1:
+  /markdown-it-anchor/8.4.1_markdown-it@13.0.1:
     resolution: {integrity: sha512-sLODeRetZ/61KkKLJElaU3NuU2z7MhXf12Ml1WJMSdwpngeofneCRF+JBbat8HiSqhniOMuTemXMrsI7hA6XyA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
+    dependencies:
+      markdown-it: 13.0.1
     dev: true
 
-  /markdown-it-attrs/4.1.3:
+  /markdown-it-attrs/4.1.3_markdown-it@13.0.1:
     resolution: {integrity: sha512-d5yg/lzQV2KFI/4LPsZQB3uxQrf0/l2/RnMPCPm4lYLOZUSmFlpPccyojnzaHkfQpAD8wBHfnfUW0aMhpKOS2g==}
     engines: {node: '>=6'}
     peerDependencies:
       markdown-it: '>= 9.0.0 < 13.0.0'
+    dependencies:
+      markdown-it: 13.0.1
+    dev: true
+
+  /markdown-it-link-attributes/4.0.0:
+    resolution: {integrity: sha512-ssjxSLlLfQBkX6BvAx1rCPrx7ZoK91llQQvS3P7KXvlbnVD34OUkfXwWecN7su/7mrI/HOW0RI5szdJOIqYC3w==}
     dev: true
 
   /markdown-it/12.3.2:
@@ -3107,6 +3125,17 @@ packages:
       argparse: 2.0.1
       entities: 2.1.0
       linkify-it: 3.0.3
+      mdurl: 1.0.1
+      uc.micro: 1.0.6
+    dev: true
+
+  /markdown-it/13.0.1:
+    resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
+    hasBin: true
+    dependencies:
+      argparse: 2.0.1
+      entities: 3.0.1
+      linkify-it: 4.0.1
       mdurl: 1.0.1
       uc.micro: 1.0.6
     dev: true

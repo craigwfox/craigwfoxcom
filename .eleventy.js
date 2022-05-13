@@ -89,21 +89,14 @@ module.exports = function (eleventyConfig) {
   // ====---------------====
   // Markdown settings
   // ====---------------====
-  // let markdownIt = require("markdown-it")
-  // let markdownItAnchor = require("markdown-it-anchor")
+  // let markdownIt = require("markdown-it")()
   // let markdownItAttrs = require("markdown-it-attrs")
-  // let options = {
-  //   html: true,
-  //   breaks: true,
-  //   linkify: true,
-  // }
-  // let markdownLib = markdownIt(options)
-  //   .use(markdownItAttrs)
-  //   .use(markdownItAnchor, {
-  //     level: [2, 3],
-  //     permalink: markdownItAnchor.permalink.headerLink(),
-  //   })
-
+  // let markdownLib = markdownIt.use(markdownItAttrs, {
+  //   // optional, these are default options
+  //   leftDelimiter: "{",
+  //   rightDelimiter: "}",
+  //   allowedAttributes: [], // empty array = all attributes are allowed
+  // })
   // eleventyConfig.setLibrary("md", markdownLib)
 
   // ====---------------====
