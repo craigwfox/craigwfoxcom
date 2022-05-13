@@ -109,3 +109,17 @@
     color: hsl(var(--clr-link));
   }
 }
+
+// ====---------------====
+// Series block
+// ====---------------====
+.series-block {
+  margin-top: var(--sp-lg);
+  padding: var(--sp-sm) var(--sp-md) var(--sp-md);
+
+  background-color: hsl(var(--clr-bg-alt));
+
+  h2 {
+    margin-top: 0;
+  }
+}
