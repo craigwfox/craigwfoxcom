@@ -5,8 +5,8 @@ date: 2022-05-13
 title: "Fluid type and sizing in CSS"
 categories: []
 description: A guide to using clamp(), min(), and max() to create fluid type and sizing in CSS.
-image: ""
-ogImage: ""
+image: "img/twitter/2022-05-13-fluid-sizing.png"
+ogImage: "img/twitter/2022-05-13-fluid-sizing.png"
 ogImageAlt: "A guide to using clamp(), min(), and max() to create fluid type and sizing in CSS."
 ---
 
