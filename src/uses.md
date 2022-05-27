@@ -18,22 +18,29 @@ Here is a list of the tools I use to build websites.
 ### Dev environment
 
 - Visual Studio Code
-- Node / npm
+- Node / npm / pnpm
 - Local By Flywheel
 - Powershell (Terminal Windows)
 - Hyper (Terminal Mac)
 - Firefox
+
+### Design
+
+- Figma
+- Adobe Illustrator
+- Adobe Photoshop
+- Adobe InDesign
 
 ### JS Stuff
 
 - Vue
 - Svelte / SvelteKit
 
-### Tasks and Notes
+### Misc apps
 
-- Asana
-- Obsidian
-- Notion
+- Asana (Task / Project tracking)
+- Obsidian (Note taking)
+- Reeder (RSS feeds)
 
 ## Hardware
 
