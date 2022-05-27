@@ -24,10 +24,10 @@ Here is a list of the tools I use to build websites.
 - Hyper (Terminal Mac)
 - Firefox
 
-### Js Stuff
+### JS Stuff
 
 - Vue
-- Svelte / Sveltekit
+- Svelte / SvelteKit
 
 ### Tasks and Notes
 
@@ -37,10 +37,10 @@ Here is a list of the tools I use to build websites.
 
 ## Hardware
 
-### 2021 Macbook Pro
+### 2021 MacBook Pro
 
-- 14in M1 Macbook Pro with 16gb of RAM and a 512gb HD
-- I connect it to three monitors using thunderbolt to HDMI adaptors and the single built in HDMI.
+- 14in M1 MacBook Pro with 16gb of RAM and a 512gb HD
+- I connect it to two monitors using thunderbolt to DisplayPort adaptors.
 
 ### Desktop
 
@@ -63,6 +63,7 @@ This is my custom built gaming PC that also get's used for work. Here are the ba
 ### Peripherals
 
 - Keyboard: Leopold FC 660m with Cherry MX Blues
-- Mouse: Logitech G600
+- Mouse: Logitech G700 (Work / Games)
+- Mouse: Logitech G600 (MMO Games)
 
 </div>
