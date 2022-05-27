@@ -136,3 +136,47 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
   gap: var(--sp-md);
 }
+
+// ====---------------====
+// Image grid
+// ====---------------====
+.image-grid {
+  display: grid;
+  gap: var(--sp-md);
+
+  @include mqMed {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  margin-top: var(--sp-md);
+
+  picture {
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &:nth-child(1) {
+      @include mqSmol {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+    }
+
+    &:nth-child(2) {
+      @include mqSmol {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+    }
+
+    &:nth-child(3) {
+      object-fit: contain;
+      @include mqSmol {
+        grid-area: 1 / 2 / 3 / 3;
+      }
+    }
+  }
+}
