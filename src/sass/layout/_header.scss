@@ -7,7 +7,7 @@
 // ---------------------------------------------
 .site-header {
   max-width: var(--w-lg);
-  width: calc(100% - var(--sp-md));
+  width: var(--w-wrapper);
 
   display: grid;
   grid-template-columns: 1fr 2rem;
@@ -19,6 +19,14 @@
   margin: 0 auto var(--sp-sm);
 
   border-bottom: 0.5rem solid hsl(var(--clr-main));
+
+  @include mqSmol {
+    grid-template-columns: auto 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas: "logo nav toggle";
+    align-items: center;
+    justify-content: start;
+  }
 
   svg {
     width: 100%;
@@ -47,6 +55,10 @@
   display: flex;
   place-content: center;
   gap: var(--sp-sm);
+
+  @include mqSmol {
+    justify-content: start;
+  }
 
   a {
     margin: 0 0.5rem;

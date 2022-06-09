@@ -49,6 +49,8 @@
   --sp-sm: 1rem;
   --sp-md: 2rem;
   --sp-lg: 3rem;
+  --sp-xl: 4rem;
+  --sp-md-xl: clamp(var(--sp-lg), 2.6rem + 1.8vw, var(--sp-xl));
   --sp-para: calc(var(--sp-sm) * 1.5);
 
   // ====---------------====
@@ -57,6 +59,7 @@
   --w-sm: 45rem;
   --w-md: 65rem;
   --w-lg: 75rem;
+  --w-wrapper: calc(100% - var(--sp-md-xl));
 
   // ====---------------====
   // Speeds
