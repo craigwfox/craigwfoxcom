@@ -31,14 +31,14 @@ body {
 // Sections
 // ====---------------====
 .section {
-  max-width: var(--w-lg);
-  width: var(--w-wrapper);
+  padding: 0 0 var(--sp-md);
 
-  padding: var(--sp-md) 0;
-  margin: 0 auto;
+  border-bottom: 0.5rem solid hsl(var(--clr-border-1));
 
-  @include mqMed {
-    max-width: calc(var(--w-lg) - 4rem);
+  &:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
   }
 
   h1 {
@@ -55,36 +55,8 @@ body {
 }
 
 .section--about {
-  border-bottom: 0.5rem solid hsl(var(--clr-border-1));
-
-  @include mqSmol {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 0 var(--sp-md);
-  }
-
   h1 {
-    @include mqSmol {
-      grid-column: 1 / -1;
-      grid-row: 1;
-
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  > div {
-    @include mqSmol {
-      grid-column: 1;
-      grid-row: 2;
-    }
-  }
-
-  .about-image {
-    @include mqSmol {
-      grid-column: 2;
-      grid-row: 2 / -1;
-    }
+    margin-bottom: var(--sp-sm);
   }
 }
 
@@ -93,48 +65,13 @@ body {
 // ====---------------====
 .home-grid {
   max-width: var(--w-lg);
-  width: calc(100% - var(--sp-md));
+  width: var(--w-wrapper);
 
   display: grid;
   grid-template-columns: 100%;
   gap: var(--sp-md);
 
-  margin: var(--sp-lg) auto 0;
-
-  @include mqSmol {
-    max-width: calc(var(--w-lg) - 2.5rem);
-
-    margin-bottom: var(--sp-lg);
-
-    border-bottom: 0;
-    grid-template-columns: 2fr 1.6fr;
-  }
-
-  .section {
-    padding-top: 0;
-
-    border-bottom: 0.5rem solid hsl(var(--clr-border-1));
-
-    @include mqSmol {
-      padding-right: var(--sp-md);
-      padding-bottom: 0;
-
-      border-bottom: 0;
-      border-right: 0.5rem solid hsl(var(--clr-border-1));
-    }
-
-    &:last-child {
-      border-right: 0;
-      border-bottom: 0;
-      padding-right: 0;
-    }
-  }
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
-  gap: var(--sp-md);
+  margin: 0 auto;
 }
 
 // ====---------------====
@@ -178,5 +115,128 @@ body {
         grid-area: 1 / 2 / 3 / 3;
       }
     }
+  }
+}
+
+// ====---------------====
+// Home posts
+// ====---------------====
+.articles-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+  gap: var(--sp-md);
+
+  margin: 1rem 0 2rem;
+}
+
+@keyframes borderPulse {
+  0% {
+    left: calc(var(--border-size-h) * -1);
+  }
+
+  100% {
+    left: calc(150%);
+  }
+}
+
+.article {
+  --border-size-h: 0.7rem;
+  --border-size-v: 0.7rem;
+
+  display: grid;
+
+  background: hsl(var(--clr-bg-alt));
+  border-radius: 0 var(--rad-3) 0 0;
+
+  a {
+    display: grid;
+
+    overflow: hidden;
+
+    position: relative;
+
+    padding: var(--sp-sm) var(--sp-sm) calc(var(--sp-sm) + var(--border-size-h));
+
+    text-decoration: none;
+
+    * {
+      position: relative;
+      z-index: 10;
+    }
+
+    &::before {
+      content: "";
+
+      display: block;
+
+      height: var(--border-size-v);
+
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      border-bottom: var(--border-size-v) solid hsl(var(--clr-link-hover));
+    }
+
+    &::after {
+      content: "";
+
+      width: calc(var(--border-size-h) * 3);
+      height: var(--border-size-v);
+
+      position: absolute;
+      z-index: 5;
+      left: calc(calc(var(--border-size-h) * 3) * -1);
+      bottom: -0.1rem;
+
+      background: linear-gradient(
+        45deg,
+        hsl(var(--clr-alt-2)) 30%,
+        hsl(var(--clr-text-base) / 0.7),
+        hsl(var(--clr-alt-2)) 70%
+      );
+    }
+
+    &::before,
+    &::after {
+      transition: all var(--speed-fast) ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      --border-size-v: 1.2rem;
+
+      color: hsl(var(--clr-link-hover));
+
+      &::before,
+      &::after {
+        height: var(--border-size-v);
+      }
+
+      &::after {
+        animation: borderPulse calc(var(--speed-main) * 1.8) ease-in-out;
+        left: calc(100% + 0.7rem);
+      }
+    }
+  }
+
+  time {
+    color: hsl(var(--clr-text-base));
+  }
+
+  h3 {
+    color: currentColor;
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    text-decoration: underline 0.2rem;
+    text-underline-offset: 0.6rem;
+  }
+
+  p {
+    margin-bottom: 0;
+
+    color: hsl(var(--clr-text-base));
   }
 }
