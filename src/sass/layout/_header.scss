@@ -53,12 +53,8 @@
 .site-header nav {
   grid-area: nav;
   display: flex;
-  place-content: center;
+  align-items: center;
   gap: var(--sp-sm);
-
-  @include mqSmol {
-    justify-content: start;
-  }
 
   a {
     margin: 0 0.5rem;

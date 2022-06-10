@@ -16,13 +16,15 @@ a:visited {
   cursor: pointer;
   color: hsl(var(--link-clr));
   text-decoration: underline 0.2rem;
-  text-underline-offset: 0.4rem;
+  text-underline-offset: 0.6rem;
 
   transition: all var(--speed-main) ease;
 
   &:hover,
   &:focus {
     --link-clr: var(--clr-link-hover);
+    text-decoration-thickness: 0.4rem;
+    text-underline-offset: 0.4rem;
   }
 }
 
