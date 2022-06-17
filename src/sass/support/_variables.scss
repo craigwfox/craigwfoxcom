@@ -39,17 +39,24 @@
   // Type
   // ====---------------====
   --fs-base: clamp(1.2rem, 1rem + 0.75vw, 1.6rem);
+  --fs-sm: clamp(1rem, 0.855rem + 0.73vw, 1.4rem);
   --fs-md: clamp(1.3rem, 1.15rem + 0.75vw, 1.7rem);
+  --fs-h1: clamp(2.4rem, 2rem + 2vw, 3.5rem);
+  --fs-h2: clamp(2.2rem, 1.909rem + 1.45vw, 3rem);
+  --fs-h3: clamp(1.8rem, 1.436rem + 1.82vw, 2.8rem);
+  --fs-h4: clamp(1.6rem, 1.236rem + 1.82vw, 2.6rem);
+  --fs-h5: clamp(1.1rem, 0.736rem + 1.82vw, 2.1rem);
+  --fs-h6: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
   --lh-base: 1.5;
   --font-main: "Rubik", sans-serif;
 
   // ====---------------====
   // Spacing
   // ====---------------====
-  --sp-sm: 1rem;
-  --sp-md: 2rem;
-  --sp-lg: 3rem;
-  --sp-xl: 4rem;
+  --sp-sm: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+  --sp-md: clamp(2rem, 1.818rem + 0.91vw, 2.5rem);
+  --sp-lg: clamp(2.5rem, 2.636rem + 1.82vw, 4rem);
+  --sp-xl: clamp(4rem, 3.636rem + 1.82vw, 5rem);
   --sp-md-xl: clamp(var(--sp-lg), 2.6rem + 1.8vw, var(--sp-xl));
   --sp-para: calc(var(--sp-sm) * 1.5);
 
