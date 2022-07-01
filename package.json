@@ -24,10 +24,11 @@
   },
   "homepage": "https://github.com/craigwfox/craigwfox.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "@11ty/eleventy-img": "^1.1.0",
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-img": "2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@types/markdown-it": "*",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^2.0.0",
