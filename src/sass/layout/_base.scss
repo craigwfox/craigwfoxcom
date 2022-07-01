@@ -28,6 +28,16 @@ body {
 }
 
 // ====---------------====
+// wrapper
+// ====---------------====
+.wrapper {
+  max-width: var(--w-lg);
+  width: var(--w-wrapper);
+
+  margin: 0 auto;
+}
+
+// ====---------------====
 // Sections
 // ====---------------====
 .section {
@@ -109,109 +119,5 @@ body {
       flex-basis: 0;
       flex-grow: 999;
     }
-  }
-}
-
-// ====---------------====
-// Home posts
-// ====---------------====
-.articles-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-md);
-
-  margin: 1rem 0 2rem;
-}
-
-@keyframes borderPulse {
-  0% {
-    left: calc(var(--border-size-h) * -1);
-  }
-
-  100% {
-    left: calc(150%);
-  }
-}
-
-.article {
-  --border-size-h: 0.7rem;
-  --border-size-v: 0.7rem;
-
-  flex: 1 1 320px;
-  display: grid;
-
-  background: hsl(var(--clr-bg-alt));
-  border-radius: 0 var(--rad-3) 0 0;
-
-  &:first-child {
-    flex-basis: 100%;
-  }
-
-  a {
-    min-width: 320px;
-
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    align-items: start;
-
-    overflow: hidden;
-
-    position: relative;
-
-    padding: var(--sp-sm) var(--sp-sm) calc(var(--sp-sm) + var(--border-size-h));
-
-    text-decoration: none;
-
-    * {
-      position: relative;
-      z-index: 10;
-    }
-
-    &::before {
-      content: "";
-
-      display: block;
-
-      height: var(--border-size-v);
-
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      border-bottom: var(--border-size-v) solid hsl(var(--clr-link-hover));
-
-      transition: all var(--speed-fast) ease-in-out;
-    }
-
-    &:hover,
-    &:focus {
-      --border-size-v: 1.2rem;
-
-      color: hsl(var(--clr-link-hover));
-
-      &::before {
-        height: var(--border-size-v);
-      }
-    }
-  }
-
-  time {
-    color: hsl(var(--clr-text-base));
-  }
-
-  h3 {
-    color: currentColor;
-    font-size: var(--fs-md);
-    line-height: 1.8;
-    text-decoration: underline 0.2rem;
-    text-underline-offset: 0.6rem;
-  }
-
-  p {
-    margin-bottom: 0;
-
-    color: hsl(var(--clr-text-base));
   }
 }

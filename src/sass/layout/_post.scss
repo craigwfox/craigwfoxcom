@@ -7,44 +7,119 @@
 // ---------------------------------------------
 
 // ====---------------====
-// Post feed
+// Articles wrapper
 // ====---------------====
+@keyframes borderPulse {
+  0% {
+    left: calc(var(--border-size-h) * -1);
+  }
 
-.post-feed {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: var(--sp-md) var(--sp-sm);
+  100% {
+    left: calc(150%);
+  }
 }
 
-.post {
+.articles-wrapper {
   display: grid;
-  place-items: start;
-  grid-template-rows: auto auto 1fr;
-  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--sp-md);
 
-  padding: var(--sp-sm) var(--sp-sm) var(--sp-md);
+  margin: 1rem 0 2rem;
+}
 
-  background: hsl(var(--clr-bg-alt) / 0.3);
+.article {
+  --border-size-h: 0.7rem;
+  --border-size-v: 0.7rem;
 
-  h2 {
-    margin-bottom: 0;
+  display: grid;
 
-    font-size: clamp(1.5rem, 2vw, 1.7rem);
+  background: hsl(var(--clr-bg-alt));
+  border-radius: 0 var(--rad-3) 0 0;
+
+  a {
+    min-width: 320px;
+
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    align-items: start;
+
+    overflow: hidden;
+
+    position: relative;
+
+    padding: var(--sp-sm) var(--sp-sm) calc(var(--sp-sm) + var(--border-size-h));
+
+    text-decoration: none;
+
+    * {
+      position: relative;
+      z-index: 10;
+    }
+
+    &::before {
+      content: "";
+
+      display: block;
+
+      height: var(--border-size-v);
+
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      border-bottom: var(--border-size-v) solid hsl(var(--clr-link-hover));
+
+      transition: all var(--speed-fast) ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      --border-size-v: 1.2rem;
+
+      color: hsl(var(--clr-link-hover));
+
+      &::before {
+        height: var(--border-size-v);
+      }
+    }
+  }
+
+  time {
+    color: hsl(var(--clr-text-base));
+  }
+
+  h3 {
+    color: currentColor;
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    text-decoration: underline 0.2rem;
+    text-underline-offset: 0.6rem;
   }
 
   p {
     margin-bottom: 0;
-  }
-}
 
-@include darkTheme() {
-  .post {
+    color: hsl(var(--clr-text-base));
+  }
+
+  &:first-child {
+    --border-size-v: 1rem;
+
+    grid-column: 1 / -1;
+
+    h3 {
+      font-size: var(--fs-h4);
+    }
+
     a {
-      --link-clr: var(--clr-alt-2);
+      padding: var(--sp-md) var(--sp-md)
+        calc(var(--sp-md) + var(--border-size-h));
 
       &:hover,
       &:focus {
-        --link-clr: var(--clr-link);
+        --border-size-v: 1.5rem;
       }
     }
   }

@@ -6,8 +6,8 @@
 // ======---------------------------------======
 // ---------------------------------------------
 .site-header {
-  max-width: var(--w-lg);
-  width: var(--w-wrapper);
+  // max-width: var(--w-lg);
+  // width: var(--w-wrapper);
 
   display: grid;
   grid-template-columns: 1fr 2rem;
@@ -15,8 +15,8 @@
   grid-template-areas: "logo toggle" "nav nav";
   gap: 1rem 2rem;
 
-  padding: var(--sp-sm) var(--sp-sm) var(--sp-md);
-  margin: 0 auto var(--sp-md);
+  padding: var(--sp-sm) var(--wrapper-main) var(--sp-md);
+  margin: 0 var(--sp-sm) var(--sp-md);
 
   border-bottom: 0.5rem solid hsl(var(--clr-main));
 

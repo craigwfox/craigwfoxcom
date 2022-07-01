@@ -4,7 +4,7 @@ title: Uses
 description: The hardware and software I use to build websites.
 ---
 
-<div class="section">
+<div class="wrapper section">
 
 # Uses
 
