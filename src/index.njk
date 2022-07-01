@@ -37,6 +37,7 @@ description: Craig Fox, front-end developer, maker, and geek
 
     <div class="articles-wrapper articles-wrapper--lg">
       {%- for post in collections.post | reverse -%}
+      {% if loop.index0 < 5 %}
       <article class="article">
         <a href={{ post.data.permalink }}>
           <time>{{ post.date | postDate }}</time>
@@ -46,6 +47,7 @@ description: Craig Fox, front-end developer, maker, and geek
           <p>{{ post.data.description }}</p>
         </a>
       </article>
+      {% endif %}
       {%- endfor -%}
     </div>
 
