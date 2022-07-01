@@ -35,7 +35,7 @@ description: Craig Fox, front-end developer, maker, and geek
   <section id="home-posts" class="section" aria-labelledby="title-blog">
     <h2 id="title-blog">Latest</h2>
 
-    <div class="articles-wrapper">
+    <div class="articles-wrapper articles-wrapper--lg">
       {%- for post in collections.post | reverse -%}
       <article class="article">
         <a href={{ post.data.permalink }}>

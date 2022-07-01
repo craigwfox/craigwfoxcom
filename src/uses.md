@@ -1,10 +1,8 @@
 ---
-layout: layouts/base.njk
+layout: layouts/page-sidebar.njk
 title: Uses
 description: The hardware and software I use to build websites.
 ---
-
-<div class="wrapper section">
 
 # Uses
 
@@ -49,9 +47,9 @@ Here is a list of the tools I use to build websites.
 - 14in M1 MacBook Pro with 16gb of RAM and a 512gb HD
 - I connect it to two monitors using thunderbolt to DisplayPort adaptors.
 
-### Desktop
+### Windows Desktop
 
-This is my custom built gaming PC that also get's used for work. Here are the basic stats.
+This is my custom built gaming PC that also get's used for work.
 
 - Ryzen 3600
 - GTX 2070
@@ -72,5 +70,3 @@ This is my custom built gaming PC that also get's used for work. Here are the ba
 - Keyboard: Leopold FC 660m with Cherry MX Blues
 - Mouse: Logitech G700 (Work / Games)
 - Mouse: Logitech G600 (MMO Games)
-
-</div>

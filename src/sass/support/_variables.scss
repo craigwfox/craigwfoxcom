@@ -66,12 +66,13 @@
   --w-sm: 45rem;
   --w-md: 65rem;
   --w-lg: 75rem;
-  --w-wrapper: calc(100% - var(--sp-md-xl));
-  --wrapper-width: 1100px;
-  --wrapper-padding: 16px;
+  --wrapper-wide: max(
+    var(--sp-md),
+    (100% - calc(var(--w-lg) - (var(--sp-md) - var(--sp-sm)) * 2)) / 2
+  );
   --wrapper-main: max(
-    var(--sp-md-xl),
-    100% - (var(--w-wrapper) - ((var(--sp-md-xl) * 2) / 2))
+    var(--sp-md),
+    (100% - calc(var(--w-lg) - var(--sp-md) * 2)) / 2
   );
 
   // ====---------------====
