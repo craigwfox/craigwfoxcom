@@ -31,9 +31,6 @@ body {
 // wrapper
 // ====---------------====
 .wrapper {
-  // max-width: var(--w-lg);
-  // width: var(--w-wrapper);
-
   padding-left: var(--wrapper-main);
   padding-right: var(--wrapper-main);
   margin: 0 auto;
@@ -88,14 +85,13 @@ body {
 // Grids
 // ====---------------====
 .home-grid {
-  max-width: var(--w-lg);
-  width: var(--w-wrapper);
-
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-md);
 
   margin: 0 auto;
+  padding-left: var(--wrapper-main);
+  padding-right: var(--wrapper-main);
 
   section {
     &:first-child {
