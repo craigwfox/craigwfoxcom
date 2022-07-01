@@ -2,3 +2,8 @@
   from = "/posts/responsive-videos/"
   to = "/posts/responsive-video-embeds/"
   status = 301
+
+[[redirects]]
+  from = "/rss"
+  to = "/feed/atom.xml"
+  status = 301

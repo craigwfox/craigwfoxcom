@@ -1,10 +1,8 @@
 ---
-layout: layouts/base.njk
+layout: layouts/page-sidebar.njk
 title: Uses
 description: The hardware and software I use to build websites.
 ---
-
-<div class="section">
 
 # Uses
 
@@ -18,33 +16,40 @@ Here is a list of the tools I use to build websites.
 ### Dev environment
 
 - Visual Studio Code
-- Node / npm
+- Node / npm / pnpm
 - Local By Flywheel
 - Powershell (Terminal Windows)
 - Hyper (Terminal Mac)
 - Firefox
 
-### Js Stuff
+### Design
+
+- Figma
+- Adobe Illustrator
+- Adobe Photoshop
+- Adobe InDesign
+
+### JS Stuff
 
 - Vue
-- Svelte / Sveltekit
+- Svelte / SvelteKit
 
-### Tasks and Notes
+### Misc apps
 
-- Asana
-- Obsidian
-- Notion
+- Asana (Task / Project tracking)
+- Obsidian (Note taking)
+- Reeder (RSS feeds)
 
 ## Hardware
 
-### 2021 Macbook Pro
+### 2021 MacBook Pro
 
-- 14in M1 Macbook Pro with 16gb of RAM and a 512gb HD
-- I connect it to three monitors using thunderbolt to HDMI adaptors and the single built in HDMI.
+- 14in M1 MacBook Pro with 16gb of RAM and a 512gb HD
+- I connect it to two monitors using thunderbolt to DisplayPort adaptors.
 
-### Desktop
+### Windows Desktop
 
-This is my custom built gaming PC that also get's used for work. Here are the basic stats.
+This is my custom built gaming PC that also get's used for work.
 
 - Ryzen 3600
 - GTX 2070
@@ -63,6 +68,5 @@ This is my custom built gaming PC that also get's used for work. Here are the ba
 ### Peripherals
 
 - Keyboard: Leopold FC 660m with Cherry MX Blues
-- Mouse: Logitech G600
-
-</div>
+- Mouse: Logitech G700 (Work / Games)
+- Mouse: Logitech G600 (MMO Games)
