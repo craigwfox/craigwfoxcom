@@ -12,9 +12,7 @@ ogImageAlt: "An overview of how the where(), is(), and has() pseudo classes work
 
 # Using the where(), is(), and has() CSS pseudo classes
 
-Lately I've seen more and more people using CSS pseudo classes, specifically `:where()` and `:is()`. These two classes allow for a lot of simplification in selector stacks.
-
-Another fun thing we have is the `:has()` pseudo class. This allows for some simple logic in CSS similar to how `:empty` works.
+With the has() pseudo classing rolling out to browsers I've seen more talking about pseudo classes and ways to utilize them. To help myself better understand them I want to go over a few of the more recent ones, where(), is(), and has().
 
 <div class="series-block">
 
@@ -32,7 +30,7 @@ This is article is a part of a series I'm going to be doing talking about some o
 
 ## where() and is()
 
-Where and is are both pseudo classes that function almost identically. They both take a list of selectors and then apply classes to the elements targeted by them.
+Where() and is() are both pseudo classes that function almost identically. Both where() and is() take a list of selectors and then apply classes to the those selectors or to children under them.
 
 ```css
 /* How we used to do this */
