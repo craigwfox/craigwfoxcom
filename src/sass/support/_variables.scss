@@ -98,7 +98,7 @@
   --clr-bg-alt: 220 39% 90%;
 
   --clr-main: 0 100% 67%;
-  --clr-alt-1: 199 100% 20%;
+  --clr-alt-1: 199 100% 15%;
   --clr-alt-2: 43 100% 65%;
 
   --clr-link: 199 100% 40%;
@@ -107,8 +107,8 @@
   --clr-text-reverse: 220 39% 95%;
 
   // ===------ Ui nuggets ------===
-  --clr-border-1: 220 30% 35%;
-  --clr-border-2: 220 30% 35% / 0.2;
+  --clr-border-1: var(--clr-alt-1);
+  --clr-border-2: var(--clr-alt-1) / 0.2;
   --clr-code-bg: 220 39% 10%;
   --clr-code-title: var(--clr-alt-2);
 }
