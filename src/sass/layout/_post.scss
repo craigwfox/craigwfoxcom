@@ -202,3 +202,27 @@
     margin-top: 0;
   }
 }
+
+// ====---------------====
+// Recent posts
+// ====---------------====
+.recent-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-sm);
+
+  margin-top: var(--sp-lg);
+  padding-top: var(--sp-sm);
+
+  border-top: 0.5rem solid hsl(var(--clr-bg-alt) / 0.5);
+
+  h2 {
+    margin-top: 0;
+
+    flex: 1 0 100%;
+  }
+
+  .article {
+    max-width: clamp(20rem, 50vw, 30rem);
+  }
+}
