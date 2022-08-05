@@ -16,10 +16,12 @@ Here is a list of the tools I use to build websites.
 ### Dev environment
 
 - Visual Studio Code
+  - **Theme:** [Community Material Theme Ocean](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-community-material-theme)
+- Hyper (Terminal Mac)
+  - **Theme:** [hyperocean](https://hyper.is/store/hyperocean)
 - Node / npm / pnpm
 - Local By Flywheel
 - Powershell (Terminal Windows)
-- Hyper (Terminal Mac)
 - Firefox
 
 ### Design
