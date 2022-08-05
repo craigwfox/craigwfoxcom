@@ -98,7 +98,7 @@
   --clr-bg-alt: 220 39% 90%;
 
   --clr-main: 0 100% 67%;
-  --clr-alt-1: 199 100% 20%;
+  --clr-alt-1: 199 100% 15%;
   --clr-alt-2: 43 100% 65%;
 
   --clr-link: 199 100% 40%;
@@ -107,18 +107,22 @@
   --clr-text-reverse: 220 39% 95%;
 
   // ===------ Ui nuggets ------===
-  --clr-border-1: 220 30% 35%;
-  --clr-border-2: 220 30% 35% / 0.2;
+  --clr-border-1: var(--clr-alt-1);
+  --clr-border-2: var(--clr-alt-1) / 0.2;
   --clr-code-bg: 220 39% 10%;
   --clr-code-title: var(--clr-alt-2);
+
+  // ===------ Logo colors ------===
+  --clr-logo-main: 0 100% 67%;
+  --clr-logo-tip: 38 22% 75%;
 }
 
 // ====---------------====
 // Dark theme
 // ====---------------====
 @mixin darkProps() {
-  --clr-bg: 220 39% 15%;
-  --clr-bg-alt: 220 39% 10%;
+  --clr-bg: 220 39% 10%;
+  --clr-bg-alt: 220 49% 15%;
 
   --clr-main: 0 100% 67%;
   --clr-alt-1: 44 100% 88%;
@@ -134,6 +138,10 @@
   --clr-border-2: 220 39% 10% / 0.5;
   --clr-code-bg: var(--clr-bg-alt);
   --clr-code-title: var(--clr-alt-1) / 0.8;
+
+  // ===------ Logo colors ------===
+  --clr-logo-main: 0 100% 67%;
+  --clr-logo-tip: 44 100% 93%;
 }
 
 @include darkTheme {

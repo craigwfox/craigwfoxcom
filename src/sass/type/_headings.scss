@@ -1,3 +1,5 @@
+@use "../support/mixins" as *;
+
 // ---------------------------------------------
 // ======---------------------------------======
 //  Headings
@@ -21,7 +23,15 @@ h1 {
   font-size: clamp(2.4rem, 1.966rem + 2.05vw, 3.5rem);
 
   strong {
-    color: hsl(var(--clr-link-hover));
+    color: hsl(var(--clr-link));
+  }
+}
+
+@include darkTheme() {
+  h1 {
+    strong {
+      color: hsl(var(--clr-link-hover));
+    }
   }
 }
 

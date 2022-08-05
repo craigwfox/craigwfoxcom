@@ -3,7 +3,7 @@ const { DateTime } = require("luxon")
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 const pluginRss = require("@11ty/eleventy-plugin-rss")
 
-async function imageShortcode(src, alt, sizes, cls) {
+async function imageShortcode(src, alt, sizes, cls, loading = "lazy") {
   let metadata = await Image(src, {
     widths: [25, 300, 600],
     svgShortCircuit: true,
@@ -15,7 +15,7 @@ async function imageShortcode(src, alt, sizes, cls) {
     class: cls,
     alt,
     sizes,
-    loading: "lazy",
+    loading: loading,
     decoding: "async",
   }
 

@@ -1,7 +1,7 @@
 ---
 tags: post
 permalink: "/posts/where-is-and-has/"
-date: 2022-05-13
+date: 2022-08-02
 title: "Using CSS where(), is(), and has()"
 categories: ["css", "guide"]
 description: "An overview of how the where(), is(), and has() pseudo classes work and examples of different ways to utilize them in your day to day work."

@@ -4,5 +4,25 @@ ogType: article
 ---
 <div class="wrapper section section--post">
   <time>{{ date | postDate }}</time>
+
   {{ content | safe }}
+
+  <div class="recent-posts">
+    <h2>View recent posts</h2>
+
+    {% set loopIndex = 0 %}
+    {%- for post in collections.post | reverse -%}
+      {% if loopIndex < 2 and post.url != page.url %}
+      <article class="article">
+        <a href={{ post.data.permalink }}>
+          <time>{{ post.date | postDate }}</time>
+          <h3>
+              {{ post.data.title }}
+          </h3>
+        </a>
+      </article>
+      {% set loopIndex = loopIndex + 1 %}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
 </div>
