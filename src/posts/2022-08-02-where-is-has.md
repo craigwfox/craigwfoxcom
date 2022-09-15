@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: njk,md
 tags: post
 permalink: "/posts/where-is-and-has/"
 date: 2022-08-02
@@ -14,19 +15,8 @@ ogImageAlt: "An overview of how the where(), is(), and has() pseudo classes work
 
 With the has() pseudo classing rolling out to browsers I've seen more talking about pseudo classes and ways to utilize them. To help myself better understand them I want to go over a few of the more recent ones, where(), is(), and has().
 
-<div class="series-block">
-
-## 2022 new CSS hotness series
-
-This is article is a part of a series I'm going to be doing talking about some of the cool new things that have come to CSS in the last couple of years.
-
-1. [Fluid type and sizing using clamp(), min(), max()](/posts/fluid-type-and-sizing/)
-2. [where(), is(), has()](/posts/where-is-and-has) _(You are here)_
-3. :focus-visible
-4. aspect-ratio
-5. Container Queries
-
-</div>
+{% set curPost = "2" %}
+{% include '../blog-parts/css-2022-hotness.njk' %}
 
 ## where() and is()
 
