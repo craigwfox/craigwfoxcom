@@ -1,6 +1,6 @@
 ---
 tags: post
-permalink: "/posts/responsive-video-embeds/"
+permalink: "/posts/2022-02/responsive-video-embeds/"
 date: 2022-02-07
 title: "Responsive / fluid width videos"
 categories: ["Web history", "Old vs new"]

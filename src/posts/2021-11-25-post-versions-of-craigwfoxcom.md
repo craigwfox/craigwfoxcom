@@ -1,6 +1,6 @@
 ---
 tags: post
-permalink: "/posts/versions-of-craigwfox-com/"
+permalink: "/posts/2021-11/versions-of-craigwfox-com/"
 date: 2021-11-25
 title: "The versions of craigwfox.com"
 description: "A look at all the versions of this site."
