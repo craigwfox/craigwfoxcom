@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: njk,md
 tags: post
-permalink: "/posts/where-is-and-has/"
+permalink: "/posts/2022-08/where-is-and-has/"
 date: 2022-08-02
 title: "Using CSS where(), is(), and has()"
 categories: ["css", "guide"]

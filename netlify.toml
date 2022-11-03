@@ -2,6 +2,24 @@
   from = "/posts/responsive-videos/"
   to = "/posts/responsive-video-embeds/"
   status = 301
+  from = "/posts/where-is-and-has/"
+  to = "/posts/2022-08/where-is-and-has/"
+  status = 301
+  from = "/posts/fluid-type-and-sizing/"
+  to = "/posts/2022-05/fluid-type-and-sizing/"
+  status = 301
+  from = "/posts/theme-toggle-web-component/"
+  to = "/posts/2022-03/theme-toggle-web-component/"
+  status = 301
+  from = "/posts/responsive-video-embeds/"
+  to = "/posts/2022-02/responsive-video-embeds/"
+  status = 301
+  from = "/posts/methods-for-equal-height-columns/"
+  to = "/posts/2021-11/methods-for-equal-height-columns/"
+  status = 301
+  from = "/posts/versions-of-craigwfox-com/"
+  to = "/posts/2021-11/versions-of-craigwfox-com/"
+  status = 301
 
 [[redirects]]
   from = "/rss"
