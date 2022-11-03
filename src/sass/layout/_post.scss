@@ -201,6 +201,12 @@
   h2 {
     margin-top: 0;
   }
+
+  [aria-current="page"] {
+    em {
+      color: hsl(var(--clr-alt-2));
+    }
+  }
 }
 
 // ====---------------====
