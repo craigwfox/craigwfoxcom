@@ -11,7 +11,7 @@ ogImage: "img/twitter/2022-11-03-aspect-ratio.png"
 ogImageAlt: "Using CSS aspect-ratio"
 ---
 
-# CSS aspect-ratio and some everyday uses for it
+# CSS aspect ratio and some everyday uses for it
 
 CSS aspect-ratio has been working in browser for a couple of years now and I want to share some ways that I frequently utilize it in my day to day work.
 
