@@ -19,6 +19,12 @@ body {
 
   color: hsl(var(--clr-text-base));
   font: 400 var(--fs-base) / 1.5 var(--font-main);
+
+  *::selection {
+    background: hsl(var(--clr-alt-1));
+
+    color: hsl(var(--clr-bg));
+  }
 }
 
 // ====---------------====
@@ -50,10 +56,22 @@ body {
 
   h1 {
     color: hsl(var(--clr-alt-1));
+
+    &::selection {
+      background: hsl(var(--clr-alt-1));
+
+      color: hsl(var(--clr-bg));
+    }
   }
 
   h2 {
     color: hsl(var(--clr-alt-1));
+
+    &::selection {
+      background: hsl(var(--clr-alt-1));
+
+      color: hsl(var(--clr-bg));
+    }
   }
 
   p + h2 {
