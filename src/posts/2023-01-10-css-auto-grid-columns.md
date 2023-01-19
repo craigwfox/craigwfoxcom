@@ -1,12 +1,12 @@
 ---
 tags: post
-permalink: "/posts/2022-11/css-auto-grid-columns/"
-date: 2023-01-10
+permalink: "/posts/2023-01/css-auto-grid-columns/"
+date: 2023-01-18
 title: "CSS Grid auto-fit/auto-fill columns"
-description: Making auto flowing columns using CSS grid
+description: A way to use CSS grid to create auto flowing columns and layers that let's us remove the need for many media queries, resulting in cleaner and more maintainable stylesheets.
 categories: [css, css-grid, grid-layout]
-image: "img/twitter/2022-11-grid-auto-fit-cols.png"
-ogImage: "img/twitter/2022-11-grid-auto-fit-cols.png"
+image: "img/twitter/2023-01-18-css-auto-columns.png"
+ogImage: "img/twitter/2023-01-18-css-auto-columns.png"
 ogImageAlt: "Auto flowing columns using CSS grid"
 ---
 
