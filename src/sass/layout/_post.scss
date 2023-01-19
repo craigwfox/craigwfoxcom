@@ -176,6 +176,18 @@
     height: auto;
     object-fit: contain;
   }
+
+  &--bright {
+    border-color: hsl(var(--clr-bg-alt));
+  }
+
+  &--lg {
+    max-width: 55rem;
+  }
+
+  &--xl {
+    max-width: 85rem;
+  }
 }
 
 .header-anchor,
