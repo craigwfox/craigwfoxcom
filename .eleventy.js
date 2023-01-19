@@ -5,7 +5,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss")
 
 async function imageShortcode(src, alt, sizes, cls, loading = "lazy") {
   let metadata = await Image(src, {
-    widths: [25, 300, 600],
+    widths: [25, 300, 600, 800, 1200],
     svgShortCircuit: true,
     formats: ["avif", "webp", "jpeg", "svg"],
     outputDir: "./dist/img/",
