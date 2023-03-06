@@ -1,0 +1,64 @@
+@use "../support/mixins" as *;
+
+// ---------------------------------------------
+// ======---------------------------------======
+//  Tables
+// ======---------------------------------======
+// ---------------------------------------------
+
+table {
+  --thead-color: hsl(var(--clr-code-bg));
+  --thead-border: hsl(var(--clr-alt-1));
+  --tbody-border: hsl(var(--clr-alt-1));
+
+  margin-bottom: var(--sp-sm);
+
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 0.5rem 1rem;
+
+    font-size: var(--fs-sm);
+  }
+
+  thead {
+    background: var(--thead-color);
+
+    th {
+      border-right: 2px solid var(--thead-border);
+
+      color: hsl(var(--clr-alt-2));
+
+      line-height: 1.3;
+
+      &:first-child {
+        border-left: 2px solid var(--thead-color);
+      }
+
+      &:last-child {
+        border-right: 2px solid var(--thead-color);
+      }
+    }
+  }
+
+  tbody {
+    @include darkTheme {
+    }
+
+    th,
+    td {
+      background: hsl(var(--clr-bg));
+      border-inline: 2px solid var(--tbody-border);
+      border-bottom: 2px solid var(--tbody-border);
+    }
+  }
+}
+
+@include darkTheme {
+  table {
+    --thead-color: hsl(var(--clr-bg-alt));
+    --thead-border: hsl(var(--clr-bg));
+    --tbody-border: hsl(var(--clr-bg-alt));
+  }
+}

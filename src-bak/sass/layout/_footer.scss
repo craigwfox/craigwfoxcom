@@ -1,0 +1,40 @@
+// ---------------------------------------------
+// ======---------------------------------======
+//  Footer
+// ======---------------------------------======
+// ---------------------------------------------
+
+.site-footer {
+  max-width: var(--w-lg);
+  width: calc(100% - var(--sp-md));
+
+  display: grid;
+  place-content: center;
+  gap: calc(var(--sp-md) / 3);
+
+  padding: var(--sp-md) var(--sp-sm);
+  margin: var(--sp-lg) auto 0;
+
+  border-top: 0.5rem solid hsl(var(--clr-main));
+
+  text-align: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  img {
+    max-width: 1.5rem;
+    height: auto;
+
+    object-fit: contain;
+
+    display: inline-block;
+  }
+}

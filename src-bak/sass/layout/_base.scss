@@ -1,0 +1,143 @@
+@use "../support/mixins" as *;
+
+// ---------------------------------------------
+// ======---------------------------------======
+//  Base layout styles
+// ======---------------------------------======
+// ---------------------------------------------
+
+// ====---------------====
+// Content Wrappers
+// ====---------------====
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: hsl(var(--clr-bg));
+
+  color: hsl(var(--clr-text-base));
+  font: 400 var(--fs-base) / 1.5 var(--font-main);
+
+  *::selection {
+    background: hsl(var(--clr-alt-1));
+
+    color: hsl(var(--clr-bg));
+  }
+}
+
+// ====---------------====
+// Main
+// ====---------------====
+.main {
+}
+
+// ====---------------====
+// wrapper
+// ====---------------====
+.wrapper {
+  padding-left: var(--wrapper-main);
+  padding-right: var(--wrapper-main);
+  margin: 0 auto;
+}
+
+// ====---------------====
+// Sections
+// ====---------------====
+.section {
+  padding-bottom: var(--sp-md);
+
+  &:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+  }
+
+  h1 {
+    color: hsl(var(--clr-alt-1));
+
+    &::selection {
+      background: hsl(var(--clr-alt-1));
+
+      color: hsl(var(--clr-bg));
+    }
+  }
+
+  h2 {
+    color: hsl(var(--clr-alt-1));
+
+    &::selection {
+      background: hsl(var(--clr-alt-1));
+
+      color: hsl(var(--clr-bg));
+    }
+  }
+
+  p + h2 {
+    margin-top: var(--sp-lg);
+  }
+}
+
+.section--about {
+  h1 {
+    margin-bottom: var(--sp-sm);
+
+    font-size: var(--fs-h2);
+  }
+
+  h2 {
+    margin-top: var(--sp-sm);
+
+    font-size: var(--fs-h4);
+  }
+
+  > * {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ====---------------====
+// Grids
+// ====---------------====
+.home-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-md);
+
+  margin: 0 auto;
+  padding-left: var(--wrapper-main);
+  padding-right: var(--wrapper-main);
+
+  section {
+    &:first-child {
+      flex-basis: 25rem;
+      flex-grow: 1;
+      order: -1;
+    }
+
+    &:last-child {
+      flex-basis: 0;
+      flex-grow: 999;
+    }
+  }
+}
+
+// ====---------------====
+// Subpage
+// ====---------------====
+.section--sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-lg);
+}
+
+.content {
+  flex: 1 1 600px;
+}
+
+.sidebar {
+  flex: 1 1 225px;
+}
