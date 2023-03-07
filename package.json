@@ -23,6 +23,7 @@
   "homepage": "https://github.com/craigwfox/craigwfox.github.io#readme",
   "dependencies": {
     "@astrojs/mdx": "^0.17.2",
+    "@astrojs/netlify": "^2.1.3",
     "@astrojs/rss": "^2.1.1",
     "@astrojs/sitemap": "^1.1.0",
     "@astrojs/svelte": "^2.0.2",
