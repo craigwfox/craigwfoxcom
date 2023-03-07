@@ -1,0 +1,43 @@
+---
+const today = new Date()
+
+const { scripts = [] } = Astro.props
+---
+
+<footer id="footer" class="site-footer" aria-label="Site footer">
+  <h2>Find me</h2>
+
+  <ul>
+    <li>
+      <a href="/feed/atom.xml">RSS</a>
+    </li>
+    <li>
+      <a rel="me" href="https://github.com/craigwfox">Github</a>
+    </li>
+    <li>
+      <a rel="me" href="https://codepen.io/craigwfox">Codepen</a>
+    </li>
+    <li>
+      <a rel="me" href="http://www.linkedin.com/in/craigwfox">LinkedIn</a>
+    </li>
+    <li>
+      <a rel="me" href="https://indieweb.social/@craigwfox">Mastodon</a>
+    </li>
+    <li>
+      <a href="mailto:info@craigwfox.com" target="_blank" rel="noreferrer">
+        Email
+      </a>
+    </li>
+  </ul>
+
+  <p>
+    &copy; {today.getFullYear()} Craig Fox
+    <img src="/images/fox-icon.svg" alt="" />
+    Front-end developer
+  </p>
+</footer>
+
+<script src="../../node_modules/simple-theme-switcher/theme-switcher.js"
+></script>
+
+{scripts.map(scriptTag => <script src={scriptTag} async />)}

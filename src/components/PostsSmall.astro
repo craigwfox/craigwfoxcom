@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content"
+import FormattedDate from "../components/FormattedDate.astro"
+
+const { count = 3 } = Astro.props
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+---
+
+<div class="articles-wrapper">
+  {
+    posts.slice(0, count).map(post => (
+      <article class="article">
+        <a href={`/blog/${post.slug}/`}>
+          <FormattedDate date={post.data.pubDate} />
+          <h3>{post.data.title}</h3>
+        </a>
+      </article>
+    ))
+  }
+</div>
