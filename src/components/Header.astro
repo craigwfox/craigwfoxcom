@@ -36,10 +36,21 @@ import { SITE_TITLE } from "../consts"
   </a>
 
   <nav aria-label="Site navigation">
-    <a href="/">Home</a>
-    <a href="/blog">Blog</a>
-    <a href="/about">About</a>
-    <a href="/uses">Uses</a>
+    <a href="/" aria-current={Astro.url.pathname === "/" ? "page" : "false"}
+      >Home</a
+    >
+    <a
+      href="/blog"
+      aria-current={Astro.url.pathname === "/blog" ? "page" : "false"}>Blog</a
+    >
+    <a
+      href="/about"
+      aria-current={Astro.url.pathname === "/about" ? "page" : "false"}>About</a
+    >
+    <a
+      href="/uses"
+      aria-current={Astro.url.pathname === "/uses" ? "page" : "false"}>Uses</a
+    >
   </nav>
 
   <div class="site-toggles">
