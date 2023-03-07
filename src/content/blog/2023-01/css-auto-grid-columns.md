@@ -1,6 +1,6 @@
 ---
 tags: post
-permalink: "/posts/2023-01/css-auto-grid-columns/"
+postSlug: "css-auto-grid-columns/"
 pubDate: 2023-01-18
 title: "Using CSS Grid auto-fit/auto-fill to create dynamic columns"
 description: A way to use CSS grid to create auto flowing columns and layers that let's us remove the need for many media queries, resulting in cleaner and more maintainable stylesheets.
@@ -68,7 +68,7 @@ Here's the code in action. You can make any column be full width, by adding the 
   class="codepen"
   data-height="300"
   data-default-tab="html,result"
-  data-slug-hash="KKeWywO"
+  data-postSlug-hash="KKeWywO"
   data-user="craigwfox"
   data-token="c9543b36266207cf5425a72285e821f1"
   style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"

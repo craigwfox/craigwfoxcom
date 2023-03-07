@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: njk,md
 tags: post
-permalink: "/posts/2022-11/using-aspect-ratio/"
+postSlug: "using-aspect-ratio/"
 pubDate: 2022-11-03
 title: "CSS aspect-ratio and some everyday uses for it"
 description: "CSS aspect-ratio has been working in browser for a couple of years now and I want to share some ways that I frequently utilize it in my day to day work."

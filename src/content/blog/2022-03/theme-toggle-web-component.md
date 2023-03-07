@@ -1,6 +1,6 @@
 ---
 tags: post
-permalink: "/posts/2022-03/theme-toggle-web-component/"
+postSlug: "theme-toggle-web-component/"
 pubDate: 2022-03-10
 title: "A web component to toggle themes"
 categories: []

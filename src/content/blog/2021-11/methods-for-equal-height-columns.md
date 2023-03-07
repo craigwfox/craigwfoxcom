@@ -1,6 +1,6 @@
 ---
 tags: post
-permalink: "/posts/2021-11/methods-for-equal-height-columns/"
+postSlug: "methods-for-equal-height-columns/"
 pubDate: 2021-11-28
 title: "Methods for equal height columns"
 description: "The different ways I've created equal height columns, since I first started making websites."

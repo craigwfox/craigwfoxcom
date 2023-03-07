@@ -67,58 +67,58 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"blog": {
-"2021-11-25-post-versions-of-craigwfoxcom.md": {
-  id: "2021-11-25-post-versions-of-craigwfoxcom.md",
-  slug: "2021-11-25-post-versions-of-craigwfoxcom",
+"2021-11/methods-for-equal-height-columns.md": {
+  id: "2021-11/methods-for-equal-height-columns.md",
+  slug: "2021-11/methods-for-equal-height-columns",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2021-11-28-post-equal-height-cols.md": {
-  id: "2021-11-28-post-equal-height-cols.md",
-  slug: "2021-11-28-post-equal-height-cols",
+"2021-11/versions-of-craigwfox-com.md": {
+  id: "2021-11/versions-of-craigwfox-com.md",
+  slug: "2021-11/versions-of-craigwfox-com",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2022-02-07-post-responsive-videos.md": {
-  id: "2022-02-07-post-responsive-videos.md",
-  slug: "2022-02-07-post-responsive-videos",
+"2022-02/responsive-video-embeds.md": {
+  id: "2022-02/responsive-video-embeds.md",
+  slug: "2022-02/responsive-video-embeds",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2022-03-07-theme-toggle-web-component.md": {
-  id: "2022-03-07-theme-toggle-web-component.md",
-  slug: "2022-03-07-theme-toggle-web-component",
+"2022-03/theme-toggle-web-component.md": {
+  id: "2022-03/theme-toggle-web-component.md",
+  slug: "2022-03/theme-toggle-web-component",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2022-05-13-fluid-type-sizing.md": {
-  id: "2022-05-13-fluid-type-sizing.md",
-  slug: "2022-05-13-fluid-type-sizing",
+"2022-05/fluid-type-and-sizing.md": {
+  id: "2022-05/fluid-type-and-sizing.md",
+  slug: "2022-05/fluid-type-and-sizing",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2022-08-02-where-is-has.md": {
-  id: "2022-08-02-where-is-has.md",
-  slug: "2022-08-02-where-is-has",
+"2022-08/where-is-and-has.md": {
+  id: "2022-08/where-is-and-has.md",
+  slug: "2022-08/where-is-and-has",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2022-11-03-aspect-ratio.md": {
-  id: "2022-11-03-aspect-ratio.md",
-  slug: "2022-11-03-aspect-ratio",
+"2022-11/using-aspect-ratio.md": {
+  id: "2022-11/using-aspect-ratio.md",
+  slug: "2022-11/using-aspect-ratio",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2023-01-10-css-auto-grid-columns.md": {
-  id: "2023-01-10-css-auto-grid-columns.md",
-  slug: "2023-01-10-css-auto-grid-columns",
+"2023-01/css-auto-grid-columns.md": {
+  id: "2023-01/css-auto-grid-columns.md",
+  slug: "2023-01/css-auto-grid-columns",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">

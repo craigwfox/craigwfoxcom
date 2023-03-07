@@ -1,6 +1,6 @@
 ---
 tags: post
-permalink: "/posts/2022-05/fluid-type-and-sizing/"
+postSlug: "fluid-type-and-sizing/"
 pubDate: 2022-05-13
 title: "Fluid type and sizing in CSS"
 categories: []
