@@ -215,7 +215,7 @@
   }
 
   [aria-current="page"] {
-    em {
+    + em {
       color: hsl(var(--clr-alt-2));
     }
   }

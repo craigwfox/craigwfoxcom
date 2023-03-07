@@ -25,8 +25,10 @@
     "@astrojs/mdx": "^0.17.2",
     "@astrojs/rss": "^2.1.1",
     "@astrojs/sitemap": "^1.1.0",
+    "@astrojs/svelte": "^2.0.2",
     "astro": "^2.0.18",
     "sass": "^1.58.3",
-    "simple-theme-switcher": "1.0.4"
+    "simple-theme-switcher": "1.0.4",
+    "svelte": "^3.55.1"
   }
 }

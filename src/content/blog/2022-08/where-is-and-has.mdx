@@ -11,12 +11,13 @@ ogImage: "images/twitter/2022-05-13-where-is-and-has.png"
 ogImageAlt: "An overview of how the where(), is(), and has() pseudo classes work and examples of different ways to utilize them in your day to day work"
 ---
 
+import CssHotness from '../../../components/CssHotness.svelte'
+
 # Using the where(), is(), and has() CSS pseudo classes
 
 With the has() pseudo classing rolling out to browsers I've seen more talking about pseudo classes and ways to utilize them. To help myself better understand them I want to go over a few of the more recent ones, where(), is(), and has().
 
-{% set curPost = "2" %}
-{% include '../blog-parts/css-2022-hotness.njk' %}
+<CssHotness curPost="2" />
 
 ## where() and is()
 

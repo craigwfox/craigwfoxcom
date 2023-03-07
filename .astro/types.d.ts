@@ -102,8 +102,8 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2022-08/where-is-and-has.md": {
-  id: "2022-08/where-is-and-has.md",
+"2022-08/where-is-and-has.mdx": {
+  id: "2022-08/where-is-and-has.mdx",
   slug: "2022-08/where-is-and-has",
   body: string,
   collection: "blog",
