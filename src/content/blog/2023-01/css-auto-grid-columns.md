@@ -8,6 +8,7 @@ categories: [css, css-grid, grid-layout]
 image: "img/twitter/2023-01-18-css-auto-columns.png"
 ogImage: "img/twitter/2023-01-18-css-auto-columns.png"
 ogImageAlt: "Auto flowing columns using CSS grid"
+codepenScripts: ["https://cpwebassets.codepen.io/assets/embed/ei.js"]
 ---
 
 # Using CSS Grid auto-fit/auto-fill to create dynamic columns
@@ -17,7 +18,7 @@ I'm sure that many are familiar with using the [Flexbox Albatross](https://heydo
 What I'm wanting to setup is an auto filling grid that doesn't require media queries and can support having some of it's elements be full width.
 
 <div class="post-image post-image--lg post-image--bright">
-{% image "./src/images/posts/2023-01/css-auto-columns/single-to-columns-example.png", "Example of going from a single column to multiple columns and rows", "800px" %}
+<img src="/images/posts/2023-01/css-auto-columns/single-to-columns-example.png" alt="Example of going from a single column to multiple columns and rows" />
 </div>
 
 ## HTML Setup
@@ -63,29 +64,7 @@ Now we style the full width modifier class to start at column **1** and end at *
 
 Here's the code in action. You can make any column be full width, by adding the `col--full` class.
 
-```html
-<p
-  class="codepen"
-  data-height="300"
-  data-default-tab="html,result"
-  data-postSlug-hash="KKeWywO"
-  data-user="craigwfox"
-  data-token="c9543b36266207cf5425a72285e821f1"
-  style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
->
-  <span
-    >See the Pen
-    <a
-      href="https://codepen.io/craigwfox/pen/KKeWywO/c9543b36266207cf5425a72285e821f1"
-    >
-      Grid auto columns with variable sizes</a
-    >
-    by Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>) on
-    <a href="https://codepen.io">CodePen</a>.</span
-  >
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-```
+<p class="codepen" data-height="500" data-default-tab="html" data-slug-hash="KKeWywO" data-user="craigwfox" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"><span>See the Pen <a href="https://codepen.io/craigwfox/pen/KKeWywO/c9543b36266207cf5425a72285e821f1">Grid auto columns with variable sizes</a> by Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
 
 ## Closing thoughts
 

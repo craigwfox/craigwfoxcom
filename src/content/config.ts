@@ -9,6 +9,8 @@ const blog = defineCollection({
     image: z.string(),
     ogImage: z.string(),
     ogImageAlt: z.string(),
+    categories: z.array(z.string()).optional(),
+    codepenScripts: z.array(z.string()).optional(),
     // Transform string to Date object
     pubDate: z
       .string()
