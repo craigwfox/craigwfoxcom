@@ -4,8 +4,8 @@ postSlug: "methods-for-equal-height-columns/"
 pubDate: 2021-11-28
 title: "Methods for equal height columns"
 description: "The different ways I've created equal height columns, since I first started making websites."
-image: "img/rss/2021-11-equal-height-columns.png"
-ogImage: "img/twitter/2021-11-equal-height-columns.png"
+image: "images/rss/2021-11-equal-height-columns.png"
+ogImage: "images/twitter/2021-11-equal-height-columns.png"
 ogImageAlt: "A look at methods for equal height columns"
 ---
 

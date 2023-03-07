@@ -4,8 +4,8 @@ postSlug: "versions-of-craigwfox-com/"
 pubDate: 2021-11-25
 title: "The versions of craigwfox.com"
 description: "A look at all the versions of this site."
-image: "img/rss/2021-11-versions-of-craigwfox.png"
-ogImage: "img/twitter/2021-11-versions-of-craigwfox.png"
+image: "images/rss/2021-11-versions-of-craigwfox.png"
+ogImage: "images/twitter/2021-11-versions-of-craigwfox.png"
 ogImageAlt: "The different version of craigwfox.com"
 ---
 

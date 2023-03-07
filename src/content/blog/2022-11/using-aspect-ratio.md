@@ -6,8 +6,8 @@ pubDate: 2022-11-03
 title: "CSS aspect-ratio and some everyday uses for it"
 description: "CSS aspect-ratio has been working in browser for a couple of years now and I want to share some ways that I frequently utilize it in my day to day work."
 categories: [2022-css, css]
-image: "img/twitter/2022-11-03-aspect-ratio.png"
-ogImage: "img/twitter/2022-11-03-aspect-ratio.png"
+image: "images/twitter/2022-11-03-aspect-ratio.png"
+ogImage: "images/twitter/2022-11-03-aspect-ratio.png"
 ogImageAlt: "Using CSS aspect-ratio"
 ---
 

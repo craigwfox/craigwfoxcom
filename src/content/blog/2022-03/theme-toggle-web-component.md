@@ -5,8 +5,8 @@ pubDate: 2022-03-10
 title: "A web component to toggle themes"
 categories: []
 description: A simple web component to toggle the site themes and modes.
-image: "img/rss/2022-03-web-component-toggle.webp"
-ogImage: "img/twitter/2022-03-web-component-toggle.webp"
+image: "images/rss/2022-03-web-component-toggle.webp"
+ogImage: "images/twitter/2022-03-web-component-toggle.webp"
 ogImageAlt: "A web component to toggle site themes / modes"
 ---
 

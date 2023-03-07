@@ -6,8 +6,8 @@ pubDate: 2022-08-02
 title: "Using CSS where(), is(), and has()"
 categories: ["css", "guide"]
 description: "An overview of how the where(), is(), and has() pseudo classes work and examples of different ways to utilize them in your day to day work."
-image: "img/twitter/2022-05-13-where-is-and-has.png"
-ogImage: "img/twitter/2022-05-13-where-is-and-has.png"
+image: "images/twitter/2022-05-13-where-is-and-has.png"
+ogImage: "images/twitter/2022-05-13-where-is-and-has.png"
 ogImageAlt: "An overview of how the where(), is(), and has() pseudo classes work and examples of different ways to utilize them in your day to day work"
 ---
 
