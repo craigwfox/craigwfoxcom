@@ -14,7 +14,7 @@
     <li>
       <a
         aria-current={curPost == 1 ? "page" : "false"}
-        href="/posts/2022-05/fluid-type-and-sizing/"
+        href="/blog/2022-05/fluid-type-and-sizing/"
       >
         Fluid type and sizing using clamp(), min(), max()
       </a>
@@ -25,7 +25,7 @@
     <li>
       <a
         aria-current={curPost == 2 ? "page" : "false"}
-        href="/posts/2022-08/where-is-and-has"
+        href="/blog/2022-08/where-is-and-has"
         >where(), is(), has()
       </a>
       {#if curPost == 2}
@@ -35,7 +35,7 @@
     <li>
       <a
         aria-current={curPost == 3 ? "page" : "false"}
-        href="/posts/2022-11/using-aspect-ratio/">aspect-ratio</a
+        href="/blog/2022-11/using-aspect-ratio/">aspect-ratio</a
       >
       {#if curPost == 3}
         <em>(You are here)</em>

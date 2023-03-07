@@ -74,8 +74,8 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2021-11/versions-of-craigwfox-com.md": {
-  id: "2021-11/versions-of-craigwfox-com.md",
+"2021-11/versions-of-craigwfox-com.mdx": {
+  id: "2021-11/versions-of-craigwfox-com.mdx",
   slug: "2021-11/versions-of-craigwfox-com",
   body: string,
   collection: "blog",
@@ -95,8 +95,8 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2022-05/fluid-type-and-sizing.md": {
-  id: "2022-05/fluid-type-and-sizing.md",
+"2022-05/fluid-type-and-sizing.mdx": {
+  id: "2022-05/fluid-type-and-sizing.mdx",
   slug: "2022-05/fluid-type-and-sizing",
   body: string,
   collection: "blog",
@@ -109,8 +109,8 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"2022-11/using-aspect-ratio.md": {
-  id: "2022-11/using-aspect-ratio.md",
+"2022-11/using-aspect-ratio.mdx": {
+  id: "2022-11/using-aspect-ratio.mdx",
   slug: "2022-11/using-aspect-ratio",
   body: string,
   collection: "blog",

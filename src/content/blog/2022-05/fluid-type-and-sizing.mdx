@@ -10,12 +10,13 @@ ogImage: "images/twitter/2022-05-13-fluid-sizing.png"
 ogImageAlt: "A guide to using clamp(), min(), and max() to create fluid type and sizing in CSS."
 ---
 
+import CssHotness from "../../../components/CssHotness.svelte"
+
 # Fluid type and sizing using clamp(), min(), max()
 
 Fluid type and sizing started gaining traction in the front end community over the last couple of years. It has allowed us to simplify a lot of our responsive code and in many cases remove media queries all together. In this article I will be talking about how clamp(), min(), and max() work and some of the more popular ways that they are used.
 
-{% set curPost = "1" %}
-{% include '../blog-parts/css-2022-hotness.njk' %}
+<CssHotness curPost="1" />
 
 ## min() and max()
 
@@ -93,10 +94,21 @@ One of the most popular uses for clamp, min, and max is to create fluid typograp
 
 Here is an example of all three being used for fluid type and how they differ.
 
-<iframe height="480" style="width: 100%;" scrolling="no" title="Min, max, and clamp example on Codepen" src="https://codepen.io/craigwfox/embed/VwQjVyJ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/craigwfox/pen/VwQjVyJ">
-  min and max example</a> by Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>)
-  on <a href="https://codepen.io">CodePen</a>.
+<iframe
+  height="480"
+  style="width: 100%;"
+  scrolling="no"
+  title="Min, max, and clamp example on Codepen"
+  src="https://codepen.io/craigwfox/embed/VwQjVyJ?default-tab=html%2Cresult"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{" "}
+  <a href="https://codepen.io/craigwfox/pen/VwQjVyJ">min and max example</a> by
+  Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 ### Margin and padding
