@@ -1,3 +1,13 @@
+/_image     /.netlify/functions/entry    200
+/           /.netlify/functions/entry    200
+/rss.xml    /.netlify/functions/entry    200
+/about      /.netlify/functions/entry    200
+/blog       /.netlify/functions/entry    200
+/blog/*     /.netlify/functions/entry    200
+/uses       /.netlify/functions/entry    200
+/404        /.netlify/functions/entry    200
+/*          /.netlify/functions/entry    404
+
 /posts/2023-01/css-auto-grid-columns/ /blog/2023-01/css-auto-grid-columns/"
 /posts/2022-11/using-aspect-ratio/ /blog/2022-11/using-aspect-ratio/"
 /posts/2022-08/where-is-and-has/ /blog/2022-08/where-is-and-has/"
