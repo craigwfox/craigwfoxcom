@@ -1,0 +1,88 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/posts/2023-01/css-auto-grid-columns/"
+  to = "/blog/2023-01/css-auto-grid-columns/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2022-11/using-aspect-ratio/"
+  to = "/blog/2022-11/using-aspect-ratio/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2022-08/where-is-and-has/"
+  to = "/blog/2022-08/where-is-and-has/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2022-05/fluid-type-and-sizing/"
+  to = "/blog/2022-05/fluid-type-and-sizing/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2022-03/theme-toggle-web-component/"
+  to = "/blog/2022-03/theme-toggle-web-component/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2022-02/responsive-video-embeds/"
+  to = "/blog/2022-02/responsive-video-embeds/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2021-11/methods-for-equal-height-columns/"
+  to = "/blog/2021-11/methods-for-equal-height-columns/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2021-11/versions-of-craigwfox-com/"
+  to = "/blog/2021-11/versions-of-craigwfox-com/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/responsive-videos/"
+  to = "/blog/2022-02/responsive-video-embeds/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/where-is-and-has/"
+  to = "/blog/2022-08/where-is-and-has/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/fluid-type-and-sizing/"
+  to = "/blog/2022-05/fluid-type-and-sizing/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/theme-toggle-web-component/"
+  to = "/blog/2022-03/theme-toggle-web-component/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/responsive-video-embeds/"
+  to = "/blog/2022-02/responsive-video-embeds/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/methods-for-equal-height-columns/"
+  to = "/blog/2021-11/methods-for-equal-height-columns/"
+  status = 301
+
+[[redirects]]
+  from = "/posts/versions-of-craigwfox-com/"
+  to = "/blog/2021-11/versions-of-craigwfox-com/"
+  status = 301
+
+[[redirects]]
+  from = "/feed/atom.xml"
+  to = "/rss.xml"
+  status = 301
+
+[[redirects]]
+  from = "/rss"
+  to = "/rss.xml"
+  status = 301
