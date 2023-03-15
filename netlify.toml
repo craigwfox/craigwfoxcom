@@ -2,11 +2,13 @@
 from = "/posts/2023-01/css-auto-grid-columns/"
 to = "/blog/2023-01/css-auto-grid-columns/"
 status = 301
+query = {path = ":path"}
 
 [[redirects]]
 from = "/posts/2022-11/using-aspect-ratio/"
 to = "/blog/2022-11/using-aspect-ratio/"
 status = 301
+query = {path = ":path"}
 
 [[redirects]]
 from = "/posts/2022-08/where-is-and-has/"
