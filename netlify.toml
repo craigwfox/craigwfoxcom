@@ -1,6 +1,0 @@
-[[redirects]]
-  from = "/rss"
-  to = "/rss.xml"
-  status = 301
-  force = true
-  query = {path = ":path"}
