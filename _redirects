@@ -6,20 +6,20 @@
 /blog/*     /.netlify/functions/entry    200
 /uses       /.netlify/functions/entry    200
 /404        /.netlify/functions/entry    200
-/*          /.netlify/functions/entry    404
-/posts/2023-01/css-auto-grid-columns/ /blog/2023-01/css-auto-grid-columns/"
-/posts/2022-11/using-aspect-ratio/ /blog/2022-11/using-aspect-ratio/"
-/posts/2022-08/where-is-and-has/ /blog/2022-08/where-is-and-has/"
-/posts/2022-05/fluid-type-and-sizing/ /blog/2022-05/fluid-type-and-sizing/"
-/posts/2022-03/theme-toggle-web-component/ /blog/2022-03/theme-toggle-web-component/"
-/posts/2022-02/responsive-video-embeds/ /blog/2022-02/responsive-video-embeds/"
-/posts/2021-11/methods-for-equal-height-columns/ /blog/2021-11/methods-for-equal-height-columns/"
-/posts/2021-11/versions-of-craigwfox-com/ /blog/2021-11/versions-of-craigwfox-com/"
-/posts/responsive-videos/ /blog/2022-02/responsive-video-embeds/"
-/posts/where-is-and-has/ /blog/2022-08/where-is-and-has/"
-/posts/fluid-type-and-sizing/ /blog/2022-05/fluid-type-and-sizing/"
-/posts/theme-toggle-web-component/ /blog/2022-03/theme-toggle-web-component/"
-/posts/responsive-video-embeds/ /blog/2022-02/responsive-video-embeds/"
-/posts/methods-for-equal-height-columns/ /blog/2021-11/methods-for-equal-height-columns/"
-/posts/versions-of-craigwfox-com/ /blog/2021-11/versions-of-craigwfox-com/"
-/feed/atom.xml /rss.xml"
+/posts/2023-01/css-auto-grid-columns/ /blog/2023-01/css-auto-grid-columns/
+/posts/2022-11/using-aspect-ratio/ /blog/2022-11/using-aspect-ratio/
+/posts/2022-08/where-is-and-has/ /blog/2022-08/where-is-and-has/
+/posts/2022-05/fluid-type-and-sizing/ /blog/2022-05/fluid-type-and-sizing/
+/posts/2022-03/theme-toggle-web-component/ /blog/2022-03/theme-toggle-web-component/
+/posts/2022-02/responsive-video-embeds/ /blog/2022-02/responsive-video-embeds/
+/posts/2021-11/methods-for-equal-height-columns/ /blog/2021-11/methods-for-equal-height-columns/
+/posts/2021-11/versions-of-craigwfox-com/ /blog/2021-11/versions-of-craigwfox-com/
+/posts/responsive-videos/ /blog/2022-02/responsive-video-embeds/
+/posts/where-is-and-has/ /blog/2022-08/where-is-and-has/
+/posts/fluid-type-and-sizing/ /blog/2022-05/fluid-type-and-sizing/
+/posts/theme-toggle-web-component/ /blog/2022-03/theme-toggle-web-component/
+/posts/responsive-video-embeds/ /blog/2022-02/responsive-video-embeds/
+/posts/methods-for-equal-height-columns/ /blog/2021-11/methods-for-equal-height-columns/
+/posts/versions-of-craigwfox-com/ /blog/2021-11/versions-of-craigwfox-com/
+/feed/atom.xml /rss.xml
+/* /.netlify/functions/entry    404
