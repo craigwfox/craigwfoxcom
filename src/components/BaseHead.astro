@@ -18,6 +18,19 @@ const {
 } = Astro.props
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65D1T3GPT8"
+></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag("js", new Date())
+
+  gtag("config", "G-65D1T3GPT8")
+</script>
+
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -46,4 +59,16 @@ const {
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.site)} />
 
-<script defer data-domain="craigwfox.com" src="https://plausible.io/js/script.js"></script>
+<!-- RSS -->
+<link
+  rel="alternate"
+  href={Astro.url + "rss.xml"}
+  type="application/xml"
+  title="RSS 2.0"
+/>
+<link
+  rel="sitemap"
+  href={Astro.url + "sitemap-index.xml"}
+  type="application/xml"
+  title="Sitemap"
+/>

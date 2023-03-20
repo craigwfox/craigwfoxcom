@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Base.astro"
 import PostsLarge from "../components/PostsLarge.astro"
+import { Image, Picture } from "@astrojs/image/components"
 ---
 
 <Layout title="Welcome">
@@ -15,9 +16,12 @@ import PostsLarge from "../components/PostsLarge.astro"
       </h1>
 
       <div class="rounded-image">
-        <img
+        <Image
           src="/images/craig-hiking-about.webp"
           alt="Craig standing like a dofus while hiking"
+          width={400}
+          height={400}
+          format="webp"
         />
       </div>
 
