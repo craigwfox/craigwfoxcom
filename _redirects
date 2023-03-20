@@ -22,4 +22,5 @@
 /posts/methods-for-equal-height-columns/ /blog/2021-11/methods-for-equal-height-columns/ 301
 /posts/versions-of-craigwfox-com/ /blog/2021-11/versions-of-craigwfox-com/ 301
 /feed/atom.xml /rss.xml 301
-/* /.netlify/functions/entry 404
+/rss /rss.xml 301
+/*          /.netlify/functions/entry    404
