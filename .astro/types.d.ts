@@ -1,7 +1,34 @@
 declare module 'astro:content' {
+	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
+	interface Render {
+		'.md': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
 	export { z } from 'astro/zod';
 	export type CollectionEntry<C extends keyof typeof entryMap> =
-		(typeof entryMap)[C][keyof (typeof entryMap)[C]] & Render;
+		(typeof entryMap)[C][keyof (typeof entryMap)[C]];
+
+	export const image: () => import('astro/zod').ZodObject<{
+		src: import('astro/zod').ZodString;
+		width: import('astro/zod').ZodNumber;
+		height: import('astro/zod').ZodNumber;
+		format: import('astro/zod').ZodString;
+	}>;
 
 	type BaseSchemaWithoutEffects =
 		| import('astro/zod').AnyZodObject
@@ -57,14 +84,6 @@ declare module 'astro:content' {
 		Required<ContentConfig['collections'][C]>['schema']
 	>;
 
-	type Render = {
-		render(): Promise<{
-			Content: import('astro').MarkdownInstance<{}>['Content'];
-			headings: import('astro').MarkdownHeading[];
-			remarkPluginFrontmatter: Record<string, any>;
-		}>;
-	};
-
 	const entryMap: {
 		"blog": {
 "2021-11/methods-for-equal-height-columns.md": {
@@ -73,56 +92,56 @@ declare module 'astro:content' {
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".md"] },
 "2021-11/versions-of-craigwfox-com.mdx": {
   id: "2021-11/versions-of-craigwfox-com.mdx",
   slug: "2021-11/versions-of-craigwfox-com",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".mdx"] },
 "2022-02/responsive-video-embeds.md": {
   id: "2022-02/responsive-video-embeds.md",
   slug: "2022-02/responsive-video-embeds",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".md"] },
 "2022-03/theme-toggle-web-component.md": {
   id: "2022-03/theme-toggle-web-component.md",
   slug: "2022-03/theme-toggle-web-component",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".md"] },
 "2022-05/fluid-type-and-sizing.mdx": {
   id: "2022-05/fluid-type-and-sizing.mdx",
   slug: "2022-05/fluid-type-and-sizing",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".mdx"] },
 "2022-08/where-is-and-has.mdx": {
   id: "2022-08/where-is-and-has.mdx",
   slug: "2022-08/where-is-and-has",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".mdx"] },
 "2022-11/using-aspect-ratio.mdx": {
   id: "2022-11/using-aspect-ratio.mdx",
   slug: "2022-11/using-aspect-ratio",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".mdx"] },
 "2023-01/css-auto-grid-columns.md": {
   id: "2023-01/css-auto-grid-columns.md",
   slug: "2023-01/css-auto-grid-columns",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".md"] },
 },
 
 	};
