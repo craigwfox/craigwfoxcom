@@ -32,7 +32,11 @@
     "markdown-it": "^13.0.1",
     "sanitize-html": "^2.10.0",
     "sass": "^1.58.3",
+    "sharp": "^0.31.3",
     "simple-theme-switcher": "1.0.4",
     "svelte": "^3.55.1"
+  },
+  "devDependencies": {
+    "netlify-cli": "^13.1.6"
   }
 }
