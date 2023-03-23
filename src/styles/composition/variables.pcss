@@ -1,0 +1,150 @@
+/* ------------------------------------------
+======---------------------------------======
+  Variables
+======---------------------------------======
+------------------------------------------ */
+
+/* ====---------------====
+  Font imports
+=======------------==== */
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/rubik-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/rubik-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/* ====---------------====
+  Base Variables
+=======------------==== */
+
+:root {
+  /* ====---------------====
+    Type
+  =======------------==== */
+  --fs-base: clamp(1.2rem, 1rem + 0.75vw, 1.6rem);
+  --fs-sm: clamp(1rem, 0.855rem + 0.73vw, 1.4rem);
+  --fs-md: clamp(1.3rem, 1.15rem + 0.75vw, 1.7rem);
+  --fs-h1: clamp(2.4rem, 2rem + 2vw, 3.5rem);
+  --fs-h2: clamp(2.2rem, 1.909rem + 1.45vw, 3rem);
+  --fs-h3: clamp(1.8rem, 1.436rem + 1.82vw, 2.8rem);
+  --fs-h4: clamp(1.6rem, 1.236rem + 1.82vw, 2.6rem);
+  --fs-h5: clamp(1.1rem, 0.736rem + 1.82vw, 2.1rem);
+  --fs-h6: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+  --lh-base: 1.5;
+  --font-main: "Rubik", sans-serif;
+
+  /* ====---------------====
+    Spacing
+  =======------------==== */
+  --sp-sm: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+  --sp-md: clamp(2rem, 1.818rem + 0.91vw, 2.5rem);
+  --sp-lg: clamp(2.5rem, 2.636rem + 1.82vw, 4rem);
+  --sp-xl: clamp(4rem, 3.636rem + 1.82vw, 5rem);
+  --sp-md-xl: clamp(var(--sp-lg), 2.6rem + 1.8vw, var(--sp-xl));
+  --sp-para: calc(var(--sp-sm) * 1.5);
+
+  /* ====---------------====
+    Widths
+  =======------------==== */
+  --w-sm: 45rem;
+  --w-md: 65rem;
+  --w-lg: 75rem;
+  --w-xl: 85rem;
+  --wrapper-wide: max(
+    var(--sp-md),
+    (100% - calc(var(--w-xl) - (var(--sp-md) - var(--sp-sm)) * 2)) / 2
+  );
+  --wrapper-main: max(
+    var(--sp-md),
+    (100% - calc(var(--w-xl) - var(--sp-md) * 2)) / 2
+  );
+
+  /* ====---------------====
+    Radius
+  =======------------==== */
+
+  --rad-1: 1rem;
+  --rad-2: 2rem;
+  --rad-3: 3rem;
+
+  /* ====---------------====
+    Speeds
+  =======------------==== */
+  --speed-fast: 0.1s;
+  --speed-main: 0.2s;
+}
+
+/* ====---------------====
+  Light theme
+=======------------==== */
+:root {
+  --clr-bg: 38 22% 95%;
+  --clr-bg-alt: 220 39% 90%;
+
+  --clr-main: 0 100% 67%;
+  --clr-alt-1: 199 100% 15%;
+  --clr-alt-2: 43 100% 65%;
+
+  --clr-link: 199 100% 40%;
+  --clr-link-hover: var(--clr-alt-1);
+  --clr-text-base: 199 100% 15%;
+  --clr-text-reverse: 220 39% 95%;
+
+  /* ===------ Ui nuggets ------=== */
+  --clr-border-1: var(--clr-alt-1);
+  --clr-border-2: var(--clr-alt-1) / 0.2;
+  --clr-code-bg: 220 39% 10%;
+  --clr-code-title: var(--clr-alt-2);
+
+  /* ===------ Logo colors ------=== */
+  --clr-logo-main: 0 100% 67%;
+  --clr-logo-tip: 38 22% 75%;
+}
+
+/* ====---------------====
+  Dark theme
+=======------------==== */
+@mixin darkProps() {
+  --clr-bg: 220 39% 10%;
+  --clr-bg-alt: 220 49% 15%;
+
+  --clr-main: 0 100% 67%;
+  --clr-alt-1: 44 100% 88%;
+  --clr-alt-2: 43 100% 65%;
+
+  --clr-link: 199 100% 65%;
+  --clr-link-hover: var(--clr-alt-2);
+  --clr-text-base: 220 39% 95%;
+  --clr-text-reverse: var(--clr-bg-alt);
+
+  /* ===------ Ui nuggets ------=== */
+  --clr-border-1: 220 39% 10%;
+  --clr-border-2: 220 39% 10% / 0.5;
+  --clr-code-bg: var(--clr-bg-alt);
+  --clr-code-title: var(--clr-alt-1) / 0.8;
+
+  /* ===------ Logo colors ------=== */
+  --clr-logo-main: 0 100% 67%;
+  --clr-logo-tip: 44 100% 93%;
+}
+
+@include darkTheme {
+  @include darkProps();
+}
