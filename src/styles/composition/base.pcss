@@ -1,13 +1,20 @@
 /* ------------------------------------------
 ======---------------------------------======
-  Styles for craigwfox.com v5.5
+  Base layout styles
 ======---------------------------------======
 ------------------------------------------ */
 
 /* ====---------------====
-  Composition
+  Content Wrappers
 =======------------==== */
-@import "./composition/variables.pcss";
-@import "./composition/reset.pcss";
-@import "./composition/type.pcss";
-@import "./composition/base.pcss";
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font: 400 var(--fs-base) / 1.5 var(--font-main);
+
+  *::selection {
+  }
+}
