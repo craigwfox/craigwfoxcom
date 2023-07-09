@@ -23,4 +23,5 @@
 /posts/versions-of-craigwfox-com/ /blog/2021-11/versions-of-craigwfox-com/ 301
 /feed/atom.xml /rss.xml 301
 /rss /rss.xml 301
+/posts /blog
 /*          /.netlify/functions/entry    404
