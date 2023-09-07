@@ -34,8 +34,5 @@
     "sharp": "^0.32.5",
     "simple-theme-switcher": "1.0.4",
     "svelte": "^4.2.0"
-  },
-  "devDependencies": {
-    "netlify-cli": "^13.2.2"
   }
 }
