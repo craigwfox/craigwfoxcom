@@ -4,8 +4,6 @@ import sitemap from "@astrojs/sitemap"
 import svelte from "@astrojs/svelte"
 import netlify from "@astrojs/netlify/functions"
 
-import image from "@astrojs/image"
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://craigwfox.com",
@@ -31,9 +29,6 @@ export default defineConfig({
       ],
     }),
     svelte(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
   ],
   output: "server",
   adapter: netlify(),
