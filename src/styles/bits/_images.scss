@@ -28,6 +28,7 @@
 // 404 image
 // ====---------------====
 .image-border {
+  height: auto;
   border-radius: 5rem;
   border: 0.5rem solid hsl(var(--clr-border-1));
 }

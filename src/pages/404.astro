@@ -1,14 +1,18 @@
 ---
 import Layout from "../layouts/PageWithSidebar.astro"
+import { Image } from 'astro:assets';
+import ImgKittyApples from "../images/kitty-apples-box.webp"
 ---
 
 <Layout title="About Me" description="A bit about Craig Fox UX engineer">
   <h1>404: Not Found</h1>
   <p>You just hit a page that doesn't exist... have a picture of my cats.</p>
 
-  <img
+
+  <Image
     class="image-border"
-    src="/images/kitty-apples-box.webp"
+    src={ImgKittyApples}
     alt="Kitty and Apples the most adorable cats in the world cuddling in a box together."
+    width={800}
   />
 </Layout>
