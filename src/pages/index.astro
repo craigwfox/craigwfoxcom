@@ -2,6 +2,7 @@
 import Layout from "../layouts/Base.astro"
 import PostsLarge from "../components/PostsLarge.astro"
 import { Image } from 'astro:assets';
+import craigHiking from '../images/craig-hiking-about.webp';
 ---
 
 <Layout title="Welcome">
@@ -17,7 +18,7 @@ import { Image } from 'astro:assets';
 
       <div class="rounded-image">
         <Image
-          src="/images/craig-hiking-about.webp"
+          src={craigHiking}
           alt="Craig standing like a dofus while hiking"
           width={400}
           height={400}
