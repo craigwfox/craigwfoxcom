@@ -1,0 +1,50 @@
+/* ------------------------------------------
+======---------------------------------======
+  Header
+======---------------------------------======
+------------------------------------------ */
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus {
+    width: auto;
+    height: auto;
+
+    padding: var(--space-xs) var(--space-m);
+
+    left: 0;
+
+    background-color: var(--c-grey-xd);
+
+    color: var(--c-blue);
+  }
+}
+
+#site-header {
+  color: var(--c-blue);
+}
+
+#site-nav {
+  display: flex;
+  gap: var(--space-m);
+}
+
+.site-logo {
+  path:not(.tip) {
+    color: var(--c-red);
+  }
+
+  path.tip {
+    color: var(--c-white);
+  }
+}
+
+.site-toggles {
+  display: none;
+}
