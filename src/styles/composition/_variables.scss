@@ -13,9 +13,9 @@
   font-weight: 400;
   font-display: swap;
   src: url("/fonts/rubik-400.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -24,9 +24,9 @@
   font-weight: 700;
   font-display: swap;
   src: url("/fonts/rubik-700.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* ====---------------====
@@ -105,11 +105,23 @@
   --c-grey-m: hsl(227, 19.6%, 60%);
   --c-grey-d: hsl(225, 20.2%, 34.9%);
   --c-grey-xd: hsl(224, 21.6%, 10%);
+  --c-black: hsl(224, 21.6%, 2%);
   --c-red: oklch(68.49% 0.241 24.26456339993587);
   --c-red-m: hsl(0, 44.3%, 50%);
+  --c-red-d: oklch(53.82% 0.183 21.26);
   --c-yellow: hsl(47, 100%, 60%);
-  --c-orange: hsl(27, 94.8%, 54.9%);
+  --c-orange: oklch(72.6% 0.176 52.62);
   --c-blue: hsl(199, 100%, 50%);
+  --c-blue-m: color-mix(
+    in oklch,
+    var(--c-blue),
+    var(--c-grey-xd) 25%
+  );
+  --c-blue-d: color-mix(
+    in oklch,
+    var(--c-blue),
+    var(--c-grey-xd) 55%
+  );
 
   /* ===------ Utilities ------=== */
   --c-text: var(--c-grey-xd);

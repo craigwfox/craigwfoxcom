@@ -1,10 +1,13 @@
 ---
+import { Image } from "astro:assets"
+import foxIcon from "../images/fox-icon.svg"
+
 const today = new Date()
 
 const { scripts = [] } = Astro.props
 ---
 
-<footer id="footer" class="site-footer" aria-label="Site footer">
+<footer id="site-footer" class="site-footer" aria-label="Site footer">
   <ul>
     <li>
       <a href="/rss.xml">RSS</a>
@@ -16,13 +19,21 @@ const { scripts = [] } = Astro.props
       <a rel="me" href="https://codepen.io/craigwfox">Codepen</a>
     </li>
     <li>
-      <a rel="me" href="http://www.linkedin.com/in/craigwfox">LinkedIn</a>
+      <a rel="me" href="http://www.linkedin.com/in/craigwfox"
+        >LinkedIn</a
+      >
     </li>
     <li>
-      <a rel="me" href="https://indieweb.social/@craigwfox">Mastodon</a>
+      <a rel="me" href="https://indieweb.social/@craigwfox"
+        >Mastodon</a
+      >
     </li>
     <li>
-      <a href="mailto:info@craigwfox.com" target="_blank" rel="noreferrer">
+      <a
+        href="mailto:info@craigwfox.com"
+        target="_blank"
+        rel="noreferrer"
+      >
         Email
       </a>
     </li>
@@ -30,12 +41,13 @@ const { scripts = [] } = Astro.props
 
   <p>
     &copy; {today.getFullYear()} Craig Fox
-    <img src="/images/fox-icon.svg" alt="" />
-    Front-end developer
+    <Image src={foxIcon} alt="" width={25} height={25} />
+     Front-end developer
   </p>
 </footer>
 
-<script src="../../node_modules/simple-theme-switcher/theme-switcher.js"
+<script
+  src="../../node_modules/simple-theme-switcher/theme-switcher.js"
 ></script>
 
 {scripts.map(scriptTag => <script src={scriptTag} async />)}

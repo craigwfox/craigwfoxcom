@@ -7,7 +7,13 @@
 /* ====---------------====
   Composition
 =======------------==== */
-@import "./composition/variables.scss";
-@import "./composition/reset.scss";
-@import "./composition/type.scss";
-@import "./composition/base.scss";
+@import "./composition/variables";
+@import "./composition/reset";
+@import "./composition/type";
+@import "./composition/base";
+
+/* ====---------------====
+  Blocks
+=======------------==== */
+@import "./blocks/header";
+@import "./blocks/footer";

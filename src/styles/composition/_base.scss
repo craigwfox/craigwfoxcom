@@ -13,10 +13,14 @@ body {
 }
 
 body {
-  background: var(--c-grey-l);
+  background: color-mix(in oklab, var(--c-blue), var(--c-white) 92%);
 
   font: 400 var(--step-0) / 1.5 var(--font-main);
 
   *::selection {
   }
+}
+
+#maincontent {
+  padding-inline: var(--wrapper-main);
 }
