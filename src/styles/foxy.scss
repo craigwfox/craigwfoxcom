@@ -5,15 +5,19 @@
 ------------------------------------------ */
 
 /* ====---------------====
+  Globals
+=======------------==== */
+@use "./global/reset";
+@use "./global/variables";
+
+/* ====---------------====
   Composition
 =======------------==== */
-@import "./composition/variables";
-@import "./composition/reset";
-@import "./composition/type";
-@import "./composition/base";
+@use "./composition/type";
+@use "./composition/base";
 
 /* ====---------------====
   Blocks
 =======------------==== */
-@import "./blocks/header";
-@import "./blocks/footer";
+@use "./blocks/header";
+@use "./blocks/footer";
