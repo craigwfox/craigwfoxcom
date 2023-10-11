@@ -4,23 +4,36 @@
 ======---------------------------------======
 ------------------------------------------ */
 
-/* ====---------------====
-  Content Wrappers
-=======------------==== */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background: color-mix(in oklab, var(--c-blue), var(--c-white) 92%);
-
-  font: 400 var(--step-0) / 1.5 var(--font-main);
-
-  *::selection {
+@layer composition {
+  /* ====---------------====
+    Content Wrappers
+  =======------------==== */
+  html,
+  body {
+    height: 100%;
   }
-}
 
-#maincontent {
-  padding-inline: var(--wrapper-main);
+  body {
+    background: color-mix(
+      in oklab,
+      var(--c-blue),
+      var(--c-white) 92%
+    );
+
+    font: 400 var(--step-0) / 1.5 var(--font-main);
+
+    *::selection {
+    }
+  }
+
+  /* ====---------------====
+    Main content
+  =======------------==== */
+  #maincontent {
+    padding-inline: var(--wrapper-main);
+  }
+
+  /* ====---------------====
+    Grid
+  =======------------==== */
 }

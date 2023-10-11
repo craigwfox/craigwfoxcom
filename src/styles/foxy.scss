@@ -7,12 +7,12 @@
 /* ====---------------====
   Globals
 =======------------==== */
-@use "./global/reset";
 @use "./global/variables";
 
 /* ====---------------====
-  Composition
+Composition
 =======------------==== */
+@use "./composition/reset";
 @use "./composition/type";
 @use "./composition/base";
 
