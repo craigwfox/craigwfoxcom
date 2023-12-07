@@ -241,6 +241,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2023-12/css-cascade-layers-and-important.md": {
+	id: "2023-12/css-cascade-layers-and-important.md";
+  slug: "2023-12/css-cascade-layers-and-important";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 
 	};

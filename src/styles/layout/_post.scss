@@ -244,3 +244,19 @@
     max-width: clamp(20rem, 50vw, 30rem);
   }
 }
+
+/* ====---------------====
+  Example
+=======------------==== */
+.html-example {
+  max-width: 90%;
+
+  padding: var(--sp-md);
+  margin-block-end: var(--sp-md);
+
+  background-color: hsl(var(--clr-bg-alt));
+
+  *:last-child {
+    margin-block-end: 0;
+  }
+}
