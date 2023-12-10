@@ -43,6 +43,7 @@ declare module 'astro:content' {
 				import('astro/zod').ZodLiteral<'webp'>,
 				import('astro/zod').ZodLiteral<'gif'>,
 				import('astro/zod').ZodLiteral<'svg'>,
+				import('astro/zod').ZodLiteral<'avif'>,
 			]
 		>;
 	}>;
@@ -236,6 +237,13 @@ declare module 'astro:content' {
 "2023-01/css-auto-grid-columns.md": {
 	id: "2023-01/css-auto-grid-columns.md";
   slug: "2023-01/css-auto-grid-columns";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2023-12/css-cascade-layers-and-important.md": {
+	id: "2023-12/css-cascade-layers-and-important.md";
+  slug: "2023-12/css-cascade-layers-and-important";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
