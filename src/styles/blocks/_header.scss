@@ -34,12 +34,8 @@
   // Site header
   // ====---------------====
   #site-header {
-    --header-bg: color-mix(
-      in oklch,
-      var(--c-blue),
-      var(--c-grey-xd) 75%
-    );
-    --sh-w-logo: 175px;
+    --header-border: var(--c-tertiary);
+    --sh-w-logo: 225px;
     --sh-w-nav: 300px;
 
     display: flex;
@@ -48,11 +44,11 @@
     align-items: end;
     justify-content: space-between;
 
-    padding-inline: var(--wrapper-main);
+    margin-inline: var(--wrapper-main);
     padding-block: var(--space-xs);
     margin-block-end: var(--space-m);
 
-    background: var(--header-bg);
+    border-block-end: 1rem solid var(--header-border);
 
     > div {
       display: flex;
@@ -71,29 +67,26 @@
     padding-block-end: var(--space-2xs);
 
     a {
-      --link-color: var(--c-yellow);
-      --border-color: color-mix(
-        in oklch,
-        var(--link-color),
-        var(--c-black) 10%
-      );
+      --link-color: var(--c-blue-m);
 
       color: var(--link-color);
       font-size: clamp(1.25rem, 1.193rem + 0.24vw, 1.375rem);
-      text-decoration-color: var(--border-color);
       text-underline-offset: 0.2rem;
       text-decoration-thickness: 0.15rem;
 
       &:hover,
       &:focus {
-        --border-color: var(--link-color);
-        color: var(--c-blue);
+        --link-color: var(--c-blue);
       }
 
       &[aria-current="page"],
       &[aria-current="page"]:hover,
       &[aria-current="page"]:focus {
-        --link-color: var(--c-blue);
+        --link-color: color-mix(
+          in oklch,
+          var(--c-blue-m),
+          var(--c-blue) 50%
+        );
       }
     }
   }

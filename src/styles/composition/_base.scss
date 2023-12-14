@@ -14,12 +14,9 @@
   }
 
   body {
-    background: color-mix(
-      in oklab,
-      var(--c-blue),
-      var(--c-white) 92%
-    );
+    background: hsl(45, 50%, 97%);
 
+    color: var(--c-text);
     font: 400 var(--step-0) / 1.5 var(--font-main);
 
     *::selection {

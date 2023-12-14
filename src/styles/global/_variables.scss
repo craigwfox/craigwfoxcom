@@ -112,18 +112,14 @@
     --c-yellow: hsl(47, 100%, 60%);
     --c-orange: oklch(72.6% 0.176 52.62);
     --c-blue: hsl(199, 100%, 50%);
-    --c-blue-m: color-mix(
-      in oklch,
-      var(--c-blue),
-      var(--c-grey-xd) 25%
-    );
-    --c-blue-d: color-mix(
-      in oklch,
-      var(--c-blue),
-      var(--c-grey-xd) 55%
-    );
+    --c-blue-m: hsl(199, 100%, 30%);
+    --c-blue-d: oklch(30.29% 0.0691 240.123);
+
+    --c-primary: var(--c-blue);
+    --c-secondary: var(--c-red);
+    --c-tertiary: var(--c-yellow);
 
     /* ===------ Utilities ------=== */
-    --c-text: var(--c-grey-xd);
+    --c-text: var(--c-blue-d);
   }
 }
