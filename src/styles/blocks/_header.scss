@@ -128,20 +128,20 @@
 
   [data-theme="light"] {
     svg {
-      color: var(--c-yellow);
+      color: var(--c-blue);
     }
 
-    .dark {
+    .light {
       display: none;
     }
   }
 
   [data-theme="dark"] {
     svg {
-      color: var(--c-blue);
+      color: var(--c-yellow);
     }
 
-    .light {
+    .dark {
       display: none;
     }
   }
