@@ -30,6 +30,15 @@
       padding: 0;
 
       list-style: none;
+
+      a {
+        color: currentColor;
+
+        &:hover,
+        &:focus {
+          color: var(--c-grey-l);
+        }
+      }
     }
 
     p {

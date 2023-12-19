@@ -1,0 +1,22 @@
+/* ------------------------------------------
+======---------------------------------======
+	Home
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer views {
+  .home-grid {
+    h2 {
+      margin-block-end: var(--space-s);
+    }
+
+    .post-feed {
+      margin-block-end: var(--space-l);
+    }
+  }
+
+  //end of layer
+}

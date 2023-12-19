@@ -106,20 +106,27 @@
     --c-grey-d: hsl(225, 20.2%, 34.9%);
     --c-grey-xd: hsl(224, 21.6%, 10%);
     --c-black: hsl(224, 21.6%, 2%);
-    --c-red: oklch(68.49% 0.241 24.26456339993587);
+    --c-red: oklch(68.49% 0.241 24.265);
     --c-red-m: hsl(0, 44.3%, 50%);
     --c-red-d: oklch(53.82% 0.183 21.26);
     --c-yellow: hsl(47, 100%, 60%);
-    --c-orange: oklch(72.6% 0.176 52.62);
-    --c-blue: hsl(199, 100%, 50%);
+    --c-orange: oklch(61.76% 0.155 52.62);
+    --c-blue: oklch(55.01% 0.126 240.113);
     --c-blue-m: hsl(199, 100%, 30%);
     --c-blue-d: oklch(30.29% 0.0691 240.123);
 
     --c-primary: var(--c-blue);
+    --c-primary-off: var(--c-blue-d);
     --c-secondary: var(--c-red);
     --c-tertiary: var(--c-yellow);
+    --c-quaternary: var(--c-orange);
 
     /* ===------ Utilities ------=== */
     --c-text: var(--c-blue-d);
+
+    /* ===------ Borders ------=== */
+    --border-color: var(--c-grey-d);
+    --border-1: 0.5rem solid var(--border-color);
+    --border-2: 0.2rem solid var(--c-grey-m);
   }
 }

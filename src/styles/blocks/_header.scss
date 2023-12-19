@@ -34,7 +34,6 @@
   // Site header
   // ====---------------====
   #site-header {
-    --header-border: var(--c-tertiary);
     --sh-w-logo: 225px;
     --sh-w-nav: 300px;
 
@@ -48,7 +47,7 @@
     padding-block: var(--space-xs);
     margin-block-end: var(--space-m);
 
-    border-block-end: 1rem solid var(--header-border);
+    border-block-end: var(--border-1);
 
     > div {
       display: flex;

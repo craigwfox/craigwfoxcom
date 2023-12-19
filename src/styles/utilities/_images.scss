@@ -1,0 +1,29 @@
+/* ------------------------------------------
+======---------------------------------======
+	Images
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer utilities {
+  .rounded-image {
+    --rad-1: clamp(5rem, 4.648rem + 1.5vw, 6rem);
+    --rad-2: clamp(3rem, 2.648rem + 1.5vw, 4rem);
+    --rad-3: clamp(1rem, 0.648rem + 1.5vw, 2rem);
+    overflow: hidden;
+
+    border-radius: var(--rad-1) var(--rad-2) var(--rad-1);
+    border: 0.5rem solid var(--c-blue-d);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  //end of layer
+}
