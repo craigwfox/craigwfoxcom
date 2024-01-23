@@ -10,13 +10,17 @@ const { title, description, codepenScripts, ogImage } = Astro.props
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} image={ogImage} />
+    <BaseHead
+      title={title}
+      description={description}
+      image={ogImage}
+    />
   </head>
 
   <body data-theme="dark">
     <Header />
     <main id="maincontent" class="main">
-      <div class="wrapper section section--post">
+      <div class="wrapper section section--post flow">
         <slot />
       </div>
     </main>

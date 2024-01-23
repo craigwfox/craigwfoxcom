@@ -42,12 +42,14 @@ const { scripts = [] } = Astro.props
   <p>
     &copy; {today.getFullYear()} Craig Fox
     <Image src={foxIcon} alt="" width={25} height={25} />
-     Front-end developer
+    Front-end developer
   </p>
 </footer>
 
 <script
   src="../../node_modules/simple-theme-switcher/theme-switcher.js"
 ></script>
+
+<script src="../js/prism.js"></script>
 
 {scripts.map(scriptTag => <script src={scriptTag} async />)}

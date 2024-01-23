@@ -29,4 +29,10 @@
   #maincontent {
     padding-inline: var(--wrapper-main);
   }
+
+  .flow {
+    > * + * {
+      margin-block-start: 1em;
+    }
+  }
 }
