@@ -3,6 +3,8 @@ import { Image } from "astro:assets"
 import foxIcon from "../images/fox-icon.svg"
 
 const today = new Date()
+
+const { scripts = [] } = Astro.props
 ---
 
 <footer id="site-footer" class="site-footer" aria-label="Site footer">
@@ -47,3 +49,5 @@ const today = new Date()
 <script
   src="../../node_modules/simple-theme-switcher/theme-switcher.js"
 ></script>
+
+{scripts.map(scriptTag => <script src={scriptTag} async />)}
