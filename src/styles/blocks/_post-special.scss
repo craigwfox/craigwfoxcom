@@ -1,0 +1,30 @@
+/* ------------------------------------------
+======---------------------------------======
+	Post special
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer blocks {
+  /* ====---------------====
+    Example HTML Content
+  =======------------==== */
+  .html-example {
+    padding: var(--space-m);
+
+    background: var(--c-code-bg);
+  }
+
+  /* ====---------------====
+    series block to hold links for related posts
+  =======------------==== */
+  .series-block {
+    padding: var(--space-m);
+
+    background: var(--c-grey-l);
+  }
+
+  //end of layer
+}
