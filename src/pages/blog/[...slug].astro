@@ -1,6 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content"
 import BlogPost from "../../layouts/BlogPost.astro"
+import FormattedDate from "../../components/FormattedDate.astro"
 
 const posts = await getCollection("blog")
 type Props = CollectionEntry<"blog">
@@ -12,5 +13,7 @@ const { Content } = await post.render()
 ---
 
 <BlogPost {...post.data}>
+  <FormattedDate date={post.data.pubDate} />
+  <h1>{post.data.title}</h1>
   <Content />
 </BlogPost>

@@ -11,8 +11,6 @@ ogImageAlt: "Auto flowing columns using CSS grid"
 codepenScripts: ["https://cpwebassets.codepen.io/assets/embed/ei.js"]
 ---
 
-# Using CSS Grid auto-fit/auto-fill to create dynamic columns
-
 I'm sure that many are familiar with using the [Flexbox Albatross](https://heydonworks.com/article/the-flexbox-holy-albatross/) to achieve wrapping columns on smaller screens without needing write a media query. Jonathan Snook has actually modified this and created a [grid version](https://codepen.io/snookca/pen/PoYVLRW) version of this.
 
 What I'm wanting to setup is an auto filling grid that doesn't require media queries and can support having some of it's elements be full width.

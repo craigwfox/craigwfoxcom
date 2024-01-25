@@ -10,8 +10,6 @@ ogImage: "images/twitter/2022-03-web-component-toggle.webp"
 ogImageAlt: "A web component to toggle site themes / modes"
 ---
 
-# A web component to toggle themes
-
 I've been doing some learning about web components and as practice decided to make a simple one that could be used to toggle themes or other accessibility features.
 
 ## Setting up the custom HTML element
@@ -134,7 +132,9 @@ class ThemeSwitcher extends HTMLButtonElement {
     super()
   }
 }
-customElements.define("theme-switcher", ThemeSwitcher, { extends: "button" })
+customElements.define("theme-switcher", ThemeSwitcher, {
+  extends: "button",
+})
 ```
 
 <p class="post-note">This isn't supported in Safari on iOS or MacOS so you will either need to fallback, install a polyfill, or not extend the element.</p>
@@ -232,7 +232,9 @@ class ThemeSwitcher extends HTMLButtonElement {
     return this.setAttribute("current", val)
   }
 }
-customElements.define("theme-switcher", ThemeSwitcher, { extends: "button" })
+customElements.define("theme-switcher", ThemeSwitcher, {
+  extends: "button",
+})
 ```
 
 ### a11y updates
@@ -398,7 +400,9 @@ class ThemeSwitcher extends HTMLButtonElement {
     return this.setAttribute("current", val)
   }
 }
-customElements.define("theme-switcher", ThemeSwitcher, { extends: "button" })
+customElements.define("theme-switcher", ThemeSwitcher, {
+  extends: "button",
+})
 ```
 
 ## Live demo
