@@ -43,6 +43,7 @@
       margin: -0.5rem -0.5rem 1rem;
 
       background: var(--c-code-title);
+      border-radius: 0.2rem;
 
       color: var(--c-code-title-text);
       font-size: 0.9rem;
@@ -72,6 +73,20 @@
   :not(pre) > code[class*="language-"],
   pre[class*="language-"] {
     background: var(--c-code-bg);
+    border: 0.5rem solid
+      color-mix(in oklab, var(--c-code-bg), var(--c-white) 20%);
+    border-radius: 0.2rem;
+  }
+
+  [data-theme="dark"] {
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+      border-color: color-mix(
+        in oklab,
+        var(--c-code-bg),
+        var(--c-white) 8%
+      );
+    }
   }
 
   :not(pre) > code[class*="language-"] {

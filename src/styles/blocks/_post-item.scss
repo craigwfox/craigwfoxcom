@@ -14,7 +14,7 @@
 
       text-decoration: none;
 
-      color: var(--clr-text);
+      color: var(--c-text);
 
       h3 {
         text-decoration: underline;
@@ -25,7 +25,7 @@
       }
 
       time {
-        color: var(--c-black);
+        color: var(--c-text);
         font-weight: 600;
       }
 
@@ -45,6 +45,20 @@
       &:focus {
         border: 3px solid var(--c-secondary);
         outline: 0;
+      }
+    }
+
+    &--sm {
+      h3 {
+        font-size: var(--step-1);
+      }
+    }
+  }
+
+  [data-theme="dark"] {
+    .post-item {
+      h3 {
+        color: var(--c-grey-m);
       }
     }
   }

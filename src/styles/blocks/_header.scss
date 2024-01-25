@@ -66,26 +66,14 @@
     padding-block-end: var(--space-2xs);
 
     a {
-      --link-color: var(--c-blue-m);
-
-      color: var(--link-color);
       font-size: clamp(1.25rem, 1.193rem + 0.24vw, 1.375rem);
       text-underline-offset: 0.2rem;
       text-decoration-thickness: 0.15rem;
 
-      &:hover,
-      &:focus {
-        --link-color: var(--c-blue);
-      }
-
       &[aria-current="page"],
       &[aria-current="page"]:hover,
       &[aria-current="page"]:focus {
-        --link-color: color-mix(
-          in oklch,
-          var(--c-blue-m),
-          var(--c-blue) 50%
-        );
+        color: var(--c-link-hover);
       }
     }
   }

@@ -13,10 +13,8 @@
   =======------------==== */
   a,
   a:visited {
-    --link-clr: var(--c-blue);
-
     cursor: pointer;
-    color: var(--link-clr);
+    color: var(--c-link);
     line-height: 1.8;
     text-decoration: underline;
 
@@ -24,7 +22,7 @@
 
     &:hover,
     &:focus {
-      --link-clr: var(--c-blue-d);
+      color: var(--c-link-hover);
     }
   }
 
@@ -32,7 +30,7 @@
     Headings
   =======------------==== */
   h1 {
-    color: var(--c-blue-m);
+    color: var(--c-text-alt);
     font-size: var(--step-5);
 
     strong {
@@ -41,7 +39,7 @@
   }
 
   h2 {
-    color: var(--c-blue-m);
+    color: var(--c-text-alt);
     font-size: var(--step-4);
   }
 

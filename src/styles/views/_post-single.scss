@@ -10,7 +10,7 @@
 @layer views {
   .post-single {
     time {
-      color: var(--c-black);
+      color: var(--c-text);
       font-weight: 600;
 
       + h1 {

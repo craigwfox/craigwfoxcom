@@ -8,6 +8,9 @@
 @use "../functions/mixins" as *;
 
 @layer views {
+  /* ====---------------====
+    Post Feed - Main
+  =======------------==== */
   .post-feed {
     --feed-gap-x: var(--space-l);
     --feed-gap-y: var(--space-l);
@@ -56,6 +59,23 @@
         h3 {
           font-size: var(--step-4);
         }
+      }
+    }
+  }
+
+  /* ====---------------====
+    Post Food - Small
+  =======------------==== */
+  .small-feed {
+    display: grid;
+    grid-template-columns: 100%;
+
+    .post-item {
+      + .post-item {
+        margin-block-start: var(--space-m);
+        padding-block-start: var(--space-m);
+
+        border-block-start: var(--border-1);
       }
     }
   }

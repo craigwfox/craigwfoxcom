@@ -114,6 +114,7 @@
     --c-yellow: hsl(47, 100%, 60%);
     --c-orange: oklch(61.76% 0.155 52.62);
     --c-blue: oklch(55.01% 0.126 240.113);
+    --c-blue-l: oklch(78.82% 0.118 240.113);
     --c-blue-m: hsl(199, 100%, 30%);
     --c-blue-d: oklch(30.29% 0.0691 240.123);
 
@@ -124,13 +125,44 @@
     --c-quaternary: var(--c-orange);
 
     /* ===------ Utilities ------=== */
+    --c-main-bg: hsl(45, 50%, 97%);
+
+    --c-link: var(--c-blue);
+    --c-link-hover: var(--c-blue-d);
+
     --c-text: var(--c-blue-d);
+    --c-text-alt: var(--c-blue-m);
+
     --c-code-bg: var(--c-grey-xd);
     --c-code-title: var(--c-blue-m);
     --c-code-title-text: var(--c-grey-l);
 
     /* ===------ Borders ------=== */
     --border-color: var(--c-grey-d);
+    --border-1: 0.5rem solid var(--border-color);
+    --border-2: 0.2rem solid var(--c-grey-m);
+  }
+
+  [data-theme="dark"] {
+    /* ===------ Utilities ------=== */
+    --c-main-bg: var(--c-grey-xd);
+
+    --c-text: var(--c-grey-l);
+    --c-text-alt: var(--c-blue-l);
+
+    --c-link: var(--c-blue-l);
+    --c-link-hover: color-mix(
+      in oklab,
+      var(--c-blue),
+      var(--c-white) 10%
+    );
+
+    --c-code-bg: var(--c-grey-xd);
+    --c-code-title: var(--c-blue-m);
+    --c-code-title-text: var(--c-grey-l);
+
+    /* ===------ Borders ------=== */
+    --border-color: var(--c-blue);
     --border-1: 0.5rem solid var(--border-color);
     --border-2: 0.2rem solid var(--c-grey-m);
   }
