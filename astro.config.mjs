@@ -7,6 +7,8 @@ import netlify from "@astrojs/netlify/functions"
 // https://astro.build/config
 export default defineConfig({
   site: "https://craigwfox.com",
+  output: "server",
+  adapter: netlify(),
   markdown: {
     syntaxHighlight: "prism",
   },
@@ -30,6 +32,4 @@ export default defineConfig({
     }),
     svelte(),
   ],
-  output: "server",
-  adapter: netlify(),
 })
