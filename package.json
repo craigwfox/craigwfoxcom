@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/craigwfox/craigwfox.github.io#readme",
   "dependencies": {
-    "@astrojs/mdx": "^2.1.0",
     "@astrojs/netlify": "^5.0.0",
     "@astrojs/rss": "^4.0.4",
     "@astrojs/sitemap": "^3.0.5",
@@ -36,6 +35,7 @@
     "svelte": "^4.2.9"
   },
   "devDependencies": {
+    "@astrojs/mdx": "^2.1.0",
     "autoprefixer": "^10.4.17",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.13.0"
