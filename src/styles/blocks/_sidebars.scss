@@ -1,0 +1,46 @@
+/* ------------------------------------------
+======---------------------------------======
+	Sidebar
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer blocks {
+  .sidebar-home-wrapper {
+    container: sidebar-home / inline-size;
+  }
+
+  .sidebar-home {
+    display: grid;
+    align-items: start;
+    gap: 1em var(--space-m);
+
+    .rounded-image {
+      max-width: 300px;
+    }
+
+    h1 {
+      font-size: var(--step-3);
+    }
+
+    h2 {
+      font-size: var(--step-2);
+    }
+
+    @container sidebar-home (min-width: 38rem) {
+      grid-template-columns: 20rem 1fr;
+
+      h1 {
+        grid-column: 1 / -1;
+      }
+
+      .rounded-image {
+        max-width: 100%;
+      }
+    }
+  }
+
+  //end of layer
+}

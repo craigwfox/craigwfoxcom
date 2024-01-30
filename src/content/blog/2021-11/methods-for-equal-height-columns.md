@@ -9,8 +9,6 @@ ogImage: "images/twitter/2021-11-equal-height-columns.png"
 ogImageAlt: "A look at methods for equal height columns"
 ---
 
-# Methods for equal height columns
-
 <p class="post-note">
   Updated for 2021, my original post on this was in 2017 and can be found on <a href="https://codepen.io/craigwfox/post/methods-for-equal-height-columns">CodePen</a>.
 </p>

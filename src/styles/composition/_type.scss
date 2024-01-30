@@ -1,0 +1,78 @@
+/* ------------------------------------------
+======---------------------------------======
+  Typography
+======---------------------------------======
+------------------------------------------ */
+@layer composition {
+  /* ====---------------====
+    Headings
+  =======------------==== */
+
+  /* ====---------------====
+    Links
+  =======------------==== */
+  a,
+  a:visited {
+    cursor: pointer;
+    color: var(--c-link);
+    line-height: 1.8;
+    text-decoration: underline;
+
+    transition: all var(--speed-main) ease;
+
+    &:hover,
+    &:focus {
+      color: var(--c-link-hover);
+    }
+  }
+
+  /* ====---------------====
+    Headings
+  =======------------==== */
+  h1 {
+    color: var(--c-text-alt);
+    font-size: var(--step-5);
+
+    strong {
+      color: var(--c-red);
+    }
+  }
+
+  h2 {
+    color: var(--c-text-alt);
+    font-size: var(--step-4);
+  }
+
+  h3 {
+    font-size: var(--step-3);
+  }
+
+  h4 {
+    font-size: var(--step-2);
+  }
+
+  h5 {
+    font-size: var(--step-1);
+  }
+
+  /* ====---------------====
+    Paragraphs
+  =======------------==== */
+
+  /* ====---------------====
+    Lists
+  =======------------==== */
+  .list-links {
+    li {
+      > span {
+        display: block;
+
+        font-size: 85%;
+      }
+
+      + li {
+        margin-block-start: 0.25em;
+      }
+    }
+  }
+}

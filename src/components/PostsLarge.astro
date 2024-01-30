@@ -5,14 +5,14 @@ import FormattedDate from "../components/FormattedDate.astro"
 const { count = 500 } = Astro.props
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 )
 ---
 
-<div class="articles-wrapper articles-wrapper--lg">
+<div class="post-feed">
   {
     posts.slice(0, count).map(post => (
-      <article class="article">
+      <article class="post-item">
         <a href={`/blog/${post.slug}/`}>
           <FormattedDate date={post.data.pubDate} />
           <h3>{post.data.title}</h3>

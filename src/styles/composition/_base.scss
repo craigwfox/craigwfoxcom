@@ -1,0 +1,39 @@
+/* ------------------------------------------
+======---------------------------------======
+  Base layout styles
+======---------------------------------======
+------------------------------------------ */
+
+@layer composition {
+  /* ====---------------====
+    Content Wrappers
+  =======------------==== */
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--c-main-bg);
+
+    color: var(--c-text);
+    font: 400 var(--step-0) / 1.5 var(--font-main);
+
+    *::selection {
+    }
+  }
+
+  /* ====---------------====
+    Main content
+  =======------------==== */
+  #maincontent {
+    padding-inline: var(--wrapper-main);
+    padding-block-end: var(--space-m);
+  }
+
+  .flow {
+    > * + * {
+      margin-block-start: 1em;
+    }
+  }
+}

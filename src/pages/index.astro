@@ -1,59 +1,73 @@
 ---
 import Layout from "../layouts/Base.astro"
 import PostsLarge from "../components/PostsLarge.astro"
-import { Image } from 'astro:assets';
-import craigHiking from '../images/craig-hiking-about.webp';
+import { Image } from "astro:assets"
+import craigHiking from "../images/craig-hiking-about.webp"
 ---
 
 <Layout title="Welcome">
   <div class="home-grid">
     <section
       id="about"
+      class="sidebar-home-wrapper"
       aria-labelledby="title-about"
-      class="section section--about"
+      data-col="1"
     >
-      <h1 id="title-about">
-        I'm <strong>Craig Fox</strong>, UX engineer, maker, and geek
-      </h1>
+      <div class="sidebar-home">
+        <h1 id="title-about">
+          I'm <strong>Craig Fox</strong>, UX engineer, maker, and geek
+        </h1>
 
-      <div class="rounded-image">
-        <Image
-          src={craigHiking}
-          alt="Craig standing like a dofus while hiking"
-          width={400}
-          height={400}
-        />
+        <div class="rounded-image">
+          <Image
+            src={craigHiking}
+            alt="Craig standing like a dofus while hiking"
+            width={400}
+            height={400}
+          />
+        </div>
+
+        <div>
+          <h2 id="title-work">Stuff I've done</h2>
+          <ul class="list-links">
+            <li>
+              <a href="https://movies.craigwfox.com">
+                What Have We Watched
+              </a>
+              <span>
+                A website showing the movies my wife and I have
+                watched over the last few years on our weekly movie
+                night.
+              </span>
+            </li>
+            <li>
+              <a href="https://tools.craigwfox.com">BareBones Tools</a
+              >
+              <span>
+                Dev tooling for fluid type, converting to ems/rems,
+                and converting colors
+              </span>
+            </li>
+            <li>
+              <a href="https://github.com/craigwfox">Github</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/craigwfox">Codepen</a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <h2 id="title-work">Stuff I've done</h2>
-      <ul class="list-links">
-        <li>
-          <a href="https://movies.craigwfox.com">What Have We Watched</a>
-          <span
-            >A website showing the movies my wife and I have watched over the last few years on our weekly movie night.</span
-          >
-        </li>
-        <li>
-          <a href="https://tools.craigwfox.com">BareBones Tools</a>
-          <span
-            >Dev tooling for fluid type, converting to ems/rems, and converting
-            colors</span
-          >
-        </li>
-        <li>
-          <a href="https://github.com/craigwfox">Github</a>
-        </li>
-        <li>
-          <a href="https://codepen.io/craigwfox">Codepen</a>
-        </li>
-      </ul>
     </section>
-    <section id="home-posts" class="section" aria-labelledby="title-blog">
+    <section
+      id="home-posts"
+      aria-labelledby="title-blog"
+      data-col="2"
+    >
       <h2 id="title-blog">Latest posts</h2>
 
       <PostsLarge count="5" />
 
-      <a href="/blog" class="btn"> View archive</a>
+      <a href="/blog" class="btn btn-primary"> View archive</a>
     </section>
   </div>
 </Layout>

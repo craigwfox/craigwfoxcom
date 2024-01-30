@@ -1,0 +1,67 @@
+/* ------------------------------------------
+======---------------------------------======
+	Post feed item
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer blocks {
+  .post-item {
+    a {
+      display: block;
+
+      text-decoration: none;
+
+      color: var(--c-text);
+
+      h3 {
+        text-decoration: underline;
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.2em;
+
+        transition: all 0.1s ease-in-out;
+      }
+
+      time {
+        color: var(--c-text);
+        font-weight: 600;
+      }
+
+      p {
+        margin-block-start: 0.7em;
+      }
+
+      &:hover,
+      &:focus {
+        h3 {
+          color: var(--c-secondary);
+          text-decoration-thickness: 0.2em;
+          text-underline-offset: 0.1em;
+        }
+      }
+
+      &:focus {
+        border: 3px solid var(--c-secondary);
+        outline: 0;
+      }
+    }
+
+    &--sm {
+      h3 {
+        font-size: var(--step-1);
+      }
+    }
+  }
+
+  [data-theme="dark"] {
+    .post-item {
+      h3 {
+        color: var(--c-grey-m);
+      }
+    }
+  }
+
+  //end of layer
+}

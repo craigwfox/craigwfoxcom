@@ -10,8 +10,6 @@ ogImage: "images/twitter/2023-12-06-css-cascade-layers-and-important.png"
 ogImageAlt: "How important works with CSS cascade layers"
 ---
 
-# How important works with CSS cascade layers
-
 I was working with CSS Cascade layers and Bootstrap 5 and learned that the specificity of `important` works very differently.
 
 ## How `important` is normally used

@@ -17,11 +17,15 @@ const { title, description } = Astro.props
   <body data-theme="dark">
     <Header />
     <main id="maincontent" class="main">
-      <div class="wrapper section section--sidebar">
-        <div class="content">
+      <div class="content-grid">
+        <div class="content flow" data-col="1">
           <slot />
         </div>
-        <aside class="sidebar" aria-labelledby="latest-posts-side">
+        <aside
+          class="sidebar"
+          aria-labelledby="latest-posts-side"
+          data-col="2"
+        >
           <h2 id="latest-posts-side">Latest posts</h2>
           <PostsSmall />
         </aside>

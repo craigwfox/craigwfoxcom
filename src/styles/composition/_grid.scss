@@ -1,0 +1,66 @@
+/* ------------------------------------------
+======---------------------------------======
+	Grid
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer composition {
+  /* ====---------------====
+    Home Grid
+  =======------------==== */
+  *:has(> .home-grid) {
+    container: home-grid / inline-size;
+  }
+
+  .home-grid {
+    display: grid;
+    gap: var(--space-m) var(--space-xl);
+
+    @container (min-width: 56rem) {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    [data-col="1"] {
+      padding-block-end: var(--space-l);
+
+      border-block-end: var(--border-1);
+
+      @container (min-width: 56rem) {
+        border-block-end: 0;
+      }
+    }
+  }
+
+  /* ====---------------====
+    Content Grid
+  =======------------==== */
+  *:has(> .content-grid) {
+    container: content-grid / inline-size;
+  }
+
+  .content-grid {
+    display: grid;
+    gap: var(--space-m) var(--space-xl);
+
+    @container (min-width: 56rem) {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    [data-col="1"] {
+      padding-block-end: var(--space-l);
+
+      border-block-end: var(--border-1);
+
+      @container (min-width: 56rem) {
+        border-block-end: 0;
+        padding-inline-end: var(--space-xl);
+        border-inline-end: var(--border-1);
+      }
+    }
+  }
+
+  //end of layer
+}

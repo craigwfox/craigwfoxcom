@@ -2,7 +2,7 @@
 tags: post
 postSlug: "where-is-and-has/"
 pubDate: 2022-08-02
-title: "Using CSS where(), is(), and has()"
+title: "Using the where(), is(), and has() CSS pseudo classes"
 categories: ["css", "guide"]
 description: "An overview of how the where(), is(), and has() pseudo classes work and examples of different ways to utilize them in your day to day work."
 image: "images/twitter/2022-05-13-where-is-and-has.png"
@@ -10,7 +10,7 @@ ogImage: "images/twitter/2022-05-13-where-is-and-has.png"
 ogImageAlt: "An overview of how the where(), is(), and has() pseudo classes work and examples of different ways to utilize them in your day to day work"
 ---
 
-import CssHotness from '../../../components/CssHotness.svelte'
+import CssHotness from "../../../components/CssHotness.svelte"
 
 # Using the where(), is(), and has() CSS pseudo classes
 
@@ -43,10 +43,21 @@ The difference in the two comes down to specificity. **where()** has **0** speci
 
 :where()'s lack of specificity makes it a prime candidate for reset styles. You can see in this example that `.article p` overwrites the base `:where()` styles.
 
-<iframe height="500" style="width: 100%;" scrolling="no" title="Example of using :where()" src="https://codepen.io/craigwfox/embed/JjLbjoV?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/craigwfox/pen/JjLbjoV">
-  Untitled</a> by Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>)
-  on <a href="https://codepen.io">CodePen</a>.
+<iframe
+  height="500"
+  style="width: 100%;"
+  scrolling="no"
+  title="Example of using :where()"
+  src="https://codepen.io/craigwfox/embed/JjLbjoV?default-tab=css%2Cresult"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{" "}
+  <a href="https://codepen.io/craigwfox/pen/JjLbjoV">Untitled</a> by
+  Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 **Note** if you declare the `:where` block after declaring `footer p` the where will take specificity. Since element selectors have **0** specificity.
@@ -55,10 +66,21 @@ The difference in the two comes down to specificity. **where()** has **0** speci
 
 :is() on the other hand can be a bit more tricky to override. In this example you will notice that `.article p` overwrites the base `:where()` styles, but `footer p` does not. That is because the `:is() ` block takes the specificity level of the **most specific selector** in the selector list.
 
-<iframe height="500" style="width: 100%;" scrolling="no" title="Example of using :is()" src="https://codepen.io/craigwfox/embed/rNdWNLq?default-tab=css%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/craigwfox/pen/rNdWNLq">
-  Untitled</a> by Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>)
-  on <a href="https://codepen.io">CodePen</a>.
+<iframe
+  height="500"
+  style="width: 100%;"
+  scrolling="no"
+  title="Example of using :is()"
+  src="https://codepen.io/craigwfox/embed/rNdWNLq?default-tab=css%2Cresult&theme-id=dark"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{" "}
+  <a href="https://codepen.io/craigwfox/pen/rNdWNLq">Untitled</a> by
+  Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 In this case the most specific selector in the list is `.article p`. It is the more specific than `footer p` in the list because class selectors have more specificity than element selectors. Then it is also more specific than `.main p` since it comes second in the list.
@@ -81,13 +103,26 @@ section:has(h2) {
 
 It's also possible to make more complex selectors by using other pseudo class. In this codepen example, I'm watching for when an a tag is hovered within a section and then am changing the background and text color.
 
-<iframe height="500" style="width: 100%;" scrolling="no" title="has() example" src="https://codepen.io/craigwfox/embed/JjLpGzr?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/craigwfox/pen/JjLpGzr">
-  has() example</a> by Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>)
+<iframe
+  height="500"
+  style="width: 100%;"
+  scrolling="no"
+  title="has() example"
+  src="https://codepen.io/craigwfox/embed/JjLpGzr?default-tab=css%2Cresult"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{" "}
+  <a href="https://codepen.io/craigwfox/pen/JjLpGzr">has() example</a>{" "}
+  by Craig Fox (<a href="https://codepen.io/craigwfox">@craigwfox</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-<p class="post-note">This example doesn't currently work in Firefox.</p>
+<p class="post-note">
+  This example doesn't currently work in Firefox.
+</p>
 
 It's also possible to get even more crazy and do something such as Dave Rupert's solution to [styling dangling elements](https://daverupert.com/2022/07/solving-the-dangler-conundrum-with-has-and-container-queries/).
 

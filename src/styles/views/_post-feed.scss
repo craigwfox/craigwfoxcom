@@ -1,0 +1,84 @@
+/* ------------------------------------------
+======---------------------------------======
+	Post Feed
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer views {
+  /* ====---------------====
+    Post Feed - Main
+  =======------------==== */
+  .post-feed {
+    --feed-gap-x: var(--space-l);
+    --feed-gap-y: var(--space-l);
+    --feed-border-size: 0.3rem;
+    --feed-border-color: var(--border-color);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: calc(var(--feed-gap-y) * 2) calc(var(--feed-gap-x) * 2);
+    overflow: hidden;
+
+    .post-item {
+      position: relative;
+
+      &::before {
+        content: "";
+
+        width: 150%;
+        height: var(--feed-border-size);
+
+        position: absolute;
+        inset-block-end: calc(var(--feed-gap-y) * -1);
+        inset-inline: 0;
+
+        background: var(--feed-border-color);
+      }
+
+      &::after {
+        content: "";
+
+        width: var(--feed-border-size);
+        height: 150%;
+
+        position: absolute;
+        inset-block: calc(var(--feed-gap-y) * -1);
+        inset-inline-end: calc(var(--feed-gap-x) * -1);
+
+        background: var(--feed-border-color);
+      }
+
+      &:first-child {
+        grid-column: 1 / -1;
+
+        padding-block-end: var(--space-s);
+
+        h3 {
+          font-size: var(--step-4);
+        }
+      }
+    }
+  }
+
+  /* ====---------------====
+    Post Food - Small
+  =======------------==== */
+  .small-feed {
+    display: grid;
+    grid-template-columns: 100%;
+
+    .post-item {
+      + .post-item {
+        margin-block-start: var(--space-m);
+        padding-block-start: var(--space-m);
+
+        border-block-start: var(--border-1);
+      }
+    }
+  }
+
+  //end of layer
+}

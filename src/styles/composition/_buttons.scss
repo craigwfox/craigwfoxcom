@@ -1,0 +1,27 @@
+/* ------------------------------------------
+======---------------------------------======
+	Buttons
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer composition {
+  .btn {
+    padding: var(--space-2xs) var(--space-s);
+
+    background: var(--c-primary);
+    border-radius: 2em;
+
+    color: var(--c-white);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: var(--c-primary-off);
+    }
+  }
+
+  //end of layer
+}

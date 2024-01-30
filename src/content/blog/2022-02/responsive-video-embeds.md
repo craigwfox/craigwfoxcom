@@ -10,8 +10,6 @@ ogImage: "images/twitter/2022-02-responsive-videos.png"
 ogImageAlt: "Learn about responsive videos"
 ---
 
-# Responsive / fluid width videos
-
 ## How I've done responsive videos in the past
 
 In the past I've used a couple of different methods to achieve responsive videos:

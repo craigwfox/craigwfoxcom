@@ -1,0 +1,52 @@
+/* ------------------------------------------
+======---------------------------------======
+  Footer
+======---------------------------------======
+------------------------------------------ */
+
+@layer blocks {
+  #site-footer {
+    --footer-bg: var(--c-red-d);
+
+    display: grid;
+    place-items: center;
+    gap: var(--space-s);
+
+    margin-block-start: var(--space-m);
+    padding-inline: var(--wrapper-main);
+    padding-block: var(--space-m);
+
+    background: var(--footer-bg);
+    border-block-start: clamp(0.375rem, 0.261rem + 0.48vw, 0.625rem)
+      solid color-mix(in oklab, var(--c-red), var(--c-black) 50%);
+
+    color: var(--c-white);
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+
+      padding: 0;
+
+      list-style: none;
+
+      a {
+        color: currentColor;
+
+        &:hover,
+        &:focus {
+          color: var(--c-grey-l);
+        }
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2xs);
+
+      text-align: center;
+    }
+  }
+}
