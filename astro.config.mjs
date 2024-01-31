@@ -20,6 +20,7 @@ export default defineConfig({
         "https://craigwfox.com/about/",
         "https://craigwfox.com/uses/",
         "https://craigwfox.com/blog/",
+        "https://craigwfox.com/blog/2023-12/css-cascade-layers-and-important/",
         "https://craigwfox.com/blog/2023-01/css-auto-grid-columns/",
         "https://craigwfox.com/blog/2022-11/using-aspect-ratio/",
         "https://craigwfox.com/blog/2022-08/where-is-and-has/",
