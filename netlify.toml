@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "npm run build"
+command = "astro build"
 
 [dev]
 command = "npm run dev"
