@@ -5,13 +5,13 @@ import sanitizeHtml from "sanitize-html"
 import MarkdownIt from "markdown-it"
 const parser = new MarkdownIt()
 
-export async function get(context) {
-  const posts = await getCollection("blog")
+export async function GET(context) {
+  const blog = await getCollection("blog")
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     site: context.site,
-    items: posts.map(post => ({
+    items: blog.map(post => ({
       ...post.data,
       title: post.data.title,
       content: sanitizeHtml(parser.render(post.body)),
