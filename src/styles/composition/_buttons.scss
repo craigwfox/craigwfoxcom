@@ -8,7 +8,8 @@
 @use "../functions/mixins" as *;
 
 @layer composition {
-  .btn {
+  .btn,
+  .btn:visited {
     padding: var(--space-2xs) var(--space-s);
 
     background: var(--c-primary);
@@ -20,6 +21,8 @@
     &:hover,
     &:focus {
       background: var(--c-primary-off);
+
+      color: var(--c-white);
     }
   }
 
