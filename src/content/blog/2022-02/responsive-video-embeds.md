@@ -1,9 +1,9 @@
 ---
-tags: post
+tags: post, post-dev
+categories: ["dev", Web history", "Old vs new"]
 postSlug: "responsive-video-embeds/"
 pubDate: 2022-02-07
 title: "Responsive / fluid width videos"
-categories: ["Web history", "Old vs new"]
 description: "A look at how responsive videos have been done in the past and how we can do them now."
 image: "images/rss/2022-02-responsive-videos.png"
 ogImage: "images/twitter/2022-02-responsive-videos.png"

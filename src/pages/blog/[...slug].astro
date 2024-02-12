@@ -14,6 +14,15 @@ const { Content } = await post.render()
 
 <BlogPost {...post.data}>
   <FormattedDate date={post.data.pubDate} />
+  {
+    post.data.categories != undefined && (
+      <ul class="tags">
+        {post.data.categories.map(category => (
+          <li>{category}</li>
+        ))}
+      </ul>
+    )
+  }
   <h1>{post.data.title}</h1>
   <Content />
 </BlogPost>

@@ -13,11 +13,18 @@ const posts = (await getCollection("blog")).sort(
   {
     posts.slice(0, count).map(post => (
       <article class="post-item">
+        <FormattedDate date={post.data.pubDate} />
+        {post.data.categories != undefined && (
+          <ul class="tags">
+            {post.data.categories.map(category => (
+              <li>{category}</li>
+            ))}
+          </ul>
+        )}
         <a href={`/blog/${post.slug}/`}>
-          <FormattedDate date={post.data.pubDate} />
           <h3>{post.data.title}</h3>
-          <p>{post.data.description}</p>
         </a>
+        <p>{post.data.description}</p>
       </article>
     ))
   }

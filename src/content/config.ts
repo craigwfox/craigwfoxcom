@@ -11,7 +11,6 @@ const blog = defineCollection({
     ogImageAlt: z.string(),
     categories: z.array(z.string()).optional(),
     codepenScripts: z.array(z.string()).optional(),
-    // Transform string to Date object
     pubDate: z
       .string()
       .or(z.date())
