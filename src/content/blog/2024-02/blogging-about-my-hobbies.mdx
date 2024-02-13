@@ -10,23 +10,37 @@ ogImage: "images/twitter/2023-12-06-css-cascade-layers-and-important.png"
 ogImageAlt: "How important works with CSS cascade layers"
 ---
 
+import { Image } from "astro:assets"
+import imgOne from "/src/images/posts/2024-02/blogging-about-my-hobbies/1-first-h-frame.jpg"
+import imgTwo from "/src/images/posts/2024-02/blogging-about-my-hobbies/2-h-frames-finished.jpg"
+import imgThree from "/src/images/posts/2024-02/blogging-about-my-hobbies/3-h-frames-with-apron.jpg"
+import imgFour from "/src/images/posts/2024-02/blogging-about-my-hobbies/4-completed-top.jpg"
+
 import ImageGallery from "../../../components/ImageGallery.svelte"
 
+export const imgSizes = {
+  thumb: 300,
+  full: 1440,
+}
 export const imageArry = [
   {
-    path: "/images/posts/2024-02/blogging-about-my-hobbies/1-first-h-frame.jpg",
+    img: imgOne,
+    id: "imgOne",
     alt: "First frame that will form the legs of the bench",
   },
   {
-    path: "/images/posts/2024-02/blogging-about-my-hobbies/2-h-frames-finished.jpg",
+    img: imgTwo,
+    id: "imgTwo",
     alt: "The two H frames for the legs clamped up ready to be planed",
   },
   {
-    path: "/images/posts/2024-02/blogging-about-my-hobbies/3-h-frames-with-apron.jpg",
+    img: imgThree,
+    id: "imgThree",
     alt: "The H frames attached to the aprons and cross braces added",
   },
   {
-    path: "/images/posts/2024-02/blogging-about-my-hobbies/4-completed-top.jpg",
+    img: imgFour,
+    id: "imgFour",
     alt: "Finished assembly ready to have the dog holes bored",
   },
 ]
@@ -37,8 +51,28 @@ The site has a series of semesters that bring you from very little woodworking k
 
 ## Orientation Semester Project One: Workbench
 
-<div>
-  <ImageGallery imageArry={imageArry} client:load />
+<div class="image-gallery">
+  {imageArry.map(image => (
+    <ImageGallery
+      imageId={image.id}
+      imageAlt={image.alt}
+      client:load
+    >
+      <Image
+        src={image.img}
+        alt={image.alt}
+        width={imgSizes.thumb}
+        slot="gallery-btn"
+      />
+      <Image
+        src={image.img}
+        alt={image.alt}
+        width={imgSizes.full}
+        slot="gallery-full"
+      />
+    </ImageGallery>
+  ))}
+
 </div>
 
 This first project was a great start showing basic marking and measuring skills and lots of mortise and tenon joinery (the base for many pieces of furniture). I had never cut a mortise and tenon before outside of one very sloppy wooden mallet years ago. There are some kinda sloppy joints, but they have been holding great for the last few weeks and the bench is incredibly sturdy.
