@@ -1,0 +1,105 @@
+/* ------------------------------------------
+======---------------------------------======
+	Image Gallery
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer blocks {
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .image-gallery__item {
+    img {
+      width: 100%;
+      height: auto;
+
+      aspect-ratio: 4/3;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .open {
+      padding: 0;
+      margin: 0;
+
+      border: 0.2rem solid var(--c-link);
+      background: none;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease-in-out;
+
+      &:hover,
+      &:focus {
+        border-color: var(--c-secondary);
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      margin-block-start: 2%;
+      margin-inline-end: var(--wrapper-main);
+
+      background: none;
+      border: 0;
+
+      color: var(--c-grey-l);
+
+      cursor: pointer;
+
+      svg {
+        width: 2rem;
+        height: auto;
+
+        object-fit: contain;
+      }
+    }
+
+    > div {
+      display: grid;
+      place-items: center;
+
+      position: fixed;
+      inset: 0;
+
+      padding: var(--space-l) var(--wrapper-main);
+
+      background: hsl(0 0% 0% / 0.5);
+
+      &[hidden] {
+        display: none;
+      }
+
+      img {
+        max-width: 800px;
+      }
+    }
+
+    figure {
+    }
+
+    figcaption {
+      padding: 0.5em 1rem;
+      background: var(--c-code-bg);
+      border-end-start-radius: var(--rad-1);
+      border-end-end-radius: var(--rad-1);
+
+      color: var(--c-code-title-text);
+      line-height: 1.5;
+    }
+  }
+
+  //end of layer
+}

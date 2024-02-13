@@ -1,10 +1,10 @@
 ---
-tags: post
+tags: post, post-dev
+categories: ["dev", "css", "css grid", "grid layout"]
 postSlug: "css-auto-grid-columns/"
 pubDate: 2023-01-18
 title: "Using CSS Grid auto-fit/auto-fill to create dynamic columns"
 description: A way to use CSS grid to create auto flowing columns and layers that let's us remove the need for many media queries, resulting in cleaner and more maintainable stylesheets.
-categories: [css, css-grid, grid-layout]
 image: "images/twitter/2023-01-18-css-auto-columns.png"
 ogImage: "images/twitter/2023-01-18-css-auto-columns.png"
 ogImageAlt: "Auto flowing columns using CSS grid"

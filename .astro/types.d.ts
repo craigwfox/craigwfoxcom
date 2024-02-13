@@ -248,6 +248,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2024-02/blogging-about-my-hobbies.mdx": {
+	id: "2024-02/blogging-about-my-hobbies.mdx";
+  slug: "2024-02/blogging-about-my-hobbies";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 };
 
 	};

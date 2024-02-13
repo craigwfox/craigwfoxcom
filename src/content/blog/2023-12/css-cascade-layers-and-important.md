@@ -1,10 +1,10 @@
 ---
-tags: post
+tags: post, post-dev
+categories: ["dev", "css", "css grid", "grid layout"]
 postSlug: "css-cascade-layers-and-important/"
 pubDate: 2023-12-06
 title: "How important works with CSS cascade layers"
 description: A short explanation of how important works with CSS cascade layers
-categories: [css, css-grid, grid-layout]
 image: "images/twitter/2023-01-18-css-auto-columns.png"
 ogImage: "images/twitter/2023-12-06-css-cascade-layers-and-important.png"
 ogImageAlt: "How important works with CSS cascade layers"

@@ -1,26 +1,21 @@
 /* ------------------------------------------
 ======---------------------------------======
-	Post single
+	Visibility
 ======---------------------------------======
 ------------------------------------------ */
 
 @use "../functions/functions" as *;
 @use "../functions/mixins" as *;
 
-@layer views {
-  .post-single {
-    time {
-      color: var(--c-text);
-      font-weight: 600;
-    }
-
-    .tags {
-      margin-block-start: 0.5rem;
-
-      + h1 {
-        margin-block-start: 0.2em;
-      }
-    }
+@layer utilities {
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
 
   //end of layer

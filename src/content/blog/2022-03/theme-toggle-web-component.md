@@ -1,9 +1,9 @@
 ---
-tags: post
+tags: post, post-dev
+categories: ["dev", "js", "web components"]
 postSlug: "theme-toggle-web-component/"
 pubDate: 2022-03-10
 title: "A web component to toggle themes"
-categories: []
 description: A simple web component to toggle the site themes and modes.
 image: "images/rss/2022-03-web-component-toggle.webp"
 ogImage: "images/twitter/2022-03-web-component-toggle.webp"

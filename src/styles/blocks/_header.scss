@@ -114,22 +114,26 @@
   }
 
   [data-theme="light"] {
-    svg {
-      color: var(--c-blue);
-    }
+    .site-toggles {
+      svg {
+        color: var(--c-blue);
+      }
 
-    .light {
-      display: none;
+      .light {
+        display: none;
+      }
     }
   }
 
   [data-theme="dark"] {
-    svg {
-      color: var(--c-yellow);
-    }
+    .site-toggles {
+      svg {
+        color: var(--c-yellow);
+      }
 
-    .dark {
-      display: none;
+      .dark {
+        display: none;
+      }
     }
   }
 }
