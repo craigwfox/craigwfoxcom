@@ -23,6 +23,21 @@ export async function getStaticPaths() {
 const post = posts.find(page => page.slug === slug)
 if (!post) return Astro.redirect("/404")
 const { Content } = await post.render()
+
+const postLinks = []
+
+if (post.data.parkWebsite != undefined) {
+	postLinks.push({
+		title: "Park",
+		url: post.data.parkWebsite,
+	})
+}
+if (post.data.allTrails != undefined) {
+	postLinks.push({
+		title: "All Trails",
+		url: post.data.allTrails,
+	})
+}
 ---
 
 <HikingPost {...post?.data}>
@@ -37,5 +52,18 @@ const { Content } = await post.render()
 		)
 	}
 	<h1>{post?.data.title}</h1>
+	{
+		postLinks.length > 0 && (
+			<ul class="tags">
+				{postLinks.map(postLink => (
+					<li>
+						<a href={postLink.url} target="_blank" rel="nofollow">
+							{postLink.title}
+						</a>
+					</li>
+				))}
+			</ul>
+		)
+	}
 	<Content />
 </HikingPost>

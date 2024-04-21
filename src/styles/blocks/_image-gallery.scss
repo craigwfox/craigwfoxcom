@@ -9,9 +9,19 @@
 
 @layer blocks {
   .image-gallery {
+    --image-min: 200px;
+    --image-max: 800px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(var(--image-min), 1fr)
+    );
     gap: 1rem;
+
+    &--xl {
+      --image-min: 350px;
+      --image-max: 1200px;
+    }
   }
 
   .image-gallery__item {
@@ -83,7 +93,7 @@
       }
 
       img {
-        max-width: 800px;
+        max-width: var(--image-max);
       }
     }
 

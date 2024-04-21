@@ -32,6 +32,8 @@ const hiking = defineCollection({
     type: z.string(),
     location: z.string(),
     difficulty: z.string(),
+    parkWebsite: z.string(),
+    allTrails: z.string(),
     pubDate: z
       .string()
       .or(z.date())
