@@ -1,0 +1,41 @@
+---
+import { CollectionEntry, getCollection } from "astro:content"
+import HikingPost from "../../layouts/HikingPost.astro"
+import FormattedDate from "../../components/FormattedDate.astro"
+
+const posts = await getCollection("hiking")
+type Props = CollectionEntry<"hiking">
+
+const { slug } = Astro.params
+
+export async function getStaticPaths() {
+	const posts = await getCollection("hiking")
+	return posts.map(post => {
+		const { slug } = post
+
+		return {
+			params: { slug },
+			props: post,
+		}
+	})
+}
+
+const post = posts.find(page => page.slug === slug)
+if (!post) return Astro.redirect("/404")
+const { Content } = await post.render()
+---
+
+<HikingPost {...post?.data}>
+	<FormattedDate date={post?.data.pubDate} />
+	{
+		post?.data.categories != undefined && (
+			<ul class="tags">
+				{post.data.categories.map(category => (
+					<li>{category}</li>
+				))}
+			</ul>
+		)
+	}
+	<h1>{post?.data.title}</h1>
+	<Content />
+</HikingPost>

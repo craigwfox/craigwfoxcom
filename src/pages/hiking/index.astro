@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Base.astro"
+import { getCollection } from "astro:content"
+import FormattedDate from "../../components/FormattedDate.astro"
+
+const { count = 500 } = Astro.props
+
+const posts = (await getCollection("hiking")).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+---
+
+<Layout title="Blog">
+	<section
+		id="blog"
+		aria-labelledby="title-blog"
+		class="wrapper section"
+	>
+		<h1 id="title-blog">Ramblings of me</h1>
+
+		<div class="post-feed">
+			{
+				posts.slice(0, count).map(post => (
+					<article class="post-item">
+						<FormattedDate date={post.data.pubDate} />
+						{post.data.categories != undefined && (
+							<ul class="tags">
+								{post.data.categories.map(category => (
+									<li>{category}</li>
+								))}
+							</ul>
+						)}
+						<a href={`/hiking/${post.slug}/`}>
+							<h3>{post.data.title}</h3>
+						</a>
+						<p>{post.data.description}</p>
+					</article>
+				))
+			}
+		</div>
+	</section>
+</Layout>

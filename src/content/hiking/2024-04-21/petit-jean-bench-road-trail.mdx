@@ -1,9 +1,41 @@
 ---
+title: "Petit Jean - Bench Road Trail"
+description: "Solo hike on the Bench Road Trail on Petit Jean"
+postSlug: "petit-jean-bench-road-trail"
+categories: ["state-park"]
 type: "ar-state-park"
 location: "petit-jean"
 difficulty: "easy"
-postSlug: "petit-jean-bench-road-trail"
 pubDate: 2024-04-20
-title: "Petit Jean - Bench Road Trail"
-description: "Solo hike on the Bench Road Trail on Petit Jean"
 ---
+
+import { Image } from "astro:assets"
+import ImageGallery from "../../../components/ImageGallery.svelte"
+
+export const imageArry = []
+
+export const imgSizes = {
+  thumb: 300,
+  full: 1200,
+}
+
+Solo hike on the Bench Road Trail on Petit Jean
+
+<div class="image-gallery">
+  {imageArry.map(image => (
+    <ImageGallery imageId={image.id} imageAlt={image.alt} client:load>
+      <Image
+        src={image.img}
+        alt={image.alt}
+        width={imgSizes.thumb}
+        slot="gallery-btn"
+      />
+      <Image
+        src={image.img}
+        alt={image.alt}
+        width={imgSizes.full}
+        slot="gallery-full"
+      />
+    </ImageGallery>
+  ))}
+</div>

@@ -207,6 +207,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 };
+"hiking": {
+"2024-04-21/petit-jean-bench-road-trail.mdx": {
+	id: "2024-04-21/petit-jean-bench-road-trail.mdx";
+  slug: "2024-04-21/petit-jean-bench-road-trail";
+  body: string;
+  collection: "hiking";
+  data: InferEntrySchema<"hiking">
+} & { render(): Render[".mdx"] };
+};
 
 	};
 
