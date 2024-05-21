@@ -1,10 +1,10 @@
 ---
-title: "Petit Jean - Bench Road Trail"
-description: "Solo hike on the Bench Road Trail on Petit Jean"
-postSlug: "petit-jean-bench-road-trail"
+title: "Mt Nebo - Bench Road Trail"
+description: "Solo hike on the Bench Road Trail on Mt Nebo"
+postSlug: "nebo-bench-road-trail"
 categories: ["state-park"]
 type: "ar-state-park"
-location: "petit-jean"
+location: "nebo"
 difficulty: "easy"
 pubDate: 2024-04-20
 parkWebsite: "https://www.arkansasstateparks.com/trails/bench-trail"
@@ -12,7 +12,7 @@ allTrails: "https://www.alltrails.com/explore/recording/afternoon-hike-at-bench-
 ---
 
 import { Image } from "astro:assets"
-import ImageGallery from "../../../components/ImageGallery.svelte"
+import SimpleGallery from "../../../components/SimpleGallery.svelte"
 import Image1 from "/src/images/hiking/2024-04-20-mt-nebo-bench-trail/IMG_8934.webp"
 import Image2 from "/src/images/hiking/2024-04-20-mt-nebo-bench-trail/IMG_8938.webp"
 import Image3 from "/src/images/hiking/2024-04-20-mt-nebo-bench-trail/IMG_8940.webp"
@@ -59,15 +59,39 @@ export const imageArry = [
   },
 ]
 
-export const imgSizes = {
-  thumb: 400,
-  full: 1200,
-}
+Solo hike on the Bench Road Trail on Mt Nebo
 
-Solo hike on the Bench Road Trail on Petit Jean
+<figure>
+  <blockquote>
+    Begins at the overlook shelter visible in the drive up the
+    mountain to the park. There is a narrow shelf called a bench that
+    encircles the entire mountain. In the early 1900s, this bench
+    featured a road. Today the bench is a trail route through a
+    woodland that teems with large trees and wildlife. Fern Lake,
+    remnants of historic springs, and steps that were a part of an
+    early resort development are still visible. The trail is level in
+    most places and offers views from the mountain, especially during
+    seasons from late fall through early spring. For a map and more
+    information, visit MTBProject.com.
+  </blockquote>
+  <figcaption>
+    [Arkansas State
+    Parks](https://www.arkansasstateparks.com/trails/bench-trail)
+  </figcaption>
+</figure>
 
-{imageArry.map(image => (
-
-    <Image src={image.img} alt={image.alt} width={imgSizes.thumb} />
-
-))}
+<SimpleGallery>
+  {imageArry.map(image => (
+    <figure>
+      <a href={image.img.src}>
+        <Image
+          src={image.img}
+          alt={image.alt}
+          width="1200"
+          slot="gallery-full"
+        />
+      </a>
+      <figcaption>{image.alt}</figcaption>
+    </figure>
+  ))}
+</SimpleGallery>

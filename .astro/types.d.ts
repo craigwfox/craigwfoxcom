@@ -208,9 +208,16 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "hiking": {
-"2024-04-21/petit-jean-bench-road-trail.mdx": {
-	id: "2024-04-21/petit-jean-bench-road-trail.mdx";
-  slug: "2024-04-21/petit-jean-bench-road-trail";
+"2024-04-13/petit-jean-seven-hollows.mdx": {
+	id: "2024-04-13/petit-jean-seven-hollows.mdx";
+  slug: "2024-04-13/petit-jean-seven-hollows";
+  body: string;
+  collection: "hiking";
+  data: InferEntrySchema<"hiking">
+} & { render(): Render[".mdx"] };
+"2024-04-21/nebo-bench-road-trail.mdx": {
+	id: "2024-04-21/nebo-bench-road-trail.mdx";
+  slug: "2024-04-21/nebo-bench-road-trail";
   body: string;
   collection: "hiking";
   data: InferEntrySchema<"hiking">
