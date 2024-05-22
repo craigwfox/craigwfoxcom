@@ -11,6 +11,12 @@
   /* ====---------------====
     Post Feed - Main
   =======------------==== */
+  .section:has(.post-feed) {
+    h1 {
+      margin-block-end: var(--space-s);
+    }
+  }
+
   .post-feed {
     --feed-gap-x: var(--space-l);
     --feed-gap-y: var(--space-l);

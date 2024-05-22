@@ -1,13 +1,16 @@
 ---
-const { date } = Astro.props;
+const { date } = Astro.props
+const newDate = new Date(
+	date.getTime() + Math.abs(date.getTimezoneOffset() * 60000)
+)
 ---
 
-<time datetime={date.toISOString()}>
+<time datetime={newDate.toISOString()}>
 	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
+		newDate.toLocaleDateString("en-us", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
 		})
 	}
 </time>

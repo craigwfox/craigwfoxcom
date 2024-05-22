@@ -23,5 +23,29 @@
     }
   }
 
+  figure {
+    &:has(blockquote) {
+      margin-block: var(--space-l);
+      padding: var(--space-xs) var(--space-s);
+
+      border-inline-start: 0.6rem solid var(--c-primary);
+      background: color-mix(
+        in oklab,
+        var(--c-main-bg) 100%,
+        var(--c-code-bg) 5%
+      );
+
+      blockquote {
+        font-style: italic;
+      }
+
+      figcaption {
+        margin-block-start: var(--space-m);
+
+        text-align: right;
+      }
+    }
+  }
+
   //end of layer
 }
