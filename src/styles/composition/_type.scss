@@ -75,4 +75,33 @@
       }
     }
   }
+
+  .hiking-links {
+    display: flex;
+
+    li {
+      display: grid;
+      place-items: center;
+    }
+
+    a {
+      text-underline-offset: 0.2em;
+    }
+
+    li + li {
+      a {
+        margin-inline-start: var(--space-2xs);
+        padding-inline-start: var(--space-2xs);
+
+        border-inline-start: 2px solid
+          color-mix(
+            in oklab,
+            var(--c-primary-off) 30%,
+            transparent 100%
+          );
+
+        line-height: 1;
+      }
+    }
+  }
 }

@@ -22,4 +22,27 @@ const blog = defineCollection({
   }),
 })
 
-export const collections = { blog }
+const hiking = defineCollection({
+  // Type-check frontmatter using a schema
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    postSlug: z.string(),
+    categories: z.array(z.string()).optional(),
+    type: z.string(),
+    location: z.string(),
+    difficulty: z.string(),
+    parkWebsite: z.string(),
+    allTrails: z.string(),
+    pubDate: z
+      .string()
+      .or(z.date())
+      .transform(val => new Date(val)),
+    updatedDate: z
+      .string()
+      .optional()
+      .transform(str => (str ? new Date(str) : undefined)),
+  }),
+})
+
+export const collections = { blog, hiking }

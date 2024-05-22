@@ -1,0 +1,73 @@
+/* ------------------------------------------
+======---------------------------------======
+	Image Gallery
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer blocks {
+  .simple-gallery {
+    --grid-size: 15rem;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--grid-size), 1fr)
+    );
+    grid-auto-rows: 1fr;
+    gap: var(--space-m);
+
+    transition: 300ms;
+
+    figure {
+      min-height: var(--grid-size);
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      overflow: hidden;
+
+      transition: all 0.2s ease-in-out;
+
+      figcaption {
+        display: none;
+
+        padding: var(--space-3xs) var(--space-s) var(--space-2xs);
+
+        background: var(--c-primary-off);
+        border-end-start-radius: var(--rad-1);
+        border-end-end-radius: var(--rad-1);
+
+        color: var(--c-code-title-text);
+        font-size: var(--step-0);
+      }
+    }
+
+    button,
+    a {
+      position: relative;
+
+      overflow: hidden;
+
+      background: none;
+      border: 0.3rem solid var(--c-primary-off);
+      border-radius: var(--rad-1);
+
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        inset: 0;
+
+        object-fit: cover;
+        object-position: top left;
+      }
+    }
+  }
+
+  //end of layer
+}
