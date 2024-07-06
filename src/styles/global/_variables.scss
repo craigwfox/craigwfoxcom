@@ -129,9 +129,17 @@
 
     /* ===------ Utilities ------=== */
     --c-main-bg: hsl(45, 50%, 97%);
+    --c-main-bg-alt: color-mix(
+      in oklab,
+      var(--c-blue) 100%,
+      var(--c-black) 100%
+    );
 
     --c-link: var(--c-blue);
     --c-link-hover: var(--c-blue-d);
+
+    --c-link-reverse: var(--c-blue-l);
+    --c-link-reverse-hover: var(--c-tertiary);
 
     --c-text: var(--c-blue-d);
     --c-text-alt: var(--c-blue-m);
@@ -144,6 +152,7 @@
     --border-color: var(--c-grey-d);
     --border-1: 0.5rem solid var(--border-color);
     --border-2: 0.2rem solid var(--c-grey-m);
+    --border-3: 0.5rem solid var(--c-black);
   }
 
   [data-theme="dark"] {

@@ -43,14 +43,16 @@
     align-items: end;
     justify-content: space-between;
 
-    margin-inline: var(--wrapper-main);
+    padding-inline: var(--wrapper-main);
     padding-block: var(--space-xs);
     margin-block-end: var(--space-m);
 
-    border-block-end: var(--border-1);
+    border-block-end: var(--border-3);
+    background: var(--c-main-bg-alt);
 
     > div {
       display: flex;
+      gap: var(--space-s);
     }
   }
 
@@ -69,11 +71,17 @@
       font-size: clamp(1.25rem, 1.193rem + 0.24vw, 1.375rem);
       text-underline-offset: 0.2rem;
       text-decoration-thickness: 0.15rem;
+      color: var(--c-link-reverse);
+
+      &:hover,
+      &:focus {
+        color: var(--c-link-reverse-hover);
+      }
 
       &[aria-current="page"],
       &[aria-current="page"]:hover,
       &[aria-current="page"]:focus {
-        color: var(--c-link-hover);
+        color: var(--c-link-reverse-hover);
       }
     }
   }
@@ -115,8 +123,17 @@
 
   [data-theme="light"] {
     .site-toggles {
+      button {
+        color: var(--c-link-reverse);
+
+        &:hover,
+        &:focus {
+          color: var(--c-link-reverse-hover);
+        }
+      }
+
       svg {
-        color: var(--c-blue);
+        color: currentColor;
       }
 
       .light {
