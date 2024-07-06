@@ -34,7 +34,7 @@
   // Site header
   // ====---------------====
   #site-header {
-    --sh-w-logo: 225px;
+    --sh-w-logo: 175px;
     --sh-w-nav: 300px;
 
     display: flex;
@@ -68,7 +68,7 @@
     padding-block-end: var(--space-2xs);
 
     a {
-      font-size: clamp(1.25rem, 1.193rem + 0.24vw, 1.375rem);
+      font-size: var(--step-0);
       text-underline-offset: 0.2rem;
       text-decoration-thickness: 0.15rem;
       color: var(--c-link-reverse);
