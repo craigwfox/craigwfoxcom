@@ -9,6 +9,10 @@
 
 @layer views {
   .post-single {
+    max-width: 60rem;
+    margin-inline: auto;
+    padding-block: var(--space-m);
+
     time {
       color: var(--c-text);
       font-weight: 600;

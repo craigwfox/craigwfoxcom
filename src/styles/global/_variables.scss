@@ -39,14 +39,15 @@
     /* ====---------------====
       Type
     =======------------==== */
-    --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.8rem);
-    --step--1: clamp(0.94rem, calc(0.91rem + 0.11vw), 1rem);
-    --step-0: clamp(1.13rem, calc(1.08rem + 0.23vw), 1.25rem);
-    --step-1: clamp(1.35rem, calc(1.27rem + 0.39vw), 1.56rem);
-    --step-2: clamp(1.62rem, calc(1.5rem + 0.61vw), 1.95rem);
-    --step-3: clamp(1.94rem, calc(1.76rem + 0.9vw), 2.44rem);
-    --step-4: clamp(2.33rem, calc(2.07rem + 1.31vw), 3.05rem);
-    --step-5: clamp(2.8rem, calc(2.43rem + 1.85vw), 3.82rem);
+    --step--2: clamp(0.6944rem, 0.6854rem + 0.0384vi, 0.72rem);
+    --step--1: clamp(0.8333rem, 0.8099rem + 0.1002vi, 0.9rem);
+    --step-0: clamp(1rem, 0.956rem + 0.1878vi, 1.125rem);
+    --step-1: clamp(1.2rem, 1.1274rem + 0.3099vi, 1.4063rem);
+    --step-2: clamp(1.44rem, 1.3281rem + 0.4775vi, 1.7578rem);
+    --step-3: clamp(1.728rem, 1.5628rem + 0.705vi, 2.1973rem);
+    --step-4: clamp(2.0736rem, 1.8366rem + 1.0111vi, 2.7466rem);
+    --step-5: clamp(2.4883rem, 2.1556rem + 1.4196vi, 3.4332rem);
+    --step-6: clamp(2.986rem, 2.5263rem + 1.9614vi, 4.2915rem);
     --lh-base: 1.5;
     --font-main: "Rubik", sans-serif;
 
@@ -88,6 +89,8 @@
     /* ====---------------====
       Radius
     =======------------==== */
+    --rad--21: 0.25rem;
+    --rad--1: 0.5rem;
     --rad-1: 1rem;
     --rad-2: 2rem;
     --rad-3: 3rem;
