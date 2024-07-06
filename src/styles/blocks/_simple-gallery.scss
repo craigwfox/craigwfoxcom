@@ -9,14 +9,14 @@
 
 @layer blocks {
   .simple-gallery {
-    --grid-size: 15rem;
+    --grid-size: 10rem;
     display: grid;
     grid-template-columns: repeat(
       auto-fill,
       minmax(var(--grid-size), 1fr)
     );
     grid-auto-rows: 1fr;
-    gap: var(--space-m);
+    gap: var(--space-xs);
 
     transition: 300ms;
 
@@ -36,8 +36,8 @@
         padding: var(--space-3xs) var(--space-s) var(--space-2xs);
 
         background: var(--c-primary-off);
-        border-end-start-radius: var(--rad-1);
-        border-end-end-radius: var(--rad-1);
+        border-end-start-radius: var(--rad--2);
+        border-end-end-radius: var(--rad--2);
 
         color: var(--c-code-title-text);
         font-size: var(--step-0);
@@ -51,8 +51,8 @@
       overflow: hidden;
 
       background: none;
-      border: 0.3rem solid var(--c-primary-off);
-      border-radius: var(--rad-1);
+      border: 0.2rem solid var(--c-primary-off);
+      border-radius: var(--rad--1);
 
       cursor: pointer;
 
