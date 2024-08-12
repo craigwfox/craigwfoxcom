@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Base.astro"
 import { getCollection } from "astro:content"
 import FormattedDate from "../../components/FormattedDate.astro"
+import PostTitle from "../../components/hiking/PostTitle.vue"
 
 const { count = 500 } = Astro.props
 
@@ -18,11 +19,10 @@ const posts = (await getCollection("hiking")).sort(
 	>
 		<h1 id="title-blog">Wandering about</h1>
 
-		<div class="post-feed">
+		<div class="post-feed post-feed--hiking">
 			{
 				posts.slice(0, count).map(post => (
 					<article class="post-item">
-						<FormattedDate date={post.data.pubDate} />
 						{post.data.categories != undefined && (
 							<ul class="tags">
 								{post.data.categories.map(category => (
@@ -30,9 +30,29 @@ const posts = (await getCollection("hiking")).sort(
 								))}
 							</ul>
 						)}
-						<a href={`/hiking/${post.slug}/`}>
-							<h3>{post.data.title}</h3>
-						</a>
+						<PostTitle
+							title={post.data.title}
+							link={`/hiking/${post.slug}/`}
+							showPage={post.data.noSingle ? false : true}
+						/>
+						<table>
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th>Miles</th>
+									<th>Location</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<FormattedDate date={post.data.pubDate} />
+									</td>
+									<td>{post.data.miles}</td>
+									<td>{post.data.location[1]}</td>
+								</tr>
+							</tbody>
+						</table>
 						<p>{post.data.description}</p>
 					</article>
 				))

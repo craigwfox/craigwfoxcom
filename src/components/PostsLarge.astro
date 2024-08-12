@@ -5,27 +5,27 @@ import FormattedDate from "../components/FormattedDate.astro"
 const { count = 500 } = Astro.props
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
 ---
 
-<div class="post-feed">
-  {
-    posts.slice(0, count).map(post => (
-      <article class="post-item">
-        <FormattedDate date={post.data.pubDate} />
-        {post.data.categories != undefined && (
-          <ul class="tags">
-            {post.data.categories.map(category => (
-              <li>{category}</li>
-            ))}
-          </ul>
-        )}
-        <a href={`/blog/${post.slug}/`}>
-          <h3>{post.data.title}</h3>
-        </a>
-        <p>{post.data.description}</p>
-      </article>
-    ))
-  }
+<div class="post-feed post-feed--wide-first">
+	{
+		posts.slice(0, count).map(post => (
+			<article class="post-item">
+				<FormattedDate date={post.data.pubDate} />
+				{post.data.categories != undefined && (
+					<ul class="tags">
+						{post.data.categories.map(category => (
+							<li>{category}</li>
+						))}
+					</ul>
+				)}
+				<a href={`/blog/${post.slug}/`}>
+					<h3>{post.data.title}</h3>
+				</a>
+				<p>{post.data.description}</p>
+			</article>
+		))
+	}
 </div>

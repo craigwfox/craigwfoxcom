@@ -229,6 +229,20 @@ declare module 'astro:content' {
   collection: "hiking";
   data: InferEntrySchema<"hiking">
 } & { render(): Render[".mdx"] };
+"2024-05-10/petit-jean-seven-hollows.mdx": {
+	id: "2024-05-10/petit-jean-seven-hollows.mdx";
+  slug: "2024-05-10/petit-jean-seven-hollows";
+  body: string;
+  collection: "hiking";
+  data: InferEntrySchema<"hiking">
+} & { render(): Render[".mdx"] };
+"2024-08-10/nebo-rim-trail.mdx": {
+	id: "2024-08-10/nebo-rim-trail.mdx";
+  slug: "2024-08-10/nebo-rim-trail";
+  body: string;
+  collection: "hiking";
+  data: InferEntrySchema<"hiking">
+} & { render(): Render[".mdx"] };
 };
 
 	};
