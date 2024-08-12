@@ -56,14 +56,18 @@
 
         background: var(--feed-border-color);
       }
+    }
 
-      &:first-child {
-        grid-column: 1 / -1;
+    &--wide-first {
+      .post-item {
+        &:first-child {
+          grid-column: 1 / -1;
 
-        padding-block-end: var(--space-s);
+          padding-block-end: var(--space-s);
 
-        h3 {
-          font-size: var(--step-4);
+          h3 {
+            font-size: var(--step-4);
+          }
         }
       }
     }

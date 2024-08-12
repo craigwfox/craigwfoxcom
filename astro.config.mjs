@@ -4,6 +4,8 @@ import sitemap from "@astrojs/sitemap"
 import svelte from "@astrojs/svelte"
 import netlify from "@astrojs/netlify"
 
+import vue from "@astrojs/vue"
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://craigwfox.com",
@@ -30,5 +32,6 @@ export default defineConfig({
       ],
     }),
     svelte(),
+    vue(),
   ],
 })

@@ -39,7 +39,7 @@
       }
     }
 
-    time {
+    > time {
       color: var(--c-text);
       font-weight: 600;
     }
@@ -56,6 +56,52 @@
 
     .tags {
       margin: 0.5rem 0 0.2rem;
+    }
+
+    table {
+      margin-block-start: var(--space-2xs);
+
+      border-collapse: collapse;
+
+      text-align: left;
+
+      th,
+      td {
+        padding-inline: 0.5rem;
+        border-inline-end: 1px solid
+          var(--feed-border-color, var(--border-color));
+
+        font-size: var(--step--1);
+
+        &:first-child {
+          padding-inline-start: 0;
+        }
+
+        &:last-child {
+          padding-inline-end: 0;
+
+          border-inline-end: 0;
+        }
+      }
+
+      thead {
+        th,
+        td {
+          padding-block-end: 0.25rem;
+        }
+
+        tr {
+          border-block-end: 1px solid
+            var(--feed-border-color, var(--border-color));
+        }
+      }
+
+      tbody {
+        th,
+        td {
+          padding-block-start: 0.25rem;
+        }
+      }
     }
   }
 
