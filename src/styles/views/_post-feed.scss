@@ -17,6 +17,33 @@
     }
   }
 
+  @media (max-width: 48rem) {
+    .stats-sidebar {
+      margin-block-start: var(--space-xl);
+      padding-block-start: var(--space-m);
+
+      border-block-start: var(--border-1);
+    }
+  }
+
+  @media (min-width: calc(48rem + 1px)) {
+    .section:has(.post-feed--hiking) {
+      display: grid;
+      gap: 1em var(--space-m);
+      grid-template-columns: 1fr 20rem;
+
+      h1 {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .stats-sidebar {
+      padding-inline-start: var(--space-m);
+
+      border-inline-start: var(--border-1);
+    }
+  }
+
   .post-feed {
     --feed-gap-x: var(--space-l);
     --feed-gap-y: var(--space-l);
