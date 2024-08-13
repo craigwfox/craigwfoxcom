@@ -30,6 +30,7 @@ const hiking = defineCollection({
     postSlug: z.string(),
     categories: z.array(z.string()).optional(),
     type: z.string(),
+    trail: z.string(),
     location: z.array(z.string()),
     difficulty: z.string(),
     parkWebsite: z.string(),

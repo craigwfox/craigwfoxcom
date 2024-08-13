@@ -9,6 +9,28 @@ const { count = 500 } = Astro.props
 const posts = (await getCollection("hiking")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
+
+const trailsList = []
+const parksList = []
+const stats2024 = {
+	trails: 0,
+	miles: 0,
+	days: 0,
+	parks: 0,
+}
+
+posts.map(x => {
+	if (!parksList.includes(x.data.trail)) {
+		stats2024.trails += 1
+		if (x.data.trail) parksList.push(x.data.trail)
+	}
+	if (!trailsList.includes(x.data.location[0])) {
+		stats2024.parks += 1
+		if (x.data.trail) trailsList.push(x.data.location[0])
+	}
+	x.data.miles ? (stats2024.miles += x.data.miles) : ""
+	stats2024.days += 1
+})
 ---
 
 <Layout title="Blog">
@@ -21,7 +43,7 @@ const posts = (await getCollection("hiking")).sort(
 
 		<div class="post-feed post-feed--hiking">
 			{
-				posts.slice(0, count).map(post => (
+				posts.map(post => (
 					<article class="post-item">
 						{post.data.categories != undefined && (
 							<ul class="tags">
@@ -57,6 +79,30 @@ const posts = (await getCollection("hiking")).sort(
 					</article>
 				))
 			}
+		</div>
+		<div class="stats-sidebar">
+			<h2>2024 Stats</h2>
+			<p><strong>2024 Goal:</strong> 50mi</p>
+			<table>
+				<tbody>
+					<tr>
+						<th>Miles Hiked</th>
+						<td>{stats2024.miles.toFixed(2)}</td>
+					</tr>
+					<tr>
+						<th>Trails Hiked</th>
+						<td>{stats2024.trails}</td>
+					</tr>
+					<tr>
+						<th>Parks Hiked</th>
+						<td>{stats2024.parks}</td>
+					</tr>
+					<tr>
+						<th>Days Hiked</th>
+						<td>{stats2024.days}</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</section>
 </Layout>
