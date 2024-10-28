@@ -1,0 +1,82 @@
+// ---------------------------------------------
+// ======---------------------------------======
+//  Movies List
+// ======---------------------------------======
+// ---------------------------------------------
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+.movies-list {
+  container: movie-list / inline-size;
+
+  display: grid;
+  gap: 0.5em;
+
+  > h3 a {
+    line-height: 1.3;
+  }
+
+  > p {
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    gap: 0.5em;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    li {
+      display: grid;
+
+      a {
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: 75px 1fr;
+        grid-template-rows: 1fr repeat(2, auto) 1fr;
+        align-items: center;
+
+        text-decoration: none;
+        line-height: 1;
+      }
+
+      .movies-list__img {
+        grid-column: 1;
+        grid-row: 1 / -1;
+
+        display: grid;
+        place-items: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 1;
+          object-fit: cover;
+
+          border: 0.3rem solid var(--border-color);
+          border-radius: 50%;
+
+          overflow: hidden;
+        }
+      }
+
+      .movies-list__title {
+        grid-column: 2;
+        grid-row: 2;
+
+        font-weight: 700;
+      }
+
+      .movies-list__date {
+        grid-column: 2;
+        grid-row: 3;
+
+        color: var(--c-text);
+      }
+    }
+  }
+}

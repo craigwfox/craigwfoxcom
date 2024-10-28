@@ -9,12 +9,14 @@
 
 @layer views {
   .home-grid {
-    h2 {
-      margin-block-end: var(--space-s);
-    }
-
     .post-feed {
       margin-block-end: var(--space-l);
+    }
+  }
+
+  .home-content {
+    h2 {
+      margin-block-end: var(--space-s);
     }
   }
 
