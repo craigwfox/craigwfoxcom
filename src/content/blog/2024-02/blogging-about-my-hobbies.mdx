@@ -16,12 +16,9 @@ import imgTwo from "/src/images/posts/2024-02/blogging-about-my-hobbies/2-h-fram
 import imgThree from "/src/images/posts/2024-02/blogging-about-my-hobbies/3-h-frames-with-apron.jpg"
 import imgFour from "/src/images/posts/2024-02/blogging-about-my-hobbies/4-completed-top.jpg"
 
-import ImageGallery from "../../../components/ImageGallery.svelte"
+import SimpleGallery from "/src/components/SimpleGallery.vue"
 
-export const imgSizes = {
-  thumb: 300,
-  full: 1440,
-}
+export const imgSizes = { thumb: 300, full: 1440 }
 export const imageArry = [
   {
     img: imgOne,
@@ -51,29 +48,21 @@ The site has a series of semesters that bring you from very little woodworking k
 
 ## Orientation Semester Project One: Workbench
 
-<div class="image-gallery">
+<SimpleGallery>
   {imageArry.map(image => (
-    <ImageGallery
-      imageId={image.id}
-      imageAlt={image.alt}
-      client:load
-    >
-      <Image
-        src={image.img}
-        alt={image.alt}
-        width={imgSizes.thumb}
-        slot="gallery-btn"
-      />
-      <Image
-        src={image.img}
-        alt={image.alt}
-        width={imgSizes.full}
-        slot="gallery-full"
-      />
-    </ImageGallery>
+    <figure>
+      <a href={image.img.src} target="_blank">
+        <Image
+          src={image.img}
+          alt={image.alt}
+          width="1200"
+          slot="gallery-full"
+        />
+      </a>
+      <figcaption>{image.alt}</figcaption>
+    </figure>
   ))}
-
-</div>
+</SimpleGallery>
 
 This first project was a great start showing basic marking and measuring skills and lots of mortise and tenon joinery (the base for many pieces of furniture). I had never cut a mortise and tenon before outside of one very sloppy wooden mallet years ago. There are some kinda sloppy joints, but they have been holding great for the last few weeks and the bench is incredibly sturdy.
 

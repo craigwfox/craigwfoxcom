@@ -14,7 +14,7 @@ allTrails: "https://www.alltrails.com/explore/recording/afternoon-hike-at-bench-
 ---
 
 import { Image } from "astro:assets"
-import SimpleGallery from "../../components/SimpleGallery.svelte"
+import SimpleGallery from "/src/components/SimpleGallery.vue"
 import Image1 from "/src/images/hiking/2024-04-20-mt-nebo-bench-trail/IMG_8934.webp"
 import Image2 from "/src/images/hiking/2024-04-20-mt-nebo-bench-trail/IMG_8938.webp"
 import Image3 from "/src/images/hiking/2024-04-20-mt-nebo-bench-trail/IMG_8940.webp"
@@ -39,11 +39,7 @@ export const imageArry = [
     id: "Image3",
     alt: "Small pool of water in some large rocks",
   },
-  {
-    img: Image4,
-    id: "Image4",
-    alt: "Rock filled drainage area",
-  },
+  { img: Image4, id: "Image4", alt: "Rock filled drainage area" },
   {
     img: Image5,
     id: "Image5",

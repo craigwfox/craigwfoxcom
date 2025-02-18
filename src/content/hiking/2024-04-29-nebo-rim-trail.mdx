@@ -14,7 +14,7 @@ allTrails: "https://www.alltrails.com/explore/recording/afternoon-hike-at-mount-
 ---
 
 import { Image } from "astro:assets"
-import SimpleGallery from "../../components/SimpleGallery.svelte"
+import SimpleGallery from "/src/components/SimpleGallery.vue"
 import Image01 from "/src/images/hiking/2024-03-29-petit-jean-rim-trail/rim-trail-01.webp"
 import Image02 from "/src/images/hiking/2024-03-29-petit-jean-rim-trail/rim-trail-02.webp"
 import Image03 from "/src/images/hiking/2024-03-29-petit-jean-rim-trail/rim-trail-03.webp"
@@ -49,166 +49,38 @@ import Image31 from "/src/images/hiking/2024-03-29-petit-jean-rim-trail/rim-trai
 import Image32 from "/src/images/hiking/2024-03-29-petit-jean-rim-trail/rim-trail-32.webp"
 
 export const imageArry = [
-  {
-    img: Image01,
-    id: "Image01",
-    alt: "",
-  },
-  {
-    img: Image02,
-    id: "Image02",
-    alt: "",
-  },
-  {
-    img: Image03,
-    id: "Image03",
-    alt: "",
-  },
-  {
-    img: Image04,
-    id: "Image04",
-    alt: "",
-  },
-  {
-    img: Image05,
-    id: "Image05",
-    alt: "",
-  },
-  {
-    img: Image06,
-    id: "Image06",
-    alt: "",
-  },
-  {
-    img: Image07,
-    id: "Image07",
-    alt: "",
-  },
-  {
-    img: Image08,
-    id: "Image08",
-    alt: "",
-  },
-  {
-    img: Image09,
-    id: "Image09",
-    alt: "",
-  },
-  {
-    img: Image10,
-    id: "Image10",
-    alt: "",
-  },
-  {
-    img: Image11,
-    id: "Image11",
-    alt: "",
-  },
-  {
-    img: Image12,
-    id: "Image12",
-    alt: "",
-  },
-  {
-    img: Image13,
-    id: "Image13",
-    alt: "",
-  },
-  {
-    img: Image14,
-    id: "Image14",
-    alt: "",
-  },
-  {
-    img: Image15,
-    id: "Image15",
-    alt: "",
-  },
-  {
-    img: Image16,
-    id: "Image16",
-    alt: "",
-  },
-  {
-    img: Image17,
-    id: "Image17",
-    alt: "",
-  },
-  {
-    img: Image18,
-    id: "Image18",
-    alt: "",
-  },
-  {
-    img: Image19,
-    id: "Image19",
-    alt: "",
-  },
-  {
-    img: Image20,
-    id: "Image20",
-    alt: "",
-  },
-  {
-    img: Image21,
-    id: "Image21",
-    alt: "",
-  },
-  {
-    img: Image22,
-    id: "Image22",
-    alt: "",
-  },
-  {
-    img: Image23,
-    id: "Image23",
-    alt: "",
-  },
-  {
-    img: Image24,
-    id: "Image24",
-    alt: "",
-  },
-  {
-    img: Image25,
-    id: "Image25",
-    alt: "",
-  },
-  {
-    img: Image26,
-    id: "Image26",
-    alt: "",
-  },
-  {
-    img: Image27,
-    id: "Image27",
-    alt: "",
-  },
-  {
-    img: Image28,
-    id: "Image28",
-    alt: "",
-  },
-  {
-    img: Image29,
-    id: "Image29",
-    alt: "",
-  },
-  {
-    img: Image30,
-    id: "Image30",
-    alt: "",
-  },
-  {
-    img: Image31,
-    id: "Image31",
-    alt: "",
-  },
-  {
-    img: Image32,
-    id: "Image32",
-    alt: "",
-  },
+  { img: Image01, id: "Image01", alt: "" },
+  { img: Image02, id: "Image02", alt: "" },
+  { img: Image03, id: "Image03", alt: "" },
+  { img: Image04, id: "Image04", alt: "" },
+  { img: Image05, id: "Image05", alt: "" },
+  { img: Image06, id: "Image06", alt: "" },
+  { img: Image07, id: "Image07", alt: "" },
+  { img: Image08, id: "Image08", alt: "" },
+  { img: Image09, id: "Image09", alt: "" },
+  { img: Image10, id: "Image10", alt: "" },
+  { img: Image11, id: "Image11", alt: "" },
+  { img: Image12, id: "Image12", alt: "" },
+  { img: Image13, id: "Image13", alt: "" },
+  { img: Image14, id: "Image14", alt: "" },
+  { img: Image15, id: "Image15", alt: "" },
+  { img: Image16, id: "Image16", alt: "" },
+  { img: Image17, id: "Image17", alt: "" },
+  { img: Image18, id: "Image18", alt: "" },
+  { img: Image19, id: "Image19", alt: "" },
+  { img: Image20, id: "Image20", alt: "" },
+  { img: Image21, id: "Image21", alt: "" },
+  { img: Image22, id: "Image22", alt: "" },
+  { img: Image23, id: "Image23", alt: "" },
+  { img: Image24, id: "Image24", alt: "" },
+  { img: Image25, id: "Image25", alt: "" },
+  { img: Image26, id: "Image26", alt: "" },
+  { img: Image27, id: "Image27", alt: "" },
+  { img: Image28, id: "Image28", alt: "" },
+  { img: Image29, id: "Image29", alt: "" },
+  { img: Image30, id: "Image30", alt: "" },
+  { img: Image31, id: "Image31", alt: "" },
+  { img: Image32, id: "Image32", alt: "" },
 ]
 
 <figure>

@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config"
 import mdx from "@astrojs/mdx"
 import sitemap from "@astrojs/sitemap"
-import svelte from "@astrojs/svelte"
 import netlify from "@astrojs/netlify"
 
 import vue from "@astrojs/vue"
@@ -9,9 +8,7 @@ import vue from "@astrojs/vue"
 // https://astro.build/config
 export default defineConfig({
   site: "https://craigwfox.com",
-  markdown: {
-    syntaxHighlight: "prism",
-  },
+  markdown: { syntaxHighlight: "prism" },
   integrations: [
     mdx(),
     sitemap({
@@ -31,7 +28,6 @@ export default defineConfig({
         "https://craigwfox.com/blog/2021-11/versions-of-craigwfox-com/",
       ],
     }),
-    svelte(),
     vue(),
   ],
 })
