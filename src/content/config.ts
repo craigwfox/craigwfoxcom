@@ -48,4 +48,34 @@ const hiking = defineCollection({
   }),
 })
 
-export const collections = { blog, hiking }
+const reading = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    storyGraph: z.string().optional(),
+    goodReads: z.coerce.string().optional(),
+    readType: z.string().optional(),
+    owned: z.boolean().optional(),
+    ratingBook: z.coerce.number().optional(),
+    startDate: z.coerce
+      .string()
+      .or(z.date())
+      .transform(val => new Date(val)),
+    endDate: z.coerce
+      .string()
+      .or(z.date())
+      .transform(val => new Date(val)),
+    isbn: z.string().optional(),
+    author: z.string().optional(),
+    publisher: z.string().optional(),
+    publishDate: z.coerce
+      .string()
+      .or(z.date())
+      .transform(val => new Date(val)),
+    pageCount: z.coerce.number().optional(),
+    bookType: z.string().optional(),
+    genres: z.array(z.string()).optional(),
+    Finished: z.string().optional(),
+  }),
+})
+
+export const collections = { blog, hiking, reading }

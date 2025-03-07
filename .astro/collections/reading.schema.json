@@ -1,0 +1,129 @@
+{
+  "$ref": "#/definitions/reading",
+  "definitions": {
+    "reading": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "storyGraph": {
+          "type": "string"
+        },
+        "goodReads": {
+          "type": "string"
+        },
+        "readType": {
+          "type": "string"
+        },
+        "owned": {
+          "type": "boolean"
+        },
+        "ratingBook": {
+          "type": "number"
+        },
+        "startDate": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "integer",
+                  "format": "unix-time"
+                }
+              ]
+            }
+          ]
+        },
+        "endDate": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "integer",
+                  "format": "unix-time"
+                }
+              ]
+            }
+          ]
+        },
+        "isbn": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "publishDate": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "integer",
+                  "format": "unix-time"
+                }
+              ]
+            }
+          ]
+        },
+        "pageCount": {
+          "type": "number"
+        },
+        "bookType": {
+          "type": "string"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Finished": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
