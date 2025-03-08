@@ -1,0 +1,106 @@
+/* ------------------------------------------
+======---------------------------------======
+	Collection cards
+======---------------------------------======
+------------------------------------------ */
+
+@use "../functions/functions" as *;
+@use "../functions/mixins" as *;
+
+@layer blocks {
+  .collection-cards {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(15rem, 1fr)
+    );
+    gap: var(--space-2xs);
+
+    &__card {
+      $self: &;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto 1fr auto;
+
+      cursor: pointer;
+
+      &__image {
+        width: 100%;
+        height: 100%;
+
+        grid-column: 1;
+        grid-row: 1 / -1;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      &__date {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+
+        padding: var(--space-3xs) var(--space-xs);
+
+        background: var(--c-blue-d);
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+
+        color: var(--c-white);
+        font-weight: 700;
+      }
+
+      &__content {
+        grid-column: 1;
+        grid-row: 1 / -1;
+        display: grid;
+        grid-template-rows: subgrid;
+        gap: 0.8em;
+        padding: var(--space-m);
+
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        background: color-mix(
+          in oklab,
+          var(--c-blue-d) 100%,
+          transparent 10%
+        );
+
+        color: var(--c-white);
+
+        h2,
+        h3 {
+          line-height: 1.2;
+        }
+
+        h2 {
+          grid-column: 1;
+          grid-row: 3;
+          color: var(--c-yellow);
+          font-size: var(--step-2);
+        }
+
+        h3 {
+          grid-column: 1;
+          grid-row: 2;
+          font-size: var(--step-0);
+        }
+
+        table {
+          grid-column: 1;
+          grid-row: 4;
+        }
+      }
+
+      &.active {
+        #{ $self }__content {
+          opacity: 1;
+        }
+
+        #{$self}__date {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

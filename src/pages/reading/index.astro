@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Base.astro"
+import { getCollection } from "astro:content"
+import { Image } from "astro:assets"
+import FormattedDate from "../../components/FormattedDate.astro"
+import { effect } from "astro:schema"
+
+type NullableDate = Date | null
+
+const finishedBooks = (await getCollection("reading"))
+	.filter(
+		x =>
+			x.data.Finished == "Finished" &&
+			x.data.readType != "audio"
+	)
+	.sort((a, b) => compareDates(a, b))
+	.map(x => {
+		const book = x.data
+		let startDate: NullableDate = null
+		let endDate: NullableDate = null
+		let publishDate: NullableDate = null
+
+		if (x.data.startDate)
+			startDate = new Date(
+				new Date(x.data.startDate)
+					.toISOString()
+					.replaceAll(/-/g, "\/")
+					.replace(/T.+/, "")
+			)
+
+		if (x.data.endDate)
+			endDate = new Date(
+				new Date(x.data.endDate)
+					.toISOString()
+					.replaceAll(/-/g, "\/")
+					.replace(/T.+/, "")
+			)
+
+		if (x.data.publishDate)
+			publishDate = new Date(
+				new Date(x.data.publishDate)
+					.toISOString()
+					.replaceAll(/-/g, "\/")
+					.replace(/T.+/, "")
+			)
+
+		const fullDate = endDate ? endDate : startDate
+		console.log()
+
+		if (fullDate)
+			book["imageSrc"] =
+				`/images/covers/${fullDate.getFullYear()}/${x.data.isbn}.webp`
+
+		if (x.data.startDate && startDate)
+			book.startDate = startDate
+		if (x.data.endDate && endDate) book.endDate = endDate
+		if (x.data.publishDate && publishDate)
+			book.publishDate = publishDate
+		return book
+	})
+
+function compareDates(a, b) {
+	if (b.data.endDate && a.data.endDate) {
+		return (
+			b.data.endDate.valueOf() - a.data.endDate.valueOf()
+		)
+	} else {
+		return false
+	}
+}
+---
+
+<script>
+	const cards = document.querySelectorAll(
+		".collection-cards__card"
+	)
+	function clearAllActives() {
+		cards.forEach(card => {
+			card.classList.remove("active")
+		})
+	}
+
+	cards.forEach(card => {
+		card.addEventListener("mouseenter", () => {
+			clearAllActives()
+			card.classList.add("active")
+		})
+		card.addEventListener("mouseleave", () => {
+			card.classList.remove("active")
+		})
+	})
+</script>
+
+<Layout title="Reading list">
+	<h1>Stuff I've read</h1>
+	<div class="collection-cards">
+		{
+			finishedBooks.map(book => (
+				<article class="collection-cards__card">
+					{book["imageSrc"] && (
+						<Image
+							class="collection-cards__card__image"
+							src={book["imageSrc"]}
+							alt=""
+							width={400}
+							height={400}
+							loading={"eager"}
+						/>
+					)}
+					<p class="collection-cards__card__date">
+						Finished: <FormattedDate date={book.endDate} />
+					</p>
+					<div class="collection-cards__card__content">
+						<h3>{book.author}</h3>
+						<h2>{book.title}</h2>
+						<table>
+							<tbody>
+								<tr>
+									<th scope="row">Finished:</th>
+									<td>
+										<FormattedDate date={book.endDate} />
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Type:</th>
+									<td>{book.readType}</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating:</th>
+									<td>{book.ratingBook} / 5</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+			))
+		}
+	</div>
+</Layout>
