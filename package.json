@@ -9,7 +9,8 @@
     "start": "astro dev --host",
     "build": "astro build && cp _redirects dist/_redirects",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "convertCovers": "find ./public/images/covers -type f -name '*.jpg' -exec sh -c 'cwebp -q 75 $1 -o \"${1%.png}.webp\"';"
   },
   "repository": {
     "type": "git",

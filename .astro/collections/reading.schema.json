@@ -25,7 +25,10 @@
         "startDate": {
           "anyOf": [
             {
-              "type": "string"
+              "type": [
+                "string",
+                "null"
+              ]
             },
             {
               "anyOf": [
@@ -48,7 +51,10 @@
         "endDate": {
           "anyOf": [
             {
-              "type": "string"
+              "type": [
+                "string",
+                "null"
+              ]
             },
             {
               "anyOf": [
@@ -80,7 +86,10 @@
         "publishDate": {
           "anyOf": [
             {
-              "type": "string"
+              "type": [
+                "string",
+                "null"
+              ]
             },
             {
               "anyOf": [
@@ -120,7 +129,8 @@
         }
       },
       "required": [
-        "title"
+        "title",
+        "publishDate"
       ],
       "additionalProperties": false
     }
