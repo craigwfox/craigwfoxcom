@@ -20,6 +20,7 @@ genres:
   - dystopian
 Finished: Finished
 Notebook: Reading Log 2025 v1
+imageSrc:
 ---
 
 # Thoughts about **The Ballad of Songbirds and Snakes**

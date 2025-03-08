@@ -3,11 +3,11 @@ tags:
   - reading-list
 title: The Midnight Library
 storyGraph: https://app.thestorygraph.com/books/567878f2-109b-495a-9a73-4f5488099534
-goodReads: 
+goodReads:
 readType: digital
 owned: false
 ratingBook: 5
-startDate: 
+startDate:
 endDate: 2021-04-27
 isbn: "9781786892713"
 author: Matt Haig
@@ -19,4 +19,5 @@ genres:
   - science fiction
   - magical realism
 Finished: Finished
+imageSrc:
 ---

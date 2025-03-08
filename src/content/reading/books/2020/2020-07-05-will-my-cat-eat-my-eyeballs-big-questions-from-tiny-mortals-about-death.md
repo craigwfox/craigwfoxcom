@@ -19,4 +19,5 @@ genres:
   - science
   - sociology
 Finished: Finished
+imageSrc:
 ---

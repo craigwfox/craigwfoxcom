@@ -19,4 +19,5 @@ genres:
   - fantasy
   - science fiction
 Finished: Finished
+imageSrc:
 ---

@@ -19,4 +19,5 @@ genres:
   - horror
   - gothic
 Finished: Finished
+imageSrc:
 ---

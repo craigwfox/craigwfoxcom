@@ -19,4 +19,5 @@ genres:
   - fantasy
   - romance
 Finished: Finished
+imageSrc:
 ---

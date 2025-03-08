@@ -20,4 +20,5 @@ genres:
   - politics
   - race
 Finished: Finished
+imageSrc:
 ---

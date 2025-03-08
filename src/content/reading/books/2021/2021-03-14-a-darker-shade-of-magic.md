@@ -19,4 +19,5 @@ genres:
   - fantasy
   - magic
 Finished: Finished
+imageSrc:
 ---

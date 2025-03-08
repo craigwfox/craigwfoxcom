@@ -17,4 +17,5 @@ bookType: fiction
 genres:
   - fantasy
 Finished: Finished
+imageSrc:
 ---

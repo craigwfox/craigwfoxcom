@@ -9,7 +9,7 @@ owned: true
 ratingBook:
 startDate: 2025-03-07
 endDate:
-isbn: " 9780593466490"
+isbn: "9780593466490"
 author: Gabrielle Zevin
 publisher: Vintage
 publishDate: 2022-07-05
@@ -20,6 +20,7 @@ genres:
   - romance
 Finished: Reading
 Notebook: Reading Log 2025 v1
+imageSrc:
 ---
 
 # Thoughts about _TITLE_

@@ -19,4 +19,5 @@ genres:
   - biography
   - memoir
 Finished: Finished
+imageSrc:
 ---

@@ -19,4 +19,5 @@ genres:
   - fantasy
   - mystery
 Finished: Finished
+imageSrc:
 ---

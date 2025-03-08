@@ -20,4 +20,5 @@ genres:
   - romance
   - historical
 Finished: Finished
+imageSrc:
 ---

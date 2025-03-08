@@ -18,4 +18,5 @@ bookType: fiction
 genres:
   - magical realism
 Finished: Finished
+imageSrc:
 ---

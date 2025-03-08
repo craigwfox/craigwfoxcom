@@ -20,4 +20,5 @@ genres:
   - science fiction
   - mystery
 Finished: Finished
+imageSrc:
 ---

@@ -20,4 +20,5 @@ genres:
   - historical
 Finished: Finished
 Notebook: Reading Log 2025 v1
+imageSrc:
 ---

@@ -19,4 +19,5 @@ genres:
   - nature
   - history
 Finished: Finished
+imageSrc:
 ---

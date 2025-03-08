@@ -19,4 +19,5 @@ genres:
   - classics
   - historical
 Finished: Finished
+imageSrc:
 ---

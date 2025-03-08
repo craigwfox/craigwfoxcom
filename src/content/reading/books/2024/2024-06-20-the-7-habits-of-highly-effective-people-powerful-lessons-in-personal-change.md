@@ -18,4 +18,5 @@ bookType: nonfiction
 genres:
   - self-help
 Finished: Finished
+imageSrc:
 ---

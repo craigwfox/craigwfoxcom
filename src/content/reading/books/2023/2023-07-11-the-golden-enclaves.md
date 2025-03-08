@@ -19,4 +19,5 @@ genres:
   - fantasy
   - young adult
 Finished: Finished
+imageSrc:
 ---

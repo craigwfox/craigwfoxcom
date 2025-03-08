@@ -19,4 +19,5 @@ genres:
   - dystopian
   - classics
 Finished: Finished
+imageSrc:
 ---

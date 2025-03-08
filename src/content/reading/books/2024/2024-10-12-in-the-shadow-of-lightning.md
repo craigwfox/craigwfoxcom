@@ -19,4 +19,5 @@ genres:
   - fantasy
   - epic fantasy
 Finished: Finished
+imageSrc:
 ---

@@ -20,6 +20,7 @@ genres:
   - romance
 Finished: Finished
 Notebook: Reading Log 2025 v1
+imageSrc:
 ---
 
 # Thoughts about _TITLE_

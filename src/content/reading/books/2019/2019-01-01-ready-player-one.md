@@ -19,4 +19,5 @@ genres:
   - science fiction
   - dystopian
 Finished: Finished
+imageSrc:
 ---

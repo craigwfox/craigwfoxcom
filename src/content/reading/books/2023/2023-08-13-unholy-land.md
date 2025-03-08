@@ -20,4 +20,5 @@ genres:
   - historical
   - science fiction
 Finished: Finished
+imageSrc:
 ---

@@ -19,4 +19,5 @@ genres:
   - science fiction
   - cyberpunk
 Finished: Finished
+imageSrc:
 ---

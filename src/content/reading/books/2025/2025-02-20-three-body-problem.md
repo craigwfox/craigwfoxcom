@@ -20,6 +20,7 @@ genres:
   - hard science fiction
 Finished: Finished
 Notebook: Reading Log 2025 v1
+imageSrc:
 ---
 
 # Thoughts about The Three-Body Problem
