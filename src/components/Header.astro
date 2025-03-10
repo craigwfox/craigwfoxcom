@@ -4,7 +4,9 @@ import { SITE_TITLE } from "../consts"
 import Logo from "./Logo.astro"
 ---
 
-<a href="#maincontent" class="skip-link">Skip to main content</a>
+<a href="#maincontent" class="skip-link"
+	>Skip to main content</a
+>
 
 <header id="site-header">
 	<a
@@ -20,8 +22,9 @@ import Logo from "./Logo.astro"
 		<nav id="site-nav" aria-label="Site navigation">
 			<a
 				href="/"
-				aria-current={Astro.url.pathname === "/" ? "page" : "false"}
-				>Home</a
+				aria-current={Astro.url.pathname === "/"
+					? "page"
+					: "false"}>Home</a
 			>
 			<a
 				href="/blog/"
@@ -36,16 +39,16 @@ import Logo from "./Logo.astro"
 					: "false"}>Hiking</a
 			>
 			<a
+				href="/reading/"
+				aria-current={Astro.url.pathname === "/reading/"
+					? "page"
+					: "false"}>Reading</a
+			>
+			<a
 				href="/about/"
 				aria-current={Astro.url.pathname === "/about/"
 					? "page"
 					: "false"}>About</a
-			>
-			<a
-				href="/uses/"
-				aria-current={Astro.url.pathname === "/uses/"
-					? "page"
-					: "false"}>Uses</a
 			>
 		</nav>
 
@@ -86,7 +89,8 @@ import Logo from "./Logo.astro"
 								width="30"
 								height="30"
 								fill="white"
-								transform="translate(0 0.682171)"></rect></clipPath
+								transform="translate(0 0.682171)"
+							></rect></clipPath
 						>
 					</defs>
 				</svg>

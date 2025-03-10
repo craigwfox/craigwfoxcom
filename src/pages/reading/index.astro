@@ -7,58 +7,6 @@ import { effect } from "astro:schema"
 
 type NullableDate = Date | null
 
-const finishedBooks = (await getCollection("reading"))
-	.filter(
-		x =>
-			x.data.Finished == "Finished" &&
-			x.data.readType != "audio"
-	)
-	.sort((a, b) => compareDates(a, b))
-	.map(x => {
-		const book = x.data
-		let startDate: NullableDate = null
-		let endDate: NullableDate = null
-		let publishDate: NullableDate = null
-
-		if (x.data.startDate)
-			startDate = new Date(
-				new Date(x.data.startDate)
-					.toISOString()
-					.replaceAll(/-/g, "\/")
-					.replace(/T.+/, "")
-			)
-
-		if (x.data.endDate)
-			endDate = new Date(
-				new Date(x.data.endDate)
-					.toISOString()
-					.replaceAll(/-/g, "\/")
-					.replace(/T.+/, "")
-			)
-
-		if (x.data.publishDate)
-			publishDate = new Date(
-				new Date(x.data.publishDate)
-					.toISOString()
-					.replaceAll(/-/g, "\/")
-					.replace(/T.+/, "")
-			)
-
-		const fullDate = endDate ? endDate : startDate
-		console.log()
-
-		if (fullDate)
-			book["imageSrc"] =
-				`/images/covers/${fullDate.getFullYear()}/${x.data.isbn}.webp`
-
-		if (x.data.startDate && startDate)
-			book.startDate = startDate
-		if (x.data.endDate && endDate) book.endDate = endDate
-		if (x.data.publishDate && publishDate)
-			book.publishDate = publishDate
-		return book
-	})
-
 function compareDates(a, b) {
 	if (b.data.endDate && a.data.endDate) {
 		return (
@@ -68,6 +16,69 @@ function compareDates(a, b) {
 		return false
 	}
 }
+
+function refineBookDate(book): any {
+	const updatedBook = book.data
+	let startDate: NullableDate = null
+	let endDate: NullableDate = null
+	let publishDate: NullableDate = null
+
+	if (book.data.startDate)
+		startDate = new Date(
+			new Date(book.data.startDate)
+				.toISOString()
+				.replaceAll(/-/g, "\/")
+				.replace(/T.+/, "")
+		)
+
+	if (book.data.endDate)
+		endDate = new Date(
+			new Date(book.data.endDate)
+				.toISOString()
+				.replaceAll(/-/g, "\/")
+				.replace(/T.+/, "")
+		)
+
+	if (book.data.publishDate)
+		publishDate = new Date(
+			new Date(book.data.publishDate)
+				.toISOString()
+				.replaceAll(/-/g, "\/")
+				.replace(/T.+/, "")
+		)
+
+	const fullDate = endDate ? endDate : startDate
+
+	if (fullDate)
+		updatedBook["imageSrc"] =
+			`/images/covers/${fullDate.getFullYear()}/${book.data.isbn}.webp`
+
+	if (book.data.startDate && startDate)
+		updatedBook.startDate = startDate
+	if (book.data.endDate && endDate)
+		updatedBook.endDate = endDate
+	if (book.data.publishDate && publishDate)
+		updatedBook.publishDate = publishDate
+	return updatedBook
+}
+
+const finishedBooks = (await getCollection("reading"))
+	.filter(
+		x =>
+			x.data.Finished == "Finished" &&
+			x.data.readType != "audio"
+	)
+	.sort((a, b) => compareDates(a, b))
+	.map(x => refineBookDate(x))
+
+const inprogressBooks = (await getCollection("reading"))
+	.filter(
+		x =>
+			x.data.Finished == "Reading" &&
+			x.data.readType != "audio"
+	)
+	.sort((a, b) => compareDates(a, b))
+	.map(x => refineBookDate(x))
 ---
 
 <script>
@@ -93,6 +104,7 @@ function compareDates(a, b) {
 
 <Layout title="Reading list">
 	<h1>Stuff I've read</h1>
+
 	<div class="collection-cards">
 		{
 			finishedBooks.map(book => (
