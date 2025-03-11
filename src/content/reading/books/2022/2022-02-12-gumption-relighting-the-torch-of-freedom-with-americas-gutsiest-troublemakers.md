@@ -6,7 +6,7 @@ storyGraph: https://app.thestorygraph.com/books/1e43afaa-4260-4ce7-b3f2-dfe041bc
 goodReads:
 readType: digital
 owned: false
-ratingBook: 10
+ratingBook: 4
 startDate:
 endDate: 2022-02-12
 isbn: "9780525954675"

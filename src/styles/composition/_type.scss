@@ -59,6 +59,18 @@
     Paragraphs
   =======------------==== */
 
+  hr {
+    --el-bg: var(--c-blue);
+    height: 0.5em;
+
+    margin-block: var(--space-m);
+
+    background: var(--el-bg);
+    border: 0;
+
+    color: var(--el-bg);
+  }
+
   /* ====---------------====
     Lists
   =======------------==== */

@@ -7,7 +7,28 @@ import { effect } from "astro:schema"
 
 type NullableDate = Date | null
 
-function compareDates(a, b) {
+function compareDates(
+	a: {
+		id?: string
+		render?: () => Render[".md"]
+		slug?: string
+		body?: string
+		collection?: "reading"
+		data: any
+		rendered?: RenderedContent | undefined
+		filePath?: string | undefined
+	},
+	b: {
+		id?: string
+		render?: () => Render[".md"]
+		slug?: string
+		body?: string
+		collection?: "reading"
+		data: any
+		rendered?: RenderedContent | undefined
+		filePath?: string | undefined
+	}
+) {
 	if (b.data.endDate && a.data.endDate) {
 		return (
 			b.data.endDate.valueOf() - a.data.endDate.valueOf()
@@ -17,7 +38,16 @@ function compareDates(a, b) {
 	}
 }
 
-function refineBookDate(book): any {
+function refineBookDate(book: {
+	id?: string
+	render?: () => Render[".md"]
+	slug?: string
+	body?: string
+	collection?: "reading"
+	data: any
+	rendered?: RenderedContent | undefined
+	filePath?: string | undefined
+}): any {
 	const updatedBook = book.data
 	let startDate: NullableDate = null
 	let endDate: NullableDate = null
@@ -62,6 +92,11 @@ function refineBookDate(book): any {
 	return updatedBook
 }
 
+function getPercentage(min: number, max: number) {
+	const percentage = Math.round((min / max) * 100)
+	return `${percentage < 100 ? percentage : 100}%`
+}
+
 const finishedBooks = (await getCollection("reading"))
 	.filter(
 		x =>
@@ -71,14 +106,59 @@ const finishedBooks = (await getCollection("reading"))
 	.sort((a, b) => compareDates(a, b))
 	.map(x => refineBookDate(x))
 
-const inprogressBooks = (await getCollection("reading"))
-	.filter(
-		x =>
-			x.data.Finished == "Reading" &&
-			x.data.readType != "audio"
-	)
-	.sort((a, b) => compareDates(a, b))
-	.map(x => refineBookDate(x))
+const sortedByRating = [...finishedBooks].sort((a, b) => {
+	return b.ratingBook - a.ratingBook
+})
+
+const yearCounts = {
+	most: 0,
+	pagesTotal: 0,
+	booksRead: 0,
+	years: {
+		"2020": {
+			label: "2020",
+			count: 0,
+			goal: 20,
+		},
+		"2021": {
+			label: "2021",
+			count: 0,
+			goal: 20,
+		},
+		"2022": {
+			label: "2022",
+			count: 0,
+			goal: 30,
+		},
+		"2023": {
+			label: "2023",
+			count: 0,
+			goal: 30,
+		},
+		"2024": {
+			label: "2024",
+			count: 0,
+			goal: 15,
+		},
+		"2025": {
+			label: "2025",
+			count: 0,
+			goal: 30,
+		},
+	},
+}
+finishedBooks.forEach(book => {
+	const year = new Date(book.endDate).getFullYear()
+	yearCounts.years[year].count += 1
+	yearCounts.booksRead++
+	yearCounts.pagesTotal += parseInt(book.pageCount)
+})
+
+yearCounts.most = Object.values(yearCounts.years).sort(
+	(a, b) => b.count - a.count
+)[0].count
+
+// console.log(yearCounts)
 ---
 
 <script>
@@ -105,47 +185,94 @@ const inprogressBooks = (await getCollection("reading"))
 <Layout title="Reading list">
 	<h1>Stuff I've read</h1>
 
-	<div class="collection-cards">
-		{
-			finishedBooks.map(book => (
-				<article class="collection-cards__card">
-					{book["imageSrc"] && (
-						<Image
-							class="collection-cards__card__image"
-							src={book["imageSrc"]}
-							alt=""
-							width={400}
-							height={400}
-							loading={"eager"}
-						/>
-					)}
-					<p class="collection-cards__card__date">
-						Finished: <FormattedDate date={book.endDate} />
-					</p>
-					<div class="collection-cards__card__content">
-						<h3>{book.author}</h3>
-						<h2>{book.title}</h2>
-						<table>
-							<tbody>
+	<div class="content-grid content-grid--collection">
+		<div class="collection-cards">
+			{
+				finishedBooks.map(book => (
+					<article class="collection-cards__card">
+						{book["imageSrc"] && (
+							<Image
+								class="collection-cards__card__image"
+								src={book["imageSrc"]}
+								alt=""
+								width={400}
+								height={400}
+								loading={"eager"}
+							/>
+						)}
+						<p class="collection-cards__card__date">
+							Finished:{" "}
+							<FormattedDate date={book.endDate} />
+						</p>
+						<div class="collection-cards__card__content">
+							<h3>{book.author}</h3>
+							<h2>{book.title}</h2>
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row">Finished:</th>
+										<td>
+											<FormattedDate date={book.endDate} />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Type:</th>
+										<td>{book.readType}</td>
+									</tr>
+									<tr>
+										<th scope="row">Rating:</th>
+										<td>{book.ratingBook} / 5</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
+				))
+			}
+		</div>
+		<aside class="collection-sidebar">
+			<div>
+				<h2>Totals</h2>
+				<table class="collection-stats">
+					<tbody>
+						<tr>
+							<th scope="row">Books:</th>
+							<td>{yearCounts.booksRead}</td>
+						</tr>
+						<tr>
+							<th scope="row">Pages:</th>
+							<td>{yearCounts.pagesTotal}</td>
+						</tr>
+						{
+							Object.values(yearCounts.years).map(
+								(year): object => (
+									<tr
+										style={`--percentage: ${getPercentage(year.count, year.goal)};`}
+									>
+										<th scope="row">{year.label}:</th>
+										<td class="graph">{year.count}</td>
+									</tr>
+								)
+							)
+						}
+					</tbody>
+				</table>
+			</div>
+			<div class="collection-top">
+				<h2>Top 5</h2>
+				<table>
+					{
+						Object.values(sortedByRating.slice(0, 5)).map(
+							(book): object => (
 								<tr>
-									<th scope="row">Finished:</th>
-									<td>
-										<FormattedDate date={book.endDate} />
-									</td>
+									<th scope="row">{book.title}</th>
+									<td>{book.ratingBook}</td>
 								</tr>
-								<tr>
-									<th scope="row">Type:</th>
-									<td>{book.readType}</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating:</th>
-									<td>{book.ratingBook} / 5</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</article>
-			))
-		}
+							)
+						)
+					}
+				</table>
+			</div>
+		</aside>
 	</div>
 </Layout>

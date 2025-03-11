@@ -8,11 +8,94 @@
 @use "../functions/mixins" as *;
 
 @layer blocks {
+  .content-grid--collection {
+    margin-block-start: var(--space-m);
+
+    @container (min-width: 56rem) {
+      grid-template-columns: 3fr 1fr;
+    }
+  }
+
+  .collection-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    justify-content: flex-start;
+  }
+
+  .collection-stats {
+    width: 100%;
+
+    th,
+    td {
+      padding-block: var(--space-2xs);
+    }
+
+    th {
+      width: 30%;
+    }
+
+    td {
+      width: 70%;
+
+      position: relative;
+
+      &.graph {
+        --border-size: 0.4rem;
+        --offset: var(--border-size);
+
+        padding-inline-start: calc(
+          var(--border-size) * 2.2
+        );
+
+        &::before,
+        &::after {
+          content: "";
+
+          height: calc(100% - (var(--border-size) * 2));
+
+          position: absolute;
+          z-index: -1;
+
+          inset-inline-start: var(--border-size);
+        }
+
+        &::before {
+          width: calc(100% - var(--border-size));
+
+          inset-block-start: var(--offset);
+
+          background: var(--c-blue-d);
+        }
+
+        &::after {
+          width: calc(
+            var(--percentage) - var(--border-size)
+          );
+
+          inset-block-start: var(--offset);
+
+          background: var(--c-yellow);
+        }
+      }
+    }
+  }
+
+  [data-theme="dark"] {
+    .collection-stats {
+      td {
+        &.graph {
+          color: var(--c-blue-d);
+        }
+      }
+    }
+  }
+
   .collection-cards {
     display: grid;
     grid-template-columns: repeat(
       auto-fill,
-      minmax(15rem, 1fr)
+      minmax(18rem, 1fr)
     );
     gap: var(--space-2xs);
 
@@ -27,6 +110,7 @@
       &__image {
         width: 100%;
         height: 100%;
+        aspect-ratio: 2 / 3;
 
         grid-column: 1;
         grid-row: 1 / -1;
