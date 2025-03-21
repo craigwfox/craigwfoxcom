@@ -186,6 +186,51 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 	<h1>Stuff I've read</h1>
 
 	<div class="content-grid content-grid--collection">
+		<aside class="collection-sidebar">
+			<details open>
+				<summary>Reading stats</summary>
+				<div>
+					<h2>Totals</h2>
+					<table class="collection-stats">
+						<tbody>
+							<tr>
+								<th scope="row">Books:</th>
+								<td>{yearCounts.booksRead}</td>
+							</tr>
+							<tr>
+								<th scope="row">Pages:</th>
+								<td>{yearCounts.pagesTotal}</td>
+							</tr>
+							{
+								Object.values(yearCounts.years).map(
+									(year): object => (
+										<tr
+											style={`--percentage: ${getPercentage(year.count, year.goal)};`}
+										>
+											<th scope="row">{year.label}:</th>
+											<td class="graph">{year.count}</td>
+										</tr>
+									)
+								)
+							}
+						</tbody>
+					</table>
+					<h2>Top 5</h2>
+					<table>
+						{
+							Object.values(sortedByRating.slice(0, 5)).map(
+								(book): object => (
+									<tr>
+										<th scope="row">{book.title}</th>
+										<td>{book.ratingBook}</td>
+									</tr>
+								)
+							)
+						}
+					</table>
+				</div>
+			</details>
+		</aside>
 		<div class="collection-cards">
 			{
 				finishedBooks.map(book => (
@@ -230,49 +275,5 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 				))
 			}
 		</div>
-		<aside class="collection-sidebar">
-			<div>
-				<h2>Totals</h2>
-				<table class="collection-stats">
-					<tbody>
-						<tr>
-							<th scope="row">Books:</th>
-							<td>{yearCounts.booksRead}</td>
-						</tr>
-						<tr>
-							<th scope="row">Pages:</th>
-							<td>{yearCounts.pagesTotal}</td>
-						</tr>
-						{
-							Object.values(yearCounts.years).map(
-								(year): object => (
-									<tr
-										style={`--percentage: ${getPercentage(year.count, year.goal)};`}
-									>
-										<th scope="row">{year.label}:</th>
-										<td class="graph">{year.count}</td>
-									</tr>
-								)
-							)
-						}
-					</tbody>
-				</table>
-			</div>
-			<div class="collection-top">
-				<h2>Top 5</h2>
-				<table>
-					{
-						Object.values(sortedByRating.slice(0, 5)).map(
-							(book): object => (
-								<tr>
-									<th scope="row">{book.title}</th>
-									<td>{book.ratingBook}</td>
-								</tr>
-							)
-						)
-					}
-				</table>
-			</div>
-		</aside>
 	</div>
 </Layout>

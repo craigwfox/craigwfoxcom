@@ -11,16 +11,32 @@
   .content-grid--collection {
     margin-block-start: var(--space-m);
 
-    @container (min-width: 56rem) {
+    @container content-grid (min-width: 56rem) {
       grid-template-columns: 3fr 1fr;
     }
   }
 
   .collection-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-l);
-    justify-content: flex-start;
+    @container content-grid (min-width: 56rem) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    * + h2 {
+      margin-block-start: var(--space-l);
+    }
+
+    summary {
+      color: var(--c-text-alt);
+      font-size: var(--step-3);
+      font-weight: 700;
+
+      cursor: pointer;
+    }
+
+    h2 {
+      font-size: var(--step-2);
+    }
   }
 
   .collection-stats {
@@ -98,6 +114,11 @@
       minmax(18rem, 1fr)
     );
     gap: var(--space-2xs);
+
+    @container content-grid (min-width: 56rem) {
+      grid-column: 1;
+      grid-row: 1;
+    }
 
     &__card {
       $self: &;

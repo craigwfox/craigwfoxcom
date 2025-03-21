@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap"
 import netlify from "@astrojs/netlify"
 
 import vue from "@astrojs/vue"
+import * as compiler from "vue/compiler-sfc"
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,6 +29,6 @@ export default defineConfig({
         "https://craigwfox.com/blog/2021-11/versions-of-craigwfox-com/",
       ],
     }),
-    vue(),
+    vue({ compiler }),
   ],
 })
