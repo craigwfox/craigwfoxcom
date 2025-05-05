@@ -10,7 +10,8 @@ ratingBook: 3.75
 startDate:
 endDate: 2023-04-04
 isbn: "9781538730270"
-author: Axton Betz-Hamilton
+author:
+  - Axton Betz-Hamilton
 publisher: Grand Central Publishing
 publishDate: 2019-10-15
 pageCount: 320

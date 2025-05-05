@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2024-11-10
 isbn: "9780812513752"
-author: Robert Jordan
+author:
+  - Robert Jordan
 publisher: Tor Fantasy
 publishDate: 1994-10-15
 pageCount: 987

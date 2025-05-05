@@ -10,7 +10,8 @@ ratingBook: 4.5
 startDate:
 endDate: 2020-07-21
 isbn: "9780804139038"
-author: Andy Weir
+author:
+  - Andy Weir
 publisher: Ballantine
 publishDate: 2011-09-27
 pageCount: 384

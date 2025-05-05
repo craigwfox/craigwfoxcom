@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2023-02-19
 isbn: B09NTK17XL
-author: Sarah Addison Allen
+author:
+  - Sarah Addison Allen
 publisher: St. Martin’s Press
 publishDate: 2022-08-30
 pageCount: 288

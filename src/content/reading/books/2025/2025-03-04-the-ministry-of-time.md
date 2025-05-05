@@ -10,7 +10,8 @@ ratingBook: 3.25
 startDate: 2025-03-01
 endDate: 2025-03-04
 isbn: "9781668045169"
-author: Kaliane Bradley
+author:
+  - Kaliane Bradley
 publisher: Sceptre
 publishDate: 2024-05-07
 pageCount: 368
@@ -20,7 +21,6 @@ genres:
   - romance
 Finished: Finished
 Notebook: Reading Log 2025 v1
-imageSrc:
 ---
 
 # Thoughts about _TITLE_

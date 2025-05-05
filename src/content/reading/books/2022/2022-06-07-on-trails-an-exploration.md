@@ -10,7 +10,8 @@ ratingBook: 4.25
 startDate:
 endDate: 2022-06-07
 isbn: "9781476739212"
-author: Robert Moor
+author:
+  - Robert Moor
 publisher: Simon & Schuster
 publishDate: 2016-07-12
 pageCount: 352

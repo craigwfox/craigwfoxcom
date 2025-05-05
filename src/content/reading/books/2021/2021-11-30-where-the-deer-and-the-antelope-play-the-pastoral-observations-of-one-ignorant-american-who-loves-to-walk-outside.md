@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2021-11-30
 isbn: "9781101984710"
-author: Nick Offerman
+author:
+  - Nick Offerman
 publisher: Dutton
 publishDate: 2021-10-12
 pageCount: 348

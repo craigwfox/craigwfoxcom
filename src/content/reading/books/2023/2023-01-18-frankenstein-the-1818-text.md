@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2023-01-18
 isbn: "9781524705701"
-author: Mary Shelley
+author:
+  - Mary Shelley
 publisher: Penguin Classics
 publishDate: 1818-01-01
 pageCount: 290

@@ -10,7 +10,8 @@ ratingBook: 3.7
 startDate:
 endDate: 2022-02-02
 isbn: "9781250788894"
-author: Freya Marske
+author:
+  - Freya Marske
 publisher: Tordotcom
 publishDate: 2021-10-26
 pageCount: 384

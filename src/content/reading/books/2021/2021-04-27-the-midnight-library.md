@@ -10,7 +10,8 @@ ratingBook: 5
 startDate:
 endDate: 2021-04-27
 isbn: "9781786892713"
-author: Matt Haig
+author:
+  - Matt Haig
 publisher: Canongate Books
 publishDate: 2020-08-13
 pageCount: 303

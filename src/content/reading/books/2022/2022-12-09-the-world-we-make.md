@@ -10,7 +10,8 @@ ratingBook: 4.25
 startDate:
 endDate: 2022-12-09
 isbn: "9780356512693"
-author: N. K. Jemisin
+author:
+  - N. K. Jemisin
 publisher: Orbit
 publishDate: 2022-11-01
 pageCount: 357

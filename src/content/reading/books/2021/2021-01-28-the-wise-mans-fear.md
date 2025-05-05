@@ -10,7 +10,8 @@ ratingBook: 3.75
 startDate:
 endDate: 2021-01-28
 isbn: "9781101486405"
-author: Patrick Rothfuss
+author:
+  - Patrick Rothfuss
 publisher: DAW Books
 publishDate: 2011-03-01
 pageCount: 1120

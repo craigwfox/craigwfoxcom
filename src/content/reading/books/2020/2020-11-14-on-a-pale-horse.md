@@ -10,7 +10,8 @@ ratingBook: 3.75
 startDate:
 endDate: 2020-11-14
 isbn: "9780307815651"
-author: Piers Anthony
+author:
+  - Piers Anthony
 publisher: Del Rey Books
 publishDate: 1983-10-01
 pageCount: 297

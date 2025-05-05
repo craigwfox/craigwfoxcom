@@ -76,7 +76,7 @@ const reading = defineCollection({
         .string()
         .optional()
         .transform(val => val?.trim()),
-      author: z.string().optional(),
+      author: z.array(z.string()).optional(),
       publisher: z.string().optional(),
       publishDate: z
         .string()

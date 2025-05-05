@@ -188,6 +188,9 @@
         h3 {
           grid-column: 1;
           grid-row: 1;
+          display: grid;
+          gap: 0.5rem;
+
           font-size: var(--step-0);
         }
 

@@ -10,7 +10,8 @@ ratingBook: 4.25
 startDate:
 endDate: 2022-04-16
 isbn: "9780765387462"
-author: V.E. Schwab
+author:
+  - V.E. Schwab
 publisher: Tor Books
 publishDate: 2017-02-21
 pageCount: 624

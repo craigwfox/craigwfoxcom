@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2023-09-24
 isbn: "9781250252630"
-author: Robert Jordan
+author:
+  - Robert Jordan
 publisher: Tor Books
 publishDate: 2004-01-06
 pageCount: 318

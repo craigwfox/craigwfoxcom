@@ -10,7 +10,8 @@ ratingBook: 3.5
 startDate:
 endDate: 2020-06-27
 isbn: "9780062109590"
-author: Neil Gaiman
+author:
+  - Neil Gaiman
 publisher: William Morrow
 publishDate: 2001-05-19
 pageCount: 541

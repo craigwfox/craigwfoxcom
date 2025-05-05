@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2020-12-15
 isbn: "9780399587078"
-author: Jim Butcher
+author:
+  - Jim Butcher
 publisher: Roc
 publishDate: 2020-07-14
 pageCount: 352

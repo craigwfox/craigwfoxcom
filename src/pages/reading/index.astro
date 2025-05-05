@@ -3,7 +3,6 @@ import Layout from "../../layouts/Base.astro"
 import { getCollection } from "astro:content"
 import { Image } from "astro:assets"
 import FormattedDate from "../../components/FormattedDate.astro"
-import { effect } from "astro:schema"
 
 type NullableDate = Date | null
 
@@ -81,7 +80,7 @@ function refineBookDate(book: {
 
 	if (fullDate)
 		updatedBook["imageSrc"] =
-			`/images/covers/${fullDate.getFullYear()}/${book.data.isbn}.webp`
+			`/images/covers/${book.data.isbn}.webp`
 
 	if (book.data.startDate && startDate)
 		updatedBook.startDate = startDate
@@ -157,9 +156,6 @@ finishedBooks.forEach(book => {
 yearCounts.most = Object.values(yearCounts.years).sort(
 	(a, b) => b.count - a.count
 )[0].count
-
-console.log(!"", !"pie")
-console.log(null ? true : false)
 ---
 
 <script>
@@ -251,7 +247,11 @@ console.log(null ? true : false)
 							<FormattedDate date={book.endDate} />
 						</p>
 						<div class="collection-cards__card__content">
-							<h3>{book.author}</h3>
+							<h3>
+								{book.author.map(author => (
+									<span>{author}</span>
+								))}
+							</h3>
 							<h2>{book.title}</h2>
 							<table>
 								<tbody>

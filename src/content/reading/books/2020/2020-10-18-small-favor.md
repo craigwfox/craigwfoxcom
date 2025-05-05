@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2020-10-18
 isbn: B000UZNS0O
-author: Jim Butcher
+author:
+  - Jim Butcher
 publisher: Roc
 publishDate: 2008-04-01
 pageCount: 444

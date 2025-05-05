@@ -10,7 +10,8 @@ ratingBook: 3.75
 startDate:
 endDate: 2020-09-16
 isbn: "9781982113490"
-author: Adam Savage
+author:
+  - Adam Savage
 publisher: Atria Books
 publishDate: 2019-05-07
 pageCount: 302

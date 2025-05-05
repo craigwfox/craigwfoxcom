@@ -10,7 +10,8 @@ ratingBook: 3.75
 startDate: 2025-02-24
 endDate: 2025-02-28
 isbn: "9781338635171"
-author: Suzane  Collins
+author:
+  - Suzane  Collins
 publisher: Scholastic Press
 publishDate:
 pageCount: 517
@@ -20,7 +21,6 @@ genres:
   - dystopian
 Finished: Finished
 Notebook: Reading Log 2025 v1
-imageSrc:
 ---
 
 # Thoughts about **The Ballad of Songbirds and Snakes**

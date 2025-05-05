@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2021-03-14
 isbn: "9781466851375"
-author: V.E. Schwab
+author:
+  - V.E. Schwab
 publisher: Tor Books
 publishDate: 2015-02-24
 pageCount: 413

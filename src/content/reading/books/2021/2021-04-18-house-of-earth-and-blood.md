@@ -10,7 +10,8 @@ ratingBook: 3
 startDate:
 endDate: 2021-04-18
 isbn: "9781635574050"
-author: Sarah J. Maas
+author:
+  - Sarah J. Maas
 publisher: Bloomsbury Publishing
 publishDate: 2020-03-03
 pageCount: 804

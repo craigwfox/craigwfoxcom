@@ -10,7 +10,8 @@ ratingBook: 3.75
 startDate:
 endDate: 2021-09-23
 isbn: "9781250762849"
-author: Christopher Paolini
+author:
+  - Christopher Paolini
 publisher: Tor Books
 publishDate: 2020-09-15
 pageCount: 880

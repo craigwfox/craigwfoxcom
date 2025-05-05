@@ -9,8 +9,9 @@ owned: true
 ratingBook: 5
 startDate: 2025-03-05
 endDate: 2025-03-10
-isbn: "9780593466490"
-author: Gabrielle Zevin
+isbn: " 9780593466490"
+author:
+  - Gabrielle Zevin
 publisher: Vintage
 publishDate: 2022-07-05
 pageCount: 397

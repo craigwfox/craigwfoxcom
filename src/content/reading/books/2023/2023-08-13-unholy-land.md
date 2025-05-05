@@ -10,7 +10,8 @@ ratingBook: 3.5
 startDate:
 endDate: 2023-08-13
 isbn: "9781616963040"
-author: Lavie Tidhar
+author:
+  - Lavie Tidhar
 publisher: Tachyon Publications
 publishDate: 2018-10-16
 pageCount: 266

@@ -10,7 +10,8 @@ ratingBook: 3.25
 startDate:
 endDate: 2021-10-13
 isbn: "9781639730964"
-author: Sarah J. Maas
+author:
+  - Sarah J. Maas
 publisher: Bloomsbury Publishing
 publishDate: 2013-08-15
 pageCount: 440

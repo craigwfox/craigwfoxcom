@@ -10,7 +10,8 @@ ratingBook: 3.8
 startDate:
 endDate: 2023-07-25
 isbn: "9781250217448"
-author: T. J. Klune
+author:
+  - T. J. Klune
 publisher: Tor Books
 publishDate: 2023-04-25
 pageCount: 420

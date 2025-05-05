@@ -10,7 +10,8 @@ ratingBook: 4.25
 startDate:
 endDate: 2021-11-13
 isbn: "9780525509295"
-author: Ibram X. Kendi
+author:
+  - Ibram X. Kendi
 publisher: One World
 publishDate: 2019-08-13
 pageCount: 320

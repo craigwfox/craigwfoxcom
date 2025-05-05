@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2022-02-12
 isbn: "9780525954675"
-author: Nick Offerman
+author:
+  - Nick Offerman
 publisher: Penguin Random House
 publishDate: 2015-05-26
 pageCount: 382

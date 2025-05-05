@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2020-09-28
 isbn: "9781101128459"
-author: Jim Butcher
+author:
+  - Jim Butcher
 publisher: Roc
 publishDate: 2003-08-01
 pageCount: 464

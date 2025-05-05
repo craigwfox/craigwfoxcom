@@ -10,7 +10,8 @@ ratingBook: 3.5
 startDate:
 endDate: 2020-07-14
 isbn: "9780553898194"
-author: Neal Stephenson
+author:
+  - Neal Stephenson
 publisher: Bantam Books
 publishDate: 1992-05-01
 pageCount: 480

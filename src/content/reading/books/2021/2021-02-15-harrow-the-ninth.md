@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2021-02-15
 isbn: B07WYSGHC7
-author: Tamsyn Muir
+author:
+  - Tamsyn Muir
 publisher: Tor Books
 publishDate: 2020-08-04
 pageCount: 538

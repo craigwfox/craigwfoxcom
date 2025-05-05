@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2024-01-22
 isbn: "9780385333849"
-author: Kurt Vonnegut
+author:
+  - Kurt Vonnegut
 publisher: Dial Press
 publishDate: 1969-03-31
 pageCount: 275

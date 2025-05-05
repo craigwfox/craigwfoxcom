@@ -10,7 +10,8 @@ ratingBook: 4
 startDate:
 endDate: 2023-12-11
 isbn: "9780765305114"
-author: Robert Jordan
+author:
+  - Robert Jordan
 publisher: Tor Books
 publishDate: 1991-10-15
 pageCount: 699
