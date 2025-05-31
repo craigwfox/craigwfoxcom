@@ -7,12 +7,13 @@ import PostTitle from "../../components/hiking/PostTitle.vue"
 const { count = 500 } = Astro.props
 
 const posts = (await getCollection("hiking")).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+	(a, b) =>
+		b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
 
 const trailsList = []
 const parksList = []
-const stats2024 = {
+const stats2025 = {
 	trails: 0,
 	miles: 0,
 	days: 0,
@@ -20,16 +21,20 @@ const stats2024 = {
 }
 
 posts.map(x => {
-	if (!parksList.includes(x.data.trail)) {
-		stats2024.trails += 1
-		if (x.data.trail) parksList.push(x.data.trail)
+	const is2025 =
+		new Date(x.data.pubDate) > new Date("2025/01/01")
+	if (is2025) {
+		if (!parksList.includes(x.data.trail)) {
+			stats2025.trails += 1
+			if (x.data.trail) parksList.push(x.data.trail)
+		}
+		if (!trailsList.includes(x.data.location[0])) {
+			stats2025.parks += 1
+			if (x.data.trail) trailsList.push(x.data.location[0])
+		}
+		x.data.miles ? (stats2025.miles += x.data.miles) : ""
+		stats2025.days += 1
 	}
-	if (!trailsList.includes(x.data.location[0])) {
-		stats2024.parks += 1
-		if (x.data.trail) trailsList.push(x.data.location[0])
-	}
-	x.data.miles ? (stats2024.miles += x.data.miles) : ""
-	stats2024.days += 1
 })
 ---
 
@@ -68,7 +73,9 @@ posts.map(x => {
 							<tbody>
 								<tr>
 									<td>
-										<FormattedDate date={post.data.pubDate} />
+										<FormattedDate
+											date={post.data.pubDate}
+										/>
 									</td>
 									<td>{post.data.miles}</td>
 									<td>{post.data.location[1]}</td>
@@ -81,25 +88,25 @@ posts.map(x => {
 			}
 		</div>
 		<div class="stats-sidebar">
-			<h2>2024 Stats</h2>
-			<p><strong>2024 Goal:</strong> 50mi</p>
+			<h2>2025 Stats</h2>
+			<p><strong>2025 Goal:</strong> 30mi</p>
 			<table>
 				<tbody>
 					<tr>
 						<th>Miles Hiked</th>
-						<td>{stats2024.miles.toFixed(2)}</td>
+						<td>{stats2025.miles.toFixed(2)}</td>
 					</tr>
 					<tr>
 						<th>Trails Completed</th>
-						<td>{stats2024.trails}</td>
+						<td>{stats2025.trails}</td>
 					</tr>
 					<tr>
 						<th>Parks Visited</th>
-						<td>{stats2024.parks}</td>
+						<td>{stats2025.parks}</td>
 					</tr>
 					<tr>
 						<th>Days Hiking</th>
-						<td>{stats2024.days}</td>
+						<td>{stats2025.days}</td>
 					</tr>
 				</tbody>
 			</table>
