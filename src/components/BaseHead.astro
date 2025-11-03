@@ -4,24 +4,31 @@
 import "../styles/foxy.scss"
 
 export interface Props {
-  title: string
-  description: string
-  image?: string
+	title: string
+	description: string
+	image?: string
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const {
-  title,
-  description = "Craig Fox, UX engineer / developer, maker, and geek",
-  image = "/images/placeholder-social.jpg",
+	title,
+	description = "Craig Fox, UX engineer / developer, maker, and geek",
+	image = "/images/placeholder-social.jpg",
 } = Astro.props
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+<meta
+	name="viewport"
+	content="width=device-width,initial-scale=1"
+/>
+<link
+	rel="icon"
+	type="image/svg+xml"
+	href="/images/favicon.svg"
+/>
 <meta name="generator" content={Astro.generator} />
 
 <!-- Canonical URL -->
@@ -37,25 +44,51 @@ const {
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.site)} />
+<meta
+	property="og:image"
+	content={new URL(image, Astro.site)}
+/>
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
+<meta
+	property="twitter:card"
+	content="summary_large_image"
+/>
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.site)} />
+<meta
+	property="twitter:description"
+	content={description}
+/>
+<meta
+	property="twitter:image"
+	content={new URL(image, Astro.site)}
+/>
 
 <!-- RSS -->
 <link
-  rel="alternate"
-  href={Astro.url + "rss.xml"}
-  type="application/xml"
-  title="RSS 2.0"
+	rel="alternate"
+	href={Astro.url + "rss.xml"}
+	type="application/xml"
+	title="RSS 2.0"
 />
 <link
-  rel="sitemap"
-  href={Astro.url + "sitemap-index.xml"}
-  type="application/xml"
-  title="Sitemap"
+	rel="sitemap"
+	href={Astro.url + "sitemap-index.xml"}
+	type="application/xml"
+	title="Sitemap"
 />
+
+<script
+	async
+	src="https://www.googletagmanager.com/gtag/js?id=G-BLWWG5VBTJ"
+></script>
+<script>
+	window.dataLayer = window.dataLayer || []
+	function gtag() {
+		dataLayer.push(arguments)
+	}
+	gtag("js", new Date())
+
+	gtag("config", "G-BLWWG5VBTJ")
+</script>
