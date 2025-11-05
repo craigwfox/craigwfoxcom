@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2021-07-13
 isbn: "9781409015741"
-author:
-  - Erich Maria Remarque
+author: Erich Maria Remarque
 publisher: Vintage Digital
 publishDate: 1928-01-01
 pageCount: 224
@@ -20,5 +19,4 @@ genres:
   - classics
   - historical
 Finished: Finished
-imageSrc:
 ---

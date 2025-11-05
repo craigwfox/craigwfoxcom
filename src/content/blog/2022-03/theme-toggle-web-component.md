@@ -1,5 +1,5 @@
 ---
-tags: post, post-dev
+tags: ["post", "post-dev"]
 categories: ["dev", "js", "web components"]
 postSlug: "theme-toggle-web-component/"
 pubDate: 2022-03-10

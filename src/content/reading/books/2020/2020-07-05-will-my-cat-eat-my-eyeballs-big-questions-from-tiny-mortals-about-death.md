@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2020-07-05
 isbn: "9780393652710"
-author:
-  - Caitlin Doughty
+author: Caitlin Doughty
 publisher: W. W. Norton Company
 publishDate: 2019-11-10
 pageCount: 240
@@ -20,5 +19,4 @@ genres:
   - science
   - sociology
 Finished: Finished
-imageSrc:
 ---

@@ -1,5 +1,5 @@
 ---
-tags: post, post-dev
+tags: ["post", "post-dev"]
 categories: ["dev", Web history", "Old vs new"]
 postSlug: "responsive-video-embeds/"
 pubDate: 2022-02-07

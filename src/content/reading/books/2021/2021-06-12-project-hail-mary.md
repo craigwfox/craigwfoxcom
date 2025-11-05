@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2021-06-12
 isbn: "9781473582583"
-author:
-  - Andy Weir
+author: Andy Weir
 publisher: Cornerstone Digital
 publishDate: 2021-05-04
 pageCount: 496
@@ -20,5 +19,4 @@ genres:
   - science fiction
   - space
 Finished: Finished
-imageSrc:
 ---

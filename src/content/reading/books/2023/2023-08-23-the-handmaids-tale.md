@@ -10,8 +10,7 @@ ratingBook: 4.1
 startDate:
 endDate: 2023-08-23
 isbn: "9780385490818"
-author:
-  - Margaret Atwood
+author: Margaret Atwood
 publisher: Anchor
 publishDate: 0085-01-01
 pageCount: 311
@@ -20,5 +19,4 @@ genres:
   - dystopian
   - classics
 Finished: Finished
-imageSrc:
 ---

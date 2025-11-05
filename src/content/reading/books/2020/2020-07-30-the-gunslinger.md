@@ -10,8 +10,7 @@ ratingBook: 3.75
 startDate:
 endDate: 2020-07-30
 isbn: "9781501143519"
-author:
-  - Stephen King
+author: Stephen King
 publisher: Scribner
 publishDate: 1982-05-01
 pageCount: 385
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - science fiction
 Finished: Finished
-imageSrc:
 ---

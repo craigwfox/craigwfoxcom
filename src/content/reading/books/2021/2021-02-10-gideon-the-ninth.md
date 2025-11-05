@@ -10,8 +10,7 @@ ratingBook: 4.25
 startDate:
 endDate: 2021-02-10
 isbn: "9781250313171"
-author:
-  - Tamsyn Muir
+author: Tamsyn Muir
 publisher: Tor Books
 publishDate: 2019-09-19
 pageCount: 464
@@ -21,5 +20,4 @@ genres:
   - science fiction
   - mystery
 Finished: Finished
-imageSrc:
 ---

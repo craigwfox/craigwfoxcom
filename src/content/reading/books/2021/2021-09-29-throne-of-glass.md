@@ -10,8 +10,7 @@ ratingBook: 3.25
 startDate:
 endDate: 2021-09-29
 isbn: "9781599909394"
-author:
-  - Sarah J. Maas
+author: Sarah J. Maas
 publisher: Bloomsbury Publishing
 publishDate: 2012-08-07
 pageCount: 416
@@ -19,5 +18,4 @@ bookType: fiction
 genres:
   - fantasy
 Finished: Finished
-imageSrc:
 ---

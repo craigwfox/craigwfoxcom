@@ -10,8 +10,7 @@ ratingBook: 3.5
 startDate:
 endDate: 2024-06-25
 isbn: "9781250333292"
-author:
-  - Rebecca Thorne
+author: Rebecca Thorne
 publisher: Bramble
 publishDate: 2022-09-15
 pageCount: 339
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - romance
 Finished: Finished
-imageSrc:
 ---

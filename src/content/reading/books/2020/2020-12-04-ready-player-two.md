@@ -10,8 +10,7 @@ ratingBook: 3.5
 startDate:
 endDate: 2020-12-04
 isbn: "9781524761332"
-author:
-  - Ernest Cline
+author: Ernest Cline
 publisher: Ballantine books
 publishDate: 2020-11-24
 pageCount: 370
@@ -20,5 +19,4 @@ genres:
   - science fiction
   - dystopian
 Finished: Finished
-imageSrc:
 ---

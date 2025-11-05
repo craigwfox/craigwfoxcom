@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2022-01-11
 isbn: "9781250217325"
-author:
-  - T. J. Klune
+author: T. J. Klune
 publisher: Tor Books
 publishDate: 2020-03-16
 pageCount: 398
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - romance
 Finished: Finished
-imageSrc:
 ---

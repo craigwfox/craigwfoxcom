@@ -10,8 +10,7 @@ ratingBook: 3.5
 startDate:
 endDate: 2023-08-30
 isbn: "9780063066175"
-author:
-  - Blair Braverman
+author: Blair Braverman
 publisher: Ecco Press
 publishDate: 2022-11-01
 pageCount: 279
@@ -20,5 +19,4 @@ genres:
   - thriller
   - mystery
 Finished: Finished
-imageSrc:
 ---

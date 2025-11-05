@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2022-06-30
 isbn: "9781582430430"
-author:
-  - Wendell Berry
+author: Wendell Berry
 publisher: Counterpoint LLC
 publishDate: 1974-02-01
 pageCount: 176
@@ -20,5 +19,4 @@ genres:
   - historical
   - classics
 Finished: Finished
-imageSrc:
 ---

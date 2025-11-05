@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2024-09-13
 isbn: "9780812550306"
-author:
-  - Robert Jordan
+author: Robert Jordan
 publisher: Tor Fantasy
 publishDate: 1993-10-15
 pageCount: 989
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - epic fantasy
 Finished: Finished
-imageSrc:
 ---

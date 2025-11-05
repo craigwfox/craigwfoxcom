@@ -14,6 +14,7 @@ const blog = defineCollection({
     image: z.string(),
     ogImage: z.string(),
     ogImageAlt: z.string(),
+    tags: z.array(z.string()).optional(),
     categories: z.array(z.string()).optional(),
     codepenScripts: z.array(z.string()).optional(),
     pubDate: z
@@ -56,12 +57,12 @@ const hiking = defineCollection({
 const reading = defineCollection({
   schema: ({ image }) =>
     z.object({
-      title: z.string(),
-      storyGraph: z.string().optional(),
-      goodReads: z.coerce.string().optional(),
-      readType: z.string().optional(),
-      owned: z.boolean().optional(),
-      ratingBook: z.coerce.number().optional(),
+      title: z.string().nullable(),
+      storyGraph: z.string().nullable().optional(),
+      goodReads: z.string().nullable().optional(),
+      readType: z.string().nullable().optional(),
+      owned: z.boolean().nullable().optional(),
+      ratingBook: z.coerce.number().nullable().optional(),
       startDate: z
         .string()
         .nullable()
@@ -74,19 +75,23 @@ const reading = defineCollection({
         .optional(),
       isbn: z
         .string()
+        .nullable()
         .optional()
         .transform(val => val?.trim()),
-      author: z.array(z.string()).optional(),
-      publisher: z.string().optional(),
+      author: z
+        .union([z.array(z.string()), z.string()])
+        .nullable()
+        .optional(),
+      publisher: z.string().nullable().optional(),
       publishDate: z
         .string()
         .nullable()
         .or(z.date())
         .transform(val => new Date(val)),
       pageCount: z.coerce.number().optional(),
-      bookType: z.string().optional(),
-      genres: z.array(z.string()).optional(),
-      Finished: z.string().optional(),
+      bookType: z.string().nullable().optional(),
+      genres: z.array(z.string()).nullable().optional(),
+      Finished: z.string().nullable().optional(),
     }),
 })
 

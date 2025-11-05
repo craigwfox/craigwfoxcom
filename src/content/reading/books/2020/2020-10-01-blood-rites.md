@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2020-10-01
 isbn: "9781101146668"
-author:
-  - Jim Butcher
+author: Jim Butcher
 publisher: Roc
 publishDate: 2004-08-03
 pageCount: 372
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - mystery
 Finished: Finished
-imageSrc:
 ---

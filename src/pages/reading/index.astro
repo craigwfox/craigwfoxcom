@@ -56,7 +56,7 @@ function refineBookDate(book: {
 		startDate = new Date(
 			new Date(book.data.startDate)
 				.toISOString()
-				.replaceAll(/-/g, "\/")
+				.replaceAll(/-/g, "/")
 				.replace(/T.+/, "")
 		)
 
@@ -80,7 +80,7 @@ function refineBookDate(book: {
 
 	if (fullDate)
 		updatedBook["imageSrc"] =
-			`/images/covers/${book.data.isbn}.webp`
+			`/images/covers/${book.data.isbn}.jpg`
 
 	if (book.data.startDate && startDate)
 		updatedBook.startDate = startDate
@@ -247,11 +247,7 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 							<FormattedDate date={book.endDate} />
 						</p>
 						<div class="collection-cards__card__content">
-							<h3>
-								{book.author.map(author => (
-									<span>{author}</span>
-								))}
-							</h3>
+							<h3>{book.author}</h3>
 							<h2>{book.title}</h2>
 							<table>
 								<tbody>

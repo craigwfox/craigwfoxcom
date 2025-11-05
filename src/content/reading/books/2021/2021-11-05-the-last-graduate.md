@@ -10,8 +10,7 @@ ratingBook: 3.75
 startDate:
 endDate: 2021-11-05
 isbn: "9780593128879"
-author:
-  - Naomi Novik
+author: Naomi Novik
 publisher: Del Rey Books
 publishDate: 2021-09-28
 pageCount: 388
@@ -19,5 +18,4 @@ bookType: fiction
 genres:
   - fantasy
 Finished: Finished
-imageSrc:
 ---

@@ -10,8 +10,7 @@ ratingBook: 4.25
 startDate: 2025-02-09
 endDate: 2025-02-24
 isbn: "9781250830746"
-author:
-  - V.E. Schwab
+author: V.E. Schwab
 publisher: Tor Books
 publishDate: 2020-10-06
 pageCount: 444

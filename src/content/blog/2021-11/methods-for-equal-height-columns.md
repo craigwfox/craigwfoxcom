@@ -1,5 +1,5 @@
 ---
-tags: post, post-dev
+tags: ["post", "post-dev"]
 categories: ["dev"]
 postSlug: "methods-for-equal-height-columns/"
 pubDate: 2021-11-28

@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2021-01-06
 isbn: "9780575087057"
-author:
-  - Patrick Rothfuss
+author: Patrick Rothfuss
 publisher: Orion Books
 publishDate: 2007-03-27
 pageCount: 946
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - epic fantasy
 Finished: Finished
-imageSrc:
 ---

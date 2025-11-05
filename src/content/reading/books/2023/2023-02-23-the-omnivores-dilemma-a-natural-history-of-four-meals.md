@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2023-02-23
 isbn: "9781101147177"
-author:
-  - Michael Pollan
+author: Michael Pollan
 publisher: Penguin Group
 publishDate: 2006-04-11
 pageCount: 464
@@ -20,5 +19,4 @@ genres:
   - food
   - environment
 Finished: Finished
-imageSrc:
 ---

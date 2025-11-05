@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2024-10-12
 isbn: "9781250755711"
-author:
-  - Brian McClellan
+author: Brian McClellan
 publisher: Tor Books
 publishDate: 2022-06-21
 pageCount: 576
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - epic fantasy
 Finished: Finished
-imageSrc:
 ---

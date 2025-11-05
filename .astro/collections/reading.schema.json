@@ -5,22 +5,40 @@
       "type": "object",
       "properties": {
         "title": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "storyGraph": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "goodReads": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "readType": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "owned": {
-          "type": "boolean"
+          "type": [
+            "boolean",
+            "null"
+          ]
         },
         "ratingBook": {
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "startDate": {
           "anyOf": [
@@ -75,16 +93,36 @@
           ]
         },
         "isbn": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "author": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "publisher": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "publishDate": {
           "anyOf": [
@@ -116,16 +154,29 @@
           "type": "number"
         },
         "bookType": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "genres": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "Finished": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "$schema": {
           "type": "string"

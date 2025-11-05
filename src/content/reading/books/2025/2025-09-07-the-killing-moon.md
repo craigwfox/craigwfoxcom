@@ -10,7 +10,7 @@ ratingBook: 3.25
 startDate: 2025-08-28
 endDate: 2025-09-07
 isbn: "9780316187282"
-author: ["N. K. Jemisin"]
+author: N. K. Jemisin
 publisher: Orbit
 publishDate: 2012-05-01
 pageCount: 404

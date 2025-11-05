@@ -9,8 +9,7 @@ ratingBook: 3.7
 startDate: 2025-01-08
 endDate: 2025-01-25
 isbn: "9780812571332"
-author:
-  - Robert Jordan
+author: Robert Jordan
 publisher: Tor Fantasy
 publishDate: 2003-01-07
 pageCount: 846

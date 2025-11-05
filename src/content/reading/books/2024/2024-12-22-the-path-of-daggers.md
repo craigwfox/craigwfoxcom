@@ -10,8 +10,7 @@ ratingBook: 3.7
 startDate:
 endDate: 2024-12-22
 isbn: "9781250252098"
-author:
-  - Robert Jordan
+author: Robert Jordan
 publisher: Tor Fantasy
 publishDate: 1998-10-20
 pageCount: 607
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - epic fantasy
 Finished: Finished
-imageSrc:
 ---

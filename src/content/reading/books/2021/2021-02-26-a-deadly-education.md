@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2021-02-26
 isbn: B084L85MZ7
-author:
-  - Naomi Novik
+author: Naomi Novik
 publisher: Cornerstone Digital
 publishDate: 2020-09-29
 pageCount: 318
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - magic
 Finished: Finished
-imageSrc:
 ---

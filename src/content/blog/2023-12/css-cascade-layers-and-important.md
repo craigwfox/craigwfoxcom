@@ -1,5 +1,5 @@
 ---
-tags: post, post-dev
+tags: ["post", "post-dev"]
 categories: ["dev", "css", "css grid", "grid layout"]
 postSlug: "css-cascade-layers-and-important/"
 pubDate: 2023-12-06

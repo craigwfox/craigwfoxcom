@@ -10,8 +10,7 @@ ratingBook: 3.75
 startDate:
 endDate: 2023-04-16
 isbn: "9781250313089"
-author:
-  - Leigh Bardugo
+author: Leigh Bardugo
 publisher: Flatiron Books
 publishDate: 2019-10-08
 pageCount: 448
@@ -21,5 +20,4 @@ genres:
   - mystery
   - thriller
 Finished: Finished
-imageSrc:
 ---

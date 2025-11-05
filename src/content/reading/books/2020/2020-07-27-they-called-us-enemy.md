@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2020-07-27
 isbn: "9781684067510"
-author:
-  - Steven Scott, George Takei, Justin Eisinger
+author: Steven Scott, George Takei, Justin Eisinger
 publisher: Top Shelf Productions
 publishDate: 2019-07-16
 pageCount: 204
@@ -21,5 +20,4 @@ genres:
   - historical
   - race
 Finished: Finished
-imageSrc:
 ---

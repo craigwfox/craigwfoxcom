@@ -10,8 +10,7 @@ ratingBook: 2.7
 startDate:
 endDate: 2024-06-20
 isbn: "9780795323430"
-author:
-  - Stephen R. Covey
+author: Stephen R. Covey
 publisher: RosettaBooks
 publishDate: 1989-01-01
 pageCount: 384
@@ -19,5 +18,4 @@ bookType: nonfiction
 genres:
   - self-help
 Finished: Finished
-imageSrc:
 ---

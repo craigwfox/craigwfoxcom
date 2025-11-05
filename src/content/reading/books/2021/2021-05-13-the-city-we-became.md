@@ -10,8 +10,7 @@ ratingBook: 4.25
 startDate:
 endDate: 2021-05-13
 isbn: "9780316509855"
-author:
-  - N. K. Jemisin
+author: N. K. Jemisin
 publisher: Orbit
 publishDate: 2020-03-24
 pageCount: 448
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - science fiction
 Finished: Finished
-imageSrc:
 ---

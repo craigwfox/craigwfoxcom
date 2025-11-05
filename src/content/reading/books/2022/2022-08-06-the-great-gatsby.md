@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2022-08-06
 isbn: "9780743273565"
-author:
-  - F. Scott Fitzgerald
+author: F. Scott Fitzgerald
 publisher: Scribner Book Company
 publishDate: 2025-04-10
 pageCount: 180
@@ -20,5 +19,4 @@ genres:
   - historical
   - classics
 Finished: Finished
-imageSrc:
 ---

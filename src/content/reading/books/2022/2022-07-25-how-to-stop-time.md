@@ -10,8 +10,7 @@ ratingBook: 3.75
 startDate:
 endDate: 2022-07-25
 isbn: "9780525522898"
-author:
-  - Matt Haig
+author: Matt Haig
 publisher: Penguin Books
 publishDate: 2018-02-06
 pageCount: 325
@@ -21,5 +20,4 @@ genres:
   - historical
   - science fiction
 Finished: Finished
-imageSrc:
 ---

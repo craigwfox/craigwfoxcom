@@ -10,8 +10,7 @@ ratingBook: 3.25
 startDate: 2025-03-01
 endDate: 2025-03-04
 isbn: "9781668045169"
-author:
-  - Kaliane Bradley
+author: Kaliane Bradley
 publisher: Sceptre
 publishDate: 2024-05-07
 pageCount: 368

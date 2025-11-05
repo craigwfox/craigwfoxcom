@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2021-12-13
 isbn: "9781453263686"
-author:
-  - Octavia E. Butler
+author: Octavia E. Butler
 publisher: Open Road Media
 publishDate: 1988-05-01
 pageCount: 277
@@ -20,5 +19,4 @@ genres:
   - science fiction
   - dystopian
 Finished: Finished
-imageSrc:
 ---

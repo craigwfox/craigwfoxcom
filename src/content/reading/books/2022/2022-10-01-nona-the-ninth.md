@@ -10,8 +10,7 @@ ratingBook: 4
 startDate:
 endDate: 2022-10-01
 isbn: "1250854121"
-author:
-  - Tamsyn Muir
+author: Tamsyn Muir
 publisher: Tordotcom Publishing
 publishDate: 2022-09-13
 pageCount: 511
@@ -20,5 +19,4 @@ genres:
   - fantasy
   - science fiction
 Finished: Finished
-imageSrc:
 ---

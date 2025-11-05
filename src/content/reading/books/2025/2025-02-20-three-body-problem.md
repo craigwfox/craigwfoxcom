@@ -10,8 +10,7 @@ ratingBook: 4.25
 startDate: 2025-02-10
 endDate: 2025-02-20
 isbn: "9780765377067"
-author:
-  - Cixin Liu
+author: Cixin Liu
 publisher: Tor Publishing Group
 publishDate: 2025-07-29
 pageCount: 400

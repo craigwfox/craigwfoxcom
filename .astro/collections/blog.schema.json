@@ -22,6 +22,12 @@
         "ogImageAlt": {
           "type": "string"
         },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "categories": {
           "type": "array",
           "items": {
