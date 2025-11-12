@@ -1,23 +1,28 @@
 ---
-import { CollectionEntry, getCollection, } from "astro:content"
+import {
+	CollectionEntry,
+	getCollection,
+} from "astro:content"
 import BlogPost from "../../layouts/BlogPost.astro"
 import FormattedDate from "../../components/FormattedDate.astro"
 
-const posts = await getCollection("blog")
+const posts = await getCollection("blog", ({ data }) => {
+	return !data.tags?.includes("inprogess")
+})
 type Props = CollectionEntry<"blog">
 
 const { slug } = Astro.params
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
-  return posts.map((post) => {
-    const { slug } = post;
+	const posts = await getCollection("blog")
+	return posts.map(post => {
+		const { slug } = post
 
-    return {
-      params: { slug },
-      props: post,
-    };
-  });
+		return {
+			params: { slug },
+			props: post,
+		}
+	})
 }
 
 const post = posts.find(page => page.slug === slug)
@@ -26,16 +31,16 @@ const { Content } = await post.render()
 ---
 
 <BlogPost {...post?.data}>
-  <FormattedDate date={post?.data.pubDate} />
-  {
-    post?.data.categories != undefined && (
-      <ul class="tags">
-        {post.data.categories.map(category => (
-          <li>{category}</li>
-        ))}
-      </ul>
-    )
-  }
-  <h1>{post?.data.title}</h1>
-  <Content />
+	<FormattedDate date={post?.data.pubDate} />
+	{
+		post?.data.categories != undefined && (
+			<ul class="tags">
+				{post.data.categories.map(category => (
+					<li>{category}</li>
+				))}
+			</ul>
+		)
+	}
+	<h1>{post?.data.title}</h1>
+	<Content />
 </BlogPost>

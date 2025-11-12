@@ -4,9 +4,12 @@ import FormattedDate from "../components/FormattedDate.astro"
 
 const { count = 500 } = Astro.props
 
-const posts = (await getCollection("blog")).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-)
+const posts = (await getCollection("blog"))
+	.sort(
+		(a, b) =>
+			b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+	)
+	.filter(x => !x.data.tags?.includes("inprogress"))
 ---
 
 <div class="post-feed post-feed--wide-first">

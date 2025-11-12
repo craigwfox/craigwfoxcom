@@ -5,9 +5,9 @@ title: The Picture of Dorian Gray
 storyGraph: https://app.thestorygraph.com/books/39d82123-c880-4b2d-87e6-448b169790df
 readType: ebook
 owned: false
-ratingBook:
+ratingBook: 3.5
 startDate: 2025-10-29
-endDate:
+endDate: 2025-11-11
 isbn: " 9780141442518"
 author:
   - Oscar Wilde
@@ -18,7 +18,7 @@ bookType: fiction
 genres:
   - classics
   - horror
-Finished: Reading
+Finished: Finished
 Notebook: Reading Log 2025 v1
 ---
 
