@@ -14,13 +14,22 @@
           "type": "string"
         },
         "image": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "ogImage": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "ogImageAlt": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "tags": {
           "type": "array",
@@ -74,9 +83,6 @@
         "title",
         "description",
         "postSlug",
-        "image",
-        "ogImage",
-        "ogImageAlt",
         "pubDate"
       ],
       "additionalProperties": false
