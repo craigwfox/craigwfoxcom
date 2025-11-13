@@ -31,7 +31,6 @@
     "@vitejs/plugin-vue": "^5.1.2",
     "astro": "^5.3.0",
     "markdown-it": "^14.1.0",
-    "sanitize-html": "^2.13.0",
     "sass": "^1.75.0",
     "sharp": "^0.33.3",
     "simple-theme-switcher": "1.0.4",
