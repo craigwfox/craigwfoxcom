@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config"
 import mdx from "@astrojs/mdx"
 import sitemap from "@astrojs/sitemap"
-
 import vue from "@astrojs/vue"
 import * as compiler from "vue/compiler-sfc"
 
