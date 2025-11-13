@@ -10,8 +10,8 @@ pubDate: 2025-11-12
 added: Nov 12 2025
 title: Api calls using composables in Vue.js
 description: How to make API calls using Vue.js composables that don't call multiple times.
-image:
-ogImage:
+image: images/twitter/2025-11-12-vue-composable-api.png
+ogImage: images/twitter/2025-11-12-vue-composable-api.png
 ogImageAlt: ""
 ---
 A few years ago my company had a vendor develop a web application for us. after handing the Vue codebase over to us, I noticed that frequently the same api call would be made multiple times per page. The root cause of the issue was the way that api calls were being made in the  composable. Compostables do share state, but things like functions are called each time the composable is loaded. This means that if you place a fetch request in it without any kind of check for it being in progress you end up with multiple matching requests happening.
