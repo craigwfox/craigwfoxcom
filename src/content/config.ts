@@ -56,44 +56,39 @@ const hiking = defineCollection({
 })
 
 const reading = defineCollection({
-  schema: ({ image }) =>
-    z.object({
-      title: z.string().nullable(),
-      storyGraph: z.string().nullable().optional(),
-      goodReads: z.string().nullable().optional(),
-      readType: z.string().nullable().optional(),
-      owned: z.boolean().nullable().optional(),
-      ratingBook: z.coerce.number().nullable().optional(),
-      startDate: z
-        .string()
-        .nullable()
-        .or(z.date())
-        .optional(),
-      endDate: z
-        .string()
-        .nullable()
-        .or(z.date())
-        .optional(),
-      isbn: z
-        .string()
-        .nullable()
-        .optional()
-        .transform(val => val?.trim()),
-      author: z
-        .union([z.array(z.string()), z.string()])
-        .nullable()
-        .optional(),
-      publisher: z.string().nullable().optional(),
-      publishDate: z
-        .string()
-        .nullable()
-        .or(z.date())
-        .transform(val => new Date(val)),
-      pageCount: z.coerce.number().optional(),
-      bookType: z.string().nullable().optional(),
-      genres: z.array(z.string()).nullable().optional(),
-      Finished: z.string().nullable().optional(),
-    }),
+  schema: z.object({
+    title: z.string().nullable(),
+    storyGraph: z.string().nullable().optional(),
+    goodReads: z.string().nullable().optional(),
+    readType: z.string().nullable().optional(),
+    owned: z.boolean().nullable().optional(),
+    ratingBook: z.coerce.number().nullable().optional(),
+    startDate: z
+      .string()
+      .nullable()
+      .or(z.date())
+      .optional(),
+    endDate: z.string().nullable().or(z.date()).optional(),
+    isbn: z
+      .string()
+      .nullable()
+      .optional()
+      .transform(val => val?.trim()),
+    author: z
+      .union([z.array(z.string()), z.string()])
+      .nullable()
+      .optional(),
+    publisher: z.string().nullable().optional(),
+    publishDate: z
+      .string()
+      .nullable()
+      .or(z.date())
+      .transform(val => new Date(val)),
+    pageCount: z.coerce.number().optional(),
+    bookType: z.string().nullable().optional(),
+    genres: z.array(z.string()).nullable().optional(),
+    Finished: z.string().nullable().optional(),
+  }),
 })
 
 export const collections = { blog, hiking, reading }
