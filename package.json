@@ -11,11 +11,11 @@
     "preview": "astro preview",
     "astro": "astro",
     "convertCovers": "find ./public/images/covers -type f -name '*.jpg' -exec sh -c 'cwebp -q 75 $1 -o \"${1%.png}.webp\"';",
-    "migrate:blog": "cp -R ~/Synced\\ Files/Notes\\ Vault/Website\\ Content/blog/* ~/Development/Websites/Personal/craigwfoxcom/src/content/blog",
-    "migrate:booksAll": "cp -R ~/Synced\\ Files/Notes\\ Vault/Website\\ Content/reading/* ~/Development/Websites/Personal/craigwfoxcom/src/content/reading",
+    "migrate:blog": "cp -R ~/Synced\\ Files/Notes\\ Vault/Blog/* ~/Development/Websites/Personal/craigwfoxcom/src/content/blog",
+    "migrate:booksAll": "cp -R ~/Synced\\ Files/Notes\\ Vault/Media\\ -\\ Reading/Reading\\ Log/* ~/Development/Websites/Personal/craigwfoxcom/src/content/reading",
     "migrate:moveCovers": "rm -rf ~/Development/Websites/Personal/craigwfoxcom/public/images/covers && mv ~/Development/Websites/Personal/craigwfoxcom/src/content/reading/covers ~/Development/Websites/Personal/craigwfoxcom/public/images",
     "migrate:books": "npm run migrate:booksAll && npm run migrate:moveCovers",
-    "migrate:hikes": "cp -R ~/Synced\\ Files/Notes\\ Vault/Website\\ Content/hiking/* ~/Development/Websites/Personal/craigwfoxcom/src/content/hiking",
+    "migrate:hikes": "cp -R ~/Synced\\ Files/Notes\\ Vault/Hiking/Trail\\ Log/* ~/Development/Websites/Personal/craigwfoxcom/src/content/hiking",
     "migrate:full": "npm run migrate:books && npm run migrate:hikes && npm run migrate:blog"
   },
   "repository": {
