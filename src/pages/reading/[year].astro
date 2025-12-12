@@ -10,62 +10,94 @@ import {
   type Book,
 } from "../../utils/books"
 
-const finishedBooks = (await getCollection("reading"))
-  .filter(
-    x =>
-      x.data.Finished == "Finished" &&
-      x.data.readType != "audio",
-  )
-  .sort((a: Book, b: Book) => compareDates(a, b))
+export function bookYear(date: string | Date): string {
+  return typeof date === "string"
+    ? new Date(date).getFullYear().toString()
+    : date.getFullYear().toString()
+}
+
+export async function getStaticPaths() {
+  const books = await getCollection("reading")
+  const bookYears: Map<string, Book[]> = new Map()
+
+  books.forEach(book => {
+    if (book.data.endDate) {
+      const year = bookYear(book.data.endDate)
+
+      if (!bookYears.get(year)) {
+        bookYears.set(year, [])
+      }
+
+      bookYears.get(year)?.push(book)
+    }
+  })
+
+  return [...bookYears.entries()].map(([year, books]) => ({
+    params: { year },
+    props: { books },
+  }))
+}
+
+const { year } = Astro.params
+const { books } = Astro.props
+
+const finishedBooks = books
+  .sort((a: Book, b: Book) => compareDates(a, b, "DESC"))
   .map(x => refineBookDate(x))
 
 const sortedByRating = [...finishedBooks].sort((a, b) => {
+  if (!b.ratingBook || !a.ratingBook) return 0
   return b.ratingBook - a.ratingBook
 })
+
+const genreCounts: {
+  [key: string]: number
+}[] = []
 
 const yearCounts = {
   most: 0,
   pagesTotal: 0,
   booksRead: 0,
   years: {
-    "2020": {
-      label: "2020",
-      count: 0,
-      goal: 20,
-    },
-    "2021": {
-      label: "2021",
-      count: 0,
-      goal: 20,
-    },
-    "2022": {
-      label: "2022",
-      count: 0,
-      goal: 30,
-    },
-    "2023": {
-      label: "2023",
-      count: 0,
-      goal: 30,
-    },
-    "2024": {
-      label: "2024",
-      count: 0,
-      goal: 15,
-    },
     "2025": {
-      label: "2025",
+      label: "Goal",
       count: 0,
       goal: 30,
     },
   },
 }
 
+function hasGenre(str: string): number {
+  return genreCounts.findIndex(x => x[str])
+}
+
 finishedBooks.forEach(book => {
-  const year = new Date(book.endDate).getFullYear()
-  yearCounts.years[year].count += 1
-  yearCounts.booksRead++
-  yearCounts.pagesTotal += parseInt(book.pageCount)
+  // set year count
+  if (book.endDate && book.pageCount) {
+    const year = new Date(book.endDate).getFullYear()
+    yearCounts.years[year].count += 1
+    yearCounts.booksRead++
+    yearCounts.pagesTotal += parseInt(
+      book.pageCount.toString(),
+    )
+  }
+
+  // set genreCounts
+  if (book.genres?.length) {
+    book.genres.forEach(x => {
+      const genreIndex = hasGenre(x)
+      if (genreIndex != -1) {
+        genreCounts[genreIndex][x] += 1
+      } else {
+        genreCounts.push({ [x]: 1 })
+      }
+    })
+  }
+})
+genreCounts.sort((a, b) => {
+  const countA = Object.values(a)[0] as number
+  const countB = Object.values(b)[0] as number
+  return countB - countA
 })
 
 yearCounts.most = Object.values(yearCounts.years).sort(
@@ -95,7 +127,7 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 </script>
 
 <Layout title="Reading list">
-  <h1>Stuff I've read</h1>
+  <h1>{year} Reads</h1>
 
   <div class="content-grid content-grid--collection">
     <aside class="collection-sidebar">
@@ -120,18 +152,33 @@ yearCounts.most = Object.values(yearCounts.years).sort(
                       style={`--percentage: ${getPercentage(year.count, year.goal)};`}
                     >
                       <th scope="row">{year.label}:</th>
-                      <td class="graph">{year.count}</td>
+                      <td class="graph">
+                        {year.count} of {year.goal}
+                      </td>
                     </tr>
                   ),
                 )
               }
             </tbody>
           </table>
-          <h2>Top 5</h2>
-          <table>
+
+          <h2>Top 5 Genres</h2>
+          <table class="collection-tops">
+            {
+              genreCounts.slice(2, 7).map(x => (
+                <tr>
+                  <th scope="row">{Object.keys(x)[0]}</th>
+                  <td>{Object.values(x)[0]}</td>
+                </tr>
+              ))
+            }
+          </table>
+
+          <h2>Top 5 books</h2>
+          <table class="collection-tops">
             {
               Object.values(sortedByRating.slice(0, 5)).map(
-                (book): object => (
+                book => (
                   <tr>
                     <th scope="row">{book.title}</th>
                     <td>{book.ratingBook}</td>

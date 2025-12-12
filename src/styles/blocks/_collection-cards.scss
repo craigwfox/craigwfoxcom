@@ -97,6 +97,19 @@
     }
   }
 
+  .collection-tops {
+    width: 100%;
+
+    th,
+    td {
+      width: 100%;
+
+      &:last-child {
+        min-width: 2.5rem;
+      }
+    }
+  }
+
   [data-theme="dark"] {
     .collection-stats {
       td {
