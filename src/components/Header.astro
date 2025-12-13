@@ -5,111 +5,111 @@ import Logo from "./Logo.astro"
 ---
 
 <a href="#maincontent" class="skip-link"
-	>Skip to main content</a
+  >Skip to main content</a
 >
 
 <header id="site-header">
-	<a
-		href="/"
-		class="site-logo h-card"
-		title="Craig Fox - Developer"
-		rel="me"
-	>
-		<Logo />
-	</a>
+  <a
+    href="/"
+    class="site-logo h-card"
+    title="Craig Fox - Developer"
+    rel="me"
+  >
+    <Logo />
+  </a>
 
-	<div>
-		<nav id="site-nav" aria-label="Site navigation">
-			<a
-				href="/"
-				aria-current={Astro.url.pathname === "/"
-					? "page"
-					: "false"}>Home</a
-			>
-			<a
-				href="/blog/"
-				aria-current={Astro.url.pathname === "/blog/"
-					? "page"
-					: "false"}>Blog</a
-			>
-			<a
-				href="/hiking/"
-				aria-current={Astro.url.pathname === "/hiking/"
-					? "page"
-					: "false"}>Hiking</a
-			>
-			<a
-				href="/reading/"
-				aria-current={Astro.url.pathname === "/reading/"
-					? "page"
-					: "false"}>Reading</a
-			>
-			<a
-				href="/about/"
-				aria-current={Astro.url.pathname === "/about/"
-					? "page"
-					: "false"}>About</a
-			>
-		</nav>
+  <div>
+    <nav id="site-nav" aria-label="Site navigation">
+      <a
+        href="/"
+        aria-current={Astro.url.pathname === "/"
+          ? "page"
+          : "false"}>Home</a
+      >
+      <a
+        href="/blog/"
+        aria-current={Astro.url.pathname === "/blog/"
+          ? "page"
+          : "false"}>Blog</a
+      >
+      <a
+        href="/hiking/"
+        aria-current={Astro.url.pathname === "/hiking/"
+          ? "page"
+          : "false"}>Hiking</a
+      >
+      <a
+        href="/reading/"
+        aria-current={Astro.url.pathname === "/reading"
+          ? "page"
+          : "false"}>Reading</a
+      >
+      <a
+        href="/about/"
+        aria-current={Astro.url.pathname === "/about/"
+          ? "page"
+          : "false"}>About</a
+      >
+    </nav>
 
-		<div class="site-toggles">
-			<button
-				is="theme-switcher"
-				modes="light, dark"
-				dataAttr="data-theme"
-				current="light"
-				aria-label="Change to dark mode"
-				aria-live="polite"
-			>
-				<svg
-					class="light"
-					aria-hidden="true"
-					width="30"
-					height="31"
-					viewBox="0 0 30 31"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<g clip-path="url(#clip0_75_186)"
-						><path
-							d="M15 21.9322C18.4518 21.9322 21.25 19.134 21.25 15.6822C21.25 12.2304 18.4518 9.43217 15 9.43217C11.5482 9.43217 8.75 12.2304 8.75 15.6822C8.75 19.134 11.5482 21.9322 15 21.9322Z"
-							stroke="currentColor"
-							stroke-width="1.66667"
-							stroke-linecap="square"
-							stroke-linejoin="round"></path><path
-							d="M23 7.68217L24.75 5.93217M15 1.93217V4.43217V1.93217ZM15 26.9322V29.4322V26.9322ZM5.25 5.93217L7 7.68217L5.25 5.93217ZM23 23.6822L24.75 25.4322L23 23.6822ZM1.25 15.6822H3.75H1.25ZM26.25 15.6822H28.75H26.25ZM5.25 25.4322L7 23.6822L5.25 25.4322Z"
-							stroke="#FFEFC2"
-							stroke-width="1.66667"
-							stroke-linecap="square"
-							stroke-linejoin="round"></path></g
-					>
-					<defs>
-						<clipPath id="clip0_75_186"
-							><rect
-								width="30"
-								height="30"
-								fill="white"
-								transform="translate(0 0.682171)"
-							></rect></clipPath
-						>
-					</defs>
-				</svg>
-				<svg
-					class="dark"
-					aria-hidden="true"
-					width="30"
-					height="30"
-					viewBox="0 0 30 30"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					><path
-						d="M26.25 15.9875C26.0534 18.1153 25.2548 20.143 23.9478 21.8335C22.6408 23.524 20.8794 24.8072 18.8696 25.5332C16.8599 26.2591 14.685 26.3977 12.5994 25.9326C10.5138 25.4676 8.60374 24.4182 7.09278 22.9072C5.58182 21.3963 4.53242 19.4862 4.06738 17.4006C3.60234 15.315 3.74089 13.1401 4.46682 11.1304C5.19275 9.12064 6.47604 7.35921 8.16651 6.05219C9.85699 4.74517 11.8847 3.94663 14.0125 3.75C12.7668 5.43533 12.1673 7.51181 12.3232 9.60177C12.479 11.6917 13.3798 13.6563 14.8618 15.1382C16.3437 16.6202 18.3083 17.521 20.3982 17.6768C22.4882 17.8327 24.5647 17.2332 26.25 15.9875V15.9875Z"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"></path></svg
-				>
-			</button>
-		</div>
-	</div>
+    <div class="site-toggles">
+      <button
+        is="theme-switcher"
+        modes="light, dark"
+        dataAttr="data-theme"
+        current="light"
+        aria-label="Change to dark mode"
+        aria-live="polite"
+      >
+        <svg
+          class="light"
+          aria-hidden="true"
+          width="30"
+          height="31"
+          viewBox="0 0 30 31"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_75_186)"
+            ><path
+              d="M15 21.9322C18.4518 21.9322 21.25 19.134 21.25 15.6822C21.25 12.2304 18.4518 9.43217 15 9.43217C11.5482 9.43217 8.75 12.2304 8.75 15.6822C8.75 19.134 11.5482 21.9322 15 21.9322Z"
+              stroke="currentColor"
+              stroke-width="1.66667"
+              stroke-linecap="square"
+              stroke-linejoin="round"></path><path
+              d="M23 7.68217L24.75 5.93217M15 1.93217V4.43217V1.93217ZM15 26.9322V29.4322V26.9322ZM5.25 5.93217L7 7.68217L5.25 5.93217ZM23 23.6822L24.75 25.4322L23 23.6822ZM1.25 15.6822H3.75H1.25ZM26.25 15.6822H28.75H26.25ZM5.25 25.4322L7 23.6822L5.25 25.4322Z"
+              stroke="#FFEFC2"
+              stroke-width="1.66667"
+              stroke-linecap="square"
+              stroke-linejoin="round"></path></g
+          >
+          <defs>
+            <clipPath id="clip0_75_186"
+              ><rect
+                width="30"
+                height="30"
+                fill="white"
+                transform="translate(0 0.682171)"
+              ></rect></clipPath
+            >
+          </defs>
+        </svg>
+        <svg
+          class="dark"
+          aria-hidden="true"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M26.25 15.9875C26.0534 18.1153 25.2548 20.143 23.9478 21.8335C22.6408 23.524 20.8794 24.8072 18.8696 25.5332C16.8599 26.2591 14.685 26.3977 12.5994 25.9326C10.5138 25.4676 8.60374 24.4182 7.09278 22.9072C5.58182 21.3963 4.53242 19.4862 4.06738 17.4006C3.60234 15.315 3.74089 13.1401 4.46682 11.1304C5.19275 9.12064 6.47604 7.35921 8.16651 6.05219C9.85699 4.74517 11.8847 3.94663 14.0125 3.75C12.7668 5.43533 12.1673 7.51181 12.3232 9.60177C12.479 11.6917 13.3798 13.6563 14.8618 15.1382C16.3437 16.6202 18.3083 17.521 20.3982 17.6768C22.4882 17.8327 24.5647 17.2332 26.25 15.9875V15.9875Z"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path></svg
+        >
+      </button>
+    </div>
+  </div>
 </header>

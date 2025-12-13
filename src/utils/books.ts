@@ -86,3 +86,36 @@ export function getPercentage(min: number, max: number) {
   const percentage = Math.round((min / max) * 100)
   return `${percentage < 100 ? percentage : 100}%`
 }
+
+export const yearsSet = {
+  "2020": {
+    label: "2020",
+    count: 0,
+    goal: 20,
+  },
+  "2021": {
+    label: "2021",
+    count: 0,
+    goal: 20,
+  },
+  "2022": {
+    label: "2022",
+    count: 0,
+    goal: 30,
+  },
+  "2023": {
+    label: "2023",
+    count: 0,
+    goal: 30,
+  },
+  "2024": {
+    label: "2024",
+    count: 0,
+    goal: 15,
+  },
+  "2025": {
+    label: "2025",
+    count: 0,
+    goal: 30,
+  },
+}

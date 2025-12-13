@@ -7,8 +7,10 @@ import {
   compareDates,
   refineBookDate,
   getPercentage,
+  yearsSet,
   type Book,
 } from "../../utils/books"
+import ReadingBreadcrumbs from "../../components/ReadingBreadcrumbs.astro"
 
 const finishedBooks = (await getCollection("reading"))
   .filter(
@@ -27,38 +29,7 @@ const yearCounts = {
   most: 0,
   pagesTotal: 0,
   booksRead: 0,
-  years: {
-    "2020": {
-      label: "2020",
-      count: 0,
-      goal: 20,
-    },
-    "2021": {
-      label: "2021",
-      count: 0,
-      goal: 20,
-    },
-    "2022": {
-      label: "2022",
-      count: 0,
-      goal: 30,
-    },
-    "2023": {
-      label: "2023",
-      count: 0,
-      goal: 30,
-    },
-    "2024": {
-      label: "2024",
-      count: 0,
-      goal: 15,
-    },
-    "2025": {
-      label: "2025",
-      count: 0,
-      goal: 30,
-    },
-  },
+  years: yearsSet,
 }
 
 finishedBooks.forEach(book => {
@@ -97,6 +68,8 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 <Layout title="Reading list">
   <h1>Stuff I've read</h1>
 
+  <ReadingBreadcrumbs />
+
   <div class="content-grid content-grid--collection">
     <aside class="collection-sidebar">
       <details open>
@@ -115,12 +88,17 @@ yearCounts.most = Object.values(yearCounts.years).sort(
               </tr>
               {
                 Object.values(yearCounts.years).map(
-                  (year): object => (
+                  (x): object => (
                     <tr
-                      style={`--percentage: ${getPercentage(year.count, year.goal)};`}
+                      style={`--percentage: ${getPercentage(x.count, x.goal)};`}
                     >
-                      <th scope="row">{year.label}:</th>
-                      <td class="graph">{year.count}</td>
+                      <th scope="row">
+                        <a href={`/reading/${x.label}`}>
+                          {x.label}
+                        </a>
+                        :
+                      </th>
+                      <td class="graph">{x.count}</td>
                     </tr>
                   ),
                 )

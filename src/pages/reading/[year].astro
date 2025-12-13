@@ -3,10 +3,12 @@ import Layout from "../../layouts/Base.astro"
 import { getCollection } from "astro:content"
 import { Image } from "astro:assets"
 import FormattedDate from "../../components/FormattedDate.astro"
+import ReadingBreadcrumbs from "../../components/ReadingBreadcrumbs.astro"
 import {
   compareDates,
   refineBookDate,
   getPercentage,
+  yearsSet,
   type Book,
 } from "../../utils/books"
 
@@ -41,7 +43,10 @@ export async function getStaticPaths() {
 const { year } = Astro.params
 const { books } = Astro.props
 
-const finishedBooks = books
+const finishedBooks = [...books]
+  .filter(
+    x => x.data.endDate?.toString().includes(year) ?? false,
+  )
   .sort((a: Book, b: Book) => compareDates(a, b, "DESC"))
   .map(x => refineBookDate(x))
 
@@ -59,11 +64,7 @@ const yearCounts = {
   pagesTotal: 0,
   booksRead: 0,
   years: {
-    "2025": {
-      label: "Goal",
-      count: 0,
-      goal: 30,
-    },
+    [year]: { ...yearsSet[year] },
   },
 }
 
@@ -128,6 +129,8 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 
 <Layout title="Reading list">
   <h1>{year} Reads</h1>
+
+  <ReadingBreadcrumbs />
 
   <div class="content-grid content-grid--collection">
     <aside class="collection-sidebar">
