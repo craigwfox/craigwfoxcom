@@ -32,8 +32,14 @@ const yearCounts = {
 	most: 0,
 	pagesTotal: 0,
 	booksRead: 0,
-	years: yearsSet,
+	years: { ...yearsSet },
 }
+// This is reset it mostly in dev mode
+Object.values(yearCounts.years).forEach(year => {
+	yearCounts.years[
+		year.label as keyof typeof yearCounts.years
+	].count = 0
+})
 
 finishedBooks.forEach(book => {
 	if (!book.endDate) return

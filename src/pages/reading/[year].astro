@@ -71,9 +71,15 @@ const yearCounts = {
 	pagesTotal: 0,
 	booksRead: 0,
 	years: {
-		[year]: { ...yearsSet[year] },
+		[year]: { ...yearsSet[year as keyof typeof yearsSet] },
 	},
 }
+// This is reset it mostly in dev mode
+Object.values(yearCounts.years).forEach(year => {
+	yearCounts.years[
+		year.label as keyof typeof yearCounts.years
+	].count = 0
+})
 
 function hasGenre(str: string): number {
 	return genreCounts.findIndex(x => x[str])
@@ -162,9 +168,7 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 											style={`--percentage: ${getPercentage(year.count, year.goal)};`}
 										>
 											<th scope="row">{year.label}:</th>
-											<td class="graph">
-												{year.count} of {year.goal}
-											</td>
+											<td class="graph">{year.count}</td>
 										</tr>
 									),
 								)
