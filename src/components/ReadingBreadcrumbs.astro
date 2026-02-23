@@ -3,32 +3,34 @@ import { yearsSet } from "../utils/books"
 ---
 
 <ul
-  class="list-links list-links--inline list-links--breadcrumb"
+	class="list-links list-links--inline list-links--breadcrumb"
 >
-  <li>
-    <a
-      aria-current={Astro.url.pathname === "/reading"
-        ? "page"
-        : undefined}
-      href="/reading/"
-    >
-      All
-    </a>
-  </li>
-  {
-    Object.keys(yearsSet).map(x => (
-      <li>
-        <a
-          aria-current={
-            Astro.url.pathname.includes(x)
-              ? "page"
-              : undefined
-          }
-          href={`/reading/${x}`}
-        >
-          {x}
-        </a>
-      </li>
-    ))
-  }
+	<li>
+		<a
+			aria-current={Astro.url.pathname === "/reading"
+				? "page"
+				: undefined}
+			href="/reading/"
+		>
+			All
+		</a>
+	</li>
+	{
+		Object.keys(yearsSet)
+			.reverse()
+			.map(x => (
+				<li>
+					<a
+						aria-current={
+							Astro.url.pathname.includes(x)
+								? "page"
+								: undefined
+						}
+						href={`/reading/${x}`}
+					>
+						{x}
+					</a>
+				</li>
+			))
+	}
 </ul>

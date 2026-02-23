@@ -4,166 +4,170 @@ import { getCollection } from "astro:content"
 import { Image } from "astro:assets"
 import FormattedDate from "../../components/FormattedDate.astro"
 import {
-  compareDates,
-  refineBookDate,
-  getPercentage,
-  yearsSet,
-  type Book,
+	compareDates,
+	refineBookDate,
+	getPercentage,
+	yearsSet,
+	type Book,
 } from "../../utils/books"
 import ReadingBreadcrumbs from "../../components/ReadingBreadcrumbs.astro"
 
 const finishedBooks = (await getCollection("reading"))
-  .filter(
-    x =>
-      x.data.Finished == "Finished" &&
-      x.data.readType != "audio",
-  )
-  .sort((a: Book, b: Book) => compareDates(a, b))
-  .map(x => refineBookDate(x))
+	.filter(
+		x =>
+			x.data.Finished == "Finished" &&
+			x.data.readType != "audio"
+	)
+	.sort((a: Book, b: Book) => compareDates(a, b))
+	.map(x => refineBookDate(x))
 
 const sortedByRating = [...finishedBooks].sort((a, b) => {
-  return b.ratingBook - a.ratingBook
+	if (!b.ratingBook || !a.ratingBook) return 0
+	return b.ratingBook - a.ratingBook
 })
 
 const yearCounts = {
-  most: 0,
-  pagesTotal: 0,
-  booksRead: 0,
-  years: yearsSet,
+	most: 0,
+	pagesTotal: 0,
+	booksRead: 0,
+	years: yearsSet,
 }
 
 finishedBooks.forEach(book => {
-  const year = new Date(book.endDate).getFullYear()
-  yearCounts.years[year].count += 1
-  yearCounts.booksRead++
-  yearCounts.pagesTotal += parseInt(book.pageCount)
+	if (!book.endDate) return
+	const year = new Date(book.endDate).getFullYear()
+	yearCounts.years[year].count += 1
+	yearCounts.booksRead++
+	yearCounts.pagesTotal += parseInt(
+		book?.pageCount?.toString() ?? "0"
+	)
 })
 
 yearCounts.most = Object.values(yearCounts.years).sort(
-  (a, b) => b.count - a.count,
+	(a, b) => b.count - a.count
 )[0].count
 ---
 
 <script>
-  const cards = document.querySelectorAll(
-    ".collection-cards__card",
-  )
-  function clearAllActives() {
-    cards.forEach(card => {
-      card.classList.remove("active")
-    })
-  }
+	const cards = document.querySelectorAll(
+		".collection-cards__card"
+	)
+	function clearAllActives() {
+		cards.forEach(card => {
+			card.classList.remove("active")
+		})
+	}
 
-  cards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-      clearAllActives()
-      card.classList.add("active")
-    })
-    card.addEventListener("mouseleave", () => {
-      card.classList.remove("active")
-    })
-  })
+	cards.forEach(card => {
+		card.addEventListener("mouseenter", () => {
+			clearAllActives()
+			card.classList.add("active")
+		})
+		card.addEventListener("mouseleave", () => {
+			card.classList.remove("active")
+		})
+	})
 </script>
 
 <Layout title="Reading list">
-  <h1>Stuff I've read</h1>
+	<h1>Stuff I've read</h1>
 
-  <ReadingBreadcrumbs />
+	<ReadingBreadcrumbs />
 
-  <div class="content-grid content-grid--collection">
-    <aside class="collection-sidebar">
-      <details open>
-        <summary>Reading stats</summary>
-        <div>
-          <h2>Totals</h2>
-          <table class="collection-stats">
-            <tbody>
-              <tr>
-                <th scope="row">Books:</th>
-                <td>{yearCounts.booksRead}</td>
-              </tr>
-              <tr>
-                <th scope="row">Pages:</th>
-                <td>{yearCounts.pagesTotal}</td>
-              </tr>
-              {
-                Object.values(yearCounts.years).map(
-                  (x): object => (
-                    <tr
-                      style={`--percentage: ${getPercentage(x.count, x.goal)};`}
-                    >
-                      <th scope="row">
-                        <a href={`/reading/${x.label}`}>
-                          {x.label}
-                        </a>
-                        :
-                      </th>
-                      <td class="graph">{x.count}</td>
-                    </tr>
-                  ),
-                )
-              }
-            </tbody>
-          </table>
-          <h2>Top 5</h2>
-          <table>
-            {
-              Object.values(sortedByRating.slice(0, 5)).map(
-                (book): object => (
-                  <tr>
-                    <th scope="row">{book.title}</th>
-                    <td>{book.ratingBook}</td>
-                  </tr>
-                ),
-              )
-            }
-          </table>
-        </div>
-      </details>
-    </aside>
-    <div class="collection-cards">
-      {
-        finishedBooks.map(book => (
-          <article class="collection-cards__card">
-            {book["imageSrc"] && (
-              <Image
-                class="collection-cards__card__image"
-                src={book["imageSrc"]}
-                alt=""
-                width={400}
-                height={400}
-                loading={"lazy"}
-              />
-            )}
-            <p class="collection-cards__card__date">
-              Finished:{" "}
-              <FormattedDate date={book.endDate} />
-            </p>
-            <div class="collection-cards__card__content">
-              <h3>{book.author}</h3>
-              <h2>{book.title}</h2>
-              <table>
-                <tbody>
-                  <tr>
-                    <th scope="row">Finished:</th>
-                    <td>
-                      <FormattedDate date={book.endDate} />
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Type:</th>
-                    <td>{book.readType}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Rating:</th>
-                    <td>{book.ratingBook} / 5</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </article>
-        ))
-      }
-    </div>
-  </div>
+	<div class="content-grid content-grid--collection">
+		<aside class="collection-sidebar">
+			<details open>
+				<summary>Reading stats</summary>
+				<div>
+					<h2>Totals</h2>
+					<table class="collection-stats">
+						<tbody>
+							<tr>
+								<th scope="row">Books:</th>
+								<td>{yearCounts.booksRead}</td>
+							</tr>
+							<tr>
+								<th scope="row">Pages:</th>
+								<td>{yearCounts.pagesTotal}</td>
+							</tr>
+							{
+								Object.values(yearCounts.years)
+									.reverse()
+									.map((x): object => (
+										<tr
+											style={`--percentage: ${getPercentage(x.count, x.goal)};`}
+										>
+											<th scope="row">
+												<a href={`/reading/${x.label}`}>
+													{x.label}
+												</a>
+												:
+											</th>
+											<td class="graph">{x.count}</td>
+										</tr>
+									))
+							}
+						</tbody>
+					</table>
+					<h2>Top 5</h2>
+					<table>
+						{
+							Object.values(sortedByRating.slice(0, 5)).map(
+								(book): object => (
+									<tr>
+										<th scope="row">{book.title}</th>
+										<td>{book.ratingBook}</td>
+									</tr>
+								)
+							)
+						}
+					</table>
+				</div>
+			</details>
+		</aside>
+		<div class="collection-cards">
+			{
+				finishedBooks.map(book => (
+					<article class="collection-cards__card">
+						{book["imageSrc"] && (
+							<Image
+								class="collection-cards__card__image"
+								src={book["imageSrc"]}
+								alt=""
+								width={400}
+								height={400}
+								loading={"lazy"}
+							/>
+						)}
+						<p class="collection-cards__card__date">
+							Finished:{" "}
+							<FormattedDate date={book.endDate} />
+						</p>
+						<div class="collection-cards__card__content">
+							<h3>{book.author}</h3>
+							<h2>{book.title}</h2>
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row">Finished:</th>
+										<td>
+											<FormattedDate date={book.endDate} />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Type:</th>
+										<td>{book.readType}</td>
+									</tr>
+									<tr>
+										<th scope="row">Rating:</th>
+										<td>{book.ratingBook} / 5</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
+				))
+			}
+		</div>
+	</div>
 </Layout>
