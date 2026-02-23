@@ -5,237 +5,244 @@ import { Image } from "astro:assets"
 import FormattedDate from "../../components/FormattedDate.astro"
 import ReadingBreadcrumbs from "../../components/ReadingBreadcrumbs.astro"
 import {
-  compareDates,
-  refineBookDate,
-  getPercentage,
-  yearsSet,
-  type Book,
+	compareDates,
+	refineBookDate,
+	getPercentage,
+	yearsSet,
+	type Book,
 } from "../../utils/books"
 
 export function bookYear(date: string | Date): string {
-  return typeof date === "string"
-    ? new Date(date).getFullYear().toString()
-    : date.getFullYear().toString()
+	return typeof date === "string"
+		? new Date(date).getFullYear().toString()
+		: date.getFullYear().toString()
 }
 
 export async function getStaticPaths() {
-  const books = await getCollection("reading")
-  const bookYears: Map<string, Book[]> = new Map()
+	const books = (await getCollection("reading")).filter(
+		x => {
+			return (
+				x.data.Finished === "Finished" &&
+				x.data.readType != "audio"
+			)
+		},
+	)
+	const bookYears: Map<string, Book[]> = new Map()
 
-  books.forEach(book => {
-    if (book.data.endDate) {
-      const year = bookYear(book.data.endDate)
+	books.forEach(book => {
+		if (book.data.endDate) {
+			const year = bookYear(book.data.endDate)
 
-      if (!bookYears.get(year)) {
-        bookYears.set(year, [])
-      }
+			if (!bookYears.get(year)) {
+				bookYears.set(year, [])
+			}
 
-      bookYears.get(year)?.push(book)
-    }
-  })
+			bookYears.get(year)?.push(book)
+		}
+	})
 
-  return [...bookYears.entries()].map(([year, books]) => ({
-    params: { year },
-    props: { books },
-  }))
+	return [...bookYears.entries()].map(([year, books]) => ({
+		params: { year },
+		props: { books },
+	}))
 }
 
 const { year } = Astro.params
 const { books } = Astro.props
 
 const finishedBooks = [...books]
-  .filter(
-    x => x.data.endDate?.toString().includes(year) ?? false,
-  )
-  .sort((a: Book, b: Book) => compareDates(a, b, "DESC"))
-  .map(x => refineBookDate(x))
+	.filter(
+		x => x.data.endDate?.toString().includes(year) ?? false,
+	)
+	.sort((a: Book, b: Book) => compareDates(a, b, "DESC"))
+	.map(x => refineBookDate(x))
 
 const sortedByRating = [...finishedBooks].sort((a, b) => {
-  if (!b.ratingBook || !a.ratingBook) return 0
-  return b.ratingBook - a.ratingBook
+	if (!b.ratingBook || !a.ratingBook) return 0
+	return b.ratingBook - a.ratingBook
 })
 
 const genreCounts: {
-  [key: string]: number
+	[key: string]: number
 }[] = []
 
 const yearCounts = {
-  most: 0,
-  pagesTotal: 0,
-  booksRead: 0,
-  years: {
-    [year]: { ...yearsSet[year] },
-  },
+	most: 0,
+	pagesTotal: 0,
+	booksRead: 0,
+	years: {
+		[year]: { ...yearsSet[year] },
+	},
 }
 
 function hasGenre(str: string): number {
-  return genreCounts.findIndex(x => x[str])
+	return genreCounts.findIndex(x => x[str])
 }
 
 finishedBooks.forEach(book => {
-  // set year count
-  if (book.endDate && book.pageCount) {
-    const year = new Date(book.endDate).getFullYear()
-    yearCounts.years[year].count += 1
-    yearCounts.booksRead++
-    yearCounts.pagesTotal += parseInt(
-      book.pageCount.toString(),
-    )
-  }
+	// set year count
+	if (book.endDate && book.pageCount) {
+		const year = new Date(book.endDate).getFullYear()
+		yearCounts.years[year].count += 1
+		yearCounts.booksRead++
+		yearCounts.pagesTotal += parseInt(
+			book.pageCount.toString(),
+		)
+	}
 
-  // set genreCounts
-  if (book.genres?.length) {
-    book.genres.forEach(x => {
-      const genreIndex = hasGenre(x)
-      if (genreIndex != -1) {
-        genreCounts[genreIndex][x] += 1
-      } else {
-        genreCounts.push({ [x]: 1 })
-      }
-    })
-  }
+	// set genreCounts
+	if (book.genres?.length) {
+		book.genres.forEach(x => {
+			const genreIndex = hasGenre(x)
+			if (genreIndex != -1) {
+				genreCounts[genreIndex][x] += 1
+			} else {
+				genreCounts.push({ [x]: 1 })
+			}
+		})
+	}
 })
 genreCounts.sort((a, b) => {
-  const countA = Object.values(a)[0] as number
-  const countB = Object.values(b)[0] as number
-  return countB - countA
+	const countA = Object.values(a)[0] as number
+	const countB = Object.values(b)[0] as number
+	return countB - countA
 })
 
 yearCounts.most = Object.values(yearCounts.years).sort(
-  (a, b) => b.count - a.count,
+	(a, b) => b.count - a.count,
 )[0].count
 ---
 
 <script>
-  const cards = document.querySelectorAll(
-    ".collection-cards__card",
-  )
-  function clearAllActives() {
-    cards.forEach(card => {
-      card.classList.remove("active")
-    })
-  }
+	const cards = document.querySelectorAll(
+		".collection-cards__card",
+	)
+	function clearAllActives() {
+		cards.forEach(card => {
+			card.classList.remove("active")
+		})
+	}
 
-  cards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-      clearAllActives()
-      card.classList.add("active")
-    })
-    card.addEventListener("mouseleave", () => {
-      card.classList.remove("active")
-    })
-  })
+	cards.forEach(card => {
+		card.addEventListener("mouseenter", () => {
+			clearAllActives()
+			card.classList.add("active")
+		})
+		card.addEventListener("mouseleave", () => {
+			card.classList.remove("active")
+		})
+	})
 </script>
 
 <Layout title="Reading list">
-  <h1>{year} Reads</h1>
+	<h1>{year} Reads</h1>
 
-  <ReadingBreadcrumbs />
+	<ReadingBreadcrumbs />
 
-  <div class="content-grid content-grid--collection">
-    <aside class="collection-sidebar">
-      <details open>
-        <summary>Reading stats</summary>
-        <div>
-          <h2>Totals</h2>
-          <table class="collection-stats">
-            <tbody>
-              <tr>
-                <th scope="row">Books:</th>
-                <td>{yearCounts.booksRead}</td>
-              </tr>
-              <tr>
-                <th scope="row">Pages:</th>
-                <td>{yearCounts.pagesTotal}</td>
-              </tr>
-              {
-                Object.values(yearCounts.years).map(
-                  (year): object => (
-                    <tr
-                      style={`--percentage: ${getPercentage(year.count, year.goal)};`}
-                    >
-                      <th scope="row">{year.label}:</th>
-                      <td class="graph">
-                        {year.count} of {year.goal}
-                      </td>
-                    </tr>
-                  ),
-                )
-              }
-            </tbody>
-          </table>
+	<div class="content-grid content-grid--collection">
+		<aside class="collection-sidebar">
+			<details open>
+				<summary>Reading stats</summary>
+				<div>
+					<h2>Totals</h2>
+					<table class="collection-stats">
+						<tbody>
+							<tr>
+								<th scope="row">Books:</th>
+								<td>{yearCounts.booksRead}</td>
+							</tr>
+							<tr>
+								<th scope="row">Pages:</th>
+								<td>{yearCounts.pagesTotal}</td>
+							</tr>
+							{
+								Object.values(yearCounts.years).map(
+									(year): object => (
+										<tr
+											style={`--percentage: ${getPercentage(year.count, year.goal)};`}
+										>
+											<th scope="row">{year.label}:</th>
+											<td class="graph">
+												{year.count} of {year.goal}
+											</td>
+										</tr>
+									),
+								)
+							}
+						</tbody>
+					</table>
 
-          <h2>Top 5 Genres</h2>
-          <table class="collection-tops">
-            {
-              genreCounts.slice(2, 7).map(x => (
-                <tr>
-                  <th scope="row">{Object.keys(x)[0]}</th>
-                  <td>{Object.values(x)[0]}</td>
-                </tr>
-              ))
-            }
-          </table>
+					<h2>Top 5 Genres</h2>
+					<table class="collection-tops">
+						{
+							genreCounts.slice(2, 7).map(x => (
+								<tr>
+									<th scope="row">{Object.keys(x)[0]}</th>
+									<td>{Object.values(x)[0]}</td>
+								</tr>
+							))
+						}
+					</table>
 
-          <h2>Top 5 books</h2>
-          <table class="collection-tops">
-            {
-              Object.values(sortedByRating.slice(0, 5)).map(
-                book => (
-                  <tr>
-                    <th scope="row">{book.title}</th>
-                    <td>{book.ratingBook}</td>
-                  </tr>
-                ),
-              )
-            }
-          </table>
-        </div>
-      </details>
-    </aside>
-    <div class="collection-cards">
-      {
-        finishedBooks.map(book => (
-          <article class="collection-cards__card">
-            {book["imageSrc"] && (
-              <Image
-                class="collection-cards__card__image"
-                src={book["imageSrc"]}
-                alt=""
-                width={400}
-                height={400}
-                loading={"lazy"}
-              />
-            )}
-            <p class="collection-cards__card__date">
-              Finished:{" "}
-              <FormattedDate date={book.endDate} />
-            </p>
-            <div class="collection-cards__card__content">
-              <h3>{book.author}</h3>
-              <h2>{book.title}</h2>
-              <table>
-                <tbody>
-                  <tr>
-                    <th scope="row">Finished:</th>
-                    <td>
-                      <FormattedDate date={book.endDate} />
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Type:</th>
-                    <td>{book.readType}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Rating:</th>
-                    <td>{book.ratingBook} / 5</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </article>
-        ))
-      }
-    </div>
-  </div>
+					<h2>Top 5 books</h2>
+					<table class="collection-tops">
+						{
+							Object.values(sortedByRating.slice(0, 5)).map(
+								book => (
+									<tr>
+										<th scope="row">{book.title}</th>
+										<td>{book.ratingBook}</td>
+									</tr>
+								),
+							)
+						}
+					</table>
+				</div>
+			</details>
+		</aside>
+		<div class="collection-cards">
+			{
+				finishedBooks.map(book => (
+					<article class="collection-cards__card">
+						{book["imageSrc"] && (
+							<Image
+								class="collection-cards__card__image"
+								src={book["imageSrc"]}
+								alt=""
+								width={400}
+								height={400}
+								loading={"lazy"}
+							/>
+						)}
+						<p class="collection-cards__card__date">
+							Finished:{" "}
+							<FormattedDate date={book.endDate} />
+						</p>
+						<div class="collection-cards__card__content">
+							<h3>{book.author}</h3>
+							<h2>{book.title}</h2>
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row">Finished:</th>
+										<td>
+											<FormattedDate date={book.endDate} />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Type:</th>
+										<td>{book.readType}</td>
+									</tr>
+									<tr>
+										<th scope="row">Rating:</th>
+										<td>{book.ratingBook} / 5</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
+				))
+			}
+		</div>
+	</div>
 </Layout>

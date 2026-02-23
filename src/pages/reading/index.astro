@@ -9,15 +9,17 @@ import {
 	getPercentage,
 	yearsSet,
 	type Book,
+	type RefinedBook,
 } from "../../utils/books"
 import ReadingBreadcrumbs from "../../components/ReadingBreadcrumbs.astro"
 
 const finishedBooks = (await getCollection("reading"))
-	.filter(
-		x =>
-			x.data.Finished == "Finished" &&
+	.filter(x => {
+		return (
+			x.data.Finished === "Finished" &&
 			x.data.readType != "audio"
-	)
+		)
+	})
 	.sort((a: Book, b: Book) => compareDates(a, b))
 	.map(x => refineBookDate(x))
 
@@ -35,22 +37,24 @@ const yearCounts = {
 
 finishedBooks.forEach(book => {
 	if (!book.endDate) return
-	const year = new Date(book.endDate).getFullYear()
-	yearCounts.years[year].count += 1
+	const year = String(new Date(book.endDate).getFullYear())
+	yearCounts.years[year as keyof typeof yearCounts.years][
+		"count"
+	] += 1
 	yearCounts.booksRead++
 	yearCounts.pagesTotal += parseInt(
-		book?.pageCount?.toString() ?? "0"
+		book?.pageCount?.toString() ?? "0",
 	)
 })
 
 yearCounts.most = Object.values(yearCounts.years).sort(
-	(a, b) => b.count - a.count
+	(a, b) => b.count - a.count,
 )[0].count
 ---
 
 <script>
 	const cards = document.querySelectorAll(
-		".collection-cards__card"
+		".collection-cards__card",
 	)
 	function clearAllActives() {
 		cards.forEach(card => {
@@ -118,7 +122,7 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 										<th scope="row">{book.title}</th>
 										<td>{book.ratingBook}</td>
 									</tr>
-								)
+								),
 							)
 						}
 					</table>

@@ -17,6 +17,10 @@ export interface Book {
   filePath?: string | undefined
 }
 
+export type RefinedBook = InferEntrySchema<"reading"> & {
+  imageSrc?: string
+}
+
 export function compareDates(
   a: Book,
   b: Book,
@@ -25,20 +29,20 @@ export function compareDates(
   if (b.data.endDate && a.data.endDate) {
     if (order === "DESC")
       return (
-        a.data.endDate.valueOf() - b.data.endDate.valueOf()
+        (a.data.endDate as Date).valueOf() -
+        (b.data.endDate as Date).valueOf()
       )
     return (
-      b.data.endDate.valueOf() - a.data.endDate.valueOf()
+      (b.data.endDate as Date).valueOf() -
+      (a.data.endDate as Date).valueOf()
     )
   } else {
     return 0
   }
 }
 
-export function refineBookDate(
-  book: Book,
-): InferEntrySchema<"reading"> {
-  const updatedBook = book.data
+export function refineBookDate(book: Book): RefinedBook {
+  const updatedBook: RefinedBook = book.data
   let startDate: NullableDate = null
   let endDate: NullableDate = null
   let publishDate: NullableDate = null
@@ -117,5 +121,10 @@ export const yearsSet = {
     label: "2025",
     count: 0,
     goal: 30,
+  },
+  "2026": {
+    label: "2026",
+    count: 0,
+    goal: 40,
   },
 }

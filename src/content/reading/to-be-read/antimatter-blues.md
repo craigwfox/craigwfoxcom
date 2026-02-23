@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+series: Mickey7
+series-number: "2"
 title: Antimatter Blues
 storyGraph: https://app.thestorygraph.com/books/d6e2abb4-9808-4a7f-9f4e-cc3d5c749a3d
 readType: paperback
