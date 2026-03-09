@@ -5,7 +5,7 @@ import { Image } from "astro:assets"
 import craigHiking from "../images/craig-hiking-about.webp"
 import { formatDate } from "../utils/formatting.js"
 
-const url = "https://movies.craigwfox.com/api/most-recent"
+const url = "https://movies.craigwfox.com/api/recent-movies"
 let movies: {
 	name: string
 	watch_date: string
@@ -31,7 +31,8 @@ try {
 		>
 			<div class="sidebar-home">
 				<h1 id="title-about">
-					I'm <strong>Craig Fox</strong>, UX engineer, maker, and geek
+					I'm <strong>Craig Fox</strong>, UX engineer,
+					maker, and geek
 				</h1>
 
 				<div class="rounded-image">
@@ -53,14 +54,15 @@ try {
 							</a>
 						</h3>
 						<p>
-							A website showing the movies my wife and I have watched
-							over the last few years on our weekly movie night.
+							A website showing the movies my wife and I
+							have watched over the last few years on our
+							weekly movie night.
 						</p>
 						<h4>Recent movies</h4>
 						{
 							moviesLoaded && movies ? (
 								<ul>
-									{movies.map(movie => (
+									{movies.slice(0, 2).map(movie => (
 										<li>
 											<a
 												href={`https://movies.craigwfox.com/movie/${movie.slug}`}
@@ -95,15 +97,19 @@ try {
 									>BareBones Tools</a
 								>
 								<span>
-									Dev tooling for fluid type, converting to ems/rems,
-									and converting colors
+									Dev tooling for fluid type, converting to
+									ems/rems, and converting colors
 								</span>
 							</li>
 							<li>
-								<a href="https://github.com/craigwfox">Github</a>
+								<a href="https://github.com/craigwfox"
+									>Github</a
+								>
 							</li>
 							<li>
-								<a href="https://codepen.io/craigwfox">Codepen</a>
+								<a href="https://codepen.io/craigwfox"
+									>Codepen</a
+								>
 							</li>
 						</ul>
 					</div>
@@ -120,7 +126,9 @@ try {
 
 			<PostsLarge count="5" />
 
-			<a href="/blog" class="btn btn-primary"> View archive</a>
+			<a href="/blog" class="btn btn-primary">
+				View archive</a
+			>
 		</section>
 	</div>
 </Layout>
