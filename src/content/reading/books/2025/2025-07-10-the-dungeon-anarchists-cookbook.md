@@ -21,7 +21,7 @@ genres:
   - comedy
   - adventure
 Finished: Finished
-Notebook: Reading Log 2025 v1
+Notebook: Reading Log Volume 1
 ---
 
 # Thoughts about _TITLE_

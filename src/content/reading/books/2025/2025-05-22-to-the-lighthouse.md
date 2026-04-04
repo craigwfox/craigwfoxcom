@@ -19,8 +19,9 @@ genres:
   - literary
   - modernism
 Finished: Finished
-Notebook: Reading Log 2025 v1
+Notebook: Reading Log Volume 1
 ---
 
 # Thoughts
+
 This was my first Virginia Woolf novel. I really struggled to get into the book and frequently found myself a bit lost knowing which characters point of view I was seeing. I wonder if I'm just not a fan of her writing style or maybe just not used to the language of the period.

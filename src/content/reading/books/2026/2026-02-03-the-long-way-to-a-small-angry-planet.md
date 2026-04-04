@@ -21,8 +21,9 @@ genres:
   - science fiction
   - space
 Finished: Finished
-Notebook: Reading Log 2025 v1
+Notebook: Reading Log Volume 1
 ---
 
 # Thoughts
+
 The Long Way to a Small, Angry Planet is very cozy and positive, but not in the way that nothing ever goes wrong for the characters. The characters have real struggles and they work through it with time, just as we do in real life. While some of these seem to resolve quickly it's important to remember that the there are gaps between the different scenes in the book, sometimes months of time between chapters.

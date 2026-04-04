@@ -19,5 +19,5 @@ genres:
   - fantasy
   - historical
 Finished: Finished
-Notebook: Reading Log 2025 v1
+Notebook: Reading Log Volume 1
 ---

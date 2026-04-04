@@ -19,7 +19,7 @@ genres:
   - science fiction
   - hard science fiction
 Finished: Finished
-Notebook: Reading Log 2025 v1
+Notebook: Reading Log Volume 1
 ---
 
 # Thoughts about The Three-Body Problem

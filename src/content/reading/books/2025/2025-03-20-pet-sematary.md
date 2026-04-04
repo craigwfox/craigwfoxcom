@@ -18,7 +18,7 @@ bookType: fiction
 genres:
   - horror
 Finished: Finished
-Notebook: Reading Log 2025 v1
+Notebook: Reading Log Volume 1
 ---
 
 # Thoughts about **Pet Sematary**

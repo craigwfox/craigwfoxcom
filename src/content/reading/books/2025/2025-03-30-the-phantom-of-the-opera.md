@@ -20,5 +20,5 @@ genres:
   - classics
   - horror
 Finished: Finished
-Notebook: Reading Log 2025 v1
+Notebook: Reading Log Volume 1
 ---
