@@ -20,8 +20,8 @@ bookType: fiction
 genres:
   - science fiction
   - dystopian
-Finished: TBR
-Notebook:
+Finished: Reading
+Notebook: Reading Log Volume 2
 ---
 
 # Thoughts about _TITLE_

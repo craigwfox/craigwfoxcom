@@ -18,7 +18,7 @@ bookType: nonfiction
 genres:
   - religion
   - buddhism
-Finished: Reading
+Finished: Finished
 Notebook: Non-fiction Journal v1
 ---
 
