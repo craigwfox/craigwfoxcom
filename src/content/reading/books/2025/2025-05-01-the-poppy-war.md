@@ -8,7 +8,7 @@ owned: true
 ratingBook: 4
 startDate: 2025-04-25
 endDate: 2025-05-03
-isbn: " 9780062662583"
+isbn: "9780062662583"
 author:
   - R.F. Kuang
 publisher: Harper Voyager

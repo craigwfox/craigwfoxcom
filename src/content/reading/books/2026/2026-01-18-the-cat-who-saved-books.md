@@ -9,7 +9,7 @@ owned: true
 ratingBook: 4.25
 startDate: 2026-01-15
 endDate: 2026-01-18
-isbn: " 9780063095731"
+isbn: "9780063095731"
 author:
   - Sōsuke Natsukawa
 publisher: HarperVia

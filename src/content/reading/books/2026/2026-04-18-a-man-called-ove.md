@@ -6,19 +6,20 @@ storyGraph: https://app.thestorygraph.com/books/41e5ca73-3daa-4048-beb9-be33c85c
 goodReads: https://www.goodreads.com/book/show/18774964-a-man-called-ove?ref=nav_sb_ss_1_17
 readType: paperback
 owned: true
-ratingBook:
-startDate:
-endDate:
+ratingBook: 4.25
+startDate: 2026-04-14
+endDate: 2026-04-18
 isbn: "9781473616349"
-author: ["Fredrik Backman"]
+author:
+  - Fredrik Backman
 publisher: Hodder And Stoughton Ltd
 publishDate: 2012-08-27
 pageCount: 294
 bookType: fiction
 genres:
   - contemporary
-Finished: TBR
-Notebook:
+Finished: Finished
+Notebook: Reading Log Volume 2
 ---
 
 # Thoughts about _TITLE_

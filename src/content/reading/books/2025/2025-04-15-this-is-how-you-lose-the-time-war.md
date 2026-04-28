@@ -9,7 +9,7 @@ owned: true
 ratingBook: 4.25
 startDate: 2025-04-12
 endDate: 2025-04-15
-isbn: " 9781534430990"
+isbn: "9781534430990"
 author:
   - Max Gladstone
   - Amal El-Mohtar

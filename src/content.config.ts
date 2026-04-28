@@ -1,13 +1,12 @@
 import { glob } from "astro/loaders"
-import { defineCollection, z } from "astro:content"
-
-function getYear(startDate: Date, endDate: Date) {
-  const fullDate = endDate ? endDate : startDate
-  return new Date(fullDate).getFullYear()
-}
+import { defineCollection } from "astro:content"
+import { z } from "astro/zod"
 
 const blog = defineCollection({
-  // Type-check frontmatter using a schema
+  loader: glob({
+    pattern: "**/*.(md|mdx)",
+    base: "./src/content/blog",
+  }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -30,7 +29,10 @@ const blog = defineCollection({
 })
 
 const hiking = defineCollection({
-  // Type-check frontmatter using a schema
+  loader: glob({
+    pattern: "**/*.(md|mdx)",
+    base: "./src/content/hiking",
+  }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -56,6 +58,10 @@ const hiking = defineCollection({
 })
 
 const reading = defineCollection({
+  loader: glob({
+    pattern: "**/*.(md|mdx)",
+    base: "./src/content/reading/books",
+  }),
   schema: z.object({
     title: z.string().nullable(),
     storyGraph: z.string().nullable().optional(),

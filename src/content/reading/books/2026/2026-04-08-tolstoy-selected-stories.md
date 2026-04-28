@@ -7,9 +7,9 @@ series-number:
 storyGraph: https://app.thestorygraph.com/books/0f181f4b-1591-4c1f-ac24-251151c2c49f
 readType: paperback
 owned: true
-ratingBook:
+ratingBook: 3.75
 startDate: 2026-03-15
-endDate:
+endDate: 2026-04-08
 isbn: "9781788884334"
 author:
   - Leo Tolstoy
@@ -20,7 +20,7 @@ bookType: fiction
 genres:
   - classics
   - short stories
-Finished: Reading
+Finished: Finished
 Notebook: Reading Log Volume 1
 ---
 

@@ -9,7 +9,7 @@ owned: true
 ratingBook: 4
 startDate: 2025-03-11
 endDate: 2025-03-20
-isbn: " 9780385182447"
+isbn: "9780385182447"
 author: Stephen King
 publisher: Doubleday
 publishDate: 1983-10-01

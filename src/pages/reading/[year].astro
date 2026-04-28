@@ -50,6 +50,8 @@ export async function getStaticPaths() {
 const { year } = Astro.params
 const { books } = Astro.props
 
+console.log([...books])
+
 const finishedBooks = [...books]
 	.filter(
 		x => x.data.endDate?.toString().includes(year) ?? false,

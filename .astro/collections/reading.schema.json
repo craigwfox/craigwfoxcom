@@ -1,165 +1,116 @@
 {
-  "$ref": "#/definitions/reading",
-  "definitions": {
-    "reading": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": [
-            "string",
-            "null"
-          ]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "anyOf": [
+        {
+          "type": "string"
         },
-        "storyGraph": {
-          "type": [
-            "string",
-            "null"
-          ]
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "storyGraph": {
+      "anyOf": [
+        {
+          "type": "string"
         },
-        "goodReads": {
-          "type": [
-            "string",
-            "null"
-          ]
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "goodReads": {
+      "anyOf": [
+        {
+          "type": "string"
         },
-        "readType": {
-          "type": [
-            "string",
-            "null"
-          ]
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "readType": {
+      "anyOf": [
+        {
+          "type": "string"
         },
-        "owned": {
-          "type": [
-            "boolean",
-            "null"
-          ]
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "owned": {
+      "anyOf": [
+        {
+          "type": "boolean"
         },
-        "ratingBook": {
-          "type": [
-            "number",
-            "null"
-          ]
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "ratingBook": {
+      "anyOf": [
+        {
+          "type": "number"
         },
-        "startDate": {
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "startDate": {
+      "anyOf": [
+        {
           "anyOf": [
             {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "format": "date-time"
-                },
-                {
-                  "type": "string",
-                  "format": "date"
-                },
-                {
-                  "type": "integer",
-                  "format": "unix-time"
-                }
-              ]
-            }
-          ]
-        },
-        "endDate": {
-          "anyOf": [
-            {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "format": "date-time"
-                },
-                {
-                  "type": "string",
-                  "format": "date"
-                },
-                {
-                  "type": "integer",
-                  "format": "unix-time"
-                }
-              ]
-            }
-          ]
-        },
-        "isbn": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "author": {
-          "anyOf": [
-            {
-              "anyOf": [
-                {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                {
-                  "type": "string"
-                }
-              ]
+              "type": "string"
             },
             {
               "type": "null"
             }
           ]
         },
-        "publisher": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "publishDate": {
+        {
+          "type": "string",
+          "format": "date-time"
+        }
+      ]
+    },
+    "endDate": {
+      "anyOf": [
+        {
           "anyOf": [
             {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": "string"
             },
             {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "format": "date-time"
-                },
-                {
-                  "type": "string",
-                  "format": "date"
-                },
-                {
-                  "type": "integer",
-                  "format": "unix-time"
-                }
-              ]
+              "type": "null"
             }
           ]
         },
-        "pageCount": {
-          "type": "number"
+        {
+          "type": "string",
+          "format": "date-time"
+        }
+      ]
+    },
+    "isbn": {
+      "anyOf": [
+        {
+          "type": "string"
         },
-        "bookType": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "genres": {
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "author": {
+      "anyOf": [
+        {
           "anyOf": [
             {
               "type": "array",
@@ -168,26 +119,85 @@
               }
             },
             {
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "publisher": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "publishDate": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
               "type": "null"
             }
           ]
         },
-        "Finished": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "$schema": {
-          "type": "string"
+        {
+          "type": "string",
+          "format": "date-time"
         }
-      },
-      "required": [
-        "title",
-        "publishDate"
-      ],
-      "additionalProperties": false
+      ]
+    },
+    "pageCount": {
+      "type": "number"
+    },
+    "bookType": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "genres": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "Finished": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "$schema": {
+      "type": "string"
     }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "title",
+    "publishDate"
+  ]
 }

@@ -8,7 +8,7 @@ owned: false
 ratingBook: 3.5
 startDate: 2025-10-29
 endDate: 2025-11-11
-isbn: " 9780141442518"
+isbn: "9780141442518"
 author:
   - Oscar Wilde
 publisher: Standard ebooks

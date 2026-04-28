@@ -7,7 +7,7 @@ owned: true
 ratingBook: 3.25
 startDate: 2025-05-04
 endDate: 2025-05-22
-isbn: " 9780156907392"
+isbn: "9780156907392"
 author:
   - Virginia Woolf
 publisher: Standard ebooks

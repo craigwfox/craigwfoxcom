@@ -10,7 +10,7 @@ owned: true
 ratingBook: 5
 startDate: 2026-02-09
 endDate: 2026-02-15
-isbn: " 9780547928227"
+isbn: "9780547928227"
 author:
   - J.R.R. Tolkien
 publisher: William Morrow

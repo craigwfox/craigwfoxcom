@@ -9,7 +9,7 @@ owned: true
 ratingBook: 4.25
 startDate: 2025-03-20
 endDate: 2025-03-23
-isbn: " 9781250824042"
+isbn: "9781250824042"
 author: Jeff VanderMeer
 publisher: Farrar, Straus and Giroux
 publishDate: 2014-02-04
