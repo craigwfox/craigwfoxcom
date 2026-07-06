@@ -3,4 +3,4 @@ publish = "dist"
 command = "astro build && cp _redirects dist/_redirects"
 
 [dev]
-command = "npm run dev"
+command = "pnpm run dev"
