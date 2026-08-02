@@ -1,28 +1,19 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content"
+import { getCollection, render } from "astro:content"
 import HikingPost from "../../layouts/HikingPost.astro"
 import FormattedDate from "../../components/FormattedDate.astro"
 
-const posts = await getCollection("hiking")
-type Props = CollectionEntry<"hiking">
-
-const { slug } = Astro.params
-
 export async function getStaticPaths() {
 	const posts = await getCollection("hiking")
-	return posts.map(post => {
-		const { slug } = post
-
-		return {
-			params: { slug },
-			props: post,
-		}
-	})
+	return posts.map(post => ({
+		params: { slug: post.id },
+		props: { post },
+	}))
 }
 
-const post = posts.find(page => page.slug === slug)
+const { post } = Astro.props
 if (!post) return Astro.redirect("/404")
-const { Content } = await post.render()
+const { Content } = await render(post)
 
 const postLinks = []
 
@@ -57,7 +48,11 @@ if (post.data.allTrails != undefined) {
 			<ul class="hiking-links">
 				{postLinks.map(postLink => (
 					<li>
-						<a href={postLink.url} target="_blank" rel="nofollow">
+						<a
+							href={postLink.url}
+							target="_blank"
+							rel="nofollow"
+						>
 							{postLink.title}
 						</a>
 					</li>

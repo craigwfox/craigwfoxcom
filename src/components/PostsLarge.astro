@@ -10,7 +10,7 @@ const posts = (
 	})
 ).sort(
 	(a, b) =>
-		b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+		b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 )
 ---
 
@@ -26,7 +26,7 @@ const posts = (
 						))}
 					</ul>
 				)}
-				<a href={`/blog/${post.slug}/`}>
+				<a href={`/blog/${post.id}`}>
 					<h3>{post.data.title}</h3>
 				</a>
 				<p>{post.data.description}</p>

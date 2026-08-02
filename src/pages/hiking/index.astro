@@ -8,11 +8,11 @@ const { count = 500 } = Astro.props
 
 const posts = (await getCollection("hiking")).sort(
 	(a, b) =>
-		b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+		b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 )
 
-const trailsList = []
-const parksList = []
+const trailsList: string[] = []
+const parksList: string[] = []
 const stats2025 = {
 	trails: 0,
 	miles: 0,
@@ -59,7 +59,7 @@ posts.map(x => {
 						)}
 						<PostTitle
 							title={post.data.title}
-							link={`/hiking/${post.slug}/`}
+							link={`/hiking/${post.id}/`}
 							showPage={post.data.noSingle ? false : true}
 						/>
 						<table>
