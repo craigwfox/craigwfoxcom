@@ -1,0 +1,12 @@
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+minimumReleaseAgeExclude:
+  - '@astrojs/internal-helpers@0.10.4'
+  - '@astrojs/markdown-remark@7.2.4'
+  - '@astrojs/markdown-satteri@0.3.7'
+  - '@astrojs/mdx@7.0.7'
+  - '@astrojs/netlify@8.2.3'
+  - astro@7.2.4
+  - sass@1.103.0
