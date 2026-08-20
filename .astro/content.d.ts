@@ -142,6 +142,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "hiking": Record<string, {
   id: string;
@@ -150,6 +151,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"hiking">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "reading": Record<string, {
   id: string;
@@ -158,6 +160,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"reading">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 
 	};
