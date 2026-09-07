@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2026
 title: " The Hitchhiker's Guide to the Galaxy"
 series: Hitchhiker's Guide to the Galaxy
 series-number: "1"

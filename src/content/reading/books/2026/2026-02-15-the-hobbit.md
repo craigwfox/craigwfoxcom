@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2026
 title: The Hobbit
 series: The Lord of the Rings
 series-number: "0"

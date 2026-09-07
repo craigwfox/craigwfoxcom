@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2026
 title: Legends & Lattes
 series: Legends & Lattes
 series-number: "1"

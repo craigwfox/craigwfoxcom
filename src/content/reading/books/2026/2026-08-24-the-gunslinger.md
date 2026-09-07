@@ -1,15 +1,17 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2026
 title: The Gunslinger
 series: The Dark Tower
 series-number: "1"
 storyGraph: https://app.thestorygraph.com/books/f34adf37-bc59-42b3-874a-679616ec1f95
 readType: paperback
 owned: true
-ratingBook:
+ratingBook: 3.5
 startDate: 2026-08-20
-endDate:
+endDate: 2026-08-24
 isbn: " 9780451210845"
 author:
   - Stephen King
@@ -20,7 +22,7 @@ bookType: fiction
 genres:
   - fantasy
   - science fiction
-Finished: Reading
+Finished: Finished
 Notebook: Reading Log Volume 2
 ---
 

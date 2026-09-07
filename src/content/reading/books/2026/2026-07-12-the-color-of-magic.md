@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2026
 title: The Color of Magic
 series: Discworld
 series-number: "1"

@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2026
 title: Do Androids Dream of Electric Sheep?
 series: Blade Runner
 series-number: "1"
