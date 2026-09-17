@@ -1,3 +1,5 @@
+https://cwfox.net/*       https://craigwfox.com/:splat 301!
+https://www.cwfox.net/*   https://craigwfox.com/:splat 301!
 /_image     /.netlify/functions/entry    200
 /           /.netlify/functions/entry    200
 /rss.xml    /.netlify/functions/entry    200
