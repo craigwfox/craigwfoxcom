@@ -1,7 +1,7 @@
 ---
 tags:
   - reading-list
-title: "'Salem's Lot"
+title: Salem's Lot
 storyGraph: https://app.thestorygraph.com/books/a6a71613-dd10-4613-8fc2-7a387a151ed6
 readType: hardcover
 owned: true

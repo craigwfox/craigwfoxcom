@@ -4,7 +4,7 @@ tags:
 title: A Marvellous Light
 storyGraph: https://app.thestorygraph.com/books/676bc1b9-bd8f-4e08-97ac-d87cce106ae3
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.7
 startDate:

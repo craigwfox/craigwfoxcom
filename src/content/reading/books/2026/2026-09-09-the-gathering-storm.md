@@ -6,9 +6,9 @@ storyGraph: https://app.thestorygraph.com/books/a2dc1536-c75e-4cee-bf67-a73af109
 goodReads: https://www.goodreads.com/book/show/7141427-the-gathering-storm
 readType: paperback
 owned: true
-ratingBook:
+ratingBook: 4.5
 startDate: 2026-08-29
-endDate:
+endDate: 2026-09-09
 isbn: "9780765341532"
 author:
   - Robert Jordan
@@ -20,8 +20,10 @@ bookType: fiction
 genres:
   - fantasy
   - epic fantasy
-Finished: Reading
+Finished: Finished
 Notebook:
+series: The Wheel of Time
+series-number: "12"
 ---
 	
 # Thoughts about _TITLE_

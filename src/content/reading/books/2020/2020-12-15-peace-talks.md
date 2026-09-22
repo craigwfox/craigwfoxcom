@@ -4,7 +4,7 @@ tags:
 title: Peace Talks
 storyGraph: https://app.thestorygraph.com/books/a9025d35-a273-4a0b-93ac-0006bdaa47ff
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

@@ -5,7 +5,7 @@ title: "No Mud, No Lotus: The Art of Transforming Suffering"
 series:
 series-number:
 storyGraph: https://app.thestorygraph.com/books/1fab508d-d78d-4812-9616-c679e035eca7
-readType: digital
+readType: ebook
 owned: true
 ratingBook:
 startDate: 2026-08-25

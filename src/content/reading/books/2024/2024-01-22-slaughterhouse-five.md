@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2027
 title: Slaughterhouse-Five
 storyGraph: https://app.thestorygraph.com/books/3e3723cd-aa86-4836-b49d-cd117c54fe46
 goodReads:
@@ -19,4 +21,5 @@ genres:
   - satire
   - dark comedy
 Finished: Finished
+bookClubMonth: 10-October
 ---

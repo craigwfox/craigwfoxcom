@@ -4,7 +4,7 @@ tags:
 title: A Darker Shade of Magic
 storyGraph: https://app.thestorygraph.com/books/26aa7873-3ebf-46ab-a697-0bbfe7b0eab2
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

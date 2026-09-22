@@ -1,7 +1,7 @@
 ---
 tags:
   - reading-list
-title: " Candide, Zadig and Selected Stories"
+title: Candide, Zadig and Selected Stories
 series:
 series-number:
 storyGraph: https://app.thestorygraph.com/books/ca4cfb4a-5eb4-4eaa-a782-94a929cd298f

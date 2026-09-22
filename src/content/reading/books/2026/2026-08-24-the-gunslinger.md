@@ -24,6 +24,7 @@ genres:
   - science fiction
 Finished: Finished
 Notebook: Reading Log Volume 2
+bookClubMonth: 09-September
 ---
 
 # Thoughts about _TITLE_

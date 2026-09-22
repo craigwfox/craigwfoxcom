@@ -4,7 +4,7 @@ tags:
 title: The Last Graduate
 storyGraph: https://app.thestorygraph.com/books/e3d422c1-6597-4e4e-b564-82bfe55d2d1f
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.75
 startDate:

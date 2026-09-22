@@ -4,7 +4,7 @@ tags:
 title: The City We Became
 storyGraph: https://app.thestorygraph.com/books/1a0d3c5e-5c8f-4343-9ac7-200c28e40bc7
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4.25
 startDate:

@@ -4,7 +4,7 @@ tags:
 title: "Where the Deer and the Antelope Play: The Pastoral Observations of One Ignorant American Who Loves to Walk Outside"
 storyGraph: https://app.thestorygraph.com/books/76f042b1-df25-4603-8c2d-3b28b306021f
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

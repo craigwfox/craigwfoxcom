@@ -4,7 +4,7 @@ tags:
 title: Nona the Ninth
 storyGraph: https://app.thestorygraph.com/books/4fbb94c8-92ea-4b2e-9386-d48c45941830
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

@@ -6,11 +6,12 @@ storyGraph: https://app.thestorygraph.com/books/ad1827fa-c0e6-4cdc-8c4d-2d0af15f
 goodReads: https://www.goodreads.com/book/show/5291539-the-girl-with-the-dragon-tattoo?ac=1&from_search=true&qid=mbYPJnjvz7&rank=1
 readType: paperback
 owned: true
-ratingBook: 
-startDate: 
-endDate: 
+ratingBook:
+startDate:
+endDate:
 isbn: "9780307454546"
-author: Stieg Larsson
+author:
+  - Stieg Larsson
 publisher: Vintage Crime
 publishDate: 2005-08-01
 pageCount: 590
@@ -20,6 +21,8 @@ genres:
   - thriller
 Finished: TBR
 Notebook:
+series: Millennium
+series-number: "1"
 ---
 
 # Thoughts about _TITLE_

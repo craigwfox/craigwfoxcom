@@ -4,7 +4,7 @@ tags:
 title: "Will My Cat Eat My Eyeballs?: Big Questions from Tiny Mortals About Death"
 storyGraph: https://app.thestorygraph.com/books/b494045f-47d1-48b8-bde7-70b739313bff
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

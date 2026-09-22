@@ -3,7 +3,7 @@ tags:
   - reading-list
   - book-club
   - book-club-2026
-title: " The Hitchhiker's Guide to the Galaxy"
+title: The Hitchhiker's Guide to the Galaxy
 series: Hitchhiker's Guide to the Galaxy
 series-number: "1"
 storyGraph: https://app.thestorygraph.com/books/c5556eef-b4aa-4be9-82eb-d03774a5b8df
@@ -24,6 +24,7 @@ genres:
   - comedy
 Finished: Finished
 Notebook:
+bookClubMonth: 08-August
 ---
 
 # Thoughts about _TITLE_

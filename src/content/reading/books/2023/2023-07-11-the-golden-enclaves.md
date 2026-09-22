@@ -4,7 +4,7 @@ tags:
 title: The Golden Enclaves
 storyGraph: https://app.thestorygraph.com/books/eecabb8b-986a-4652-a54a-e1a98f89e956
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.9
 startDate:

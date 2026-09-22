@@ -24,6 +24,7 @@ genres:
   - dystopian
 Finished: Finished
 Notebook: Reading Log Volume 2
+bookClubMonth: 04-April
 ---
 
 # Thoughts about _TITLE_

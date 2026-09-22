@@ -1,6 +1,7 @@
 ---
 tags:
   - reading-list
+  - aardvark-book-club
 title: Japanese Gothic
 series:
 series-number:

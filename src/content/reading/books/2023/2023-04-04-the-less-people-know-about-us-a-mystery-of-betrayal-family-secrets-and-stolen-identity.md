@@ -4,7 +4,7 @@ tags:
 title: "The Less People Know About Us: A Mystery of Betrayal, Family Secrets, and Stolen Identity"
 storyGraph: https://app.thestorygraph.com/books/444625bb-5b62-439c-a727-6ee0cc99d9d2
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.75
 startDate:

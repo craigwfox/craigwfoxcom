@@ -4,7 +4,7 @@ tags:
 title: How to Be an Antiracist
 storyGraph: https://app.thestorygraph.com/books/d90fb1e6-bff5-4f64-9f7b-2072c9197824
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4.25
 startDate:

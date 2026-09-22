@@ -1,0 +1,30 @@
+---
+tags:
+  - reading-list
+  - book-club
+  - book-club-2026
+title: Dead Silence
+series:
+series-number:
+storyGraph: https://app.thestorygraph.com/books/fd636bcc-9f34-49f1-ab47-b1b56f78fe9b
+readType: paperback
+owned: true
+ratingBook:
+startDate:
+endDate:
+isbn: "9781250778543"
+author:
+  - S.A. Barnes
+publisher: Tor Nightfire
+publishDate: 2023-02-20
+pageCount: 343
+bookType: fiction
+genres:
+  - science fiction
+  - horror
+Finished: TBR
+Notebook:
+bookClubMonth: 10-October
+---
+
+# Thoughts about _TITLE_
