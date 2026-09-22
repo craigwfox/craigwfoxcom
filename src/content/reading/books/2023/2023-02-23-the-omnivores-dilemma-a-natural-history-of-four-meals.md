@@ -4,7 +4,7 @@ tags:
 title: "The Omnivore's Dilemma: A Natural History of Four Meals"
 storyGraph: https://app.thestorygraph.com/books/4e890769-7358-49e9-833f-ae1073ef792d
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

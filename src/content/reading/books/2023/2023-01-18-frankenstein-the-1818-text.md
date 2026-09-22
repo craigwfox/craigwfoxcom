@@ -4,7 +4,7 @@ tags:
 title: "Frankenstein: The 1818 Text"
 storyGraph: https://app.thestorygraph.com/books/ae87dd9c-fbc0-4f93-9182-957de68eb0b3
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

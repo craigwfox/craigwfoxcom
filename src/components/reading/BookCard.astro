@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets"
+import FormattedDate from "../../components/FormattedDate.astro"
+import type { RefinedBook } from "../../utils/books"
+
+interface Props {
+	book: RefinedBook
+}
+
+const { book } = Astro.props as Props
+
+function displayAuthor(author: string | string[]): string {
+	if (typeof author === "string") return author
+
+	return author.join(", ")
+}
+---
+
+<article class="collection-cards__card">
+	{
+		book["imageSrc"] && (
+			<div class="collection-cards__card__image">
+				<Image
+					src={book["imageSrc"]}
+					alt=""
+					width={250}
+					height={250}
+					loading={"lazy"}
+				/>
+			</div>
+		)
+	}
+	<div class="collection-cards__card__content">
+		{book.author && <h3>{displayAuthor(book.author)}</h3>}
+		<h2>{book.title}</h2>
+		<table>
+			<tbody>
+				<tr>
+					<th scope="row">Finished:</th>
+					<td>
+						<FormattedDate date={book.endDate} />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Type:</th>
+					<td>{book.readType}</td>
+				</tr>
+				<tr>
+					<th scope="row">Rating:</th>
+					<td>{book.ratingBook} / 5</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</article>

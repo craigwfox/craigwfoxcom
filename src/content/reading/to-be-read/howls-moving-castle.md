@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2026
 title: Howl's Moving Castle
 series:
 series-number:
@@ -22,6 +24,7 @@ genres:
   - classics
 Finished: TBR
 Notebook:
+bookClubMonth: 11-November
 ---
 
 # Thoughts about _TITLE_

@@ -4,7 +4,7 @@ tags:
 title: Project Hail Mary
 storyGraph: https://app.thestorygraph.com/books/398653b1-d33d-424e-a0b1-14bd44729035
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

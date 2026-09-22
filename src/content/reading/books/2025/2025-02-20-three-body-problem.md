@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2026
 title: Three-Body Problem
 storyGraph: https://app.thestorygraph.com/books/0f45bfa2-ef74-45c1-9d08-4bdbc1a14d29
 goodReads:
@@ -20,6 +22,7 @@ genres:
   - hard science fiction
 Finished: Finished
 Notebook: Reading Log Volume 1
+bookClubMonth: 06-June
 ---
 
 # Thoughts about The Three-Body Problem

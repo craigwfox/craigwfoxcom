@@ -4,7 +4,7 @@ tags:
 title: Under the Whispering Door
 storyGraph: https://app.thestorygraph.com/books/7a0dd7bb-0854-4771-bc08-119d3610eea3
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4.25
 startDate:

@@ -1,6 +1,8 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2027
 title: Assassin's Apprentice
 series: The Farseer Trilogy
 series-number: "1"
@@ -21,6 +23,7 @@ genres:
   - fantasy
 Finished: Finished
 Notebook: Reading Log Volume 2
+bookClubMonth: 12-December
 ---
 
 # Thoughts about _TITLE_

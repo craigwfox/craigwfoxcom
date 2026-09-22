@@ -4,7 +4,7 @@ tags:
 title: Crown of Midnight
 storyGraph: https://app.thestorygraph.com/books/47701b8d-0891-4006-b783-1446bc345069
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.25
 startDate:

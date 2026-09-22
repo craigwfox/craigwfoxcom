@@ -23,6 +23,7 @@ genres:
   - fantasy
 Finished: Finished
 Notebook: Reading Log Volume 2
+bookClubMonth: 05-May
 ---
 
 # Thoughts about _TITLE_

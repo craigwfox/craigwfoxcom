@@ -4,7 +4,7 @@ tags:
 title: The Wise Man's Fear
 storyGraph: https://app.thestorygraph.com/books/91f33d4b-ffba-4bab-9496-df0ad76ccdf2
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.75
 startDate:

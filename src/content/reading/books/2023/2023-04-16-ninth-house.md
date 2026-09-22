@@ -4,7 +4,7 @@ tags:
 title: Ninth House
 storyGraph: https://app.thestorygraph.com/books/67be08b7-a6a0-4645-9d62-0b49e9d4be33
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.75
 startDate:

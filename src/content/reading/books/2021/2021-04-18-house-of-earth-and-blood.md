@@ -4,7 +4,7 @@ tags:
 title: House of Earth and Blood
 storyGraph: https://app.thestorygraph.com/books/370f81a1-8c0c-4046-9b40-52fbd727eca9
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3
 startDate:

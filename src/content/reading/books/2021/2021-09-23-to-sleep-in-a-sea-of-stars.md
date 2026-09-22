@@ -4,7 +4,7 @@ tags:
 title: To Sleep in a Sea of Stars
 storyGraph: https://app.thestorygraph.com/books/b8c49c52-7aff-4159-9111-041ffc884e7a
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.75
 startDate:

@@ -4,7 +4,7 @@ tags:
 title: Harrow the Ninth
 storyGraph: https://app.thestorygraph.com/books/e43a9d0a-953a-47f5-b418-305edf204312
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

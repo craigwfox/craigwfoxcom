@@ -4,7 +4,7 @@ tags:
 title: A Deadly Education
 storyGraph: https://app.thestorygraph.com/books/337fd043-3fb8-4e03-b05d-1bff26b04b5c
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

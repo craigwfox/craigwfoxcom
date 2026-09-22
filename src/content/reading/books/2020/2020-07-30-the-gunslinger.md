@@ -4,7 +4,7 @@ tags:
 title: The Gunslinger
 storyGraph: https://app.thestorygraph.com/books/b494045f-47d1-48b8-bde7-70b739313bff
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.75
 startDate:

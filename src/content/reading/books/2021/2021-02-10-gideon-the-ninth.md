@@ -1,10 +1,12 @@
 ---
 tags:
   - reading-list
+  - book-club
+  - book-club-2027
 title: Gideon the Ninth
 storyGraph: https://app.thestorygraph.com/books/b3635d8a-fc97-4443-b650-f0843b1d7864
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4.25
 startDate:
@@ -20,4 +22,5 @@ genres:
   - science fiction
   - mystery
 Finished: Finished
+bookClubMonth: 11-November
 ---

@@ -4,7 +4,7 @@ tags:
 title: Adulthood Rites
 storyGraph: https://app.thestorygraph.com/books/88905cf4-022c-454e-a3b1-d9fac9ac5cdf
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

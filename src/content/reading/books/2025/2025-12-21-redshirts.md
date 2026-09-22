@@ -1,7 +1,7 @@
 ---
 tags:
   - reading-list
-title: " Redshirts: A Novel with Three Codas"
+title: "Redshirts: A Novel with Three Codas"
 storyGraph: https://app.thestorygraph.com/books/ee192c83-e4e3-4cee-8a65-b5f8f31609b5
 readType: paperback
 owned: true

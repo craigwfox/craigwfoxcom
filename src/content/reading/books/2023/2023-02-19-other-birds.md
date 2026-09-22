@@ -4,7 +4,7 @@ tags:
 title: Other Birds
 storyGraph: https://app.thestorygraph.com/books/898060b4-0c65-4798-85bd-3859ef21c307
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

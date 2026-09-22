@@ -4,7 +4,7 @@ tags:
 title: Battle Ground
 storyGraph: https://app.thestorygraph.com/books/2a1b83c5-ca65-493e-8406-bee4762cef5c
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

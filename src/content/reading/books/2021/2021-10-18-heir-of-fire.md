@@ -4,7 +4,7 @@ tags:
 title: Heir of Fire
 storyGraph: https://app.thestorygraph.com/books/77f5083b-e74d-4f72-8c31-80703c2a6cc0
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.25
 startDate:

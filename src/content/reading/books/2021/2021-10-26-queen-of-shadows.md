@@ -4,7 +4,7 @@ tags:
 title: Queen of Shadows
 storyGraph: https://app.thestorygraph.com/books/2f259a7a-922f-4567-b80f-035131adb3f6
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3
 startDate:

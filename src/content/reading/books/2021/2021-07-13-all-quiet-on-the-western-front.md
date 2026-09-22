@@ -4,7 +4,7 @@ tags:
 title: All Quiet on the Western Front
 storyGraph: https://app.thestorygraph.com/books/a96e8466-c493-4248-8762-0771e9ecbc84
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

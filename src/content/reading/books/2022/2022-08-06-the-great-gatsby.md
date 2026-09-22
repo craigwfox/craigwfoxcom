@@ -4,7 +4,7 @@ tags:
 title: The Great Gatsby
 storyGraph: https://app.thestorygraph.com/books/1415b38e-b2ff-4832-98f6-07948b9c1242
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

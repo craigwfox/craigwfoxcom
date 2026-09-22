@@ -1,7 +1,7 @@
 ---
 tags:
   - reading-list
-title: " The Long Way to a Small, Angry Planet"
+title: The Long Way to a Small, Angry Planet
 series: Wayfarers
 series-number: "1"
 storyGraph: https://app.thestorygraph.com/books/47260618-eb7b-4664-b3ae-814c1c36eded

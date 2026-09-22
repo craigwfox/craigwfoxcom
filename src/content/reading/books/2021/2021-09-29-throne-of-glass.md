@@ -4,7 +4,7 @@ tags:
 title: Throne of Glass
 storyGraph: https://app.thestorygraph.com/books/e9a832a7-bd54-48ab-a3b5-220167aa7120
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 3.25
 startDate:

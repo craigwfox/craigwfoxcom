@@ -4,7 +4,7 @@ tags:
 title: The Name of the Wind
 storyGraph: https://app.thestorygraph.com/books/bf400485-af1f-475a-bada-b111af99ac20
 goodReads:
-readType: digital
+readType: ebook
 owned: false
 ratingBook: 4
 startDate:

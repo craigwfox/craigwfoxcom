@@ -12,6 +12,7 @@ import {
 	type RefinedBook,
 } from "../../utils/books"
 import ReadingBreadcrumbs from "../../components/ReadingBreadcrumbs.astro"
+import BookCard from "../../components/reading/BookCard.astro"
 
 const finishedBooks = (await getCollection("reading"))
 	.filter(x => {
@@ -86,98 +87,68 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 
 	<div class="content-grid content-grid--collection">
 		<aside class="collection-sidebar">
-			<details open>
+			<details>
 				<summary>Reading stats</summary>
-				<div>
-					<h2>Totals</h2>
-					<table class="collection-stats">
-						<tbody>
-							<tr>
-								<th scope="row">Books:</th>
-								<td>{yearCounts.booksRead}</td>
-							</tr>
-							<tr>
-								<th scope="row">Pages:</th>
-								<td>{yearCounts.pagesTotal}</td>
-							</tr>
+				<div class="collection-sidebar__grid">
+					<div>
+						<h2>Totals</h2>
+						<table class="collection-stats">
+							<tbody>
+								<tr>
+									<th scope="row">Books:</th>
+									<td
+										><span>{yearCounts.booksRead}</span></td
+									>
+								</tr>
+								<tr>
+									<th scope="row">Pages:</th>
+									<td
+										><span>{yearCounts.pagesTotal}</span
+										></td
+									>
+								</tr>
+								{
+									Object.values(yearCounts.years)
+										.reverse()
+										.map((x): object => (
+											<tr
+												style={`--percentage: ${getPercentage(x.count, x.goal)};`}
+											>
+												<th scope="row">
+													<a href={`/reading/${x.label}`}>
+														{x.label}
+													</a>
+													:
+												</th>
+												<td class="graph">
+													<span>{x.count}</span>
+												</td>
+											</tr>
+										))
+								}
+							</tbody>
+						</table>
+					</div>
+					<div>
+						<h2>Top 5</h2>
+						<table>
 							{
-								Object.values(yearCounts.years)
-									.reverse()
-									.map((x): object => (
-										<tr
-											style={`--percentage: ${getPercentage(x.count, x.goal)};`}
-										>
-											<th scope="row">
-												<a href={`/reading/${x.label}`}>
-													{x.label}
-												</a>
-												:
-											</th>
-											<td class="graph">{x.count}</td>
-										</tr>
-									))
-							}
-						</tbody>
-					</table>
-					<h2>Top 5</h2>
-					<table>
-						{
-							Object.values(sortedByRating.slice(0, 5)).map(
-								(book): object => (
+								Object.values(
+									sortedByRating.slice(0, 5),
+								).map((book): object => (
 									<tr>
 										<th scope="row">{book.title}</th>
 										<td>{book.ratingBook}</td>
 									</tr>
-								),
-							)
-						}
-					</table>
+								))
+							}
+						</table>
+					</div>
 				</div>
 			</details>
 		</aside>
 		<div class="collection-cards">
-			{
-				finishedBooks.map(book => (
-					<article class="collection-cards__card">
-						{book["imageSrc"] && (
-							<Image
-								class="collection-cards__card__image"
-								src={book["imageSrc"]}
-								alt=""
-								width={400}
-								height={400}
-								loading={"lazy"}
-							/>
-						)}
-						<p class="collection-cards__card__date">
-							Finished:{" "}
-							<FormattedDate date={book.endDate} />
-						</p>
-						<div class="collection-cards__card__content">
-							<h3>{book.author}</h3>
-							<h2>{book.title}</h2>
-							<table>
-								<tbody>
-									<tr>
-										<th scope="row">Finished:</th>
-										<td>
-											<FormattedDate date={book.endDate} />
-										</td>
-									</tr>
-									<tr>
-										<th scope="row">Type:</th>
-										<td>{book.readType}</td>
-									</tr>
-									<tr>
-										<th scope="row">Rating:</th>
-										<td>{book.ratingBook} / 5</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</article>
-				))
-			}
+			{finishedBooks.map(book => <BookCard book={book} />)}
 		</div>
 	</div>
 </Layout>

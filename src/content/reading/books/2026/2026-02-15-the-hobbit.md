@@ -24,6 +24,7 @@ genres:
   - classics
 Finished: Finished
 Notebook: Reading Log Volume 1
+bookClubMonth: 03-March
 ---
 
 # Thoughts about _TITLE_

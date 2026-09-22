@@ -1,6 +1,7 @@
 ---
 tags:
   - reading-list
+  - aardvark-book-club
 title: The Caretaker
 series:
 series-number:
