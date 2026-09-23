@@ -48,6 +48,7 @@
     margin-block-end: var(--space-m);
 
     border-block-end: var(--border-3);
+    background: var(--c-main-bg-alt);
 
     > div {
       display: flex;
@@ -70,17 +71,17 @@
       font-size: var(--step-0);
       text-underline-offset: 0.2rem;
       text-decoration-thickness: 0.15rem;
-      color: var(--c-link);
+      color: var(--c-link-reverse);
 
       &:hover,
       &:focus {
-        color: var(--c-link-hover);
+        color: var(--c-link-reverse-hover);
       }
 
       &[aria-current="page"],
       &[aria-current="page"]:hover,
       &[aria-current="page"]:focus {
-        color: var(--c-link-hover);
+        color: var(--c-link-reverse-hover);
       }
     }
   }
