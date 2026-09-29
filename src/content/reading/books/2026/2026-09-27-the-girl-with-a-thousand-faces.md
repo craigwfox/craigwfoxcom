@@ -8,9 +8,9 @@ series-number:
 storyGraph: https://app.thestorygraph.com/books/3fd5593f-da09-4b6f-b7f3-212378ad70d7
 readType: hardcover
 owned: true
-ratingBook:
+ratingBook: 3.75
 startDate: 2026-09-25
-endDate:
+endDate: 2026-09-27
 isbn: "9781250810212"
 author:
   - Sunyi Dean
@@ -21,7 +21,7 @@ bookType: fiction
 genres:
   - fantasy
   - historical
-Finished: Reading
+Finished: Finished
 Notebook:
 ---
 
