@@ -7,7 +7,7 @@ series-number:
 storyGraph: https://app.thestorygraph.com/books/1fab508d-d78d-4812-9616-c679e035eca7
 readType: ebook
 owned: true
-ratingBook: 1
+ratingBook: 3
 startDate: 2026-08-25
 endDate: 2026-09-28
 isbn: "9781937006853"
