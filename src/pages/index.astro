@@ -14,8 +14,11 @@ let movies: {
 }[] = []
 let moviesLoaded = false
 try {
-	const response = await fetch(url)
-	movies = await response.json()
+	const data = await fetch(url).then(res => res.json())
+	if (!data) throw new Error("No movies found")
+	movies = data ?? []
+} catch (error) {
+	console.error(error)
 } finally {
 	moviesLoaded = true
 }
@@ -58,32 +61,34 @@ try {
 							have watched over the last few years on our
 							weekly movie night.
 						</p>
-						<h4>Recent movies</h4>
 						{
-							moviesLoaded && movies ? (
-								<ul>
-									{movies.slice(0, 2).map(movie => (
-										<li>
-											<a
-												href={`https://movies.craigwfox.com/movie/${movie.slug}`}
-												target="_blank"
-											>
-												<span class="movies-list__img">
-													<img
-														src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}
-														alt=""
-													/>
-												</span>
-												<span class="movies-list__title">
-													{movie.name}
-												</span>
-												<span class="movies-list__date">
-													{formatDate(movie.watch_date)}
-												</span>
-											</a>
-										</li>
-									))}
-								</ul>
+							moviesLoaded && movies.length > 0 ? (
+								<>
+									<h4>Recent movies</h4>
+									<ul>
+										{movies.slice(0, 2).map(movie => (
+											<li>
+												<a
+													href={`https://movies.craigwfox.com/movie/${movie.slug}`}
+													target="_blank"
+												>
+													<span class="movies-list__img">
+														<img
+															src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}
+															alt=""
+														/>
+													</span>
+													<span class="movies-list__title">
+														{movie.name}
+													</span>
+													<span class="movies-list__date">
+														{formatDate(movie.watch_date)}
+													</span>
+												</a>
+											</li>
+										))}
+									</ul>
+								</>
 							) : (
 								""
 							)

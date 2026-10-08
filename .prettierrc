@@ -1,5 +1,6 @@
 {
   "arrowParens": "avoid",
   "semi": false,
-  "printWidth": 60
+  "printWidth": 60,
+  "plugins": ["prettier-plugin-astro"]
 }

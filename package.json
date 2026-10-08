@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/craigwfox/craigwfox.github.io#readme",
   "dependencies": {
+    "@astrojs/check": "^0.9.10",
     "@astrojs/netlify": "^8.2.3",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
@@ -41,6 +42,7 @@
     "sass": "^1.103.0",
     "sharp": "^0.35.3",
     "simple-theme-switcher": "1.0.4",
+    "typescript": "^7.0.2",
     "vue": "^3.5.41"
   },
   "devDependencies": {
