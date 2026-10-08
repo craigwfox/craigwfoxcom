@@ -12,7 +12,7 @@
     "astro": "astro",
     "convertCovers": "find ./public/images/covers -type f -name '*.jpg' -exec sh -c 'cwebp -q 75 $1 -o \"${1%.png}.webp\"';",
     "migrate:blog": "cp -R ~/Synced\\ Files/Notes\\ Vault/Blog/* ~/Development/Websites/Personal/craigwfoxcom/src/content/blog",
-    "migrate:booksClean": "rm -rf ~/Development/Websites/Personal/craigwfoxcom/public/images/covers && rm -rf ~/Development/Websites/Personal/craigwfoxcom/src/content/reading/books",
+    "migrate:booksClean": "rm -rf ~/Development/Websites/Personal/craigwfoxcom/public/images/covers && rm -rf ~/Development/Websites/Personal/craigwfoxcom/src/content/reading/*",
     "migrate:booksAll": "cp -R ~/Synced\\ Files/Notes\\ Vault/Media\\ -\\ Reading/Reading\\ Log/* ~/Development/Websites/Personal/craigwfoxcom/src/content/reading",
     "migrate:moveCovers": "mv ~/Development/Websites/Personal/craigwfoxcom/src/content/reading/covers ~/Development/Websites/Personal/craigwfoxcom/public/images",
     "migrate:books": "pnpm migrate:booksClean && pnpm run migrate:booksAll && pnpm run migrate:moveCovers",
