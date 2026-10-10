@@ -20,8 +20,8 @@ bookType: fiction
 genres:
   - fantasy
   - horror
-Finished: TBR
-Notebook:
+Finished: Reading
+Notebook: Reading Log Volume 2
 ---
 
 # Thoughts about _TITLE_

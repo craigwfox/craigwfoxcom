@@ -22,8 +22,8 @@ bookType: nonfiction
 genres:
   - short stories
   - young adult
-Finished: TBR
-Notebook:
+Finished: Reading
+Notebook: Non-fiction Journal v1
 ---
 
 # Thoughts about _TITLE_
