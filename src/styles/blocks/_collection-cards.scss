@@ -135,6 +135,25 @@
     }
   }
 
+  .collection-year {
+    summary {
+      cursor: pointer;
+
+      font-size: var(--step-3);
+      font-weight: 700;
+    }
+
+    > div {
+      padding-block-start: var(--space-m);
+    }
+
+    + .collection-year {
+      padding-block-start: var(--space-m);
+
+      border-block-start: var(--border-1);
+    }
+  }
+
   .collection-cards {
     display: grid;
     grid-template-columns: repeat(
