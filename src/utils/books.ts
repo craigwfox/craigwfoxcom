@@ -1,21 +1,11 @@
 import type {
-  Render,
-  RenderedContent,
+  CollectionEntry,
   InferEntrySchema,
 } from "astro:content"
 
 export type NullableDate = Date | null
 
-export interface Book {
-  id: string
-  render(): Render[".md"]
-  slug: string
-  body: string
-  collection: "reading"
-  data: InferEntrySchema<"reading">
-  rendered?: RenderedContent
-  filePath?: string | undefined
-}
+export type Book = CollectionEntry<"reading">
 
 export type RefinedBook = InferEntrySchema<"reading"> & {
   imageSrc?: string

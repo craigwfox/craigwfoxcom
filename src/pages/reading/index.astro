@@ -9,7 +9,6 @@ import {
 	getPercentage,
 	yearsSet,
 	type Book,
-	type RefinedBook,
 } from "../../utils/books"
 import ReadingBreadcrumbs from "../../components/ReadingBreadcrumbs.astro"
 import BookCard from "../../components/reading/BookCard.astro"
@@ -29,6 +28,10 @@ const sortedByRating = [...finishedBooks].sort((a, b) => {
 	return b.ratingBook - a.ratingBook
 })
 
+const genreCounts: {
+	[key: string]: number
+}[] = []
+
 const yearCounts = {
 	most: 0,
 	pagesTotal: 0,
@@ -42,6 +45,10 @@ Object.values(yearCounts.years).forEach(year => {
 	].count = 0
 })
 
+function hasGenre(str: string): number {
+	return genreCounts.findIndex(x => x[str])
+}
+
 finishedBooks.forEach(book => {
 	if (!book.endDate) return
 	const year = String(new Date(book.endDate).getFullYear())
@@ -52,6 +59,24 @@ finishedBooks.forEach(book => {
 	yearCounts.pagesTotal += parseInt(
 		book?.pageCount?.toString() ?? "0",
 	)
+
+	// set genreCounts
+	if (book.genres?.length) {
+		book.genres.forEach(x => {
+			const genreIndex = hasGenre(x)
+			if (genreIndex != -1) {
+				genreCounts[genreIndex][x] += 1
+			} else {
+				genreCounts.push({ [x]: 1 })
+			}
+		})
+	}
+})
+
+genreCounts.sort((a, b) => {
+	const countA = Object.values(a)[0] as number
+	const countB = Object.values(b)[0] as number
+	return countB - countA
 })
 
 yearCounts.most = Object.values(yearCounts.years).sort(
@@ -127,6 +152,19 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 										))
 								}
 							</tbody>
+						</table>
+					</div>
+					<div>
+						<h2>Top 5 Genres</h2>
+						<table class="collection-tops">
+							{
+								genreCounts.slice(0, 5).map(x => (
+									<tr>
+										<th scope="row">{Object.keys(x)[0]}</th>
+										<td>{Object.values(x)[0]}</td>
+									</tr>
+								))
+							}
 						</table>
 					</div>
 					<div>

@@ -184,7 +184,7 @@ yearCounts.most = Object.values(yearCounts.years).sort(
 						<h2>Top 5 Genres</h2>
 						<table class="collection-tops">
 							{
-								genreCounts.slice(2, 7).map(x => (
+								genreCounts.slice(0, 5).map(x => (
 									<tr>
 										<th scope="row">{Object.keys(x)[0]}</th>
 										<td>{Object.values(x)[0]}</td>
