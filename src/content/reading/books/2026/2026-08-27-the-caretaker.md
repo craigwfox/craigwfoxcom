@@ -11,7 +11,7 @@ owned: true
 ratingBook: 4
 startDate: 2026-08-25
 endDate: 2026-08-27
-isbn: " 9781982198817"
+isbn: "9781982198817"
 author:
   - Marcus Kliewer
 publisher: Atria Books

@@ -8,7 +8,7 @@ storyGraph: https://app.thestorygraph.com/books/754d815e-6183-47d9-847e-842749d0
 readType: ebook
 owned: true
 ratingBook:
-startDate: 2026-10-19
+startDate: 2026-10-26
 endDate:
 isbn: "9781416597155"
 author:

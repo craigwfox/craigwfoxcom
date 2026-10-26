@@ -9,7 +9,7 @@ owned: true
 ratingBook: 4
 startDate: 2025-03-24
 endDate: 2025-03-30
-isbn: " B075CL6KKV"
+isbn: "B075CL6KKV"
 author:
   - Gaston Leroux
 publisher: Standard ebooks

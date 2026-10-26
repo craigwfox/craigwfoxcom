@@ -8,7 +8,7 @@ owned: false
 ratingBook: 4
 startDate: 2025-10-04
 endDate: 2025-10-12
-isbn: " 9780553418613"
+isbn: "9780553418613"
 author:
   - Scott Hawkins
 publisher: Crown Publishing

@@ -10,7 +10,7 @@ owned: true
 ratingBook: 3.5
 startDate: 2026-02-15
 endDate: 2026-02-22
-isbn: " 9780593820308"
+isbn: "9780593820308"
 author:
   - Matt Dinniman
 publisher: Ace

@@ -8,7 +8,7 @@ owned: true
 ratingBook: 4.25
 startDate: 2025-01-25
 endDate: 2025-02-09
-isbn: " 9780812577563"
+isbn: "9780812577563"
 author: Robert Jordan
 publisher: Tor Fantasy
 publishDate: 2005-10-11

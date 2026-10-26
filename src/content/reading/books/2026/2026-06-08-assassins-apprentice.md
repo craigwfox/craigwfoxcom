@@ -12,7 +12,7 @@ owned: true
 ratingBook: 5
 startDate: 2026-05-27
 endDate: 2026-06-08
-isbn: " 9780593722824"
+isbn: "9780593722824"
 author:
   - Robin Hobb
 publisher: Del Rey Books
@@ -21,6 +21,7 @@ pageCount: 438
 bookType: fiction
 genres:
   - fantasy
+  - epic fantasy
 Finished: Finished
 Notebook: Reading Log Volume 2
 bookClubMonth: 12-December

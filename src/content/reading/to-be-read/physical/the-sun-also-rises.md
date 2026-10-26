@@ -10,7 +10,7 @@ owned: true
 ratingBook:
 startDate:
 endDate:
-isbn: " 9781476739953"
+isbn: "9781476739953"
 author:
   - Ernest Hemingway
 publisher: Charles Scribner's Sons

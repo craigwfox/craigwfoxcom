@@ -10,7 +10,7 @@ owned: true
 ratingBook:
 startDate:
 endDate:
-isbn: " 9780553051827"
+isbn: "9780553051827"
 author:
   - Louis L'Amour
 publisher: Bantam Books

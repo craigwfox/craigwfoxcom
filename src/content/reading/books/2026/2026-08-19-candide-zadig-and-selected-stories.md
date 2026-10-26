@@ -10,7 +10,7 @@ owned: true
 ratingBook: 3.5
 startDate: 2026-08-16
 endDate: 2026-08-19
-isbn: " 9780451523570"
+isbn: "9780451523570"
 author:
   - Voltaire
 publisher: Signet Classics

@@ -12,7 +12,7 @@ owned: false
 ratingBook: 4
 startDate: 2026-08-06
 endDate: 2026-08-08
-isbn: " 9780345391803"
+isbn: "9780345391803"
 author:
   - Douglas Adams
 publisher: Del Rey Books

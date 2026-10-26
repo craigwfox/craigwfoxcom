@@ -10,7 +10,7 @@ owned: true
 ratingBook: 3.5
 startDate: 2026-04-27
 endDate: 2026-05-06
-isbn: " 9781250425409"
+isbn: "9781250425409"
 author:
   - John Chu
 publisher: Tor Books

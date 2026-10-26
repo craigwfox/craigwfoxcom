@@ -8,7 +8,7 @@ owned: true
 ratingBook: 4.5
 startDate: 2025-08-02
 endDate: 2025-08-10
-isbn: " 9780593956014"
+isbn: "9780593956014"
 author:
   - Matt Dinniman
 publisher: Ace

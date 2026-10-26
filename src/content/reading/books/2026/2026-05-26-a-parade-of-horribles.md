@@ -10,7 +10,7 @@ owned: true
 ratingBook: 3.75
 startDate: 2026-05-13
 endDate: 2026-05-26
-isbn: " 9798217190065"
+isbn: "9798217190065"
 author:
   - Matt Dinniman
 publisher: Ace

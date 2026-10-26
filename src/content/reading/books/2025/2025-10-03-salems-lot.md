@@ -8,7 +8,7 @@ owned: true
 ratingBook: 4
 startDate: 2025-09-16
 endDate: 2025-10-03
-isbn: "  0965772411"
+isbn: " 0965772411"
 author:
   - Stephen King
 publisher: Doubleday

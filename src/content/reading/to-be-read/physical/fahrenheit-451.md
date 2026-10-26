@@ -10,7 +10,7 @@ owned: true
 ratingBook:
 startDate:
 endDate:
-isbn: " 9780345342966"
+isbn: "9780345342966"
 author:
   - Ray Bradbury
 publisher: Del Rey / Ballantine Books

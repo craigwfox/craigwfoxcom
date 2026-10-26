@@ -10,7 +10,7 @@ owned: true
 ratingBook: 4
 startDate: 2026-05-18
 endDate: 2026-07-05
-isbn: " 9780140390124"
+isbn: "9780140390124"
 author:
   - Frederick Douglass
 publisher: Penguin Classics

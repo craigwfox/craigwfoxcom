@@ -12,7 +12,7 @@ owned: true
 ratingBook: 3.5
 startDate: 2026-08-20
 endDate: 2026-08-24
-isbn: " 9780451210845"
+isbn: "9780451210845"
 author:
   - Stephen King
 publisher: Signet

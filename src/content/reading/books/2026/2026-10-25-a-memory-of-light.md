@@ -10,7 +10,7 @@ owned: true
 ratingBook: 5
 startDate: 2026-10-16
 endDate: 2026-10-25
-isbn: " 9781429997171"
+isbn: "9781429997171"
 author:
   - Brandon Sanderson
   - Robert Jordan
