@@ -8,7 +8,7 @@ storyGraph: https://app.thestorygraph.com/books/83a096e7-7872-42a0-bfeb-0920035f
 readType: ebook
 owned: true
 ratingBook:
-startDate:
+startDate: 2026-11-05
 endDate:
 isbn: "9780812993813"
 author:
@@ -20,7 +20,7 @@ bookType: fiction
 genres:
   - contemporary
   - short stories
-Finished: TBR
+Finished: Reading
 Notebook:
 ---
 

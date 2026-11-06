@@ -9,9 +9,9 @@ series-number:
 storyGraph: https://app.thestorygraph.com/books/be1e2182-dc2c-4eda-b8fc-e660bbe9fbd1
 readType: paperback
 owned: true
-ratingBook:
-startDate:
-endDate:
+ratingBook: 4.25
+startDate: 2026-10-30
+endDate: 2026-11-03
 isbn: "9780061478789"
 author:
   - Diana Wynne Jones
@@ -22,9 +22,10 @@ bookType: fiction
 genres:
   - fantasy
   - classics
-Finished: TBR
-Notebook:
+Finished: Finished
+Notebook: Reading Log Volume 2
 bookClubMonth: 11-November
 ---
 
-# Thoughts about _TITLE_
+# Thoughts
+I've been a fan of Miyazaki's movie version of Howls for years. The book is just as charming and you get much more complexity out of the house of characters. 

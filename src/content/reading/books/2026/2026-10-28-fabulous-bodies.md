@@ -9,9 +9,9 @@ series-number:
 storyGraph: https://app.thestorygraph.com/books/1e00e754-cc33-4158-a6f7-d4a08424698e
 readType: hardcover
 owned: true
-ratingBook:
+ratingBook: 3.75
 startDate: 2026-10-26
-endDate:
+endDate: 2026-10-28
 isbn: "9781250398567"
 author:
   - Chuck Tingle
@@ -21,8 +21,9 @@ pageCount: 231
 bookType: fiction
 genres:
   - horror
-Finished: Reading
+Finished: Finished
 Notebook: Reading Log Volume 2
 ---
 
 # Thoughts
+A quick campy and blood horror story. It reminds me a lot of slasher movies where a lot of the fun is knowing that it's just going to keep getting worse. The background of the story rids on showing the parallels of modern influencer culture to the long history of humans vying for fame at all costs.
